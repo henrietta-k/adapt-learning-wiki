@@ -12,5 +12,5 @@ Welcome to the developer documentation for the Adapt Learning Framework! We have
 * [Developer documentation files](https://github.com/adaptlearning/adapt_framework)
 
 **Developer documentation for the Adapt Authoring Tool**
-* [Developer documentation Wiki] - (https://github.com/adaptlearning/adapt_authoring/wiki)
+* [Developer documentation Wiki](https://github.com/adaptlearning/adapt_authoring/wiki)
 * [Developer documentation files](https://github.com/adaptlearning/adapt_authoring)
