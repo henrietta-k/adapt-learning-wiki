@@ -14,7 +14,7 @@ More detailed documentation about the Adapt Learning open source project can be 
 * [Adapt Learning files](https://github.com/adaptlearning/documentation)
 
 **Developer documentation for the Adapt (Output) Framework**
-* Developer documentation Wiki - YOU ARE HERE
+* Developer documentation Wiki - **YOU ARE HERE**
 * [Developer documentation files](https://github.com/adaptlearning/adapt_framework)
 
 **Developer documentation for the Adapt Authoring Tool**
