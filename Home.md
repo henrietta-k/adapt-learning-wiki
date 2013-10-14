@@ -6,7 +6,7 @@ This Wiki will contain developer documentation for the Adapt Output framework. A
 
 More detailed documentation about the Adapt Learning open source project can be found in the following places:
 
-** High Level Documentation**
+**High Level Documentation**
 * [Adapt Learning Wiki](https://github.com/adaptlearning/documentation/wiki)
 * [Adapt Learning files](https://github.com/adaptlearning/documentation)
 
