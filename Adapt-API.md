@@ -1,4 +1,4 @@
-### Events
+## Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
 
@@ -7,6 +7,8 @@ trigger - triggers a global event
 on - listens to a global event and calls a callback
 
 off - removes the global event attached to an object
+
+### A basic events implementation
 
     define(['coreJS/adapt'], function(Adapt) {
         
