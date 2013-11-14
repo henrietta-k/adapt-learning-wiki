@@ -10,7 +10,7 @@ Welcome to the developer documentation for the Adapt Learning Framework! We have
 **Developer documentation for the Adapt (output) Framework**
 * Developer documentation Wiki - **YOU ARE HERE**
 * [Developer documentation files](https://github.com/adaptlearning/adapt_framework)
-* [Adapt Command line interface]
+* Adapt Command line interface
 
 **Developer documentation for the Adapt Authoring Tool**
 * [Developer documentation Wiki](https://github.com/adaptlearning/adapt_authoring/wiki)
