@@ -38,6 +38,24 @@ var children = Adapt.pages[0].findDescendants('components');
 // returns all the components that are in the first page.
 ````
 
+##### - <a name="setOnChildren"></a>setOnChildren(key, value, [options])
+
+Sets attributes on all children models. An object can also be passed in to allow multiple attributes to be set at once. The standard Backbone options can also be passed in.
+
+````
+var firstPage = Adapt.pages[0];
+firstPage.setOnChildren('_complete', true);
+// sets all childrens '_complete' attribute to true, all the way down to component level.
+
+firstPage.setOnChildren({'_complete': false, 'title', 'I have a new title'});
+// Uses an object to set all childrens '_complete' attribute to false and 'title' attribute to 'I have a new title'.
+
+firstPage.setOnChildren('_complete', true, {silent:true});
+> or
+firstPage.setOnChildren({_complete:true}, {silent:true});
+// Passes an option of silent:true so the models will not fire off a change event.
+````
+
 ### Adapt.course
 
 Adapt's main course object can be accessed by using 
