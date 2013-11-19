@@ -48,6 +48,10 @@ Adapt.course
 
 As this is inherited from AdaptModel you can call the following methods
 
+[getChildren()](#getChildren)
+
+[getParent()](#getParent)
+
 [findAncestor(ancestors)](#findAncestor)
 
 [findDescendants(descendants)](#findDescendants)
