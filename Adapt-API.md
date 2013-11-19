@@ -58,7 +58,7 @@ firstPage.setOnChildren({_complete:true}, {silent:true});
 
 ### Adapt.course
 
-Adapt's main course object can be accessed by using 
+Adapt's main course object can be accessed by using:
 
 ````
 Adapt.course
