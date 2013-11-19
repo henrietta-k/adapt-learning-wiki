@@ -79,6 +79,8 @@ As this is inherited from AdaptModel you can call the following methods
 
 [getParent()](#getParent)
 
+[getSiblings()](#getSiblings)
+
 [findAncestor(ancestors)](#findAncestor)
 
 [findDescendants(descendants)](#findDescendants)
