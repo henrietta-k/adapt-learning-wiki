@@ -16,6 +16,7 @@ Finds descendants of the current model and returns a collection. Like findAncest
 ````
 var children = Adapt.pages[0].findDescendants('components');
 // returns all the components that are in the first page.
+````
 
 ### Adapt.course
 
@@ -28,6 +29,8 @@ Adapt.course
 As this is inherited from Adapt model you can call the following methods
 
 [findAncestor(ancestors)](#findAncestor)
+
+[findDescendants(descendants)](#findDescendants)
 
 ### Events
 
