@@ -5,8 +5,8 @@
 Finds ancestors of the current model. Because of the way our menus system is setup findAncestor only works from components up to page level
 
 ````
-this.model.findAncestor('page')
-// returns the current page this model is in
+var currentPage = this.model.findAncestor('page')
+// returns the current page model 'this' model is in
 ````
 
 ##### - <a name="findDescendants"></a>findAncestor(descendants)
