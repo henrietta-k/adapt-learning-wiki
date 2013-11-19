@@ -65,6 +65,32 @@ firstPage.setOnChildren({_complete:true}, {silent:true});
 // Passes an option of silent:true so the models will not fire off a change event.
 ````
 
+### AdaptView
+
+All core views inherit from AdaptView (adaptView.js) and contain the following methods:
+
+##### - <a name="adapt-view-initialize"></a>initialize()
+
+This is called when a view is created. This should never be overwritten as it sets up each view to work with Adapt. It follows the structure below:
+
+* Set model to not ready - used when finding out whether a page is ready to display after all assets are downloaded.
+* Listen to Adapt for any 'remove' events and remove this view.
+* Call this.init() - used to setup anything on the view or model before rendering.
+* Trigger 'preRender' event based upon the views type - 'pageView:preRender' - this is used by plugins to tap into a view before render.
+* Call this.render() - renders the view into the dom.
+* Trigger 'postRender' event based upon the views type - 'pageView:postRender' - this is used by plugins to tap into a view after render.
+* Call this.postRender() - used to setup anything on the view or model after rendering.
+
+##### - <a name="adapt-view-init"></a>init()
+
+##### - <a name="adapt-view-render"></a>render()
+
+##### - <a name="adapt-view-postRender"></a>postRender()
+
+##### - <a name="adapt-view-setReadyListener"></a>setReadyListener()
+
+##### - <a name="adapt-view-setCompletionListener"></a>setCompletionListener()
+
 ### Adapt.course
 
 Adapt's main course object can be accessed by using:
