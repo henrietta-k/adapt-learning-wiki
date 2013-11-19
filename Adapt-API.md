@@ -1,3 +1,16 @@
+### AdaptModel
+
+##### - <a name="findAncestor"></a>findAncestor(ancestors)
+
+Finds ancestors of the current model. Because of the way our menus system is setup findAncestor only works from components up to page level
+
+````
+this.model.findAncestor('page')
+// returns the current page this model is in
+````
+
+##### - <a name="findDescendants"></a>findAncestor(descendants)
+
 ### Adapt.course
 
 Adapt's main course object can be accessed by using 
@@ -8,7 +21,7 @@ Adapt.course
 
 As this is inherited from Adapt model you can call the following methods
 
-[findAncestor(ancestors)](#Adapt.course)
+[findAncestor(ancestors)](#findAncestor)
 
 ### Events
 
