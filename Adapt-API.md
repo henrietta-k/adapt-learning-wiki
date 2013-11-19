@@ -2,14 +2,20 @@
 
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
 
-Finds ancestors of the current model. Because of the way our menus system is setup findAncestor only works from components up to page level
+Finds ancestors of the current model and returns a model. Because of the way our menus system is setup findAncestor only works from components up to page level
 
 ````
-var currentPage = this.model.findAncestor('page')
-// returns the current page model 'this' model is in
+var currentPage = Adapt.components[0].findAncestor('pages');
+// returns the current page model that is an ancestor of the first component.
 ````
 
-##### - <a name="findDescendants"></a>findAncestor(descendants)
+##### - <a name="findDescendants"></a>findDescendants(descendants)
+
+Finds descendants of the current model and returns a collection. Like findAncestor this only works from page level down to components.
+
+````
+var children = Adapt.pages[0].findDescendants('components');
+// returns all the components that are in the first page.
 
 ### Adapt.course
 
