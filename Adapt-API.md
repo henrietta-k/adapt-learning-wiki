@@ -1,5 +1,7 @@
 ### AdaptModel
 
+All core models inherit from AdaptModel (adaptModel.js) and contain the following methods:
+
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
 
 Finds ancestors of the current model and returns a model. Because of the way our menus system is setup findAncestor only works from components up to page level
