@@ -83,13 +83,15 @@ This is called when a view is created. This should never be overwritten as it se
 
 ##### - <a name="adapt-view-init"></a>init()
 
+This is a blank method that is used in other views to setup anything on the view or model before rendering.
+
 ##### - <a name="adapt-view-render"></a>render()
+
+This method renders the view into the dom.
 
 ##### - <a name="adapt-view-postRender"></a>postRender()
 
-##### - <a name="adapt-view-setReadyListener"></a>setReadyListener()
-
-##### - <a name="adapt-view-setCompletionListener"></a>setCompletionListener()
+This is a blank method that is used in other views to setup anything on the view or model after rendering.
 
 ### Adapt.course
 
