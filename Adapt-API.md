@@ -74,6 +74,8 @@ As this is inherited from AdaptModel you can call the following methods
 
 [findDescendants(descendants)](#findDescendants)
 
+[setOnChildren(key, value, [options])](#setOnChildren)
+
 ### Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
