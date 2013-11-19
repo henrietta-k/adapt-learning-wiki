@@ -2,6 +2,24 @@
 
 All core models inherit from AdaptModel (adaptModel.js) and contain the following methods:
 
+##### - <a name="getChildren"></a>getChildren()
+
+Returns the current models children as a collection.
+
+````
+var myChildren = Adapt.articles[0].getChildren();
+// returns the article's blocks as a collection.
+````
+
+##### - <a name="getParent"></a>getParent()
+
+Returns the current models parent as a model.
+
+````
+var myParent = Adapt.articles[0].getParent();
+// returns the article's page model.
+````
+
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
 
 Finds ancestors of the current model and returns a model. Because of the way our menus system is setup findAncestor only works from components up to page level
@@ -28,7 +46,7 @@ Adapt's main course object can be accessed by using
 Adapt.course
 ````
 
-As this is inherited from Adapt model you can call the following methods
+As this is inherited from AdaptModel you can call the following methods
 
 [findAncestor(ancestors)](#findAncestor)
 
