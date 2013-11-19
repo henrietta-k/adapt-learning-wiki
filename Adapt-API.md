@@ -20,6 +20,15 @@ var myParent = Adapt.articles[0].getParent();
 // returns the article's page model.
 ````
 
+##### - <a name="getSiblings"></a>getSiblings()
+
+Returns a collection of all the current models siblings.
+
+````
+var mySiblings = Adapt.blocks[0].getSiblings();
+// returns all the blocks in the same article as the first block.
+````
+
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
 
 Finds ancestors of the current model and returns a model. Because of the way our menus system is setup findAncestor only works from components up to page level
