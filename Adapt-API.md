@@ -1,3 +1,15 @@
+### Adapt.course
+
+Adapt's main course object can be accessed by using 
+
+````
+Adapt.course
+````
+
+As this is inherited from Adapt model you can call the following methods
+
+[findAncestor(ancestors)](#Adapt.course)
+
 ### Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
