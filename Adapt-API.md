@@ -115,6 +115,73 @@ As this is inherited from AdaptModel you can call the following methods
 
 [setOnChildren(key, value, [options])](#setOnChildren)
 
+### Adapt
+
+The main Adapt object can be used to pass events, grab the core collections of models or register a component. Adapt also has the following:
+
+##### - Adapt.initialize
+
+This is only able to be called once and fires off when all the content is loaded and Adapt is ready to begin. It triggers off a 'adapt:initialize' event and then starts the router.
+
+##### - Adapt.course
+
+This gives access to the course model that contains the course completion status, title and body.
+
+##### - Adapt.contentObjects
+
+This collection holds all the contentObjects including the pages.
+
+##### - Adapt.articles
+
+This collection holds all the article models.
+
+##### - Adapt.blocks
+
+This collection holds all the block models.
+
+##### - Adapt.comoponents
+
+This collection holds all the component models.
+
+##### Adapt.register
+
+This is used to register components into the componentStore:
+
+````
+var HelloWorld = ComponentView.extend({
+        
+    postRender: function() {
+        console.log('Hello to the world');
+    }
+    
+});
+
+Adapt.register("helloWorld", HelloWorld);
+
+// Registers a "helloWorld" plugin into the componentStore
+````
+
+##### Adapt.componentStore
+
+Used by BlockView when creating components. The BlockView is able to search the right component, by searching it's children and rendering the right component.
+
+##### Adapt.currentLocation
+
+This is set by the router and tracks the current location of the user. This can be two of the following:
+
+* "course" - This is set when the router goes to the first route.
+* ":id" - This "id" is set based upon what attribute is passed into the router.
+
+If a plugin wanted to find out what the current page model is the can do the following:
+
+````
+if (Adapt.currentLocation !== "course") {
+    var currentPageModel = Adapt.contentObject.findWhere({
+        "_id": Adapt.currentLocation
+    });
+}
+````
+
 ### Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
