@@ -93,15 +93,17 @@ This method renders the view into the dom.
 
 This is a blank method that is used in other views to setup anything on the view or model after rendering.
 
-### Adapt.course
+### Adapt
 
-Adapt's main course object can be accessed by using:
+The main Adapt object can be used to pass events, grab the core collections of models or register a component. Adapt also has the following:
 
-````
-Adapt.course
-````
+##### - Adapt.initialize
 
-As this is inherited from AdaptModel you can call the following methods
+This is only able to be called once and fires off when all the content is loaded and Adapt is ready to begin. It triggers off a 'adapt:initialize' event and then starts the router.
+
+##### - Adapt.course
+
+This gives access to the course model that contains the course completion status, title and body. You can use all the AdaptModel methods:
 
 [getChildren()](#getChildren)
 
@@ -114,18 +116,6 @@ As this is inherited from AdaptModel you can call the following methods
 [findDescendants(descendants)](#findDescendants)
 
 [setOnChildren(key, value, [options])](#setOnChildren)
-
-### Adapt
-
-The main Adapt object can be used to pass events, grab the core collections of models or register a component. Adapt also has the following:
-
-##### - Adapt.initialize
-
-This is only able to be called once and fires off when all the content is loaded and Adapt is ready to begin. It triggers off a 'adapt:initialize' event and then starts the router.
-
-##### - Adapt.course
-
-This gives access to the course model that contains the course completion status, title and body.
 
 ##### - Adapt.contentObjects
 
