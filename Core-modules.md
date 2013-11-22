@@ -1,8 +1,10 @@
 Quick links
 
-[#navigationView]("NavigationView")
+[NavigationView](#navigationView)
+[App](#app)
+[Router](#router)
 
-### NavigationView
+### <a name="navigationView"></a>NavigationView
 
 The NavigationView controls the top navigation bar. To keep a nice separation of plugins, any icon or button placed in this view should contain a 'data-event' attribute:
 
@@ -16,11 +18,11 @@ The Navigation View will then trigger an event based up the elements data-event:
 Adapt.trigger('navigation:backButton');
 ````
 
-### App
+### <a name="app"></a>App
 
 This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
 
-### Router
+### <a name="router"></a>Router
 
 When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only two routes. The first route handles loading a course whilst the second route handles an "_id" attribute being passed in. When an "_id" attribute is passed in:
 
