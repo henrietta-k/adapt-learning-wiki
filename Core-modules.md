@@ -1,10 +1,14 @@
 #####Quick links
 
-[NavigationView](#navigationView)
-
 [App](#app)
 
+[NavigationView](#navigationView)
+
 [Router](#router)
+
+### <a name="app"></a>App
+
+This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
 
 ### <a name="navigationView"></a>NavigationView
 
@@ -19,10 +23,6 @@ The Navigation View will then trigger an event based up the elements data-event:
 ````
 Adapt.trigger('navigation:backButton');
 ````
-
-### <a name="app"></a>App
-
-This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
 
 ### <a name="router"></a>Router
 
