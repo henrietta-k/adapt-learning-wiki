@@ -129,7 +129,7 @@ This collection holds all the article models.
 
 This collection holds all the block models.
 
-##### - Adapt.comoponents
+##### - Adapt.components
 
 This collection holds all the component models.
 
