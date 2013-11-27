@@ -6,5 +6,20 @@ All of the components you'll need can be installed with [npm](https://npmjs.org/
 ```js
 npm install adapt-cli -g
 npm install grunt-cli -g
-npm install bower-cli -g
+npm install bower -g
 ```
+
+### Get the Adapt output framework
+#### Overview
+The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
+
+#### Installing
+You can get the latest version of the framework from our [GitHub repository](https://github.com/adaptlearning/adapt_framework). You should clone the repository using git.
+
+```bash
+$ git clone git@github.com:adaptlearning/adapt_framework.git adapt
+$ cd adapt
+```
+
+Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
+
