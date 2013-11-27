@@ -7,6 +7,10 @@ Welcome to the developer documentation for the Adapt Learning Framework! We have
 * [Adapt Learning Wiki](https://github.com/adaptlearning/documentation/wiki)
 * [Adapt Learning files](https://github.com/adaptlearning/documentation)
 
+
+### Getting started as a developer
+* [Setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)
+
 **Developer documentation for the Adapt (output) Framework**
 * Developer documentation Wiki - **YOU ARE HERE**
 * [Developer documentation files](https://github.com/adaptlearning/adapt_framework)
