@@ -10,16 +10,12 @@ Welcome to the developer documentation for the Adapt Learning Framework! We have
 
 ### Getting started as a developer
 * [Setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)
+* [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
 
 **Developer documentation for the Adapt (output) Framework**
 * Developer documentation Wiki - **YOU ARE HERE**
 * [Developer documentation files](https://github.com/adaptlearning/adapt_framework)
-* [Adapt Command line interface](adapt-cli/overview)
-    - Overview
-    - Installation
-    - Searching for plugins
-    - Installing plugins
-    - Configuration
+* [Adapt Command line interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
 
 **Developer documentation for the Adapt Authoring Tool**
 * [Developer documentation Wiki](https://github.com/adaptlearning/adapt_authoring/wiki)
