@@ -23,3 +23,10 @@ $ cd adapt
 
 Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
 
+The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process. Run all of the grunt tasks from your output framework directory.
+
+#### Building
+```bash
+grunt build
+```
+The build task compiles and compresses your course and prepares it for distribution. The output is located in the *build* directory.
