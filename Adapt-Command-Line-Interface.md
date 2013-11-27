@@ -30,4 +30,4 @@ Uninstalling a plugin from your current directory
 adapt uninstall {name of plugin}
 ````
 ### Configuration
-The plugin system is powered by Bower. Each plugin should be a [valid bower package](http://bower.io/#defining-a-package) and they should be registered with the Adapt registry `adapt-bower-repository.herokuapp.com`.
+The plugin system is powered by [Bower](https://bower.io). Each plugin should be a [valid bower package](http://bower.io/#defining-a-package) and they should be registered with the Adapt registry `adapt-bower-repository.herokuapp.com`.
