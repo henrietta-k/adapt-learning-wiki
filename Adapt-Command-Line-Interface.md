@@ -1,10 +1,10 @@
-# Overview
+## Overview
 -todo-
-# Installation
+### Installation
 -todo-
-# Searching for plugins
+### Searching for plugins
 -todo-
-# Installing plugins
+### Installing plugins
 -todo-
-# Configuration
+### Configuration
 -todo-
