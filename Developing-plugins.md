@@ -45,6 +45,13 @@ The `bower.json` defines several options:
   "license": "GPLv3"
 }
 ```
+###### Plugin naming policy
+In order to publish a plugin it is required that a plugin name must:-
+
+1. Be **Unique**, plugin names are available on a first come, first serve basis.
+2. Start with **adapt-**
+3. Not start with **adapt-contrib-**, this is reserved for plugins that have been acknowledged by the Adapt Community as "offically" supported. To achieve contrib status a plugin must conform to the projects standard for code convention and test coverage.
+
 ##### Implementing a plugin
 The javascript file that is specified by the `main` property must define itself as an AMD module.
 
@@ -63,8 +70,18 @@ If your plugin has a user interface then you can include [LESS](http://lesscss.o
 These files will be compiled and included in the course output.
 
 ##### Registering a plugin
-Once your plugin is complete you can publish it to the plugin registry. In order to publish a plugin it is required that a plugin name must:-
+To register a new package:
 
-1. Be **Unique**, plugin names are available on a first come, first serve basis.
-2. Start with **adapt-**
-3. Not start with **adapt-contrib-**, this is reserved for plugins that have been acknowledged by the Adapt Community as "offically" supported. To achieve contrib status a plugin must conform to the projects standard for code convention and test coverage.
+* There must be a valid manifest `bower.json` in the current working directory. 
+* Your plugin version should use semver Git tags.
+* Your package must be available at a Git endpoint (e.g., GitHub)
+* Bower must be configured to use `adapt-bower-repository.herokuapp.com` as its registry. To do this create `.bowerrc` in your plugins directory and set the `register` property to `adapt-bower-repository.herokuapp.com`.
+
+```js
+//contents of .bowerrc
+{
+    "register" : "adapt-bower-repository.herokuapp.com"
+}
+```
+
+Once you are ready to publish, just do `bower register <plugin-name> <git-endpoint-url>`
