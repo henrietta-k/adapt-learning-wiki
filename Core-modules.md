@@ -40,3 +40,11 @@ the router will follow this order:
 * Set Adapt.currentLocation to the current "_id" being passed in.
 * Search through the contentObjects collection and find the model with that "_id" and render either a menu or a page.
 * Add a class to the "#wrapper" element based upon location, either 'location-content' or 'location-menu'.
+
+### <a name="device"></a>Device
+
+The device module detects which browser the user is on and adds the following classes to the ``<HTML>`` tag:
+
+* Browser - ``Chrome``
+* Version - ``version-32``
+* OS - ``OS-Mac``
