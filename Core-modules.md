@@ -6,6 +6,8 @@
 
 [Router](#router)
 
+[Device](#device)
+
 ### <a name="app"></a>App
 
 This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
@@ -48,3 +50,11 @@ The device module detects which browser the user is on and adds the following cl
 * Browser - ``Chrome``
 * Version - ``version-32``
 * OS - ``OS-Mac``
+
+As well as adding these classes, device.js triggers an event ``'device:resize'``. This should be used to find out when the browser has resized and passes the new window size as an argument.
+
+````
+Adapt.on('device:resize', function(windowWidth) {
+    console.log("Any time the window resizes I will be called and here's the new window width: ", windowWidth);
+});
+````
