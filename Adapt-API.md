@@ -174,7 +174,7 @@ if (Adapt.currentLocation !== "course") {
 
 ##### Adapt.screenWidth
 
-This is set by the device.js module and is updated anytime the device's screen width changes. Will return the window with as a number.
+This is set by the device.js module and is updated anytime the device's screen width changes. Will return the window width as a number.
 
 ##### Adapt.screenSize
 
