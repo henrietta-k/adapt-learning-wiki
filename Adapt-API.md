@@ -172,6 +172,10 @@ if (Adapt.currentLocation !== "course") {
 }
 ````
 
+##### Adapt.screenWidth
+
+This is set by the device.js module and is updated anytime the device's screen width changes.
+
 ### Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
