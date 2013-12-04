@@ -159,12 +159,12 @@ Used by BlockView when creating components. The BlockView is able to search the 
 
 Returns an object with the following key/values:
 
-* Adapt.device.browser - returns the users browser ``Chrome``.
-* Adapt.device.version - returns the users browser version ``31``.
-* Adapt.device.OS - returns the users operating system ``OS``.
-* Adapt.device.screenSize - returns the current screen size and is updated when the window size changes. Can be one of the following: ``large``, ``medium`` or ``small``.
-* Adapt.device.screenWidth - returns the current screen width and is updated when the window width changes. ``1024``.
-* Adapt.device.touch - returns ``true`` or ``false`` based upon if the device is touch enabled.
+* ``Adapt.device.browser`` - returns the users browser ``Chrome``.
+* ``Adapt.device.version`` - returns the users browser version ``31``.
+* ``Adapt.device.OS`` - returns the users operating system ``OS``.
+* ``Adapt.device.screenSize`` - returns the current screen size and is updated when the window size changes. Can be one of the following: ``large``, ``medium`` or ``small``.
+* ``Adapt.device.screenWidth`` - returns the current screen width and is updated when the window width changes. ``1024``.
+* ``Adapt.device.touch`` - returns ``true`` or ``false`` based upon if the device is touch enabled.
 
 This object is setup in device.js.
 
