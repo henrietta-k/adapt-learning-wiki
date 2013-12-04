@@ -155,6 +155,19 @@ Adapt.register("helloWorld", HelloWorld);
 
 Used by BlockView when creating components. The BlockView is able to search the right component, by searching it's children and rendering the right component.
 
+##### Adapt.device
+
+Returns an object with the following key/values:
+
+* Adapt.device.browser - returns the users browser ``Chrome``.
+* Adapt.device.version - returns the users browser version ``31``.
+* Adapt.device.OS - returns the users operating system ``OS``.
+* Adapt.device.screenSize - returns the current screen size and is updated when the window size changes. Can be one of the following: ``large``, ``medium`` or ``small``.
+* Adapt.device.screenWidth - returns the current screen width and is updated when the window width changes. ``1024``.
+* Adapt.device.touch - returns ``true`` or ``false`` based upon if the device is touch enabled.
+
+This object is setup in device.js.
+
 ##### Adapt.currentLocation
 
 This is set by the router and tracks the current location of the user. This can be two of the following:
@@ -171,14 +184,6 @@ if (Adapt.currentLocation !== "course") {
     });
 }
 ````
-
-##### Adapt.screenWidth
-
-This is set by the device.js module and is updated anytime the device's screen width changes. Will return the window width as a number.
-
-##### Adapt.screenSize
-
-This is set by the device.js module and is updated anytime the device's screen size changes. Will display either ``'large'``, ``'medium'`` or ``'small'``.
 
 ### Events
 
