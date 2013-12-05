@@ -86,3 +86,4 @@ To register a new package:
 
 Once you are ready to publish, just do `bower register <plugin-name> <git-endpoint-url>`. Your plugin will be published into the registry, you can confirm this by doing `bower search <plugin-name>`. 
 
+**Next** - 
