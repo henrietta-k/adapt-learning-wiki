@@ -30,3 +30,5 @@ The output framework contains all the source files and programs required to prod
 grunt build
 ```
 The build task compiles and compresses your course and prepares it for distribution. The output is located in the *build* directory.
+
+_TODO - How do I view the built output in a browser? How do I create a local server?_
