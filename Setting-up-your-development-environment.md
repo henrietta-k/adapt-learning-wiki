@@ -34,4 +34,4 @@ The build task compiles and compresses your course and prepares it for distribut
 _TODO - How do I view the built output in a browser? How do I create a local server?_
 
 
-Next - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
+**Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
