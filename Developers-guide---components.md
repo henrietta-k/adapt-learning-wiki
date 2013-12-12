@@ -111,6 +111,16 @@ Classes should be descriptive and prefixed with the components name. All Less st
   }
 }
 ````
+###### Theme inheritence
+
+All components should inherit from the theme. The following Less variables are available:
+
+- ``@primary-color``
+- ``@secondary-color``
+- ``@tertiary-color``
+- ``@foreground-color``
+
+##### Templates
 
 ##### Assets
 
