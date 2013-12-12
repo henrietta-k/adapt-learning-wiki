@@ -19,6 +19,7 @@ You can get the latest version of the framework from our [GitHub repository](htt
 ```bash
 $ git clone git@github.com:adaptlearning/adapt_framework.git adapt/framework
 $ cd adapt/framework
+$ npm install
 ```
 
 Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
