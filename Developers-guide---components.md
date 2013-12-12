@@ -4,7 +4,10 @@ In Adapt we have a concept of components. These components are the main interact
 
 #### Presentational components
 
-A presentational component should be used to display content with little interactivity. A few components that full under this category are: Graphic, Media, Hot Graphic and Narrative.
+A presentational component should be used to display content with little interactivity. A few components that full under this category are: Graphic, Media, Hot Graphic and Narrative. Each presentational component should set the following on it's model:
+
+- ``_isComplete`` (boolean) - Should be set on the model when the user completes the question and used all the avilable attempts.
+- ``_isReady`` (boolean) - Should be set on the model when the component is fully loaded. If this the component has imagery please see the adapt-contrib-narrative component for an exmaple of imageReady.
 
 #### Question components
 
