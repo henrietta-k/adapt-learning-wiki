@@ -39,7 +39,7 @@ All css classes use a dashed approach:
 
 ``.text-component``
 
-Classes should be descriptive and prefixed with the components name
+Classes should be descriptive and prefixed with the components name. All Less styling should be laid out in the following format, where an initial nested class is used to hold everything to do with the component. The only styling outside of this should be the ``.no-touch`` class (used for adding hovers on elements for devices that are not touch).
 
 ````
 .accordion-component {
@@ -111,12 +111,29 @@ Classes should be descriptive and prefixed with the components name
 
 ##### Assets
 
+All assets for a component should be prefixed with the component name:
+
+``media-flashPlayer.swf``
+
 ##### JSON
 
 ###### schema.json
 
+This file is needed for the component to work with the editor. It describes what fields are needed to edit the component.
+
 ###### example.json
 
+Each component should come with an example.json which contains an example of the data structure needed for this component to work. This enables developers to copy this over without the need for an editor.
+
 #### Preset methods
+
+Each component has the following preset methods:
+
+- ``setReadyStatus`` - Sets the component to ready.
+- ``setCompletionStatus`` - Sets the component to complete.
+- ``init`` - Should be used to setup anything before render.
+- ``postRender`` - Should be used to setup anything after render.
+- ``events`` - Should be used to attach events on the component.
+
 
 ##### Question components
