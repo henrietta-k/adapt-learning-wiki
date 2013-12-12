@@ -119,6 +119,21 @@ All components should inherit from the theme. The following Less variables are a
 - ``@secondary-color``
 - ``@tertiary-color``
 - ``@foreground-color``
+- ``@background-color``
+- ``@inverted-foreground-color``
+- ``@inverted-background-color``
+- ``@transparency``
+
+- ``@button-color``
+- ``@button-hover-color``
+- ``@button-disabled-color``
+- ``@button-text-color``
+- ``@button-text-hover-color``
+- ``@button-text-disabled-color``
+
+- ``@component-title-padding``
+- ``@component-body-padding``
+- ``@component-item-padding``
 
 ##### Templates
 
@@ -147,6 +162,5 @@ Each component has the following preset methods:
 - ``init`` - Should be used to setup anything before render.
 - ``postRender`` - Should be used to setup anything after render.
 - ``events`` - Should be used to attach events on the component.
-
 
 ##### Question components
