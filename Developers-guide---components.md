@@ -17,13 +17,97 @@ A question component should be used to test a user or ask a question. Each quest
 
 #### Structure of components
 
+All components should have the following files to work:
+
+- Javascript file (.js)
+- Handlebars file for templates (.hbs)
+- Less file for styling (.less)
+
+There are other files such as our testing suite, bower.json file and LICENSE files. Please view the adapt-component repository
+
 #### Getting started
 
 #### Naming conventions
 
 ##### Javascript
 
+
+
 ##### Less
+
+All css classes use a dashed approach:
+
+``.text-component``
+
+Classes should be descriptive and prefixed with the components name
+
+````
+.accordion-component {
+
+  .accordion-item {
+      border: 1px solid #b9b9b9;
+      margin-bottom: 2px;
+  }
+
+  .accordion-item-icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 10px;
+  }
+
+  .accordion-item .selected .arrow-r {
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 10px;
+  }
+
+  .accordion-item-title {
+      position:relative;
+      display:block;
+      background-color:#fff;
+      text-decoration: none;
+
+      &.visited {
+        background-color:#919191;
+      }
+
+      &.selected {
+        background-color:#b9b9b9;
+      }
+  }
+
+  .accordion-item-title-inner {
+      padding:14px 14px 14px 42px;
+      color:#454545;
+  }
+
+  .accordion-item-body {
+      display:none;
+      border-top: 1px solid #b9b9b9;
+  }
+
+  .accordion-item-body-inner {
+      padding:14px;
+  }
+
+}
+
+.no-touch {
+  .accordion-component {
+    .accordion-item-title {
+      &:hover {
+        background-color:#ccc;
+        color:#fff;
+      }
+      &.visited:hover {
+        background-color:#919191;
+      }
+    }
+  }
+}
+````
 
 ##### Assets
 
@@ -32,3 +116,7 @@ A question component should be used to test a user or ask a question. Each quest
 ###### schema.json
 
 ###### example.json
+
+#### Preset methods
+
+##### Question components
