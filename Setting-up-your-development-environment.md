@@ -32,7 +32,15 @@ grunt build
 ```
 The build task compiles and compresses your course and prepares it for distribution. The output is located in the *build* directory.
 
-_TODO - How do I view the built output in a browser? How do I create a local server?_
+#### Viewing the build
+To view the build package create a local server:
+```bash
+grunt connect:server
+```
+Note: to terminate the server ctrl+c
+
+Now open a browser and navigate to the following URL:
+[http://localhost:9001#/id/co-05](http://localhost:9001#/id/co-05)
 
 
 **Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
