@@ -73,14 +73,14 @@ These files will be compiled and included in the course output.
 To register a new package:
 
 * There must be a valid manifest `bower.json` in the current working directory. 
-* Your plugin version should use semver Git tags.
-* Your package must be available at a Git endpoint (e.g., GitHub)
-* Bower must be configured to use `adapt-bower-repository.herokuapp.com` as its registry. To do this create `.bowerrc` in your plugins directory and set the `register` property to `adapt-bower-repository.herokuapp.com`.
+* Your plugin version should use server Git tags.
+* Your package must be available at a Git endpoint (e.g. GitHub)
+* Bower must be configured to use `adapt-bower-repository.herokuapp.com` as its registry. To do this create `.bowerrc` in your plugins directory and set the `registry` property to `adapt-bower-repository.herokuapp.com`.
 
 ```js
 //contents of .bowerrc
 {
-    "register" : "adapt-bower-repository.herokuapp.com"
+    "registry" : "adapt-bower-repository.herokuapp.com"
 }
 ```
 
