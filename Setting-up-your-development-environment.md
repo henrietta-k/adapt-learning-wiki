@@ -26,6 +26,16 @@ Alternatively you can [download](https://github.com/adaptlearning/adapt_framewor
 
 The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process. Run all of the grunt tasks from your output framework directory.
 
+#### The Core Bundle
+In order to for an Adapt course to run correctly, you will need to install the Core Bundle. This bundle contains a variety of basic components, as well as a vanilla theme used to display the course.
+
+*-todo- add menu information once it is contained within the bunde*
+
+To install the core bundle, enter the following command:
+```bash
+adapt install
+```
+
 #### Building
 ```bash
 grunt build
