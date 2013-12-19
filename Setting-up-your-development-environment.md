@@ -52,5 +52,8 @@ Note: to terminate the server ctrl+c
 Now open a browser and navigate to the following URL:
 [http://localhost:9001#/id/co-05](http://localhost:9001#/id/co-05)
 
+You should see the default menu view appropriate to the device you're using.
+
+*-todo- change above link to menu rather than content, once menu is available*
 
 **Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
