@@ -58,3 +58,15 @@ Adapt.on('device:resize', function(windowWidth) {
     console.log("Any time the window resizes I will be called and here's the new window width: ", windowWidth);
 });
 ````
+
+### <a name="mediator"></a>Mediator
+
+The mediator is an events based module that enables developers to 'tap' in to Adapt's core functionality and prevent the default behaviour. It is important for extensions to be able to delay a core function being called, like displaying feedback to a user.
+
+The core open ended events are attached through the ``Adapt.mediator.default`` method:
+
+````
+Adapt.mediator.default('questionView:feedback', function() {
+    // This callback will be called if no ``event.preventDefault()`` is called
+})
+````
