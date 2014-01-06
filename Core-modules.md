@@ -8,6 +8,8 @@
 
 [Device](#device)
 
+[Mediator](#mediator)
+
 ### <a name="app"></a>App
 
 This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
