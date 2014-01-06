@@ -63,7 +63,7 @@ Adapt.on('device:resize', function(windowWidth) {
 
 ### <a name="mediator"></a>Mediator
 
-The mediator is an events based module that enables developers to 'tap' in to Adapt's core functionality and prevent the default behaviour. It is important for extensions to be able to delay a core function being called, like displaying feedback to a user.
+The mediator is an events based module that enables developers to 'tap' in to Adapt's core functionality and prevent the default behaviour. It is important for extensions to be able to delay a core function being called, like displaying feedback to a user. Once a default callback has been created it can never be overwritten.
 
 The core open ended events are attached through the ``Adapt.mediator.default`` method:
 
@@ -87,7 +87,7 @@ To add a callback to the mediator use ``Adapt.mediator.on`` and pass the event n
 * ``event`` - Use ``event.preventDefault();`` to prevent the default callback from happening.
 * ``attributes`` - This is the original attributes passed into the event.
 
-Any amount of callbacks can be attached to a default callback and all of the callbacks will be called before the default.
+Any amount of callbacks can be attached to a default callback and all of the callbacks will be called before the default:
 
 ````
 var feedback {
