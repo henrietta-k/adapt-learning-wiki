@@ -37,8 +37,29 @@ Adapt.on('pageView:postRender', function(view) {
 ````
 
 Below is a list of all the core view events:
-
+##### Core Events
 * ('app:dataReady') - Triggered when all the course data is loaded.
 * ('adapt:initialize') - Triggered when adapt is ready to start the router.
 * ('router:menu', [currentModel]) - Triggered when a route hits a menu.
 * ('router:page', [currentModel]) - Triggered when a route hits a page.
+* ('remove') - Is used by Adapt to trigger an event to remove all views.
+* ('device:resize', [Adapt.device.screenWidth]) - Triggered when the window resizes.
+* ('device:changed', [Adapt.device.screenSize]) - Triggered when the device size changes.
+##### Core Views
+* ('menuView:preRender', [currentView]) - Triggered when a menuView has initialized.
+* ('menuView:postRender', [currentView]) - Triggered when a menuView has rendered.
+* ('pageView:preRender', [currentView]) - Triggered when a pageView has initialized.
+* ('pageView:postRender', [currentView]) - Triggered when a pageView has rendered.
+* ('pageView:ready', [currentView]) - Triggered when all the assets are loaded for a page.
+* ('articleView:preRender', [currentView]) - Triggered when a articleView has initialized.
+* ('articleView:postRender', [currentView]) - Triggered when a articleView has rendered.
+* ('blockView:preRender', [currentView]) - Triggered when a blockView has initialized.
+* ('blockView:postRender', [currentView]) - Triggered when a blockView has rendered.
+* ('componentView:preRender', [currentView]) - Triggered when a componentView has initialized.
+* ('componentView:postRender', [currentView]) - Triggered when a componentView has rendered.
+* ('navigationView:preRender', [navigationView]) - Triggered when the navigationView has initialized.
+* ('navigationView:postRender', [navigationView]) - Triggered when the navigationView has rendered.
+* ('questionView:showFeedback', [feedback]) - Triggered when a question shows feedback.
+
+##### Navigation Events
+* ('navigation:menu') - Triggered when the menu button is pressed.
