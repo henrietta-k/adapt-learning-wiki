@@ -28,6 +28,8 @@ this.listenTo(Adapt.components, 'change', this.componentChangedAttribute);
 // Using 'change' listens to all changes on a model 
 ````
 
+### Adapt built-in events
+
 Adapt also allows modules to plugin into events through events triggered by core views. These events can be listened to by using the following syntax:
 
 ````
