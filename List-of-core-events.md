@@ -45,6 +45,7 @@ Below is a list of all the core view events:
 * ('remove') - Is used by Adapt to trigger an event to remove all views.
 * ('device:resize', [Adapt.device.screenWidth]) - Triggered when the window resizes.
 * ('device:changed', [Adapt.device.screenSize]) - Triggered when the device size changes.
+
 ##### Core Views
 * ('menuView:preRender', [currentView]) - Triggered when a menuView has initialized.
 * ('menuView:postRender', [currentView]) - Triggered when a menuView has rendered.
