@@ -45,6 +45,8 @@ the router will follow this order:
 * Search through the contentObjects collection and find the model with that "_id" and render either a menu or a page.
 * Add a class to the "#wrapper" element based upon location, either 'location-content' or 'location-menu'.
 
+The ``navigateToParent`` function finds the parent item of the current content object, and navigates to it. Using this function, 'upward' navigation of a course can be achieved - i.e. navigation between the current content and it's parent. The function is triggered by the ``navigation:menu`` event - currently, NavigationView triggers this event when the navigation menu icon is clicked.
+
 ### <a name="device"></a>Device
 
 The device module detects which browser the user is on and adds the following classes to the ``<HTML>`` tag:
