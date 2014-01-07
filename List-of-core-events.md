@@ -28,3 +28,17 @@ this.listenTo(Adapt.components, 'change', this.componentChangedAttribute);
 // Using 'change' listens to all changes on a model 
 ````
 
+Adapt also allows modules to plugin into events through events triggered by core views. These events can be listened to by using the following syntax:
+
+````
+Adapt.on('pageView:postRender', function(view) {
+    // 'view' is the current view triggering the event
+})
+````
+
+Below is a list of all the core view events:
+
+* ('app:dataReady') - Triggered when all the course data is loaded.
+* ('adapt:initialize') - Triggered when adapt is ready to start the router.
+* ('router:menu', [currentModel]) - Triggered when a route hits a menu.
+* ('router:page', [currentModel]) - Triggered when a route hits a page.
