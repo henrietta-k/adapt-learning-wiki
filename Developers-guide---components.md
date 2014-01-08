@@ -16,7 +16,7 @@ A question component should be used to test a user or ask a question. Each quest
 - ``_isPassed`` (boolean) - Should be set on the model when the user gets this question correct.
 - ``_isComplete`` (boolean) - Should be set on the model when the user completes the question and used all the avilable attempts.
 - ``_isReady`` (boolean) - Should be set on the model when the component is fully loaded. If this the component has imagery please see the adapt-contrib-narrative component for an exmaple of imageReady.
-- ``_weight`` (boolean) - Each question component should have a weight. This is either taken from the global ``_weight`` attribute or from the components individual ``_weight`` attribute.
+- ``_questionWeight`` (numeric) - Each question component should have a weight. This is either taken from the global ``_questionWeight`` attribute or from the components individual ``_questionWeight`` attribute.
 
 #### Structure of components
 
