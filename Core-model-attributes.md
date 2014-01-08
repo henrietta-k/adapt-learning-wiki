@@ -32,6 +32,8 @@ Default: ``false``
 ##### _questionWeight
 Default: ``1``
 
+The weight of a particular question, which is used when calculating the score.
+
 ##### buttons
 Default:
 ```
