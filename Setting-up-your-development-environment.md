@@ -24,7 +24,7 @@ $ npm install
 
 Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
 
-The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process. Run all of the grunt tasks from your output framework directory.
+The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
 
 #### The Core Bundle
 In order to for an Adapt course to run correctly, you will need to install the Core Bundle. This bundle contains a variety of basic components, as well as a vanilla theme used to style and display the course.
@@ -50,7 +50,7 @@ $ grunt connect:server
 Note: to terminate the server ctrl+c
 
 Now open a browser and navigate to the following URL:
-[http://localhost:9001#/id/co-05](http://localhost:9001#/id/co-05)
+[http://localhost:9001/](http://localhost:9001/)
 
 You should see the default menu view appropriate to the device you're using.
 
