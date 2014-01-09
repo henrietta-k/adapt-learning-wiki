@@ -54,6 +54,4 @@ Now open a browser and navigate to the following URL:
 
 You should see the default menu view appropriate to the device you're using.
 
-*-todo- change above link to menu rather than content, once menu is available*
-
 **Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
