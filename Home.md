@@ -2,6 +2,7 @@
 Welcome to the developer documentation for the Adapt Learning Framework! 
 
 ## Getting started as a developer
+* [The Framework in five minutes](wiki/framework-in-five-minutes)
 * [Setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)
 * [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
 * [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
