@@ -3,7 +3,7 @@ Before you get started with Adapt, make sure you [install Node.js](http://nodejs
 
 All of the components you'll need can be installed with [npm](https://npmjs.org/) which **comes installed with Node.js**
 
-```js
+```bash
 $ npm install adapt-cli -g
 $ npm install grunt-cli -g
 $ npm install bower -g
