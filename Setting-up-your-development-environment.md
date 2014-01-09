@@ -4,9 +4,9 @@ Before you get started with Adapt, make sure you [install Node.js](http://nodejs
 All of the components you'll need can be installed with [npm](https://npmjs.org/) which **comes installed with Node.js**
 
 ```js
-npm install adapt-cli -g
-npm install grunt-cli -g
-npm install bower -g
+$ npm install adapt-cli -g
+$ npm install grunt-cli -g
+$ npm install bower -g
 ```
 
 ### Get the Adapt output framework
@@ -33,19 +33,19 @@ In order to for an Adapt course to run correctly, you will need to install the C
 
 To install the core bundle, enter the following command:
 ```bash
-adapt install
+$ adapt install
 ```
 
 #### Building
 ```bash
-grunt build
+$ grunt build
 ```
 The build task compiles and compresses your course and prepares it for distribution. The output is located in the *build* directory.
 
 #### Viewing the build
 To view the build package create a local server:
 ```bash
-grunt connect:server
+$ grunt connect:server
 ```
 Note: to terminate the server ctrl+c
 
