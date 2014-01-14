@@ -27,7 +27,7 @@ Modify both of these values and save your code.
 
 Now you will need to re-build your course to see your modifications. To do this you will need to open your terminal window (not the terminal running the server), and run the following command.
 
-``$ grunt build''
+``$ grunt build``
 
 After a short period of time, the build process will complete. Switch over to your browser and refresh the course. You will now see at the top of the course the name and description have been updated.
 
