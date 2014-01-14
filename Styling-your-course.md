@@ -15,3 +15,5 @@ Simple customisation is possible by changing the built-in variable in ```less/va
 - **@inverted-foreground-color**
 - **@inverted-background-color**
 - **@transparency**
+
+**Next** - [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
