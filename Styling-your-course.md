@@ -18,7 +18,7 @@ Simple customisation is possible by changing the built-in variable in ```less/va
 
 ###How to modify the vanilla theme
 
-Locate the vanilla theme located in the following directory:
+Locate the vanilla theme from the following directory:
 ``src/theme/adapt-contrib-vanilla`` here you will find all of the elements which make up an Adapt theme.
 
 The ```/less/``` folder contains all of the style elements and it is here where we can quite quickly change the look of your course.
