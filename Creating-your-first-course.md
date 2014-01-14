@@ -44,6 +44,7 @@ A page item will direct the user to an article, a menu will direct a user to a s
 Go ahead and copy the first example:
 
 ```js
+...
     {
         "_id":"co-05",
         "_parentId":"course",
@@ -57,6 +58,7 @@ Go ahead and copy the first example:
         },
         "linkText":"View"
     }
+...
 ```
 
 Scroll to the bottom of your document and locate the last instance of ````}````
@@ -67,6 +69,7 @@ _When inserting any new json objects, always make sure you include this comma be
 On a new line directly after paste the code you copied earlier, so the end of your file should now look like the following:
 
 ```js
+...
     },
     {
         "_id":"co-05",
@@ -100,6 +103,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 You should now have something which looks like this..
 
 ```js
+...
     },
     {
         "_id":"a-50",
@@ -126,6 +130,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 You should have something that looks like this:
 
 ```js
+...
     },
     {
         "_id":"b-150",
@@ -135,6 +140,7 @@ You should have something that looks like this:
         "title":"Title of first block",
         "body":"Body text for block"
     }
+]
 ```
 
 Modify the title and body and save your code.
@@ -149,6 +155,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 You should have something that looks like this:
 
 ```js
+...
     },
     {
         "_id":"c-200",
@@ -159,7 +166,7 @@ You should have something that looks like this:
         "_layout":"left",
         "title":"Title of our very first component",
         "body":"Whoo - if we get this rendering we've made the big time"
-    }
+]
 ```
 
 Modify the title and body and save your code. Now you will need to re-build your course and refresh your browser. From the main menu you will be able to click your new menu item. You should now see your article, block and component displaying on screen :)
