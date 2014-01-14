@@ -4,7 +4,7 @@
 Navigate to ```src/course/``` here you will find the following files/folders:
 
 ####Config.js
---to-do--
+The config file is used to store any settings for your course. For example which folder to use as the default language or any LMS tracking settings.
 
 ####en
 The folder ```/en/``` folder contains all of the language specific data of your course. "en" is used in this instance to hold all English data and assets.
