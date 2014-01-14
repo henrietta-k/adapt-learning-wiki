@@ -45,11 +45,11 @@ The build task compiles and compresses your course and prepares it for distribut
 #### Viewing the build
 To view the build package create a local server:
 ```bash
-$ grunt connect:server
+$ grunt server
 ```
 Note: to terminate the server ctrl+c
 
-Now open a browser and navigate to the following URL:
+This will now open a browser and navigate to the following URL:
 [http://localhost:9001/](http://localhost:9001/)
 
 You should see the default menu view appropriate to the device you're using.
