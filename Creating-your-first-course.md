@@ -43,7 +43,7 @@ A page item will direct the user to an article, a menu will direct a user to a s
 
 Go ahead and copy the first example:
 
-````
+```js
     {
         "_id":"co-05",
         "_parentId":"course",
@@ -57,7 +57,7 @@ Go ahead and copy the first example:
         },
         "linkText":"View"
     }
-````
+```
 
 Scroll to the bottom of your document and locate the last instance of ````}````
 Update this to include a comma, ````},````
@@ -66,7 +66,7 @@ _When inserting any new json objects, always make sure you include this comma be
 
 On a new line directly after paste the code you copied earlier, so the end of your file should now look like the following:
 
-````
+```js
     },
     {
         "_id":"co-05",
@@ -82,7 +82,7 @@ On a new line directly after paste the code you copied earlier, so the end of yo
         "linkText":"View"
     }
 ]
-````
+```
 
 * Change the "_id" to an unused reference, for this example we want the item to be displayed last in the menu, so modify it to ```"_id":"co-25",```
 * Change the title and the body, just as you did in the previous example.
@@ -99,7 +99,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 
 You should now have something which looks like this..
 
-````
+```js
     },
     {
         "_id":"a-50",
@@ -110,7 +110,7 @@ You should now have something which looks like this..
         "body":"Body text for article"
     }
 ]
-````
+```
 
 Modify the title and body and save your code.
 
@@ -125,7 +125,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 
 You should have something that looks like this:
 
-````
+```js
     },
     {
         "_id":"b-150",
@@ -135,7 +135,7 @@ You should have something that looks like this:
         "title":"Title of first block",
         "body":"Body text for block"
     }
-````
+```
 
 Modify the title and body and save your code.
 
@@ -148,7 +148,7 @@ The next important attribute to edit is the '_parentId' item, this is what links
 
 You should have something that looks like this:
 
-````
+```js
     },
     {
         "_id":"c-200",
@@ -160,7 +160,7 @@ You should have something that looks like this:
         "title":"Title of our very first component",
         "body":"Whoo - if we get this rendering we've made the big time"
     }
-````
+```
 
 Modify the title and body and save your code. Now you will need to re-build your course and refresh your browser. From the main menu you will be able to click your new menu item. You should now see your article, block and component displaying on screen :)
 
