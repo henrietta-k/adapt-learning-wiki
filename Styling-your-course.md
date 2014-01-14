@@ -28,8 +28,10 @@ Open the file ``variables.less``
 Modify the @primary-color & @secondary-color values to:
 
 ```
-@primary-color:#3eb4e4;
-@secondary-color:#1b87b2;
+@primary-color:#BE3550;
+@secondary-color:#74104B;
 ```
+
+Save your file, rebuild the course and preview in your browser. You should see that your course is now displaying in a red tone. Continue to modify the remaining variables in the .less file for further customisation.
 
 **Next** - [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
