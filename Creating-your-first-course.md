@@ -1,4 +1,4 @@
-**First** - Make sure you have followed the documentation on [Setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment).
+**First** - Make sure you have followed the documentation on [setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment).
 
 ### Locating the course files
 Navigate to ```src/course/``` here you will find the following files/folders:
@@ -60,8 +60,10 @@ Go ahead and copy the first example:
 ````
 
 Scroll to the bottom of your document and locate the last instance of ````}````
-
 Update this to include a comma, ````},````
+
+_When inserting any new json objects, always make sure you include this comma between any objects, otherwise your course will fail to build._
+
 On a new line directly after paste the code you copied earlier, so the end of your file should now look like the following:
 
 ````
@@ -91,16 +93,16 @@ Now you will need to re-build your code and refresh the browser, should now see 
 ####articles.json
 Now that you have created your item in the menu you will want to create an 'Article'. Open the articles.json file, just as we did in the last example, copy the first json object and paste this at the bottom of your document.
 
-Again we need to modify the '_id' attribute of this article, so change the id to 'a-99'.
+Again we need to modify the '_id' attribute of this article, so change the id to 'a-50'.
 
-The next important attribute to edit is the '_parent' item, this is what links the article to the course object. The id here should be the '_id' which we assigned to our course object earlier. So update the value to 'co-25' to match.
+The next important attribute to edit is the '_parentId' item, this is what links the article to the course object. The id here should be the '_id' which we assigned to our course object earlier. So update the value to 'co-25' to match.
 
 You should now have something which looks like this..
 
 ````
     },
     {
-        "_id":"a-99",
+        "_id":"a-50",
         "_parentId":"co-25",
         "_type":"article",
         "_classes":"",
@@ -115,13 +117,56 @@ Modify the title and body and save your code.
 ####blocks.json
 Now that we've setup your first article, we can now include a new block element, this will be used later to add components.
 
-Open the blocks.json file,
+Open the blocks.json file, again copy the first json object and paste this at the bottom of your document.
+
+Again we need to modify the '_id' attribute of this block, so change the id to 'b-150'.
+
+The next important attribute to edit is the '_parentId' item, this is what links the block to the article. The id here should be the '_id' which we assigned to our article earlier. So update the value to 'a-50' to match.
+
+You should have something that looks like this:
+
+````
+    },
+    {
+        "_id":"b-150",
+        "_parentId":"a-50",
+        "_type":"block",
+        "_classes":"",
+        "title":"Title of first block",
+        "body":"Body text for block"
+    }
+````
+
+Modify the title and body and save your code.
 
 ####components.json
---to-do--
+Its time to add a component to your course. Again copy the first json object and paste this at the bottom of your document.
+
+Again we need to modify the '_id' attribute of this component, so change the id to 'c-200'.
+
+The next important attribute to edit is the '_parentId' item, this is what links the component to the block. The id here should be the '_id' which we assigned to our block earlier. So update the value to 'b-150' to match.
+
+You should have something that looks like this:
+
+````
+    },
+    {
+        "_id":"c-200",
+        "_parentId":"b-150",
+        "_type":"component",
+        "_component":"text",
+        "_classes":"",
+        "_layout":"left",
+        "title":"Title of our very first component",
+        "body":"Whoo - if we get this rendering we've made the big time"
+    }
+````
+
+Modify the title and body and save your code. Now you will need to re-build your course and refresh your browser. From the main menu you will be able to click your new menu item. You should now see your article, block and component displaying on screen :)
+
 
 ####images/
-Here you can store any images used in your course.
+Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of it's use can be viewed in the components.json file.
 
 
 **Next** - [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
