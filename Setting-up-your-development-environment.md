@@ -17,7 +17,7 @@ The output framework is the generic codebase used to create e-learning content â
 You can get the latest version of the framework from our [GitHub repository](https://github.com/adaptlearning/adapt_framework). You should clone the repository using git.
 
 ```bash
-$ git clone git@github.com:adaptlearning/adapt_framework.git adapt/framework
+$ git clone https://github.com/adaptlearning/adapt_framework.git adapt/framework
 $ cd adapt/framework
 $ npm install
 ```
