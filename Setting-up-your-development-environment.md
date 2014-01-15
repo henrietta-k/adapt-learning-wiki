@@ -1,5 +1,5 @@
 ### Installation
-Before you get started with Adapt, make sure you [install Node.js](http://nodejs.org/).
+Before you get started with Adapt, make sure you [install Node.js](http://nodejs.org/) and [Git](http://git-scm.com/downloads).
 
 All of the components you'll need can be installed with [npm](https://npmjs.org/) which **comes installed with Node.js**
 
