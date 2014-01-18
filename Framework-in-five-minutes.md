@@ -12,7 +12,7 @@ The Framework has a component based architecture. There is a small core with mos
 
 Version 1.0 of the Framework launches with a set of [core components](Core-Components-in-the-Adapt-Learning-Framework)
 
-As a developer you shouldn't normally need to modify code in the core framework. Instead, most of your time will be spent developing [Themes](theming), [Components](components) and additional plugins.
+As a developer you shouldn't normally need to modify code in the core framework. Instead, most of your time will be spent developing [Themes](plugins#theming), [Components](plugins#components) and additional plugins.
 
 ## Content Structure
 
