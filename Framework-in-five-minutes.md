@@ -8,11 +8,11 @@ The Framework is a JavaScript client-side application that delivers Responsive e
 
 E-Learning content is defined in JSON files which are included into a package along with various components or plugins.  The Adapt Framework takes these JSON files, applies them to the included components and builds Responsive HTML5 pages using them.
 
-The Framework has a component based architecture. There is a small core with most functionality delivered by [Adapt Plugins](wiki/plugins).  Most plugins will be **Components** which produce output as part of a course.
+The Framework has a component based architecture. There is a small core with most functionality delivered by [Adapt Plugins](plugins).  Most plugins will be **Components** which produce output as part of a course.
 
 Version 1.0 of the Framework launches with a set of [core components](wiki/Core-Components-in-the-Adapt-Learning-Framework)
 
-As a developer you shouldn't normally need to modify code in the core framework. Instead, most of your time will be spent developing [Themes](wiki/theming), [Components](wiki/components) and additional plugins.
+As a developer you shouldn't normally need to modify code in the core framework. Instead, most of your time will be spent developing [Themes](theming), [Components](components) and additional plugins.
 
 ## Content Structure
 
