@@ -6,4 +6,4 @@ Just about everything in the Adapt Learning Framework is a plugin.  You can crea
 some info on how to create a theme here - or link to the detailed docs
 
 ## Plugins
-some info on how to create a plugins here - or link to the detailed docs
+You should probably go here: [Developing-plugins](Developing-plugins)
