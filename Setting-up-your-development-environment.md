@@ -47,6 +47,11 @@ To view the build package create a local server:
 ```bash
 $ grunt server
 ```
+
+To emulate a scorm package offline use this instead:
+```bash
+$ grunt server-scorm
+```
 Note: to terminate the server ctrl+c
 
 This will now open a browser and navigate to the following URL:
