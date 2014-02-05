@@ -5,6 +5,7 @@ Welcome to the developer documentation for the Adapt Learning Framework!
 * [The Framework in five minutes](wiki/framework-in-five-minutes)
 * [Setting up your development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)
 * [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
+* [Styling your course](https://github.com/adaptlearning/adapt_framework/wiki/Styling-your-course)
 * [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
 * [Adapt Command line interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
 
