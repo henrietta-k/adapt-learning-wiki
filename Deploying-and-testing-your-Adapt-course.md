@@ -1,5 +1,3 @@
-# Deploying and testing your Adapt course
-
 Developing a course takes place in the adapt_framework/src/course folder.  When you want to test or release your creation, there are a few simple commands you should be aware of.
 
 In a Node.js Command Prompt, navigate to the adapt_framework directory.  From here there are several commands you can run:
