@@ -211,3 +211,7 @@ The popup manager should be triggered anytime you open or close a popup. Althoug
 When triggering a popup to open please use ``Adapt.trigger('popup:opened');`` and when closing the popup use ``Adapt.trigger('popup:closed');``.
 
 ### <a name="helpers"></a>Helpers
+
+We have a few helper functions for Handlebars. These can be used in your templates to help with attributes and adding extra logic.
+
+* 
