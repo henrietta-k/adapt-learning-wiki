@@ -214,4 +214,8 @@ When triggering a popup to open please use ``Adapt.trigger('popup:opened');`` an
 
 We have a few helper functions for Handlebars. These can be used in your templates to help with attributes and adding extra logic.
 
-* 
+* ``{{lowerCase title}}`` - returns the attribute 'title' in lowercase. Second attribute can be any string attribute from the model.
+* ``{{numbers @index}}`` - returns a number listing when used within a ``{{#each}} {{/each}}`` iteration.
+* ``{{capitalise title}}`` - returns the attribute 'title' with the first letter capitalised. Second attribute can be any string attribute from the model.
+* ``{{odd @index}}`` - returns either 'even' or 'odd' when used within a ``{{#each}} {{/each}}`` iteration. Used when you need 'odd' or 'even' classes on items.
+* ``{{#if_value_equals _type "component"}}[block of html]{{/if_value_equals}}`` - returns the [block of html] if the first argument is equal to the second.
