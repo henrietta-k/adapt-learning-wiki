@@ -14,6 +14,10 @@
 
 [Notify](#notify)
 
+[Popup Manager](#popupManager)
+
+[Helpers](#helpers)
+
 ### <a name="app"></a>App
 
 This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
@@ -151,3 +155,22 @@ Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collec
 Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use ``'drawer:closeDrawer'``
 
 ### <a name="notify"></a>Notify
+
+Adapt has an internal notifications system and can trigger three types of notifications:
+
+* Popup - Used for when you need to popup some additional information. Similar to the feedback plugin Tutor.
+* Alert - Used to get the users attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
+* Prompt - Used for when the learner needs to make a choice. The prompts can have unlimited button options but we suggest three is the maximum. Each prompt button triggers a callback event.
+
+How to activate a popup:
+```
+var popupObject = {
+    title: "Popup title",
+    body: "This is a popup to add additional information - please close me by pressing the 'x'"
+};
+
+Adapt.trigger('notify:popup', popupObject);
+
+### <a name="popupManager"></a>Popup Manager
+
+### <a name="helpers"></a>Helpers
