@@ -202,6 +202,7 @@ var promptObject = {
     ],
     _showIcon: true
 }
+```
 
 ### <a name="popupManager"></a>Popup Manager
 
