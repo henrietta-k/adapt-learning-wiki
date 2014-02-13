@@ -170,6 +170,38 @@ var popupObject = {
 };
 
 Adapt.trigger('notify:popup', popupObject);
+```
+
+How to activate an alert:
+```
+var alertObject = {
+    title: "Alert",
+    body: "Oops - looks like you've not passed this assessment. Please try again.",
+    confirmText: "Ok",
+    _callbackEvent: "assessment:notPassedAlert",
+    _showIcon: true
+};
+
+Adapt.trigger('notify:alert', alertObject);
+```
+
+How to activate a prompt dialogue:
+```
+var promptObject = {
+    title: "Leaving so soon?",
+    body: "Looks like you're trying to leave this page, yet you haven't completed all the learning. Would you like to stay on this page and complete it?",
+    _prompts:[
+        {
+            promptText: "Yes",
+            _callbackEvent: "pageLevelProgress:stayOnPage",
+        },
+        {
+            promptText: "No",
+            _callbackEvent: "pageLevelProgress:leavePage"
+        }
+    ],
+    _showIcon: true
+}
 
 ### <a name="popupManager"></a>Popup Manager
 
