@@ -206,4 +206,8 @@ var promptObject = {
 
 ### <a name="popupManager"></a>Popup Manager
 
+The popup manager should be triggered anytime you open or close a popup. Although this is a small module it is responsible for returning the users scroll position back to where the popup was triggered. This helps solve a problem where the user can scroll behind a popup and will loose their positioning on the page.
+
+When triggering a popup to open please use ``Adapt.trigger('popup:opened');`` and when closing the popup use ``Adapt.trigger('popup:closed');``.
+
 ### <a name="helpers"></a>Helpers
