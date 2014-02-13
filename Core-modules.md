@@ -10,6 +10,10 @@
 
 [Mediator](#mediator)
 
+[Drawer](#drawer)
+
+[Notify](#notify)
+
 ### <a name="app"></a>App
 
 This is where all the main loading and setup of Adapt begins. All the core Adapt Collections are instantiated and checked whether they have loaded their data.
@@ -113,3 +117,37 @@ Adapt.trigger('questionView:feedback', feedback);
 
 // The default callback does not get called due to event.preventDefault() being called
 ````
+
+### <a name="drawer"></a>Drawer
+
+The Drawer module is a slide out panel from the right hand side. Drawer has two main features:
+
+* Item view - Enables plugins to add to the Drawer list. Each item can have a title, body and custom css class attached to the Drawer item. When a Drawer item is clicked it triggers a callback event.
+* Custom view - Enables plugins to add a custom view into the Drawer pull out. This is then managed via the plugin itself.
+
+To add an item to the Drawer you need to listen to the ``'app:dataReady' event and add your item:
+```
+// Listen to 'app:dataReady'
+Adapt.on('app:dataReady', function() {
+    var drawerObject = {
+        title: "Title of my Drawer item",
+        description: "A nice little description of my drawer item and possibly what I expect to see when clicked on.",
+        className: 'custom-class-added-to-item'
+    };
+    // Syntax for adding a Drawer item
+    // Adapt.drawer.addItem([object], [callbackEvent]);
+    Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');
+});
+```
+
+To add a custom view into the Drawer pull out use the following (remember that this invokes the view straight away):
+
+```
+// Syntax for adding a custom Drawer view
+// Adapt.drawer.triggerCustomView([$element]);
+Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collection}).$el);
+```
+
+Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use ``'drawer:closeDrawer'``
+
+### <a name="notify"></a>Notify
