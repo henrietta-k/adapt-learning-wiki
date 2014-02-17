@@ -202,6 +202,8 @@ var promptObject = {
     ],
     _showIcon: true
 }
+
+Adapt.trigger('notify:prompt', promptObject);
 ```
 
 ### <a name="popupManager"></a>Popup Manager
