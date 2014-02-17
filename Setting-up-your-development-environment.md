@@ -6,7 +6,6 @@ All of the components you'll need can be installed with [npm](https://npmjs.org/
 ```bash
 $ npm install adapt-cli -g
 $ npm install grunt-cli -g
-$ npm install bower -g
 ```
 
 ### Get the Adapt output framework
@@ -14,33 +13,23 @@ $ npm install bower -g
 The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
 
 #### Installing
-You can get the latest version of the framework from our [GitHub repository](https://github.com/adaptlearning/adapt_framework). You should clone the repository using git.
+You can get the latest version of the framework from our [GitHub repository](https://github.com/adaptlearning/adapt_framework) using the Adapt Command Line Interface.
 
 ```bash
-$ git clone https://github.com/adaptlearning/adapt_framework.git adapt/framework
-$ cd adapt/framework
-$ npm install
+$ adapt create course
 ```
+
+This will ask you to confirm the name of the course and the branch to download. A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
 Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
 
 The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
 
-#### The Core Bundle
-In order to for an Adapt course to run correctly, you will need to install the Core Bundle. This bundle contains a variety of basic components, as well as a vanilla theme used to style and display the course.
-
-*-todo- add menu information once it is contained within the bunde*
-
-To install the core bundle, enter the following command:
-```bash
-$ adapt install
-```
-
 #### Building
 ```bash
 $ grunt build
 ```
-The build task compiles and compresses your course and prepares it for distribution. The output is located in the *build* directory.
+The build task compiles and compresses your course and prepares it for viewing and distribution. The output is located in the *build* directory.
 
 #### Viewing the build
 To view the build package create a local server:
