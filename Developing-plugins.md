@@ -76,7 +76,7 @@ To register a new package:
 
 * There must be a valid manifest `bower.json` in the current working directory. 
 * Your plugin version should use server Git tags.
-* Your package must be available at a Git endpoint (e.g. GitHub)
+* Your package must be available at a Git endpoint (e.g. git://GitHub.com/....git)
 
 Once you are ready to publish, run the adapt command line interface and provide the required information.
 
