@@ -34,6 +34,7 @@ The `bower.json` defines several options:
 {
   "name": "adapt-hello-world",
   "version": "0.0.4",
+  "repository": "git://github.com/cajones/adapt-hello-world.git",
   "homepage": "https://github.com/cajones/adapt-hello-world",
   "authors": [
     "Chris Jones <chris.jones@spongeuk.com>"
