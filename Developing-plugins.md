@@ -83,6 +83,6 @@ Once you are ready to publish, run the adapt command line interface and provide 
 $ adapt register
 ```
 
-Your plugin will be published into the registry, you can confirm this by doing `bower search <plugin-name>`. 
+Your plugin will be published into the registry, you can confirm this by doing `adapt search <plugin-name>`. 
 
 **Next** - 
