@@ -20,9 +20,9 @@ bower init
 
 The `bower.json` defines several options:
 
-* `name` (required): The name of your package.
+* `name` [string](required): The name of your package.
 * `version`: A semantic version number (see [semver](http://semver.org/)).
-* `main` [string]: The main javascript AMD module for your package.
+* `main` [string](required): The main javascript AMD module for your package.
 * `repository` [string]: The git repository where the package is available.
 * `keywords` [array]: An array containing one of the following values, `adapt-component`, `adapt-extension`, `adapt-menu` or `adapt-theme`
 * `ignore` [array]: An array of paths not needed in production that you want Bower to ignore when installing your package.
