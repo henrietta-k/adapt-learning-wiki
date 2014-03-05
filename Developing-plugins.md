@@ -76,15 +76,13 @@ To register a new package:
 * There must be a valid manifest `bower.json` in the current working directory. 
 * Your plugin version should use server Git tags.
 * Your package must be available at a Git endpoint (e.g. GitHub)
-* Bower must be configured to use `adapt-bower-repository.herokuapp.com` as its registry. To do this create `.bowerrc` in your plugins directory and set the `registry` property to `adapt-bower-repository.herokuapp.com`.
 
-```js
-//contents of .bowerrc
-{
-    "registry" : "adapt-bower-repository.herokuapp.com"
-}
+Once you are ready to publish, run the adapt command line interface and provide the required information.
+
+```bash
+$ adapt register
 ```
 
-Once you are ready to publish, just do `bower register <plugin-name> <git-endpoint-url>`. Your plugin will be published into the registry, you can confirm this by doing `bower search <plugin-name>`. 
+Your plugin will be published into the registry, you can confirm this by doing `bower search <plugin-name>`. 
 
 **Next** - 
