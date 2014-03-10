@@ -9,13 +9,16 @@ Simple customisation is possible by changing the built-in variable in ```less/va
 ######Main colors
 Use the main colours to store your theme's colors. You can use the main color in combination with other variables that set colors, for example the button color. This will help achieve a consistent look and feel across your course.
 
-- **@primary-color**   
+- **@primary-color**
+
 This is your theme's main color. This variable could be used for the overall color of your theme by assigning it to all UI elements such as button color or an interactive element such as an accordion background color.
 
 - **@secondary-color**
+
 This the the theme's secondary color. Set this variable to something that compliments your primary. An example of where the secondary could be used is the hover colors.
 
 - **@tertiary-color**
+
 The tertiary variable is your theme's supporting color. This could be used where both primary and secondary colors are used together to style a button and a third color is now required for the hover state.
 
 - **@foreground-color**
