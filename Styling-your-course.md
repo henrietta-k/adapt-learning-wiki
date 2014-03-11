@@ -22,10 +22,25 @@ This the the theme's secondary color. Set this variable to something that compli
 The tertiary variable is your theme's supporting color. This could be used where both primary and secondary colors are used together to style a button and a third color is now required for the hover state.
 
 - **@foreground-color**
+
+The foreground color is used as your content's main color. Use this to set properties such as font-color.
+
 - **@background-color**
+
+The background color is used in conjunction with the foreground color. An example would be text component, where if the foreground-color is white then background-color should be set as a darker color.
+
 - **@inverted-foreground-color**
 - **@inverted-background-color**
+
+The inverted foreground/background are used in similar way as above. An ideal situation to use this is the the accordion component. The collapsed label color would be set using the foreground/background and the expanded display text would use the inverted.
+
 - **@transparency**
+
+Transparencies are used for modal popups to fade out the content underneath so the learner's focus is on the popup.
+
+- **transparency-fallback-png**
+
+To support browsers that don't support transparent colour, a fallback is required. This is set by providing a transparent png and setting the source of the file to this variable.
 
 ###How to modify the vanilla theme
 
