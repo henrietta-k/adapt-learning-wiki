@@ -46,6 +46,15 @@ Note: to terminate the server ctrl+c
 This will now open a browser and navigate to the following URL:
 [http://localhost:9001/](http://localhost:9001/)
 
+*N.B.* If you have run the server-scorm task, navigate to this URL to emulate an LMS environment:
+[http://localhost:9001/main.html](http://localhost:9001/main.html)
+
+This allows you to test your SCO without the need for a continual upload / update / reupload cycle. Please note that as this emulation uses an iframe, it is not suitable for device testing. It is intended for testing SCORM functionality only. If you do not require SCORM functionality, please run 
+
+```bash
+$ adapt uninstall contrib-spoor
+```
+
 The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
 
 **Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
