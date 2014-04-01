@@ -173,7 +173,7 @@ Modify the title and body and save your code. Now you will need to re-build your
 
 
 ####images/
-Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of it's use can be viewed in the components.json file.
+Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of its use can be viewed in the components.json file.
 
 
 **Next** - [Styling your course](https://github.com/adaptlearning/adapt_framework/wiki/Styling-your-course)
