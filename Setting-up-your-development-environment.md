@@ -53,6 +53,7 @@ This allows you to test your SCO without the need for a continual upload / updat
 
 ```bash
 $ adapt uninstall contrib-spoor
+$ grunt build
 ```
 
 The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
