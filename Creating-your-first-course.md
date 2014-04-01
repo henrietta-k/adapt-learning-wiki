@@ -1,4 +1,4 @@
-**First** - Make sure you have followed the documentation on [[setting up your development environment|Setting-up-your-development-environment]].
+**First** - Make sure you have followed the documentation on [[setting up your development environment]].
 
 ### Locating the course files
 Navigate to ```src/course/``` here you will find the following files/folders:
@@ -9,7 +9,7 @@ The config file is used to store any settings for your course. For example which
 ####en
 The folder ```/en/``` folder contains all of the language specific data of your course. "en" is used in this instance to hold all English data and assets.
 
-Inside this folder are a number of .json files which all follow contain [[core model attributes|Core-model-attributes]] as well as a directory used to store and language specific images.
+Inside this folder are a number of .json files which all follow contain [[core model attributes]] as well as a directory used to store and language specific images.
 
 Here it's key to work with the files in the following order to better understand how the framework is constructed. In the following documentation we will be looking at the example files provided.
 
@@ -176,4 +176,4 @@ Modify the title and body and save your code. Now you will need to re-build your
 Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of its use can be viewed in the components.json file.
 
 
-**Next** - [[Styling your course|Styling-your-course]]
+**Next** - [[Styling your course]]
