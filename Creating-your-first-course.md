@@ -3,7 +3,7 @@
 ### Locating the course files
 Navigate to ```src/course/``` here you will find the following files/folders:
 
-####Config.js
+####config.json
 The config file is used to store any settings for your course. For example which folder to use as the default language or any LMS tracking settings.
 
 ####en
