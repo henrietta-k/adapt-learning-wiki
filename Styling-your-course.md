@@ -2,7 +2,7 @@ Themes
 ------
 Adapt supports user-defined themes, a special kind of plugin that lets you style your course in a variety of ways. Themes are written in [LESS](http://lesscss.org/), all CSS syntax is supported plus variables and nested rules. The HTML templates are created using [handlebars](http://handlebarsjs.com/).
 
-A basic theme, [adapt-contrib-vanilla](https://github.com/adaptlearning/adapt-contrib-vanilla) is included in the framework. 
+A basic theme, [[adapt-contrib-vanilla]] is included in the framework. 
 
 Simple customisation is possible by changing the built-in variable in ```less/variables.less```
 #####Theme variables
@@ -61,4 +61,4 @@ Modify the @primary-color & @secondary-color values to:
 
 Save your file, rebuild the course and preview in your browser. You should see that your course is now displaying in a red tone. Continue to modify the remaining variables in the .less file for further customisation.
 
-**Next** - [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
+**Next** - [[Developing plugins]]
