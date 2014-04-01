@@ -13,7 +13,7 @@ $ npm install grunt-cli -g
 The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
 
 #### Installing
-You can get the latest version of the framework from our [GitHub repository](https://github.com/adaptlearning/adapt_framework) using the Adapt Command Line Interface.
+You can get the latest version of the framework from our [GitHub repository](/adaptlearning/adapt_framework) using the Adapt Command Line Interface.
 
 ```bash
 $ adapt create course
@@ -21,7 +21,7 @@ $ adapt create course
 
 This will ask you to confirm the name of the course and the branch to download. A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
-Alternatively you can [download](https://github.com/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
+Alternatively you can [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
 
 The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
 
@@ -58,4 +58,4 @@ $ grunt build
 
 The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
 
-**Next** - [Creating your first course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
+**Next** - [[Creating your first course]]
