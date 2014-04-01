@@ -1,4 +1,4 @@
-#### What is a component
+#### What is a component?
 
 In Adapt we have a concept of components. These components are the main interactive elements found on a page. (Multiple Choice Question, Media, Text and Narrative are all types of components). These components can be split into two categories.
 
@@ -11,7 +11,7 @@ A presentational component should be used to display content with little interac
 
 #### Question components
 
-A question component should be used to test a user or ask a question. Each question component should set the following on it's model:
+A question component should be used to test a user or ask a question. Each question component should set the following on its model:
 
 - ``_isPassed`` (boolean) - Should be set on the model when the user gets this question correct.
 - ``_isComplete`` (boolean) - Should be set on the model when the user completes the question and used all the avilable attempts.
@@ -42,7 +42,7 @@ All css classes use a dashed approach:
 
 ``.text-component``
 
-Classes should be descriptive and prefixed with the components name. All Less styling should be laid out in the following format, where an initial nested class is used to hold everything to do with the component. The only styling outside of this should be the ``.no-touch`` class (used for adding hovers on elements for devices that are not touch).
+Classes should be descriptive and prefixed with the component's name. All Less styling should be laid out in the following format, where an initial nested class is used to hold everything to do with the component. The only styling outside of this should be the ``.no-touch`` class (used for adding hovers on elements for devices that are not touch).
 
 ````
 .accordion-component {
