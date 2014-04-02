@@ -9,6 +9,7 @@ Welcome to the developer documentation for the Adapt Learning Framework!
 * [[Developing plugins]]
 * [[Adapt Command line interface]]
 * [[Deploying and testing your Adapt course]]
+* [[Common issues]]
 * Read our [Development Standards](/adaptlearning/documentation/blob/master/01_cross_workstream/developer_requirements.md) - feel free to raise pull requests against this if you disagree with any!
 
 ## Adapt Learning Authoring Tool
