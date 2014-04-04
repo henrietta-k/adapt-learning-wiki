@@ -4,6 +4,13 @@ Adapt supports user-defined themes, a special kind of plugin that lets you style
 
 A basic theme, [adapt-contrib-vanilla](/adaptlearning/adapt-contrib-vanilla) is included in the framework and can be found in the ```theme``` folder 
 
+To switch to a new theme, do the following:
+```bash
+$ adapt uninstall contrib-vanilla
+$ adapt install some-other-theme
+$ grunt build
+```
+
 Simple customisation is possible by changing the built-in variable in ```less/variables.less```
 #####Theme variables
 ######Main colors
