@@ -2,12 +2,12 @@ Semantic Versioning uses a three-part version number: major version; minor versi
 
 For example:-
 
-Given I have a plugin on its first major release the version number would be *1.0.0*
+Given I have a plugin on its first major release the version number would be **1.0.0**
 
-When I release a bug fix then I should increment the patch, to be *1.0.1*
+When I release a bug fix then I should increment the patch, to be **1.0.1**
 
-When I subsequently add a new feature that is backward-compatible I should increase the minor version, to be  *1.1.0* and reset the patch. 
+When I subsequently add a new feature that is backward-compatible I should increase the minor version, to be  **1.1.0** and reset the patch. 
 
-When I release another bug fix to this new release then I should increment the patch, to be *1.1.1*
+When I release another bug fix to this new release then I should increment the patch, to be **1.1.1**
 
-If I introduce breaking changes of my plugin then the major version should be incremented, *2.0.0*
+If I introduce breaking changes of my plugin then the major version should be incremented, **2.0.0**
