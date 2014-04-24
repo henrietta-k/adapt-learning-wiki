@@ -74,6 +74,12 @@ Similar to item color, use these variables to change how item's border styling.
 
 Use these variables to adjust the layout of items. 
 
+####Button
+
+Much like the item variables, these variables cover all states of a button. An example of a button in Adapt is the submit on a question component. Again like the item all the styling applied here will be applied to all buttons in the course.
+
+Make sure buttons are styled, not just for use with a mouse but also for touch on a mobile device. 
+
 ###How to modify the vanilla theme
 
 Locate the vanilla theme from the following directory:
