@@ -11,9 +11,10 @@ $ adapt install some-other-theme
 $ grunt build
 ```
 
-Simple customisation is possible by changing the built-in variable in ```less/variables.less```
-#####Theme variables
-#####Main colors
+Simple customisation is possible by changing the built-in variables in ```less/variables.less```
+
+###Theme variables
+####Main colors
 
 Use the main colours to store your theme's colors. You can use the main color in combination with other variables that set colors, for example the button color. This will help achieve a consistent look and feel across your course.
 
@@ -50,9 +51,28 @@ Transparencies are used for modal popups to fade out the content underneath so t
 
 To support browsers that don't support transparent colour, a fallback is required. This is set by providing a transparent png and setting the source of the file to this variable.
 
-#####Validation Error
+#####Validation error
 
-Use the variables to set a validation error color to items and instruction text. Be careful with what color you set this too since this needs to be clearly visible.
+- **Validation error color**
+
+Use the variables to set a validation error color to items and instruction text. Be careful with what color you set these too since this needs to be clearly visible.
+
+####Item setup
+
+Use the these variables to style component items. A component item is an interactive element, e.g. a multiple choice question option. The variables are applied to every component to help achieve a consistent look to the course.
+
+- **Item color**
+
+Item color variables cover all the states an item can have such has a hover or selected.
+
+- **Item border**
+
+Similar to item color, use these variables to change how item's border styling.
+
+- **Item padding**
+- **Item spacing**
+
+Use these variables to adjust the layout of items. 
 
 ###How to modify the vanilla theme
 
