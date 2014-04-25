@@ -123,6 +123,14 @@ Removing this element or changing the class name would mean that components woul
 
 Remember to use handlebars helpers to make sure only the html that needs to be displayed is rendered. More information about handlebars can be found [here](http://handlebarsjs.com/).
 
+###Theme Javascript
+
+The theme javascript file found in the ```/js/``` folder should be used to add any additional theming that cannot be done using just html/css. For example you could use this to fade in an image when the page loads.
+
+It's strongly recommended that the theme shouldn't be setting any attributes on models, you can however use classes if say you want an effect on a particular page.
+
+You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on say a page postRender event.
+
 ###How to modify the vanilla theme
 
 Locate the vanilla theme from the following directory:
