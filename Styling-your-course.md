@@ -78,7 +78,35 @@ Use these variables to adjust the layout of items.
 
 Much like the item variables, these variables cover all states of a button. An example of a button in Adapt is the submit on a question component. Again like the item all the styling applied here will be applied to all buttons in the course.
 
-Make sure buttons are styled, not just for use with a mouse but also for touch on a mobile device. 
+Make sure buttons are styled, not just for use with a mouse but also for touch on a mobile device.
+
+####Device widths
+
+These variables are used to set the breakpoints in Adapt. For example **@device-width-small** could be used to set your mobile breakpoint.
+
+####Global spacing
+
+Use these variables to set the padding and margins for all titles and body text in your course.
+
+####Navigation
+
+The navigation is the bar that is fixed to the top of the browser window. These variables are used to style the navigation bar and the icons that sit inside it.
+
+####Drawer
+
+Drawer is the panel that slides out from the right of the browser window. These variables are used to style the drawer panel and the items that sit inside it.
+
+####Notify
+
+The variables here apply styling to all notify popup's in your course. This can include popup's like question feedback.
+
+####Fonts
+
+Setup global font styling and properties here.
+
+####Icons
+
+These variables style the SVG icons in your course. Example of one of these icons would be the mcq radio icon. 
 
 ###How to modify the vanilla theme
 
