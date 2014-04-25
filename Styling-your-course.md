@@ -131,6 +131,12 @@ It's strongly recommended that the theme shouldn't be setting any attributes on 
 
 You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on say a page postRender event.
 
+###Theme Assets
+
+Place any assets required for your theme to display correctly in the ```/assets/``` folder. Any course related assets should be placed in the course folder rather than the theme.
+
+Remember to provide smaller sized assets for mobile devices to keep page weights down.
+
 ###How to modify the vanilla theme
 
 Locate the vanilla theme from the following directory:
