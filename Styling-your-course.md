@@ -41,7 +41,7 @@ The background color is used in conjunction with the foreground color. An exampl
 - **@inverted-foreground-color**
 - **@inverted-background-color**
 
-The inverted foreground/background are used in similar way as above. An ideal situation to use this is the the accordion component. The collapsed label color would be set using the foreground/background and the expanded display text would use the inverted.
+The inverted foreground/background are used in similar way as above. An ideal situation to use this is the the narrative component. The strapline background would be the inverted-background-color whilst the text would be the inverted-foreground-color. This should be used when you want an element to stand out from the background.
 
 - **@transparency**
 
