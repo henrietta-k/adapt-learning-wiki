@@ -51,7 +51,7 @@ Transparencies are used for modal popups to fade out the content underneath so t
 
 To support browsers that don't support transparent colour, a fallback is required. This is set by providing a transparent png and setting the source of the file to this variable.
 
-#####Validation error
+####Validation error
 
 - **Validation error color**
 
