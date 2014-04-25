@@ -132,6 +132,9 @@ All components should inherit from the theme. The following Less variables are a
 - ``@component-title-padding``
 - ``@component-body-padding``
 - ``@component-item-padding``
+- ``@validation-error-text-color``
+- ``@validation-error-icon-color``
+- ``@validation-error-border-color``
 
 ##### Templates
 
