@@ -106,7 +106,22 @@ Setup global font styling and properties here.
 
 ####Icons
 
-These variables style the SVG icons in your course. Example of one of these icons would be the mcq radio icon. 
+These variables style the SVG icons in your course. Example of one of these icons would be the mcq radio icon.
+
+###Theme templates
+
+Inside the ```/templates/``` folder you will find editable handlebars templates for various views such as the page and block. 
+
+It's important to understand how Adapt renders these templates before changing them significantly. For example in ```block.hbs``` you will find a div element:
+
+```
+<div class="component-container">
+</div>
+```
+
+Removing this element or changing the class name would mean that components would no longer render.
+
+Remember to use handlebars helpers to make sure only the html that needs to be displayed is rendered. More information about handlebars can be found [here](http://handlebarsjs.com/).
 
 ###How to modify the vanilla theme
 
