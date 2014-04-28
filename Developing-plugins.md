@@ -8,8 +8,39 @@ Each plugin must define itself as an [AMD module](/amdjs/amdjs-api/wiki/AMD).
 The Adapt output framework is pre-configured to search for plugins in our own registry, `http://adapt-bower-repository.herokuapp.com`.
 
 ### Creating a new plugin
-All plugins are [Bower packages](http://bower.io/#defining-a-package); to create your plugin you will need to define your package and then register it with our plugin registry.
+
+
+##### Plugin naming policy
+In order to publish a plugin it is required that a plugin name must:-
+
+1. Be **Unique**, plugin names are available on a first come, first serve basis.
+2. Start with **adapt-**
+3. Not start with **adapt-contrib-**, this is reserved for plugins that have been acknowledged by the Adapt Community as "offically" supported. To achieve contrib status a plugin must conform to the projects standard for code convention and test coverage.
+
+##### Implementing a plugin
+The plugins javascript file must define itself as an AMD module (this is the file specified by the `main` property in your package).
+
+```js
+define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adapt) {
+
+    var MyPlugin = {
+       // implement your component
+    };        
+    return MyPlugin;
+   
+});
+```
+
+If your plugin has a user interface then you can include [LESS](http://lesscss.org/) stylesheets (.less) and [Handlebars](http://handlebarsjs.com/) templates (.hbs).
+These files will be compiled and included in the course output.
+
 ##### Defining a package
+All plugins are [Bower packages](http://bower.io); to create your plugin you will need to define your package and then register it with our plugin registry. If you need to install Bower first, you can do so with the following command:
+
+```
+npm install -g bower
+```
+
 You must create a `bower.json` in your plugin's root, and specify all of its dependencies. This is similar to Node's `package.json`, or Ruby's `Gemfile`, and is useful for locking down a project's dependencies.
 
 You can interactively create a `bower.json` with the following command:
@@ -47,29 +78,6 @@ The `bower.json` defines several options:
   "license": "GPLv3"
 }
 ```
-###### Plugin naming policy
-In order to publish a plugin it is required that a plugin name must:-
-
-1. Be **Unique**, plugin names are available on a first come, first serve basis.
-2. Start with **adapt-**
-3. Not start with **adapt-contrib-**, this is reserved for plugins that have been acknowledged by the Adapt Community as "offically" supported. To achieve contrib status a plugin must conform to the projects standard for code convention and test coverage.
-
-##### Implementing a plugin
-The javascript file that is specified by the `main` property must define itself as an AMD module.
-
-```js
-define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adapt) {
-
-    var MyPlugin = {
-       // implement your component
-    };        
-    return MyPlugin;
-   
-});
-```
-
-If your plugin has a user interface then you can include [LESS](http://lesscss.org/) stylesheets (.less) and [Handlebars](http://handlebarsjs.com/) templates (.hbs).
-These files will be compiled and included in the course output.
 
 ##### Registering a plugin
 To register a new package:
@@ -78,6 +86,13 @@ To register a new package:
 * Your plugin version should use server Git tags.
 * Your package must be available at a Git endpoint (e.g. git://GitHub.com/....git)
 * There must be a valid `.bowerrc` file in the current git repository - this can be taken from the adapt_framework repository.
+
+Example:
+```js
+{
+    "registry"  : "http://adapt-bower-repository.herokuapp.com/"
+}
+```
 
 Once you are ready to publish, run the adapt command line interface and provide the required information.
 
