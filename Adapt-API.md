@@ -155,6 +155,10 @@ Adapt.register("helloWorld", HelloWorld);
 
 Used by BlockView when creating components. The BlockView is able to search the right component, by searching it's children and rendering the right component.
 
+##### Adapt.drawer
+
+Used to access the Drawer module. Please see [here](https://github.com/adaptlearning/adapt_framework/wiki/Core-modules#drawer) for more details.
+
 ##### Adapt.device
 
 Returns an object with the following key/values:
@@ -184,6 +188,28 @@ if (Adapt.currentLocation !== "course") {
     });
 }
 ````
+
+##### Adapt.scrollTo
+
+Used to wrap the ScrollTo plugin to enable events on start and end of the scroll.
+
+```
+//Syntax: Adapt.scrollTo(element, [duration,] options);
+Adapt.scrollTo('.a-05', 2000, {
+    onAfter: function() {
+        console.log('trigger this after page has scrolled');
+    }
+})
+```
+
+For more information on the options object please see [here](https://github.com/flesler/jquery.scrollTo)
+
+By wrapping your page and menu scrollTo methods with Adapt.scrollTo() you get the benefit of these events:
+
+* ``'page:scrollTo'`` - Triggered before the scroll when on a page - passes out the element.
+* ``'menu:scrollTo'`` - Triggered before the scroll when on a menu - passes out the element.
+* ``'page:scrolledTo'`` - Triggered after the scroll when on a page and the scroll has ended - passes out the element.
+* ``'menu:scrolledTo'`` - Triggered after the scroll when on a menu and the scroll has ended - passes out the element.
 
 ### Events
 
