@@ -46,14 +46,24 @@ When initialized, the router sets up the course title as the HTML document title
 
 the router will follow this order:
 
-* Triggers an event 'router:handleId'
 * Remove all currently active views.
-* Show a loading status
-* Set Adapt.currentLocation to the current "_id" being passed in.
+* Show a loading status.
+* Set contentObjects to visited.
+* Set Adapt.currentLocation to the current "_id" being passed in. Add a class to the "#wrapper" element based upon location, either 'location-content' or 'location-menu'.
 * Search through the contentObjects collection and find the model with that "_id" and render either a menu or a page.
-* Add a class to the "#wrapper" element based upon location, either 'location-content' or 'location-menu'.
 
 The ``navigateToParent`` function finds the parent item of the current content object, and navigates to it. Using this function, 'upward' navigation of a course can be achieved - i.e. navigation between the current content and it's parent. The function is triggered by the ``navigation:menu`` event - currently, NavigationView triggers this event when the navigation menu icon is clicked.
+
+When plugins use their own routers it's important to update the Adapt.currentLocation, class and attributes on the #wrapper. A plugin can do this by triggering this event:
+
+```
+// Syntax: Adapt.trigger('router:updateLocation', locationObject);
+Adapt.trigger('router:updateLocation', {location:'my-plugin-name', id:'my-plugin-name-id'});
+```
+
+The ``locationObject`` above allows just the location key and value to be passed on. By doing this the ``id`` will be the same as the ``location`` value.
+
+By setting this you are updating Adapt.currentLocation to the id, adding a class of location-[location] and a data attribute of data-location of the location. Plugins should not be adding classes to the #wrapper element.
 
 ### <a name="device"></a>Device
 
