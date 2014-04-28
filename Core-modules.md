@@ -156,8 +156,14 @@ Custom views should deal with their own removing and closing of Drawer. To close
 
 Drawer passes out a few useful events:
 
-``'drawer:opened'`` - When Drawer is opened
-``'drawer:closed'`` - When Drawer is closed
+``'drawer:opened'`` - When Drawer is opened.
+
+``'drawer:closed'`` - When Drawer is closed.
+
+``'drawer:openedItemView'`` - When Drawer is opening the standard Item View.
+
+``'drawer:openedCustomView'`` - When Drawer is opening a Custom View.
+
 
 ### <a name="notify"></a>Notify
 
