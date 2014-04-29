@@ -183,7 +183,7 @@ If a plugin wanted to find out what the current page model is the can do the fol
 
 ````
 if (Adapt.currentLocation !== "course") {
-    var currentPageModel = Adapt.contentObject.findWhere({
+    var currentPageModel = Adapt.contentObjects.findWhere({
         "_id": Adapt.currentLocation
     });
 }
