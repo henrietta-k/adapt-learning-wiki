@@ -77,15 +77,20 @@ As well as adding these classes, device.js triggers some events:
 
 * ``'device:resize'`` - This should be used to find out when the browser has resized and passes the new window size as an argument.
 
-* ``'device:changed'`` - This is fired when the screen size changes between the set screen sizes ('large', 'medium', 'small') and passes the new screen size as an argument.
-
-
-
 ````
 Adapt.on('device:resize', function(windowWidth) {
     console.log("Any time the window resizes I will be called and here's the new window width: ", windowWidth);
 });
 ````
+
+* ``'device:changed'`` - This is fired when the screen size changes between the set screen sizes ('large', 'medium', 'small') and passes the new screen size as an argument.
+
+````
+Adapt.on('device:changed', function(deviceSize) {
+    console.log("Any time the device size changes I will be called and here's the new device size: ", deviceSize);
+});
+````
+
 
 ### <a name="mediator"></a>Mediator
 
