@@ -26,12 +26,12 @@ Returns a collection of all the current models siblings.
 
 ````
 var mySiblings = Adapt.blocks[0].getSiblings();
-// returns siblings if I'm an article but not return self.
+// returns siblings if I'm a block but not return self.
 ````
 
 ````
 var mySiblings = Adapt.blocks[0].getSiblings(true);
-// returns my siblings if I'm an article and return self
+// returns my siblings if I'm a block and return self
 ````
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
 
