@@ -73,7 +73,13 @@ The device module detects which browser the user is on and adds the following cl
 * Version - ``version-32``
 * OS - ``OS-Mac``
 
-As well as adding these classes, device.js triggers an event ``'device:resize'``. This should be used to find out when the browser has resized and passes the new window size as an argument.
+As well as adding these classes, device.js triggers some events: 
+
+* ``'device:resize'`` - This should be used to find out when the browser has resized and passes the new window size as an argument.
+
+* ``'device:changed'`` - This is fired when the screen size changes between the set screen sizes ('large', 'medium', 'small') and passes the new screen size as an argument.
+
+
 
 ````
 Adapt.on('device:resize', function(windowWidth) {
