@@ -20,12 +20,12 @@ var myParent = Adapt.articles[0].getParent();
 // returns the article's page model.
 ````
 
-##### - <a name="getSiblings"></a>getSiblings()
+##### - <a name="getSiblings"></a>getSiblings(boolean)
 
 Returns a collection of all the current models siblings.
 
 ````
-var mySiblings = Adapt.blocks[0].getSiblings(boolean);
+var mySiblings = Adapt.blocks[0].getSiblings();
 // returns siblings if I'm a block but not return self.
 ````
 
