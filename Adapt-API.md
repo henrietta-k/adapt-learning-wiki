@@ -25,7 +25,7 @@ var myParent = Adapt.articles[0].getParent();
 Returns a collection of all the current models siblings.
 
 ````
-var mySiblings = Adapt.blocks[0].getSiblings();
+var mySiblings = Adapt.blocks[0].getSiblings(boolean);
 // returns siblings if I'm a block but not return self.
 ````
 
