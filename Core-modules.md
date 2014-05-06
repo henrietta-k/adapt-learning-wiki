@@ -188,11 +188,12 @@ Drawer passes out a few useful events:
 
 ### <a name="notify"></a>Notify
 
-Adapt has an internal notifications system and can trigger three types of notifications:
+Adapt has an internal notifications system and can trigger four types of notifications:
 
 * Popup - Used for when you need to popup some additional information. Similar to the feedback plugin Tutor.
 * Alert - Used to get the users attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
 * Prompt - Used for when the learner needs to make a choice. The prompts can have unlimited button options but we suggest three is the maximum. Each prompt button triggers a callback event.
+* Push - Used to push an unobtrusive message to the learner. Similar to Mac OS growl.
 
 How to activate a popup:
 ```
@@ -236,6 +237,23 @@ var promptObject = {
 }
 
 Adapt.trigger('notify:prompt', promptObject);
+```
+
+How to active a push notification:
+```
+var pushObject = {
+    title: "Great work!",
+    body: "You've just completed a page",
+    _timeout:5000,
+    _callbackEvent: "pageCompletion:complete"
+};
+// The _callbackEvent is called when the push notification is clicked.
+// This callback event is not fired when closed.
+Adapt.on('pageCompletion:complete', function() {
+    console.log('A push alert was clicked');
+});
+
+Adapt.trigger('notify:push', pushObject);
 ```
 
 ### <a name="popupManager"></a>Popup Manager
