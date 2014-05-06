@@ -169,11 +169,11 @@ To add a custom view into the Drawer pull out use the following (remember that t
 
 ```
 // Syntax for adding a custom Drawer view
-// Adapt.drawer.triggerCustomView([$element]);
-Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collection}).$el);
+// Adapt.drawer.triggerCustomView([$element], [showBackButton:boolean]);
+Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collection}).$el, false);
 ```
 
-Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use ``'drawer:closeDrawer'``
+Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use ``'drawer:closeDrawer'``. Custom views also have the ability to show a back button. This is set to show by default. The back button takes the user back to the Drawer item view
 
 Drawer passes out a few useful events:
 
