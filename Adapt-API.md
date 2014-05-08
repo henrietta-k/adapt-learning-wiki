@@ -51,7 +51,7 @@ var children = Adapt.pages[0].findDescendants('components');
 // returns all the components that are in the first page.
 ````
 
-##### - <a name="lockedAttributes"></a>Locked Attributes
+##### - <a name="lockedAttributes"></a>set & Locked Attributes
 
 We've taken Backbone's set and validate methods and added some extra functionality that enables Locked Attributes.
 
