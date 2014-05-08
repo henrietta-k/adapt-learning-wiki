@@ -7,7 +7,10 @@ A unique identifier created by the authoring tool.
 The type of the particular item. Examples include ``"type":"block"`` or ``"type":"component"``.
 
 ##### title
-The title text of the particular item.
+The title text of the particular item. This title is mandatory.
+
+##### displayTitle
+This is the title that Adapt displays when viewing a course. This is not mandatory.
 
 ##### body
 The body text content of the particular item.
@@ -48,10 +51,10 @@ Default: ``1``
 
 The weight of a particular question, which is used when calculating the score.
 
-##### buttons
+##### _buttons
 Default:
 ```
-    "buttons": {
+    "_buttons": {
         "submit":"Submit",
         "reset":"Reset",
         "showCorrectAnswer":"Model Answer",
@@ -63,8 +66,8 @@ The buttons attribute stores the label values for particular buttons found throu
 
 ```
 <a href="#" class="button submit">
-  <h6>  
-    {{{buttons.submit}}} 
-  </h6>
+  <span>  
+    {{{_buttons.submit}}} 
+  </span>
 </a>
 ```
