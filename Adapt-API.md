@@ -51,6 +51,35 @@ var children = Adapt.pages[0].findDescendants('components');
 // returns all the components that are in the first page.
 ````
 
+##### - <a name="lockedAttributes"></a>Locked Attributes
+
+We've taken Backbone's set and validate methods and added some extra functionality that enables Locked Attributes.
+
+Now any model extending off Backbone.Model gets the ability to lock attributes and stop them from being changed without consent from other plugins that have changed that attribute.
+
+Let's take the attribute ``_isVisible`` on a component. By default this is set to ``true``. If a plugin would like to change this then they need to pass in the plugin name in the options object:
+
+```
+componentModel.set('_isVisible', false, {pluginName:"_trickle"});
+```
+
+If no pluginName is added then this attribute will not be changed.
+
+Locked Attributes works like a mediator between plugins and allows attributes to change if all plugins agree. Let's add to the situation above - Currently because only one plugin has changed it the attribute will change to ``false``. Another plugin then sets the same component ``_isVisible`` attribute to ``false``. 
+
+```
+// Can be written this way too
+componentModel.set({'_isVisible':false}, {pluginName:"_triggered"});
+```
+
+The attribute stays as ``false``. However if one of the plugins decides to try and show the component:
+
+```
+componentModel.set('_isVisible', true, {pluginName:"_trickle"});
+```
+
+The model will not change to ``true`` as there is still one plugin set to ``false``.
+
 ##### - <a name="setOnChildren"></a>setOnChildren(key, value, [options])
 
 Sets attributes on all children models. An object can also be passed in to allow multiple attributes to be set at once. The standard Backbone options can also be passed in.
