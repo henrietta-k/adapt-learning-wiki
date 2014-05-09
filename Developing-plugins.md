@@ -104,11 +104,11 @@ Your plugin will be published into the registry, you can confirm this by doing `
 
 ##### Plugin versions
 It is possible to maintain multiple version of your plugin, this give you the freedom to change you plugin at any time but still allow existing users migrate to newer versions at their leisure. 
-We strongly recommend that you follow [Semantic version numbers](https://github.com/adaptlearning/adapt_framework/wiki/Semantic) for your releases.
+We strongly recommend that you follow [Semantic version numbers](//github.com/adaptlearning/adapt_framework/wiki/Semantic-Version-numbers) for your releases.
 
-To create a new version of a registered plugin, simple [tag your git repository](http://git-scm.com/book/en/Git-Basics-Tagging) with the version number.
+To create a new version of a registered plugin, simple [tag your git repository](//git-scm.com/book/en/Git-Basics-Tagging) with the version number.
 
-To install a specific version of a plugin using the [Adapt Command Line Interface]() run the install command followed by the name of the plugin, # symbol and then the version number.
+To install a specific version of a plugin using the [Adapt Command Line Interface](//github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface) run the install command followed by the name of the plugin, # symbol and then the version number.
 
 ```bash
 adapt install hello-world#0.0.2
