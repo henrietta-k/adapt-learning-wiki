@@ -1,5 +1,6 @@
-### Registering a plugin
-To register a new package:
+All plugins are Bower packages; to create your plugin you will need to define your package and then register it with our plugin registry.
+
+To register a new plugin:
 
 * There must be a valid manifest `bower.json` in the current working directory. 
 * Your plugin version should use server Git tags.
