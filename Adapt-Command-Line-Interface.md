@@ -1,7 +1,7 @@
 ## Overview
 Adapt Command Line Interface is a set of cross platform command line tools for developers to create, manage and build Adapt courses and plugin.
 
-Full details are available from the [NPM Package](https://npmjs.org/package/adapt-cli).
+Full details are available from the [npm Package](https://npmjs.org/package/adapt-cli).
 
 ### Installation
 To install the Adapt CLI, first be sure to install NodeJS, then from the command line run:-
