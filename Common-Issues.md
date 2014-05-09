@@ -4,7 +4,7 @@ On Windows, when running ```$ npm install adapt-cli -g```, you receive an error 
 ```
 Oh dear, something went wrong. I'm terribly sorry. git is not installed or is not in the path
 ```
-To fix this, add GIT to your system path, as documented at http://blog.countableset.ch/2012/06/07/adding-git-to-windows-7-path/
+To fix this, check that GIT is installed correctly and add GIT to your system path, as documented at http://blog.countableset.ch/2012/06/07/adding-git-to-windows-7-path/
 
 ## Course creation
 ### 'Can't stat' error when creating a course
