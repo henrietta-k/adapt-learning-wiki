@@ -1,4 +1,4 @@
-##### Registering a plugin
+### Registering a plugin
 To register a new package:
 
 * There must be a valid manifest `bower.json` in the current working directory. 
@@ -21,7 +21,7 @@ $ adapt register
 
 Your plugin will be published into the registry, you can confirm this by doing `adapt search <plugin-name>`. 
 
-##### Plugin versions
+### Plugin versions
 It is possible to maintain multiple version of your plugin, this give you the freedom to change you plugin at any time but still allow existing users migrate to newer versions at their leisure. 
 We strongly recommend that you follow [Semantic version numbers](//github.com/adaptlearning/adapt_framework/wiki/Semantic-Version-numbers) for your releases.
 
