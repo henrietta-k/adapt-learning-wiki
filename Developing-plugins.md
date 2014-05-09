@@ -79,4 +79,4 @@ The `bower.json` defines several options:
 }
 ```
 
-**Next** - [Registering a plugin](https://github.com/adaptlearning/adapt_framework/wiki/Registering-plugins)
+**Next** - [Registering a plugin](https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin)
