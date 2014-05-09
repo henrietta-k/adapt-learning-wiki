@@ -10,6 +10,7 @@ $ npm install adapt-cli -g
 ```
 
 ### CLI features
+* Create courses
 * Search for plugins
 * Install a plugin
 * Uninstall a plugin
