@@ -10,4 +10,4 @@ When I subsequently add a new feature that is backward-compatible I should incre
 
 When I release another bug fix to this new release then I should increment the patch, to be **1.1.1**
 
-If I introduce breaking changes of my plugin then the major version should be incremented, **2.0.0**
+If I introduce breaking changes of my plugin then the major version should be incremented and the minor version and patch reset, **2.0.0**
