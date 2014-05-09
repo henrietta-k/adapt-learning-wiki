@@ -34,5 +34,3 @@ adapt install hello-world#0.0.2
 ```
 
 Would for example, install the adapt-hello-world plugin version 0.0.2.
-
-Next ...
