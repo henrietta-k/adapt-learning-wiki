@@ -64,7 +64,7 @@ Below is a list of all the core view events:
 * ('componentView:postRender', [currentView]) - Triggered when a componentView has rendered.
 * ('navigationView:preRender', [navigationView]) - Triggered when the navigationView has initialized.
 * ('navigationView:postRender', [navigationView]) - Triggered when the navigationView has rendered.
-* ('questionView:showFeedback', [feedback]) - Triggered when a question shows feedback.
+* ('questionView:showFeedback', [currentView]) - Triggered when a question shows feedback. Question View automatically sets up feedbackTitle and feedbackMessage as attributes on the currentView.model
 
 ##### Navigation Events
 * ('navigation:menu') - Triggered when the menu button is pressed.
