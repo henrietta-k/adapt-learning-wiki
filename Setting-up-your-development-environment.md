@@ -21,7 +21,7 @@ $ adapt create course
 
 This will ask you to confirm the name of the course and the branch to download. A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
-Alternatively you can [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract it.
+Alternatively you can [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and perform a [manual installation]().
 
 The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
 
