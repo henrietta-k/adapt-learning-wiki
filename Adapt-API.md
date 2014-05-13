@@ -122,6 +122,10 @@ This is a blank method that is used in other views to setup anything on the view
 
 This method renders the view into the dom.
 
+##### - <a name="adapt-view-preRender"></a>preRender()
+
+This is a blank method that is used to setup components before they render.
+
 ##### - <a name="adapt-view-postRender"></a>postRender()
 
 This is a blank method that is used in other views to setup anything on the view or model after rendering.
