@@ -69,3 +69,4 @@ Below is a list of all the core view events:
 
 ##### Navigation Events
 * ('navigation:menu') - Triggered when the menu button is pressed.
+* ('navigation:toggleDrawer') - Triggered when the Drawer toggle button is clicked.
