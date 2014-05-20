@@ -36,7 +36,9 @@ Adapt.trigger('navigation:backButton');
 
 ### <a name="router"></a>Router
 
-When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only two routes. The first route handles loading a course whilst the second route handles an "_id" attribute being passed in. When an "_id" attribute is passed in:
+When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an "_id" attribute being passed in and the third handles routes for plugins. 
+
+When an "_id" attribute is passed in:
 
 ````
 "#/id/co-05"
@@ -47,21 +49,25 @@ the router will follow this order:
 * Remove all currently active views.
 * Show a loading status.
 * Set contentObjects to visited.
-* Set Adapt.currentLocation to the current "_id" being passed in. Add a class to the "#wrapper" element based upon location, either 'location-content' or 'location-menu'.
-* Search through the contentObjects collection and find the model with that "_id" and render either a menu or a page.
+* Set Adapt.location object to the current "_id" being passed in. Add a class to the "#wrapper" element based upon location.
+* Search through the contentObjects collection and find the model with that "_id". Then render either a menu or a page.
 
-The ``navigateToParent`` function finds the parent item of the current content object, and navigates to it. Using this function, 'upward' navigation of a course can be achieved - i.e. navigation between the current content and it's parent. The function is triggered by the ``navigation:menu`` event - currently, NavigationView triggers this event when the navigation menu icon is clicked.
-
-When plugins use their own routers it's important to update the Adapt.currentLocation, class and attributes on the #wrapper. A plugin can do this by triggering this event:
+The ``navigateToPreviousRoute`` method mimics the back button of the browser whilst keeping the user within an Adapt course. This is the default way Adapt routes but can be overwritten like this:
 
 ```
-// Syntax: Adapt.trigger('router:updateLocation', locationObject);
-Adapt.trigger('router:updateLocation', {location:'my-plugin-name', id:'my-plugin-name-id'});
+// Using locked attributes a plugin can change the default navigation
+// Set _canNavigate to false
+Adapt.router.set('_canNavigate', false, {pluginName: '_pageLevelProgress'});
+
+// Listen to navigation event and add custom navigation
+Adapt.on('navigation:backButton', function() {
+    // Always navigate to the course menu
+    Backbone.history.navigate('#', {trigger:true});
+});
 ```
 
-The ``locationObject`` above allows just the location key and value to be passed on. By doing this the ``id`` will be the same as the ``location`` value.
 
-By setting this you are updating Adapt.currentLocation to the id, adding a class of location-[location] and a data attribute of data-location of the location. Plugins should not be adding classes to the #wrapper element.
+Plugins should not be adding classes to the #wrapper element as they get removed by the router - instead we suggest adding them to the HTML element.
 
 ### <a name="device"></a>Device
 
