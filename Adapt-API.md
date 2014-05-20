@@ -114,10 +114,6 @@ This is called when a view is created. This should never be overwritten as it se
 * Trigger 'postRender' event based upon the views type - 'pageView:postRender' - this is used by plugins to tap into a view after render.
 * Call this.postRender() - used to setup anything on the view or model after rendering.
 
-##### - <a name="adapt-view-init"></a>init()
-
-This is a blank method that is used in other views to setup anything on the view or model before rendering.
-
 ##### - <a name="adapt-view-render"></a>render()
 
 This method renders the view into the dom.
