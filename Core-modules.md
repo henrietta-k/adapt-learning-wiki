@@ -66,6 +66,24 @@ Adapt.on('navigation:backButton', function() {
 });
 ```
 
+The router allows a three level routing system for plugins. When using the router to navigate through a plugin the following syntax is used:
+
+``#/:pluginName(/*location)(/*action)``
+
+``pluginName`` is needed whilst ``location`` and ``action`` are optional. When a user is navigated to a plugin route the router sets the Adapt.location object and triggers an event:
+
+```
+// If the plugin route was
+// #/myPluginName/views/edit
+// Then Adapt will trigger:
+Adapt.trigger('router:plugin:myPluginName');
+// Passing out the three levels of the route
+
+// To listen to the plugin route
+Adapt.on('router:plugin:myPluginName', function(pluginName, location, action) {
+    console.log(pluginName, location, action);
+    // Logs 'myPluginName', 'views', 'edit'
+});
 
 Plugins should not be adding classes to the #wrapper element as they get removed by the router - instead we suggest adding them to the HTML element.
 
