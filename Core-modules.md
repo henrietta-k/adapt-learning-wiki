@@ -84,6 +84,7 @@ Adapt.on('router:plugin:myPluginName', function(pluginName, location, action) {
     console.log(pluginName, location, action);
     // Logs 'myPluginName', 'views', 'edit'
 });
+```
 
 Plugins should not be adding classes to the #wrapper element as they get removed by the router - instead we suggest adding them to the HTML element.
 
