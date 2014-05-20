@@ -91,58 +91,6 @@ Adapt.on('device:changed', function(deviceSize) {
 });
 ````
 
-
-### <a name="mediator"></a>Mediator
-
-The mediator is an events based module that enables developers to 'tap' in to Adapt's core functionality and prevent the default behaviour. It is important for extensions to be able to delay a core function being called, like displaying feedback to a user. Once a default callback has been created it can never be overwritten.
-
-The core open ended events are attached through the ``Adapt.mediator.default`` method:
-
-````
-var feedback {
-    title: "Yeah, you got this correct!",
-    body: "It turns out that Adapt is Open Source and free to use."
-}
-
-Adapt.mediator.default('questionView:feedback', function(attributes) {
-    // This callback will be called if no event.preventDefault() is called
-    // The only argument passed in is from the original event arguments
-    // attributes.title = "Yeah, you got this correct!"
-});
-
-Adapt.trigger('questionView:feedback', feedback);
-````
-
-To add a callback to the mediator use ``Adapt.mediator.on`` and pass the event name and callback. The callback is passed two arguments: 
-
-* ``event`` - Use ``event.preventDefault();`` to prevent the default callback from happening.
-* ``attributes`` - This is the original attributes passed into the event.
-
-Any amount of callbacks can be attached to a default callback and all of the callbacks will be called before the default:
-
-````
-var feedback {
-    title: "Yeah, you got this correct!",
-    body: "It turns out that Adapt is Open Source and free to use."
-}
-
-Adapt.mediator.default('questionView:feedback', function(attributes) {
-    // This callback will be called if no event.preventDefault() is called
-    // The only argument passed in is from the original event arguments
-    // attributes.title = "Yeah, you got this correct!"
-});
-
-Adapt.mediator.on('questionView:feedback', function(event, attributes) {
-    event.preventDefault();
-    // If event.preventDefault() is called then the callback above won't be called
-    console.log(attributes.title); // "Yeah, you got this correct!"
-})
-
-Adapt.trigger('questionView:feedback', feedback);
-
-// The default callback does not get called due to event.preventDefault() being called
-````
-
 ### <a name="drawer"></a>Drawer
 
 The Drawer module is a slide out panel from the right hand side. Drawer has two main features:
