@@ -8,8 +8,6 @@
 
 [Device](#device)
 
-[Mediator](#mediator)
-
 [Drawer](#drawer)
 
 [Notify](#notify)
