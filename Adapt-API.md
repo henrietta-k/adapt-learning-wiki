@@ -231,7 +231,7 @@ if (Adapt.currentLocation !== "course") {
 Used to wrap the ScrollTo plugin to enable events on start and end of the scroll.
 
 ```
-//Syntax: Adapt.scrollTo(element, options);
+// Syntax: Adapt.scrollTo(element, options);
 Adapt.scrollTo('.a-05', {
     onAfter: function() {
         console.log('trigger this after page has scrolled');
@@ -247,6 +247,19 @@ By wrapping your page and menu scrollTo methods with Adapt.scrollTo() you get th
 * ``'menu:scrollTo'`` - Triggered before the scroll when on a menu - passes out the element.
 * ``'page:scrolledTo'`` - Triggered after the scroll when on a page and the scroll has ended - passes out the element.
 * ``'menu:scrolledTo'`` - Triggered after the scroll when on a menu and the scroll has ended - passes out the element.
+
+##### Adapt.navigateToElement
+
+This allows you to navigate to any core element within a page (article, block or component).
+
+```
+// Syntax: Adapt.navigateToElement(element, type, options);
+Adapt.navigateToElement('.b-22', 'blocks', {duration: 3000});
+```
+
+This will navigate to a block with the ``_id`` 'b-22' - even if it's on another page. It's wrapped around ``Adapt.scrollTo`` so you get the benefit of the events being triggered.
+
+For more information on the options object please see [here](https://github.com/flesler/jquery.scrollTo).
 
 ### Events
 
