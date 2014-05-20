@@ -230,6 +230,7 @@ Adapt.on('router:location', function(locationObject) {
         Adapt.router.set('_canNavigate', true, {pluginName:'_lockedPageNavigation'});
     }
 });
+```
 
 ##### Adapt.scrollTo
 
