@@ -205,22 +205,18 @@ Returns an object with the following key/values:
 
 This object is setup in device.js.
 
-##### Adapt.currentLocation
+##### Adapt.location
 
-This is set by the router and tracks the current location of the user. This can be two of the following:
+This is set by the router and tracks the current location of the user. This contains the following:
 
-* "course" - This is set when the router goes to the first route.
-* ":id" - This "id" is set based upon what attribute is passed into the router.
-
-If a plugin wanted to find out what the current page model is the can do the following:
-
-````
-if (Adapt.currentLocation !== "course") {
-    var currentPageModel = Adapt.contentObjects.findWhere({
-        "_id": Adapt.currentLocation
-    });
-}
-````
+* ``_contentType`` - Can be 'menu', 'page' or null/undefined
+* ``_currentId`` - Is the current _id of a core object (course, contentObject, article, block or component)
+* ``_currentLocation`` - Can be 'course', 'menu-' + current _id, 'page-' + current _id or for plugins 'pluginName-location-action'
+* ``_lastVisitedMenu`` - Is the _id of the last visited menu
+* ``_lastVisitedPage`` - Is the _id of the last visited page
+* ``_lastVisitedType`` - Can either be 'menu' or 'page'. This stores the lastVisitedType to check if you came from a page or menu.
+* ``_previousContentType`` - Can either be 'menu', 'page' or null/undefined. This is the previous content type. This differs from ``_lastVistedType`` as this is the previous type including plugins whereas ``_lastVisitedType`` is the last visited core content type ('menu' or 'page').
+* ``_previousId`` -  Can either be 'menu', 'page' or null/undefined. Is the previous _id of the last route. 
 
 ##### Adapt.scrollTo
 
