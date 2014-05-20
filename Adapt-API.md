@@ -231,8 +231,8 @@ if (Adapt.currentLocation !== "course") {
 Used to wrap the ScrollTo plugin to enable events on start and end of the scroll.
 
 ```
-//Syntax: Adapt.scrollTo(element, [duration,] options);
-Adapt.scrollTo('.a-05', 2000, {
+//Syntax: Adapt.scrollTo(element, options);
+Adapt.scrollTo('.a-05', {
     onAfter: function() {
         console.log('trigger this after page has scrolled');
     }
