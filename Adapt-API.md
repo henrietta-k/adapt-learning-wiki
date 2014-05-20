@@ -218,6 +218,19 @@ This is set by the router and tracks the current location of the user. This cont
 * ``_previousContentType`` - Can either be 'menu', 'page' or null/undefined. This is the previous content type. This differs from ``_lastVistedType`` as this is the previous type including plugins whereas ``_lastVisitedType`` is the last visited core content type ('menu' or 'page').
 * ``_previousId`` -  Can either be 'menu', 'page' or null/undefined. Is the previous _id of the last route. 
 
+Any plugin is able to find out when the location has changed:
+
+```
+Adapt.on('router:location', function(locationObject) {
+    // Listen to location and if it's a page lock the default back button to not navigate back
+    if (locationObject._contentType = 'page' && locationObject._currentId == 'co-05') {
+        Adapt.router.set('_canNavigate', false, {pluginName:'_lockedPageNavigation'});
+    } else {
+    // If the location is anything else - return to the default navigation
+        Adapt.router.set('_canNavigate', true, {pluginName:'_lockedPageNavigation'});
+    }
+});
+
 ##### Adapt.scrollTo
 
 Used to wrap the ScrollTo plugin to enable events on start and end of the scroll.
