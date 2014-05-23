@@ -9,6 +9,12 @@ To install the Adapt CLI, first be sure to install NodeJS, then from the command
 $ npm install adapt-cli -g
 ```
 
+### Update
+To update the Adapt CLI run the following command
+```bash
+$ npm update adapt-cli -g
+```
+
 ### CLI features
 * Create courses
 * Search for plugins
