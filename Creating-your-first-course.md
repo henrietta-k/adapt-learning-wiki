@@ -166,7 +166,7 @@ You should have something that looks like this:
         "_layout":"left",
         "title":"Title of our very first component",
         "body":"Whoo - if we get this rendering we've made the big time"
-]
+    }
 ```
 
 Modify the title and body and save your code. Now you will need to re-build your course and refresh your browser. From the main menu you will be able to click your new menu item. You should now see your article, block and component displaying on screen :)
