@@ -7,7 +7,7 @@ All core models inherit from AdaptModel (adaptModel.js) and contain the followin
 Returns the current models children as a collection.
 
 ````
-var myChildren = Adapt.articles[0].getChildren();
+var myChildren = Adapt.articles.models[0].getChildren();
 // returns the article's blocks as a collection.
 ````
 
@@ -16,7 +16,7 @@ var myChildren = Adapt.articles[0].getChildren();
 Returns the current models parent as a model.
 
 ````
-var myParent = Adapt.articles[0].getParent();
+var myParent = Adapt.articles.models[0].getParent();
 // returns the article's page model.
 ````
 
@@ -25,12 +25,12 @@ var myParent = Adapt.articles[0].getParent();
 Returns a collection of all the current models siblings.
 
 ````
-var mySiblings = Adapt.blocks[0].getSiblings();
+var mySiblings = Adapt.blocks.models[0].getSiblings();
 // returns siblings if I'm a block but not return self.
 ````
 
 ````
-var mySiblings = Adapt.blocks[0].getSiblings(true);
+var mySiblings = Adapt.blocks.models[0].getSiblings(true);
 // returns my siblings if I'm a block and return self
 ````
 ##### - <a name="findAncestor"></a>findAncestor(ancestors)
@@ -38,7 +38,7 @@ var mySiblings = Adapt.blocks[0].getSiblings(true);
 Finds ancestors of the current model and returns a model. Because of the way our menus system is setup findAncestor only works from components up to page level
 
 ````
-var currentPage = Adapt.components[0].findAncestor('pages');
+var currentPage = Adapt.components.models[0].findAncestor('pages');
 // returns the current page model that is an ancestor of the first component.
 ````
 
@@ -47,7 +47,7 @@ var currentPage = Adapt.components[0].findAncestor('pages');
 Finds descendants of the current model and returns a collection. Like findAncestor this only works from page level down to components.
 
 ````
-var children = Adapt.pages[0].findDescendants('components');
+var children = Adapt.contentObjects.models[0].findDescendants('components');
 // returns all the components that are in the first page.
 ````
 
@@ -85,7 +85,7 @@ The model will not change to ``true`` as there is still one plugin set to ``fals
 Sets attributes on all children models. An object can also be passed in to allow multiple attributes to be set at once. The standard Backbone options can also be passed in.
 
 ````
-var firstPage = Adapt.pages[0];
+var firstPage = Adapt.contentObjects[0];
 firstPage.setOnChildren('_complete', true);
 // sets all childrens '_complete' attribute to true, all the way down to component level.
 
