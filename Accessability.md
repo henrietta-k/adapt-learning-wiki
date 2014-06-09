@@ -15,6 +15,8 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **dialog** - Feedback, often in pop-up form such as tutor extension.
 
+`<div class="notify-popup notify-type-{{_type}}" role="dialog">`
+
 **search** - A search tool. Usually found in drawer.
 
 **button** - An input that allows for user-triggered actions when clicked or pressed.
