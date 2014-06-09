@@ -27,6 +27,14 @@ We can define parts of your page using roles. This allows screen reader users th
 
 **progressbar** - An element that displays the progress status for tasks that take a long time.
 
+**radio** - A checkable input in a group of radio roles, only one of which can be checked at a time.
+
+**slider** - A user input where the user selects a value from within a given range.
+
+**textbox** - Input that allows free-form text as its value.
+
+
+
 
 
 
