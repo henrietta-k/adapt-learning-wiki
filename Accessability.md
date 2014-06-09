@@ -25,7 +25,9 @@ We can define parts of your page using roles. This allows screen reader users th
 
 **menuitem** - An option in a set of choices contained by a menu or menubar.
 
-**progressbar
+**progressbar** - An element that displays the progress status for tasks that take a long time.
+
+
 
 
 
