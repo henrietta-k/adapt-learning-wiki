@@ -1,6 +1,6 @@
-### Landmarks in Adapt
+# Landmarks in Adapt
 
-# Landmark Roles
+### Landmark Roles
 
 Landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region.
 
