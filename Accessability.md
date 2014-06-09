@@ -9,6 +9,8 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **navigation** - Top bar collection of page navigation links. Standard consists of 'back button' 'progress bar' and 'drawer'.
 
+`<div class="navigation-inner clearfix" role="navigation">`
+
 **main** - The main content of the page. There should only be one 'main' landmark per page.
 
 **dialog** - Feedback, often in pop-up form such as tutor extension.
@@ -41,4 +43,3 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 
  
-
