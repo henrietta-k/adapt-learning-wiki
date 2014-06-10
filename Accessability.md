@@ -63,7 +63,8 @@ A transcript is the content of the audio track (in particular) expressed as on- 
 
 **example.json**
 
-` {
+` 
+{
 	"_id":"c-15",
 	"_parentId":"b-10",
 	"_type":"component",
@@ -83,6 +84,7 @@ A transcript is the content of the audio track (in particular) expressed as on- 
         "transcriptText": "Transcript"
 	}
 } 
+
  `
 
 
