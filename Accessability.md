@@ -17,6 +17,8 @@ Role attributes should not be placed on elements that already have semantic mean
 
 **checkbox** - A checkable input.
 
+**complementary** - A supporting section of the document, designed to be complementary to the main content yet treated as a navigational landmark such as draw.
+
 **dialog** - An application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response such as tutor extension.
 
 **document** - Information that is declared as document content, as opposed to a web application. Used for media component transcript.
