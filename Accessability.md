@@ -10,7 +10,24 @@ We can define parts of a page using 'roles'. This allows screen reader users the
 
 Roles provide semantic information therefore these attributes should not be placed on elements that already have semantic meaning. They should only be placed on `<div>` and `<span>` elements. 
 
-    `<div class="menu-container" role="menu">`
+    <div class="menu-container" role="menu">
+	<div class='menu-container-inner box-menu-inner clearfix'>
+		{{#if title}}
+		<div class="menu-title">
+			<h1 class="menu-title-inner">
+				{{{title}}}
+			</h1>
+		</div>
+		{{/if}}
+		{{#if body}}
+		<div class="menu-body">
+			<div class="menu-body-inner">
+				{{{body}}}
+			</div>
+		</div>
+		{{/if}}
+	</div>
+    </div>
 
 
 ###Definition of Roles 
