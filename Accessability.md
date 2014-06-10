@@ -15,7 +15,7 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **checkbox** - A checkable input.
 
-**dialog** - Feedback, often in pop-up form such as tutor extension.
+**dialog** - An application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response such as tutor extension.
 
 **heading** - A heading for a section of the page.
 
