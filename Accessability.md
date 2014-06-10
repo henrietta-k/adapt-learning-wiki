@@ -4,7 +4,7 @@ Accessibility settings/preferences are intended to help users with visual or mot
 
 ### ARIA Landmark Roles
 
-Landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region.
+Landmarks help assistive technology users orient themselves to a page and help them navigate easily to various sections. Landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region.
 
 We can define parts of a page using 'roles'. This allows screen reader users the ability to easily jump from one section to another and know where they are going.
 
