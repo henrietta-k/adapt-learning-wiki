@@ -1,6 +1,6 @@
 Accessibility settings/preferences are intended to help users with visual or motor impairments access the course.
 
-# Landmarks in Adapt
+## Landmarks in Adapt
 
 ### ARIA Landmark Roles
 
