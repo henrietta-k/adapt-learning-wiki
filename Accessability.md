@@ -17,6 +17,8 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **dialog** - An application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response such as tutor extension.
 
+**document** - Information that is declared as document content, as opposed to a web application. Used for media component transcript.
+
 **heading** - A heading for a section of the page.
 
 **link** - An interactive reference to an internal or external resource that, when activated, causes the user agent to navigate to that resource.
