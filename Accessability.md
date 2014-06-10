@@ -11,7 +11,9 @@ We can define parts of a page using 'roles'. This allows screen reader users the
 Roles provide semantic information therefore these attributes should not be placed on elements that already have semantic meaning. They should only be placed on `<div>` and `<span>` elements. 
 
     `<div class="menu-container" role="menu">`
- 
+
+
+###Definition of Roles 
 
 **alert** - A message with important, and usually time-sensitive, information.
 
