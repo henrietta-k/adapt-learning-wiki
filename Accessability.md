@@ -29,6 +29,8 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **navigation** - Top bar collection of page navigation links. Standard consists of 'back button' 'progress bar' and 'drawer'.
 
+**option** - A selectable item in a select list.
+
 **progressbar** - An element that displays the progress status for tasks that take a long time.
 
 **radio** - A checkable input in a group of radio roles, only one of which can be checked at a time.
