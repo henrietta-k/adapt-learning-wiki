@@ -9,7 +9,7 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **alert** - A message with important, and usually time-sensitive, information.
 
-**alertdialog** - A type of dialog that contains an alert message, where initial focus goes to an element within the dialog. 
+**alertdialog** - A type of dialog that contains an alert message, where initial focus goes to an element within the dialog as with notify pop-ups. 
 
 **button** - An input that allows for user-triggered actions when clicked or pressed.
 
