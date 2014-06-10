@@ -19,6 +19,8 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **heading** - A heading for a section of the page.
 
+**link** - An interactive reference to an internal or external resource that, when activated, causes the user agent to navigate to that resource.
+
 **main** - The main content of the page. There should only be one 'main' landmark per page.
 
 **menu** - A type of widget that offers a list of choices to the user.
