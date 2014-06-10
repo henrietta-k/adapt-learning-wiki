@@ -63,31 +63,7 @@ A transcript is the content of the audio track (in particular) expressed as on- 
 
 **example.json**
 
-` 
 
-{
-	"_id":"c-15",
-	"_parentId":"b-10",
-	"_type":"component",
-	"_component":"media",
-	"_classes":"",
-	"_layout":"left",
-	"title":"Title of the media component",
-	"displayTitle": "Title of the media component",
-	"body": "This is optional body text. Select the play button to start the video.",
-	"instruction": "",
-	"_setCompletionOn":"inview",
-	"_media": {
-		"mp4": "course/assets/big_buck_bunny.mp4",
-		"ogv": "course/assets/big_buck_bunny.ogv",
-		"poster": "course/assets/big-buck-bunny.jpg",
-		"transcriptLink": "assets/transcript.pdf",
-        "transcriptText": "Transcript"
-	}
-} 
-
-
- `
 
 
 
