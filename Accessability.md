@@ -11,15 +11,15 @@ Roles provide semantic information therefore these attributes should not be plac
 
 **alert** - A message with important, and usually time-sensitive, information.
 
-**alertdialog** - A type of dialog that contains an alert message, where initial focus goes to an element within the dialog as with notify pop-ups. 
+**alertdialog** - A type of dialog that contains an alert message, where initial focus goes to an element within the dialog as with 'notify' pop-ups. 
 
 **button** - An input that allows for user-triggered actions when clicked or pressed.
 
 **checkbox** - A checkable input.
 
-**complementary** - A supporting section of the document, designed to be complementary to the main content yet treated as a navigational landmark such as drawer.
+**complementary** - A supporting section of the document, designed to be complementary to the main content yet treated as a navigational landmark such as 'drawer'.
 
-**dialog** - An application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response such as tutor extension.
+**dialog** - An application window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response such as 'tutor' extension.
 
 **document** - Information that is declared as document content, as opposed to a web application. Used for media component transcript.
 
@@ -35,13 +35,13 @@ Roles provide semantic information therefore these attributes should not be plac
 
 **navigation** - Top bar collection of page navigation links. Standard consists of 'back button' 'progress bar' and 'drawer'.
 
-**option** - A selectable item in a select list, such as matching component.
+**option** - A selectable item in a select list, such as 'matching' component.
 
 **progressbar** - An element that displays the progress status for tasks that take a long time.
 
 **radio** - A checkable input in a group of radio roles, only one of which can be checked at a time.
 
-**search** - A search tool. Usually found in drawer.
+**search** - A search tool. Usually found in 'drawer'.
 
 **slider** - A user input where the user selects a value from within a given range.
 
