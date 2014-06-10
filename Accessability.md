@@ -56,6 +56,13 @@ Roles provide semantic information therefore these attributes should not be plac
 
 
 
+### Adding transcript to your media component
+
+A transcript is the content of the audio track (in particular) expressed as on- screen text. It enables delivery of the content to learners who are not able to play back or hear / understand the audio track.
+
+
+
+
 
 
 
