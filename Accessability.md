@@ -29,7 +29,7 @@ We can define parts of a page using roles. This allows screen reader users the a
 
 **navigation** - Top bar collection of page navigation links. Standard consists of 'back button' 'progress bar' and 'drawer'.
 
-**option** - A selectable item in a select list.
+**option** - A selectable item in a select list, such as matching component.
 
 **progressbar** - An element that displays the progress status for tasks that take a long time.
 
