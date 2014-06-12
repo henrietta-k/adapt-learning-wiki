@@ -1,4 +1,4 @@
-Accessibility settings/preferences are intended to help users with visual or motor impairments access the course.
+Accessibility settings/preferences are intended to help users with visual or motor impairments access Adapt courses.
 
 ## Landmarks in Adapt
 
