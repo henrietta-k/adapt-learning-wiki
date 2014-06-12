@@ -11,7 +11,7 @@ We can define parts of a page using 'roles'. This allows screen reader users the
 Roles provide semantic information therefore these attributes should not be placed on elements that already have semantic meaning. They should only be placed on `<div>` and `<span>` elements. 
 
     <div class="menu-container" role="menu">
-	<div class='menu-container-inner box-menu-inner clearfix'>
+	<div class='menu-container-inner'>
 		{{#if title}}
 		<div class="menu-title">
 			<h1 class="menu-title-inner">
@@ -70,6 +70,18 @@ Roles provide semantic information therefore these attributes should not be plac
 
 **textbox** - Input that allows free-form text as its value.
 
+
+
+### Using ARIA Label in Adapt
+
+The aria-label attribute is a description that is never displayed on screen but is relayed to a screen reader user. It defines a string that labels the current element. 
+
+This attribute can be used with any typical HTML element; it is not limited to elements that have an ARIA role assigned. Use it in cases where a text label is not visible on the screen. 
+
+<div class="navigation-inner" role="navigation">
+    <a href="#" class="navigation-back-button" aria-label="Back button"></a>
+    <a href="#" class="navigation-drawer-toggle-button" aria-label="Drawer"></a>
+</div>
 
 
 
