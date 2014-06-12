@@ -78,11 +78,12 @@ The aria-label attribute is a description that is never displayed on screen but 
 
 This attribute can be used with any typical HTML element; it is not limited to elements that have an ARIA role assigned. Use it in cases where a text label is not visible on the screen. 
 
-  ` <div class="navigation-inner" role="navigation">`
-       `<a href="#" class="navigation-back-button" aria-label="Back button"></a>`
-       `<a href="#" class="navigation-drawer-toggle-button" aria-label="Drawer"></a>`
-   `</div> `
-
+```
+<div class="navigation-inner" role="navigation">
+    <a href="#" class="navigation-back-button" aria-label="Back button"></a>
+    <a href="#" class="navigation-drawer-toggle-button" aria-label="Drawer"></a>
+</div> 
+```
 
 
 
