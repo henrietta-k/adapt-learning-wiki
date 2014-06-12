@@ -64,6 +64,8 @@ Roles provide semantic information therefore these attributes should not be plac
 
 **radio** - A checkable input in a group of radio roles, only one of which can be checked at a time.
 
+**region** - A large perceivable section of a web page or document, that is important enough to be included in a page summary or table of contents, for example, an area of the page containing live sporting event statistics.
+
 **search** - A search tool. Usually found in 'drawer'.
 
 **slider** - A user input where the user selects a value from within a given range.
