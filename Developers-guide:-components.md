@@ -160,7 +160,7 @@ Each component has the following preset methods:
 
 - ``setReadyStatus`` - Sets the component to ready.
 - ``setCompletionStatus`` - Sets the component to complete.
-- ``init`` - Should be used to setup anything before render.
+- ``preRender`` - Should be used to setup anything before render.
 - ``postRender`` - Should be used to setup anything after render.
 - ``events`` - Should be used to attach events on the component.
 
