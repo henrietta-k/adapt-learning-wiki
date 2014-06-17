@@ -20,8 +20,8 @@ A question component should be used to test a user or ask a question. Question c
 - ``showModelAnswer``
 - ``showUserAnswer``
 - ``onComplete``
-- ``onQuestionComplete``
-- ``onQuestionComplete``
+- ``onQuestionCorrect``
+- ``onQuestionIncorrect``
 - ``onModelAnswerClicked``
 - ``onResetClicked``
 - ``onSubmitClicked``
