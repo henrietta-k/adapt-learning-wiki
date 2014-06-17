@@ -11,12 +11,26 @@ A presentational component should be used to display content with little interac
 
 #### Question components
 
-A question component should be used to test a user or ask a question. Each question component should set the following on its model:
+A question component should be used to test a user or ask a question. Question components have the same methods presentation components have so they should be using ``setCompletionStatus`` and ``setReadyStatus``. Question components have a few extra methods available:
 
-- ``_isPassed`` (boolean) - Should be set on the model when the user gets this question correct.
-- ``_isComplete`` (boolean) - Should be set on the model when the user completes the question and used all the avilable attempts.
-- ``_isReady`` (boolean) - Should be set on the model when the component is fully loaded. If this the component has imagery please see the adapt-contrib-narrative component for an exmaple of imageReady.
-- ``_questionWeight`` (numeric) - Each question component should have a weight. This is either taken from the global ``_questionWeight`` attribute or from the components individual ``_questionWeight`` attribute.
+- ``getOptionSpecificFeedback``
+- ``setupDefaultSettings``
+- ``resetQuestion``
+- ``showFeedback``
+- ``showModelAnswer``
+- ``showUserAnswer``
+- ``onComplete``
+- ``onQuestionComplete``
+- ``onQuestionComplete``
+- ``onModelAnswerClicked``
+- ``onResetClicked``
+- ``onSubmitClicked``
+- ``onUserAnswerClicked``
+- ``showInstructionError``
+
+Each question component should also set the following on its model:
+
+- ``_isCorrect`` (boolean) - This should be set when the question has no more attempts and the user has finished interacting with the question.
 
 #### Structure of components
 
