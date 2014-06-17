@@ -14,7 +14,14 @@ A presentational component should be used to display content with little interac
 A question component should be used to test a user or ask a question. Question components have the same methods presentation components have so they should be using ``setCompletionStatus`` and ``setReadyStatus``. Question components have a few extra methods available:
 
 - ``getOptionSpecificFeedback``
-- ``setupDefaultSettings``
+
+- ``setupQuestion`` - This is called from the preRender method and is used to setup any question settings before rendering. This method is intended to be overwritten if needed
+
+- ``_setupDefaultSettings`` - This is called from the preRender method and is used to setup default settings on the question like button text and question weight. This method calls other methods like ``setupButtonSettings`` and ``setupWeightSettings`` This method should remain as is.
+
+- ``setupButtonSettings`` - This is called from setupDefaultSettings and sets whether the button text should be taken from the global button settings or from the components settings
+
+- ``setupWeightSettings``
 - ``resetQuestion``
 - ``showFeedback``
 - ``showModelAnswer``
