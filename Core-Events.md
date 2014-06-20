@@ -68,5 +68,5 @@ Below is a list of all the core view events:
 * ('questionView:disabledFeedback', [currentView]) - Triggered when a question is meant to show feedback but ``_canShowFeedback`` is disabled on the model.
 
 ##### Navigation Events
-* ('navigation:menu') - Triggered when the menu button is pressed.
+* ('navigation:backButton') - Triggered when the menu button is pressed.
 * ('navigation:toggleDrawer') - Triggered when the Drawer toggle button is clicked.
