@@ -259,13 +259,24 @@ By wrapping your page and menu scrollTo methods with Adapt.scrollTo() you get th
 This allows you to navigate to any core element within a page (article, block or component).
 
 ```
-// Syntax: Adapt.navigateToElement(element, type, options);
-Adapt.navigateToElement('.b-22', 'blocks', {duration: 3000});
+// Syntax: Adapt.navigateToElement(element, options);
+Adapt.navigateToElement('.b-22', {duration: 3000});
 ```
 
 This will navigate to a block with the ``_id`` 'b-22' - even if it's on another page. It's wrapped around ``Adapt.scrollTo`` so you get the benefit of the events being triggered.
 
 For more information on the options object please see [here](https://github.com/flesler/jquery.scrollTo).
+
+##### Adapt.mapById
+
+This maps a given _id to the containing collection.
+
+```
+// Syntax: Adapt.mapById(_id);
+Adapt.mapById('co-05');
+```
+
+This will return "contentObjects". This is useful for when _ids deviate from a naming convention. It is also used internally with ``Adapt.navigateToElement``.
 
 ### Events
 
