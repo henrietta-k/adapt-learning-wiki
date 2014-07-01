@@ -278,6 +278,17 @@ Adapt.mapById('co-05');
 
 This will return "contentObjects". This is useful for when _ids deviate from a naming convention. It is also used internally with ``Adapt.navigateToElement``.
 
+##### Adapt.findById
+
+This passes back a model based upon the _id you pass in. Useful for when you don't know where the _id has come from.
+
+```
+// Syntax: Adapt.findById(_id);
+Adapt.findById('c-200');
+```
+
+This will return a component model with ``_id`` of 'c-200'. This can also pass back the course model if the course _id is passed in.
+
 ### Events
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
