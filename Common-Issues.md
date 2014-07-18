@@ -1,4 +1,12 @@
 ## Installation/setup
+###'Can't find Python executable' error when installing Adapt
+On Windows, when running ```$ npm install adapt-cli -g```, you receive a long list of errors and the first few are something like:
+```
+gyp ERR! configure error
+gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
+```
+You should just reboot your PC to allow the environment variables to be set correctly, the try the command again. You may still get an error like 'optional dep failed, continuing' - that's OK because it's only an option dependency.
+
 ###'git is not installed' error when installing Adapt
 On Windows, when running ```$ npm install adapt-cli -g```, you receive an error like:
 ```
