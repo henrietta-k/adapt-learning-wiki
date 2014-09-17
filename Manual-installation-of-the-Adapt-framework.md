@@ -1,4 +1,3 @@
-
 ### Overview
 To manually install the Adapt framework you will first need to [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and extract the files to your course folder.
 
@@ -8,7 +7,7 @@ Then from the course folder you can run ```npm install``` to download and instal
 
 ### Requirements
 
-Before you start, make sure that you have followed the initial steps in the [Setting up your development environment](/adapt_framework/wiki/Setting-up-your-development-environment#installation) guide.
+Before you start, make sure that you have followed the initial steps in the [Setting up your development environment](/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment#installation) guide.
 
 You should then have [node.js](http://nodejs.org/), [git](http://git-scm.com/book/en/Getting-Started-Installing-Git), [Adapt Command Line Interface](/adaptlearning/adapt_framework/wiki/Adapt Command Line Interface) and [Grunt](http://gruntjs.com/getting-started) installed.
 
