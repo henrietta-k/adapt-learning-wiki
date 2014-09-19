@@ -17,3 +17,6 @@ In conjunction with banking, it should be possible to randomise the appearance a
 
 Properties should allow configuration of the number of retry attempts a user may have.
 
+TODO
+- Question picker/placeholder component
+- ...
