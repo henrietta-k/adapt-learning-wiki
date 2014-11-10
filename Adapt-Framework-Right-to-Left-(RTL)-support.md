@@ -35,4 +35,5 @@ inside the course content, but rather define the RTL at course settings level)**
 * Relative and absolute positions of elements
 * Shadows that have left/right properties
 * Choice of correct icons and images (e.g. arrows, progress bars)
+
 **3. Use variables and if statements in javascript to calculate correct RTL direction, position and movement, etc.**
