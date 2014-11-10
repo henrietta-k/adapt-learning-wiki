@@ -3,11 +3,13 @@ To define the requirements and approach for RTL support in Adapt RTL framework. 
 
 # Functional Requirements list:
 1. Ability to determine course default direction should affect all course elements:
+
 * Ideally a single setting would trickle down to all course elements, components, extensions, etc.
 * Default direction would be set as LTR
 * Allow and define how contributed components and extensions can support RTL, as long as the extensions conform to the Adapt RTL guidelines
 
 2. Display text in correct RTL format, including:
+
 * Signs such as full stop, exclamation mark, question mark, etc. appear in their correct location in the sentence and do not break sentence structure
 * When using RTL, Latin text within an RTL sentence appears in correct location in the sentence and does not break sentence structure
 * Text typing in interactive elements such as text boxes and essay answer boxes functions in proper RTL 
