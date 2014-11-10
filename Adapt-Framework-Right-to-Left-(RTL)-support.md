@@ -26,6 +26,7 @@ inside the course content, but rather define the RTL at course settings level)**
 
 ## Coding approach guidelines:
 **1. Use `.dir-rtl &` to append RTL style changes in LESS files of theme/component**
+
 **2. Most CSS/LESS RTL adjustments normally have to do with:**
 * Direction - rtl - to be handled at Body element level
 * Align text left/right
