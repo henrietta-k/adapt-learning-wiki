@@ -24,3 +24,14 @@ To define the requirements and approach for RTL support in Adapt RTL framework. 
 `<p style="direction: rtl;"> `
 inside the course content, but rather define the RTL at course settings level)**
 
+## Coding approach guidelines:
+**1. Use `.dir-rtl &` to append RTL style changes in LESS files of theme/component**
+**2. Most CSS/LESS RTL adjustments normally have to do with:**
+* Direction - rtl - to be handled at Body element level
+* Align text left/right
+* Float elements right/left
+* Left/right margin/padding
+* Relative and absolute positions of elements
+* Shadows that have left/right properties
+* Choice of correct icons and images (e.g. arrows, progress bars)
+**3. Use variables and if statements in javascript to calculate correct RTL direction, position and movement, etc.**
