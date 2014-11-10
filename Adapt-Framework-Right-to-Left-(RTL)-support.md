@@ -20,5 +20,7 @@ To define the requirements and approach for RTL support in Adapt RTL framework. 
 * Progress of multi-part and interactive elements (e.g. narrative) is moving from right to left
 * Animation and easing directionality is adjusted for RTL behavior (e.g. opening of drawer, menus)
 
-**5. Maintain the separation of content and design and handle directionality via components style and javascript and not via course content (i.e. no need to use <p style="direction: rtl;"> inside the course content, but rather define the RTL at course settings level)**
+**5. Maintain the separation of content and design and handle directionality via components style and javascript and not via course content (i.e. no need to use 
+`<p style="direction: rtl;"> `
+inside the course content, but rather define the RTL at course settings level)**
 
