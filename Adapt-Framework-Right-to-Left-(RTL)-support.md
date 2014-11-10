@@ -39,6 +39,9 @@ inside the course content, but rather define the RTL at course settings level)**
 **3. Use variables and if statements in javascript to calculate correct RTL direction, position and movement, etc.**
 
 ## Current progress and outstanding work
+The RTL work has been implemented and we expect to include RTL compatibility in version 1.2 of the Adapt framework.
+
+The list below shows the pull requests agains the Adapt framework core bundle:
 
 https://github.com/adaptlearning/adapt_framework/pull/463
 
