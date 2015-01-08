@@ -7,6 +7,7 @@ All of the components you'll need can be installed with [npm](https://npmjs.org/
 $ npm install adapt-cli -g
 $ npm install grunt-cli -g
 ```
+(OS X users - you will need to either prefix the above commands with 'sudo' or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo))
 
 ### Get the Adapt output framework
 #### Overview
