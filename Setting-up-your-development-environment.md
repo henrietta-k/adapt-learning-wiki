@@ -1,13 +1,20 @@
 ### Installation
-Before you get started with Adapt, make sure you [install Node.js](http://nodejs.org/) and [Git](http://git-scm.com/downloads).
+Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
-All of the components you'll need can be installed with [npm](https://npmjs.org/) which **comes installed with Node.js**
+Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/).
+
+OS X 10.9 (Mavericks) users - you should be able to install git simply by trying to run the command 'git' in the Terminal. It should recognise what you are trying to do and prompt you to install the XCode Command Line Tools, which include Git.
+
+Once you've got both Git and Node.js installed, the other components you'll need can be installed with the Node Package Manager - AKA [npm](https://npmjs.org/) - which **comes installed with Node.js**
+
+To install the components, run the following two commands - which can be done via Terminal on OS X or on Windows via whatever command line utility was installed when you installed Git e.g. Git Bash or PoshGit.
+
+OS X users - you will need to either prefix the commands with 'sudo' - or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo)
 
 ```bash
 $ npm install adapt-cli -g
 $ npm install grunt-cli -g
 ```
-(OS X users - you will need to either prefix the above commands with 'sudo' or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo))
 
 ### Get the Adapt output framework
 #### Overview
