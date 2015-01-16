@@ -40,33 +40,3 @@ inside the course content, but rather define the RTL at course settings level)**
 
 ## Current progress and outstanding work
 The RTL work has been implemented and we expect to include RTL compatibility in version 1.2 of the Adapt framework.
-
-The list below shows the pull requests agains the Adapt framework core bundle:
-
-https://github.com/adaptlearning/adapt_framework/pull/463
-
-https://github.com/adaptlearning/adapt-contrib-trickle/pull/25
-
-https://github.com/adaptlearning/adapt-contrib-resources/pull/12
-
-https://github.com/adaptlearning/adapt-contrib-tutor/pull/35
-
-https://github.com/adaptlearning/adapt-contrib-vanilla/pull/55
-
-https://github.com/adaptlearning/adapt-contrib-boxmenu/pull/21
-
-https://github.com/adaptlearning/adapt-contrib-textInput/pull/43
-
-https://github.com/adaptlearning/adapt-contrib-gmcq/pull/51
-
-https://github.com/adaptlearning/adapt-contrib-mcq/pull/73
-
-https://github.com/adaptlearning/adapt-contrib-narrative/pull/88
-
-https://github.com/adaptlearning/adapt-contrib-matching/pull/45
-
-https://github.com/adaptlearning/adapt-contrib-pageLevelProgress/pull/29
-
-https://github.com/adaptlearning/adapt-contrib-hotgraphic/pull/61
-
-https://github.com/adaptlearning/adapt-contrib-accordion/pull/39
