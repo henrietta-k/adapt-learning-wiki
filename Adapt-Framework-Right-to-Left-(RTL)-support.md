@@ -40,3 +40,8 @@ inside the course content, but rather define the RTL at course settings level)**
 
 ## Current progress and outstanding work
 The RTL work has been implemented and we expect to include RTL compatibility in version 1.2 of the Adapt framework.
+
+## Useful Links
+- [Moodle CSS Coding Style: RTL](https://docs.moodle.org/dev/CSS_coding_style#Right-to-left)
+- [Readying Your Site For RTL](http://tech.pro/tutorial/1738/readying-your-site-for-rtl)
+- [The Guide to create RTL adaptations of LTR CSS](http://www.numediaweb.com/guide-create-rtl-adaptations-css/927)
