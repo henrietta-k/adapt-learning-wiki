@@ -1,7 +1,6 @@
-## Purpose of this document:
-To define the requirements and approach for RTL support in Adapt RTL framework. This should be used as a basis for content builders who plan to develop RTL courses, and for developers who work on core and contributed extensions that should support RTL directionality.
+We've created this page to define the requirements and approach for RTL support in the Adapt framework, and help content builders and developers who wish to support such functionality in their own courses. The good news is that by default, the framework and all of the core plugins are RTL-compatible, and supported by the core team.
 
-## Functional Requirements list:
+## Functional Requirements:
 **1. Ability to determine course default direction should affect all course elements:**
 * Ideally a single setting would trickle down to all course elements, components, extensions, etc.
 * Default direction would be set as LTR
