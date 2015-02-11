@@ -3,10 +3,12 @@ We've created this page to define the requirements and approach for RTL support 
 However, there are a number of things you will need to do as a developer to make sure that your content looks its best for RTL users.
 
 ## Functional Requirements:
-**1. Ability to determine course default direction should affect all course elements:**
-* Ideally a single setting would trickle down to all course elements, components, extensions, etc.
-* Default direction would be set as LTR
-* Allow and define how contributed components and extensions can support RTL, as long as the extensions conform to the Adapt RTL guidelines
+
+The following points summarise what we, as Adapt developers aim to deliver for RTL users.
+
+**1. Ability to determine course default direction**
+* LTR is the default text direction.
+* Text direction trickles down to all course elements from a single `config.json` setting.
 
 **2. Display text in correct RTL format, including:**
 * Signs such as full stop, exclamation mark, question mark, etc. appear in their correct location in the sentence and do not break sentence structure
@@ -38,9 +40,6 @@ inside the course content, but rather define the RTL at course settings level)**
 * Choice of correct icons and images (e.g. arrows, progress bars)
 
 **3. Use variables and if statements in javascript to calculate correct RTL direction, position and movement, etc.**
-
-## Current progress and outstanding work
-The RTL work has been implemented and we expect to include RTL compatibility in version 1.2 of the Adapt framework.
 
 ## Useful Links
 - [Moodle CSS Coding Style: RTL](https://docs.moodle.org/dev/CSS_coding_style#Right-to-left)
