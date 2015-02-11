@@ -1,4 +1,6 @@
-We've created this page to define the requirements and approach for RTL support in the Adapt framework, and help content builders and developers who wish to support such functionality in their own courses. The good news is that by default, the framework and all of the core plugins are RTL-compatible, and supported by the core team.
+We've created this page to define the requirements and approach for RTL support in the Adapt framework, and help developers who wish to support such functionality in their own courses. The good news is that by default, the framework and all of the core plugins are RTL-compatible, and supported by the core team.
+
+However, there are a number of things you will need to do as a developer to make sure that your content looks its best for RTL users.
 
 ## Functional Requirements:
 **1. Ability to determine course default direction should affect all course elements:**
