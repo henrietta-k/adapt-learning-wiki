@@ -87,8 +87,8 @@ This attribute can be used with any typical HTML element; it is not limited to e
 </div> 
 ```
 
-
-
+## Useful Links
+* [Worked example of updating the narrative component for accessibility](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility:-worked-example)
 
 
 
