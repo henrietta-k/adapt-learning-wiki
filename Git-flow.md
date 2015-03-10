@@ -24,4 +24,4 @@ We apply the following rules to the core Adapt repos (i.e. those owned by [@adap
 
 ### Gearing up for release
 
-When a release is planned, we create a release branch from develop at the point that represents the required feature set. Once this release branch is created, only fixes are made to it, no further additions. After this branch has been thoroughly tested, and any bugs fixed, it is merged with master (and optionally develop, to make sure that all fixes have been carried across) and deleted. A 'tag' is added to the master branch to signify the new release
+When a release is planned, we create a release branch from `develop` at the point that represents the required feature set. Once this release branch is created, only fixes are made to it, no further additions. After this branch has been thoroughly tested, and any bugs fixed, it is merged with `master` (and optionally `develop`, to make sure that all fixes have been carried across) and deleted. A 'tag' is added to the master branch to signify the new release.
