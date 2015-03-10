@@ -1,73 +1,27 @@
-All core models inherit from AdaptModel (adaptModel.js) and contain the following attributes:
+All core models inherit from AdaptModel (adaptModel.js) and contain the following attributes. An asterisk denotes that an attribute is required.
 
-##### _id
-A unique identifier created by the authoring tool.
+Attribute | Description | Default value 
+--------- | ----------- | -------------
+`_id`*   | A unique identifier. In the authoring tool, this is randomly generated.
+`_type`* | The type of the particular item. Examples include `block` and `component`.
+`title`* | The title of the particular item.
+`displayTitle` | This is the title that Adapt displays when viewing a course.
+`body` | The body text content of the particular item.
+`_isComplete` | Whether the item has been completed. | `false`
+`_isEnabled` | Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled. | `true`
+`_isEnabledOnRevisit` |  | `true`
+`_isAvailable` |  | `true`
+`_isOptional` | _Not implemented by the framework._ | `false`
+`_isTrackable` | Specifies whether or not the current item can be tracked by an extension such as SCORM. | `_isReady` | This is used to determine if the current item is ready (i.e. has been initialised). This needs to be set manually for custom components. For instance, this may be set to true post-render. | `false`
+`_questionWeight` | The weight of a particular question, which is used when calculating the score. | `1`
+`_buttons` | An object to store the label values for template buttons. Buttons can then be referenced in templates using `{{{_buttons.submit}}}` | See fig.1.
 
-##### _type
-The type of the particular item. Examples include ``"type":"block"`` or ``"type":"component"``.
-
-##### title
-The title text of the particular item. This title is mandatory.
-
-##### displayTitle
-This is the title that Adapt displays when viewing a course. This is not mandatory.
-
-##### body
-The body text content of the particular item.
-
-##### _isComplete
-Default: ``false``
-
-Determines if the item is complete.
-
-##### _isEnabled
-Default: ``true``
-
-Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled.
-
-##### _isEnabledOnRevisit
-Default: ``true``
-
-##### _isAvailable
-Default: ``true``
-
-##### _isOptional
-Default: ``false``
-
-Specifies whether or not a particular item is required to be completed, for instance when tracking with SCORM.
-
-##### _isTrackable
-Default: ``true``
-
-Specifies whether or not the current item can be tracked by an extension such as SCORM.
-
-##### _isReady
-Default: ``false``
-
-This is used to determine if the current item is ready. For instance, this may be set to true post-render.
-
-##### _questionWeight
-Default: ``1``
-
-The weight of a particular question, which is used when calculating the score.
-
-##### _buttons
-Default:
-```
-    "_buttons": {
-        "submit":"Submit",
-        "reset":"Reset",
-        "showCorrectAnswer":"Model Answer",
-        "hideCorrectAnswer":"My Answer"
-    }
-```
-
-The buttons attribute stores the label values for particular buttons found throughout the framework templates. You can reference these within a template as follows:
-
-```
-<a href="#" class="button submit">
-  <span>  
-    {{{_buttons.submit}}} 
-  </span>
-</a>
+**Figure 1**
+``` javascript
+"_buttons": { 
+   "submit":"Submit", 
+   "reset":"Reset", 
+   "showCorrectAnswer":"ModelAnswer", 
+   "hideCorrectAnswer":"My Answer" 
+}
 ```
