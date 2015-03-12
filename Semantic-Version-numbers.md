@@ -1,13 +1,10 @@
-Semantic Versioning uses a three-part version number: major version; minor version; and patch. The patch number is incremented for minor changes and bug fixes which do not change the software's API. The minor version is incremented for releases which add new, but backward-compatible, API features, and the major version is incremented for API changes which are not backward-compatible.
+#### MAJOR.MINOR.PATCH
+Semantic Versioning uses a three-part version number. The **major** version is incremented for big changes to the API which are not backward-compatible, the **minor** number is incremented for releases which add new (but crucially, **backward-compatible**) API features, and the **patch** number is incremented for minor changes and bug fixes which do not change the software's API.
 
-For example:-
+#### Example scenario
 
-Given I have a plugin on its first major release the version number would be **1.0.0**
-
-When I release a bug fix then I should increment the patch, to be **1.0.1**
-
-When I subsequently add a new feature that is backward-compatible I should increase the minor version, to be  **1.1.0** and reset the patch. 
-
-When I release another bug fix to this new release then I should increment the patch, to be **1.1.1**
-
-If I introduce breaking changes of my plugin then the major version should be incremented and the minor version and patch reset, **2.0.0**
+- A plugin's first major release should have a version number of: **`1.0.0`**
+- A subsequent bug-fix should bump the patch version number, resulting in **`1.0.1`**
+- A new _backward-compatible_ feature is added, so the minor version is incremented: **`1.1.0`** (note that the patch number is reset to `0`) 
+- Another bug-fix is added, changing the version to: **`1.1.1`**
+- Some breaking changes are introduced, so the major version is incremented, and the minor and patch numbers are reset: **`2.0.0`**
