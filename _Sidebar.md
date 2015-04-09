@@ -48,4 +48,4 @@
 
 ###Resources
 * [Adapt Community Home](https://community.adaptlearning.org/)
-* [FAQ](https://github.com/adaptlearning/adapt_authroing/wik/iFAQ)  
+* [FAQ](https://github.com/adaptlearning/adapt_authoring/wiki/FAQ)  
