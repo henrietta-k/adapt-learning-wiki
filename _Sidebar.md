@@ -1,9 +1,9 @@
 ###Getting Started
 * [Framework in Five Minutes](https://github.com/adaptlearning/adapt_framework/wiki/Framework-in-five-minutes)
-* [Getting Started](https://github.com/adaptlearning/adapt_framework/wiki/Getting-Started)
+* [Setting up Your Development Environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)  
 * [Manual Installation of the Adapt Framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework)
-* [Setting up Your Development Environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)
 * [Adapt Command Line Interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
+* [Getting Started](https://github.com/adaptlearning/adapt_framework/wiki/Getting-Started)
 * [Common Issues](https://github.com/adaptlearning/adapt_framework/wiki/Common-Issues)
 
 ----------------
