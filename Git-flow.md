@@ -1,4 +1,4 @@
-_**Note:** this article assumes that you understand the basic concepts of the git version control system, which you can read about [here **[page awaiting creation]**](#)._
+_**Note:** This article assumes that you understand the [basic concepts of the git version control system](https://help.github.com/articles/good-resources-for-learning-git-and-github/)._
 
 On the Adapt project, we've adopted the git flow model to organise our repos using branches (which you can read more about in [this article](http://nvie.com/posts/a-successful-git-branching-model/)). This process may be too involved for smaller plugins, but as a rule, it's important to always separate your release code from your in-development code (i.e. master and develop).
 
