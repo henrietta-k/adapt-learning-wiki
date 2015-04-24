@@ -167,9 +167,9 @@ All assets for a component should be prefixed with the component name:
 
 ##### JSON
 
-###### schema.json
+###### properties.schema
 
-This file is needed for the component to work with the editor. It describes what fields are needed to edit the component.
+This file is needed for the component to interface with the authoring tool. It describes the properties that need to be configured. The authoring tool uses this data to construct an interface to gather input from the course developer.
 
 ###### example.json
 
