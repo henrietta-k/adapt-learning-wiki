@@ -24,6 +24,7 @@
 * [Core Model Attributes](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes)
 * [Core Modules](https://github.com/adaptlearning/adapt_framework/wiki/Core-modules)
 * [Web Security Audit](https://github.com/adaptlearning/adapt_framework/wiki/Web-Security-Audit)
+* [Peer Code Review](https://github.com/adaptlearning/adapt_framework/wiki/Peer-Code-Review)
 
 ----------------
 
