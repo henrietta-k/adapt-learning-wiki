@@ -1,5 +1,3 @@
-## Peer review process
-
 After writing some code (be it in the form of a new feature, or bug fix), it must go through a vetting process by the Adapt collaborators before it is incorporated in the collaborator-maintained codebases:
 
 1. Code is submitted for review as a pull request.
