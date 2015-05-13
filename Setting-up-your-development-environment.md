@@ -63,7 +63,14 @@ This allows you to test your SCO without the need for a continual upload / updat
 $ adapt uninstall contrib-spoor
 $ grunt build
 ```
-
 The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
+
+#### Building a course with different themes and menus
+The theme and menu used in the build process can be customised using the `--theme` and `--menu` switches.  For example, if you had installed a new theme called `adapt-new-theme` and a new menu called `adapt-new-menu`, you could use them as follows:
+
+````bash
+$ grunt build --theme=adapt-new-theme --menu=adapt-new-menu
+````
+
 
 **Next** - [[Creating your first course]]
