@@ -52,7 +52,8 @@ bower init
 The `bower.json` defines several options:
 
 * `name` [string, required]: The name of your package.
-* `version`: A semantic version number (see [semver](http://semver.org/)).
+* `version` [string]: A semantic version number (see [semver](http://semver.org/)).
+* `framework` [string]: The semantic version(s) of the Adapt Framework that your package works with. This can be a single version (e.g. `2.0.0`), a range of versions (e.g. `>2.0.0`) or multiple discreet versions (e.g. `2.0.1 || 2.0.3). (see [Semver Ranges](https://nodesource.com/blog/semver-a-primer#semver-ranges)).
 * `main` [string, required]: The main javascript AMD module for your package.
 * `repository` [string]: The git repository where the package is available.
 * `keywords` [array]: An array containing one of the following values, `adapt-component`, `adapt-extension`, `adapt-menu` or `adapt-theme`
