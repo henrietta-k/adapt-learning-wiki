@@ -41,7 +41,7 @@ inside the course content, but rather define the RTL at course settings level)**
 
 **3. Use variables and if statements in javascript to calculate correct RTL direction, position and movement, etc.**
 
-**4. Activate RTL by adding/changing the defaul tDirection setting "_defaultDirection": "rtl", in src/course/config.json **
+**4. Activate RTL by adding/changing the default Direction setting "_defaultDirection": "rtl", in src/course/config.json.**
 
 ## Useful Links
 - [Moodle CSS Coding Style: RTL](https://docs.moodle.org/dev/CSS_coding_style#Right-to-left)
