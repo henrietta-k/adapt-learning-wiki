@@ -1,7 +1,7 @@
 ### Installation
 Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
-Windows users may prefer [cmder](http://gooseberrycreative.com/cmder/), [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/).
+Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/). Note: if you install Git for Windows, you will need to reboot after installation even though it doesn't prompt you to do this.
 
 OS X 10.9 (Mavericks) users - you should be able to install git simply by trying to run the command 'git' in the Terminal. It should recognise what you are trying to do and prompt you to install the XCode Command Line Tools, which include Git.
 
