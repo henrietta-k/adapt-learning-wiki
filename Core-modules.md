@@ -210,7 +210,7 @@ var promptObject = {
 Adapt.trigger('notify:prompt', promptObject);
 ```
 
-How to active a push notification:
+How to activate a push notification:
 ```
 var pushObject = {
     title: "Great work!",
