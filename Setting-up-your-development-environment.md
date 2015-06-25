@@ -29,7 +29,12 @@ First, open your command line utility and navigate to the folder where you'd lik
 $ adapt create course
 ```
 
-This will ask you to confirm the name of the course and the branch to download. You can change the name of the course if you want, but you should accept the default setting for which branch (MASTER) to use. 
+This will ask you to confirm four things:
+
+1. type: accept the default (course)
+1. name: change this if you want (or accept the default, you can always change it later if you need)
+1. branch: accept the default (master)
+1. create now?: accept the default (y)
 
 A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
