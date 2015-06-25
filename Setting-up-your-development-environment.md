@@ -20,20 +20,31 @@ $ npm install grunt-cli -g
 #### Overview
 The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
 
-#### Installing
+#### Downloading the framework
 You can get the latest version of the framework from our [GitHub repository](/adaptlearning/adapt_framework) using the Adapt Command Line Interface.
+
+First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
 
 ```bash
 $ adapt create course
 ```
 
-This will ask you to confirm the name of the course and the branch to download. A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
+This will ask you to confirm the name of the course and the branch to download. You can change the name of the course if you want, but you should accept the default setting for which branch (MASTER) to use. 
+
+A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
 Alternatively you can [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and perform a [manual installation](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework).
 
 The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
 
 #### Building
+In order to run the various build commands, you will need to navigate to the directory that was created when you ran the create course command earlier.
+
+Assuming you used the default course name of 'my-adapt-course', you can change to that folder with the command:
+```bash
+$ cd my-adapt-course
+```
+You can then create a build of your course using:
 ```bash
 $ grunt build
 ```
@@ -45,13 +56,13 @@ To view the build package create a local server:
 $ grunt server
 ```
 
-To emulate a scorm package offline use this instead:
+To emulate a SCORM server, use this command instead:
 ```bash
 $ grunt server-scorm
 ```
-Note: to terminate the server ctrl+c
+Note: to terminate the server, press ctrl+c
 
-This will now open a browser and navigate to the following URL:
+This will now open your default browser at the following URL:
 [http://localhost:9001/](http://localhost:9001/)
 
 *N.B.* If you have run the server-scorm task, navigate to this URL to emulate an LMS environment:
