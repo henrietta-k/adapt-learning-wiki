@@ -9,7 +9,7 @@ Simply running this will list out all of the tasks along with descriptions; usef
 This tasks compiles a production-ready minified/compressed version of the course.
 
 #### `$ grunt dev`
-This tasks compiles a developer-friendly version of the course, including sourcemaps for debugging.
+This tasks compiles a developer-friendly version of the course, including sourcemaps for debugging. Also runs the 'watch' task, which monitors your source code for any file changes, running the appropriate grunt tasks to update the build.
 
 #### `$ grunt tracking-insert`
 Before your course will track to an LMS (using [spoor](https://github.com/adaptlearning/adapt-contrib-spoor) or another tracking extension), you'll need to make sure that tracking identifiers are added to the relevant places in your JSON files. You _**can**_ do it manually, or you can run this task which will insert them for you automatically.
