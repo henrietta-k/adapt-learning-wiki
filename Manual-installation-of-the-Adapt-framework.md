@@ -28,7 +28,7 @@ Install the following before proceeding:
 * <a href="https://github.com/adaptlearning/adapt-cli" target="_blank">adapt-cli</a>  
 
 > **Tips:**  
-> + To verify if a requirement is already installed, [check for its version.](Just-Enough-Command-Line-for-Installing#check-version)  
+> + To verify if a requirement is already installed, [check for its version.](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing#check-version)  
 > + Windows users should run these commands in Git Bash if Git was installed using default settings.
 > + Mac and Linux users may need to prefix the commands with `sudo` or give yourself elevated permissions on the /usr/local directory as documented <a href="http://foohack.com/2010/08/intro-to-npm/#what_no_sudo" target="_blank">here</a>.
 
