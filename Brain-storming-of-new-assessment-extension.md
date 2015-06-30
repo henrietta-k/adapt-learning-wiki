@@ -1,4 +1,4 @@
-:exclamation: This page is scheduled to be deleted. If you know of a reason why it should be retained, please contact Chuck Lorenz through Github right away. Thanks.
+:exclamation: *This page is scheduled to be deleted. If you know of a reason why it should be retained, please contact Chuck Lorenz through Github right away. Thanks.*
 
 This document is intended to document the discussions around a replacement for adapt-contrib-assessment as discussed at the Adapt Hack.
 
