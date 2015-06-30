@@ -8,9 +8,9 @@ Name | Description | Persisting
 ---- | ----------- | ----------
 `master` | Contains the stable, released code. | yes
 `develop` | The ‘working’ branch. Is the the parent of all feature and release branches, and contains the latest code. Develop **does not** contain tested code, and should definitely not be considered production ready. | yes
-release (e.g. `v2.0`) | A release candidate branch. Contains code currently being tested. | no
-`hotfix/TICKET_NAME` | Self-contained bug-fix. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
-`feature/FEATURE_NAME` | Self-contained feature. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
+`release/VERSION_NAME` | (e.g. `release/v2.0`)<br> A release candidate branch. Contains code currently being tested. | no
+`hotfix/TICKET_NAME` | (e.g. `hotfix/ABU-001`)<br> Self-contained bug-fix. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
+`feature/FEATURE_NAME` | This is also likely to be named after a JIRA ticket (see above).<br> Self-contained feature. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
 
 We apply the following rules to the core Adapt repos (i.e. those owned by [@adaptlearning](https://github.com/adaptlearning)):
 
