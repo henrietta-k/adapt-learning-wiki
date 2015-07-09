@@ -12,8 +12,8 @@ To install the components, run the following two commands - which can be done vi
 OS X users - you will need to either prefix the commands with 'sudo' - or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo)
 
 ```bash
-$ npm install adapt-cli -g
-$ npm install grunt-cli -g
+npm install adapt-cli -g
+npm install grunt-cli -g
 ```
 
 ### Get the Adapt output framework
@@ -26,7 +26,7 @@ You can get the latest version of the framework from our [GitHub repository](/ad
 First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
 
 ```bash
-$ adapt create course
+adapt create course
 ```
 
 This will ask you to confirm four things:
@@ -47,23 +47,23 @@ In order to run the various build commands, you will need to navigate to the dir
 
 Assuming you used the default course name of 'my-adapt-course', you can change to that folder with the command:
 ```bash
-$ cd my-adapt-course
+cd my-adapt-course
 ```
 You can then create a build of your course using:
 ```bash
-$ grunt build
+grunt build
 ```
 The build task compiles and compresses your course and prepares it for viewing and distribution. The output is located in the *build* directory.
 
 #### Viewing the build
 To view the build package create a local server:
 ```bash
-$ grunt server
+grunt server
 ```
 
 To emulate a SCORM server, use this command instead:
 ```bash
-$ grunt server-scorm
+grunt server-scorm
 ```
 Note: to terminate the server, press ctrl+c
 
@@ -76,8 +76,8 @@ This will now open your default browser at the following URL:
 This allows you to test your SCO without the need for a continual upload / update / reupload cycle. Please note that as this emulation uses an iframe, it is not suitable for device testing. It is intended for testing SCORM functionality only. If you do not require SCORM functionality, please run 
 
 ```bash
-$ adapt uninstall contrib-spoor
-$ grunt build
+adapt uninstall contrib-spoor
+grunt build
 ```
 The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
 
@@ -85,7 +85,7 @@ The server will display the default menu of the course in your browser with the 
 The theme and menu used in the build process can be customised using the `--theme` and `--menu` switches.  For example, if you had installed a new theme called `adapt-new-theme` and a new menu called `adapt-new-menu`, you could use them as follows:
 
 ````bash
-$ grunt build --theme=adapt-new-theme --menu=adapt-new-menu
+grunt build --theme=adapt-new-theme --menu=adapt-new-menu
 ````
 
 
