@@ -21,6 +21,14 @@ As the Adapt project has to rely on voluntary time, regular, thorough testing cy
    * Implementing new features
    * JIRA
    * Pull requests/code review
-   * Creating plugins
+   * Creating plugins  
+* Contributing Code
+   1. Before starting work on a new feature, enhancement, or fix, please create an issue and optionally assign it to yourself or a developer.
+   1. Fork the repository and make your changes against the 'develop' branch (not master).
+   1. After making your changes in your fork, run tests and ensure that the page looks good and works with all supported browsers.
+   1. If you have made a series of commits into the 'develop' branch, please try to squash them into a small number of commits.
+   1. Issue a Pull Request against the 'develop' branch (not master).
+   1. The core development team  will review your code and may optionally request conformance, functional, or other changes. Work together to resolve any issues.
+   1. Upon acceptance, your code will be merged into the codebase and will become available for all.
 
 ## Designers
