@@ -1,3 +1,5 @@
+<a href="https://github.com/adaptlearning/adapt_framework/wiki"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo_208x200.gif" alt="adapt logo"></a> 
+
 ###Getting Started
 * [Framework in Five Minutes](https://github.com/adaptlearning/adapt_framework/wiki/Framework-in-five-minutes)
 * [Setting up Your Development Environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)  
