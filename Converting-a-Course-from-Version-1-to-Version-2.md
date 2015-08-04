@@ -20,7 +20,7 @@ While this list is not comprehensive, the following are some things to watch for
 * here's where to configure Spoor, Right-to-Left display, accessibility, default weight for questions, default language, and drawer behavior
 
 ####*course.json*   
-* There are completely new sections for buttons used with questions, texts used globally with accessibility, page level progress, assessment, and bookmarking. The section for Resources has remained the same.
+* There are completely new sections for buttons used with questions, texts used globally with accessibility, Page Level Progress, Assessment, and Bookmarking. The section for Resources has remained the same.
 
 ####*contentObjects.json*  
 * two new properties:`pageBody` and `linkText`
