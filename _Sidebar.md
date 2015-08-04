@@ -13,7 +13,8 @@
 * [Creating Your First Course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
 * [Styling Your Course](https://github.com/adaptlearning/adapt_framework/wiki/Styling-your-course)
 * [Core Plugins in the Adapt Learning Framework](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework)
-* [Deploying and Testing Your Adapt Course](https://github.com/adaptlearning/adapt_framework/wiki/Deploying-and-testing-your-Adapt-course)
+* [Deploying and Testing Your Adapt Course](https://github.com/adaptlearning/adapt_framework/wiki/Deploying-and-testing-your-Adapt-course)  
+* [Converting a Course from Framework Version 1 to Version 2](https://github.com/adaptlearning/adapt_framework/wiki/Converting-a-Course-from-Version-1-to-Version-2)
 
 ----------------
 
