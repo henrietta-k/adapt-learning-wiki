@@ -1,4 +1,6 @@
 ### Installation
+Installing Adapt requires the use of the command line. If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need. If you've never used the command line before, please take advantage of tutorials on the web. Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.  
+
 Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
 Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/). Note: if you install Git for Windows, you will need to reboot after installation even though it doesn't prompt you to do this.
