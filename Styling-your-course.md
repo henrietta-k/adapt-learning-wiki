@@ -11,9 +11,9 @@ $ adapt install some-other-theme
 $ grunt build
 ```
 
-Simple customisation is possible by changing the built-in variables in **Vanilla**'s *less* folder: *colors.less*, *fonts.less*, *generic.less*, and *paddings.less*.
+###Theme variables  
+Simple customisation is possible by changing the built-in variables in **Vanilla**'s *less* folder: *colors.less*, *fonts.less*, *generic.less*, and *paddings.less*.  
 
-###Theme variables
 ####Main colors
 
 Use variables to store your theme's colors. Assign these to roles in your color scheme. This will help achieve a consistent look and feel across your course.
@@ -51,38 +51,16 @@ Transparencies are used for modal pop-ups to fade out the content underneath so 
 
 To support browsers that don't support transparent color, a fallback is required. This is set by providing a transparent PNG and setting the source of the file to this variable.
 
-####Validation error
+####Validation States
 
-- **Validation error color**
+- **@validation-error**  
+- **@validation-success**
 
-Set a validation error color to highlight items and instruction text. Be careful in your choice since this color needs to attract the learner's attention.
-
-####Item setup
-
-Use the these variables to style component items. A component item is an interactive element, e.g., a multiple choice question option. The variables are applied to every component to help achieve a consistent look to the course.
-
-- **Item color**
-
-Item color variables cover all the states an item can have such has a hover or selected.
-
-- **Item border**
-
-Similar to item color, use these variables to change how item's border styling.
-
-- **Item padding**
-- **Item spacing**
-
-Use these variables to adjust the layout of items. 
-
-####Button
-
-Much like the item variables, these variables cover all states of a button. An example of a button in Adapt is the submit button on a question component. Again, as previously described for *item*, all the styling applied here will be applied to all buttons in the course.
-
-Make sure buttons are styled, not just for use with a mouse, but also for touch on a mobile device.
+Set a validation error color to highlight items and instruction text when the learner's input is disallowed and to color the "X" icon when the answer is incorrect. Be careful in your choice since this color needs to attract the learner's attention. Set a validation-success color to highlight the tick icon when the answer is correct.
 
 ####Device widths
 
-These variables found in *less/generic.less* are used to set the breakpoints in Adapt. For example **@device-width-small** could be used to set your mobile breakpoint.
+These variables are used to set the breakpoints that determine what widths the design will respond to. For example **@device-width-small** could be used to set your mobile breakpoint. These are found in *less/generic.less*
 
 ####Global spacing
 
@@ -90,71 +68,69 @@ Set the variables for padding and margins for all titles and body text in your c
 
 ####Fonts
 
-Setup global font styling and properties in *less/fonts.less.
+Setup global font styling and properties in *less/fonts.less*.
+
+
+###Style Rules  
+Variables set in *colors.less*, *fonts.less*, *generic.less*, and *paddings.less* are assigned to CSS styles found in the various files contained in the *less/src* folder.
 
 ####Navigation
 
-The navigation is the bar that is fixed to the top of the browser window. These variables are used to style the navigation bar and the icons that sit inside it.
+The navigation is the bar that is fixed to the top of the browser window. These CSS rules used to style the navigation bar and the icons that sit within it are located in *less/src/navigation.less*.
 
 ####Drawer
 
-Drawer is the panel that slides out from the right of the browser window. These variables are used to style the drawer panel and the items that sit inside it.
+Drawer is the panel that slides out from the right of the browser window. Use the rules in *less/src/drawer.less* to style the drawer panel and the items that sit inside it.
 
 ####Notify
 
-The variables here apply styling to all notify popup's in your course. This can include popup's like question feedback.
-
-
+**Notify** includes most modal pop-ups like you see with a question's feedback. Style them with rules found in *less/src/notify.less*. 
 
 ####Icons
 
-These variables style the SVG icons in your course. Example of one of these icons would be the mcq radio icon.
+Styles for the SVG icons used in your theme are found in *less/src/icons.less*. An example of such an  icons would be the check-box icon that appears in a **Multiple Choice Question** (adapt-contrib-mcq). Contained in this file are the assignments of icon codes to the classnames used to represent them, for example, `.icon-tick:before {content: "\e633";}`
+
+####Button
+
+The styles found in *buttons.less* cover all states of a button. An example of a button in Adapt is the submit button on a question component. All the styling applied here will be applied to all buttons in the course. Make sure buttons are styled, not just for use with a mouse, but also for touch on a mobile device.
 
 ###Theme templates
 
-Inside the ```/templates/``` folder you will find editable handlebars templates for various views such as the page and block. 
+Inside the *templates* folder you will find editable Handlebars templates for various views such as the page and block. 
 
-It's important to understand how Adapt renders these templates before changing them significantly. For example in ```block.hbs``` you will find a div element:
-
+It's important to understand how Adapt renders these templates before changing them significantly. For example, in *block.hbs*, you will find this `div` element:  
 ```
 <div class="component-container">
 </div>
-```
-
+```  
 Removing this element or changing the class name would mean that components would no longer render.
 
-Remember to use handlebars helpers to make sure only the html that needs to be displayed is rendered. More information about handlebars can be found [here](http://handlebarsjs.com/).
+Remember to use [Handlebars helpers](http://handlebarsjs.com/block_helpers.html) to make sure only the html that needs to be displayed is rendered.
 
 ###Theme Javascript
 
-The theme javascript file found in the ```/js/``` folder should be used to add any additional theming that cannot be done using just html/css. For example you could use this to fade in an image when the page loads.
+The theme JavaScript files found in the *js* folder should be used to add any additional theming that cannot be done using just html/css (.hbs/.less). For example, you could ass JavaScript to fade in an image when the page loads.
 
-It's strongly recommended that the theme shouldn't be setting any attributes on models, you can however use classes if say you want an effect on a particular page.
+It's strongly recommended that the theme shouldn't be setting any attributes on [Backbone models](http://backbonejs.org/#Model-View-separation); you can, however, use classes if, say, you want an effect on a particular page.
 
-You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on say a page postRender event.
+You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on, say, a page postRender event.
 
 ###Theme Assets
 
-Place any assets required for your theme to display correctly in the ```/assets/``` folder. Any course related assets should be placed in the course folder rather than the theme.
+Place any assets required for your theme to display correctly in the *assets* folder. Any course related assets should be placed in the course folder (_src/course/en/*_) rather than here. Remember to provide smaller sized assets for mobile devices to keep page weights down.
 
-Remember to provide smaller sized assets for mobile devices to keep page weights down.
+###How to modify the **Vanilla** theme
 
-###How to modify the vanilla theme
+Locate the **Vanilla** theme:  *src/theme/adapt-contrib-vanilla* Here you will find all of the elements which make up an Adapt theme.
 
-Locate the vanilla theme from the following directory:
-``src/theme/adapt-contrib-vanilla`` here you will find all of the elements which make up an Adapt theme.
+The *less* folder contains all of the style elements, and it is here where we can quite quickly change the look of your course.
 
-The ```/less/``` folder contains all of the style elements and it is here where we can quite quickly change the look of your course.
-
-Open the file *colors.less*.
-
-Create a new Less variable:  
+Open the file *colors.less* and create a new Less variable:  
 @crimson: #DC143C;
 
 Assign the new color variable to the `@primary-color`:  
-
 `@primary-color: @crimson;`
 
-Save your file, rebuild the course, and preview in your browser. You should see that your course is now displaying in a red tone. Continue to modify the remaining variables in the *.less* file for further customisation.
+Save your file, rebuild the course, and preview in your browser. Significant elements in your course now appear in red. Continue to modify the remaining variables in the *.less* file for further customisation.
 
 **Next** - [[Developing plugins]]
