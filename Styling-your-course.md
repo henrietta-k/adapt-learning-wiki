@@ -1,22 +1,22 @@
 Themes
 ------
-Adapt supports user-defined themes, a special kind of plugin that lets you style your course in a variety of ways. Themes are written in [LESS](http://lesscss.org/), all CSS syntax is supported plus variables and nested rules. The HTML templates are created using [handlebars](http://handlebarsjs.com/).
+Adapt supports user-defined themes, a special kind of plugin that lets you style your course in a variety of ways. Themes are written in [Less](http://lesscss.org/), all CSS syntax is supported plus variables and nested rules. The HTML templates are created using [Handlebars](http://handlebarsjs.com/).
 
-A basic theme, [adapt-contrib-vanilla](/adaptlearning/adapt-contrib-vanilla) is included in the framework and can be found in the ```theme``` folder 
+A basic theme, [adapt-contrib-vanilla](/adaptlearning/adapt-contrib-vanilla) is included in the framework's *src/theme* folder. 
 
-To switch to a new theme, do the following:
+The framework permits only one theme to be installed at a time. To switch to a new theme, uninstall the **Vanilla** theme, then install the new theme. Run the following commands:  
 ```bash
 $ adapt uninstall contrib-vanilla
 $ adapt install some-other-theme
 $ grunt build
 ```
 
-Simple customisation is possible by changing the built-in variables in ```less/variables.less```
+Simple customisation is possible by changing the built-in variables in **Vanilla**'s *less* folder: *colors.less*, *fonts.less*, *generic.less*, and *paddings.less*.
 
 ###Theme variables
 ####Main colors
 
-Use the main colours to store your theme's colors. You can use the main color in combination with other variables that set colors, for example the button color. This will help achieve a consistent look and feel across your course.
+Use variables to store your theme's colors. Assign these to roles in your color scheme. This will help achieve a consistent look and feel across your course.
 
 - **@primary-color**
 
@@ -24,7 +24,7 @@ This is your theme's main color. This variable could be used for the overall col
 
 - **@secondary-color**
 
-This the the theme's secondary color. Set this variable to something that compliments your primary. An example of where the secondary could be used is the hover colors.
+This the the theme's secondary color. Set this variable to something that complements your primary. An example of where the secondary could be used is the hover colors.
 
 - **@tertiary-color**
 
@@ -45,21 +45,21 @@ The inverted foreground/background are used in similar way as above. An ideal si
 
 - **@transparency**
 
-Transparencies are used for modal popups to fade out the content underneath so the learner's focus is on the popup.
+Transparencies are used for modal pop-ups to fade out the content underneath so the learner's focus is on the pop-up.
 
 - **@transparency-fallback-png**
 
-To support browsers that don't support transparent colour, a fallback is required. This is set by providing a transparent png and setting the source of the file to this variable.
+To support browsers that don't support transparent color, a fallback is required. This is set by providing a transparent PNG and setting the source of the file to this variable.
 
 ####Validation error
 
 - **Validation error color**
 
-Use the variables to set a validation error color to items and instruction text. Be careful with what color you set these too since this needs to be clearly visible.
+Set a validation error color to highlight items and instruction text. Be careful in your choice since this color needs to attract the learner's attention.
 
 ####Item setup
 
-Use the these variables to style component items. A component item is an interactive element, e.g. a multiple choice question option. The variables are applied to every component to help achieve a consistent look to the course.
+Use the these variables to style component items. A component item is an interactive element, e.g., a multiple choice question option. The variables are applied to every component to help achieve a consistent look to the course.
 
 - **Item color**
 
@@ -76,17 +76,21 @@ Use these variables to adjust the layout of items.
 
 ####Button
 
-Much like the item variables, these variables cover all states of a button. An example of a button in Adapt is the submit on a question component. Again like the item all the styling applied here will be applied to all buttons in the course.
+Much like the item variables, these variables cover all states of a button. An example of a button in Adapt is the submit button on a question component. Again, as previously described for *item*, all the styling applied here will be applied to all buttons in the course.
 
-Make sure buttons are styled, not just for use with a mouse but also for touch on a mobile device.
+Make sure buttons are styled, not just for use with a mouse, but also for touch on a mobile device.
 
 ####Device widths
 
-These variables are used to set the breakpoints in Adapt. For example **@device-width-small** could be used to set your mobile breakpoint.
+These variables found in *less/generic.less* are used to set the breakpoints in Adapt. For example **@device-width-small** could be used to set your mobile breakpoint.
 
 ####Global spacing
 
-Use these variables to set the padding and margins for all titles and body text in your course.
+Set the variables for padding and margins for all titles and body text in your course in *less/paddings.less*.
+
+####Fonts
+
+Setup global font styling and properties in *less/fonts.less.
 
 ####Navigation
 
@@ -100,9 +104,7 @@ Drawer is the panel that slides out from the right of the browser window. These 
 
 The variables here apply styling to all notify popup's in your course. This can include popup's like question feedback.
 
-####Fonts
 
-Setup global font styling and properties here.
 
 ####Icons
 
@@ -144,15 +146,15 @@ Locate the vanilla theme from the following directory:
 
 The ```/less/``` folder contains all of the style elements and it is here where we can quite quickly change the look of your course.
 
-Open the file ``variables.less``
+Open the file *colors.less*.
 
-Modify the @primary-color & @secondary-color values to:
+Create a new Less variable:  
+@crimson: #DC143C;
 
-```
-@primary-color:#BE3550;
-@secondary-color:#74104B;
-```
+Assign the new color variable to the `@primary-color`:  
 
-Save your file, rebuild the course and preview in your browser. You should see that your course is now displaying in a red tone. Continue to modify the remaining variables in the .less file for further customisation.
+`@primary-color: @crimson;`
+
+Save your file, rebuild the course, and preview in your browser. You should see that your course is now displaying in a red tone. Continue to modify the remaining variables in the *.less* file for further customisation.
 
 **Next** - [[Developing plugins]]
