@@ -121,7 +121,7 @@ Place any assets required for your theme to display correctly in the *assets* fo
 
 ###How to modify the **Vanilla** theme
 
-Locate the **Vanilla** theme:  *src/theme/adapt-contrib-vanilla* Here you will find all of the elements which make up an Adapt theme.
+Locate the **Vanilla** theme:  *src/theme/adapt-contrib-vanilla* Here you will find all of the elements which make up an Adapt theme. Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for an exploration of its structure and styles. 
 
 The *less* folder contains all of the style elements, and it is here where we can quite quickly change the look of your course.
 
