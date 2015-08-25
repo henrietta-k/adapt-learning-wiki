@@ -1,6 +1,6 @@
 **DRAFT**
 
-So what is the Adapt Framework?
+<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/deep-scroll01.png" alt="" align="right">So what is the Adapt Framework?
 
 You can read the full detail on the [community site](http://community.adaptlearning.org) (start with the Vision).
 
@@ -16,7 +16,7 @@ As a developer you shouldn't normally need to modify code in the core framework.
 
 ## Content Structure
 
-There's some detailed information about [content structure](https://community.adaptlearning.org/mod/page/view.php?id=20) on the Community Site.
+<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/a-b-c_structure.png" alt="diagram of boxes showing page surrounding article surrounding block surrounding component" align="right">There's some detailed information about [content structure](https://community.adaptlearning.org/mod/page/view.php?id=20) on the Community Site.
 
 The Adapt Framework deals with "Courses".  Each package contains a single **Course** and that course is made up of **Pages**.  Pages have a hierarchical structure of **Articles** which contain **Blocks** which contain **Components**
 
