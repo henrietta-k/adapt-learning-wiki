@@ -7,7 +7,7 @@ We use the following branches:
 Name | Description | Persisting
 ---- | ----------- | ----------
 `master` | Contains the stable, released code. | yes
-`develop` | The ‘working’ branch. Is the the parent of all feature and release branches, and contains the latest code. Develop **does not** contain tested code, and should definitely not be considered production ready. | yes
+`develop` | The ‘working’ branch containing the latest code, and the parent of all feature and release branches. Develop code has **not** gone through a rigorous testing process, and should definitely not be considered production ready. | yes
 `release/VERSION_NAME` | (e.g. `release/v2.0`)<br> A release candidate branch. Contains code currently being tested. | no
 `hotfix/TICKET_NAME` | (e.g. `hotfix/ABU-001`)<br> Self-contained bug-fix. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
 `feature/FEATURE_NAME` | This is also likely to be named after a JIRA ticket (see above).<br> Self-contained feature. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
