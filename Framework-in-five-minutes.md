@@ -11,7 +11,7 @@ What this means in practise:
 
 **Single source**: Keeping content current becomes less problematic when there's only one version to maintain.
 
-**Single-page app**: Rather than force the user to download lots of pages individually, we've chosen to create Adapt as [single-page app](https://en.wikipedia.org/wiki/Single-page_application), meaning less HTTP requests, and a much more responsive experience users, especially those on mobile or with poor data connections.
+**Single-page app**: Rather than force the user to download lots of pages individually, we've chosen to create Adapt as [single-page app](https://en.wikipedia.org/wiki/Single-page_application), meaning less HTTP requests, and a much more responsive experience for users, especially those on mobile or with poor data connections.
 
 **Designed for e-learning**: Built from the ground up specifically for e-learning, the framework comes bundled with a number of useful plugins, including learner progress tracking, customisable assessments and a learning resources 'drawer'.
 
@@ -47,7 +47,7 @@ These scrolling layouts provide us with:
 
 - An opportunity to structure content in more varied ways.
 - The ability to incorporate art direction throughout the course, rather than being limited to specific branding areas (such as the nav bar).
-- No more need for unnecessary pages, and extra navigation due to the designer running out of onscreen ‘real estate’.
+- No more need for unnecessary pages and extra navigation as a result of the designer running out of screen ‘real estate’.
 
 ### Learn your ABCs
 
@@ -57,22 +57,19 @@ To better fit the new scrolling page design ethic, we've created a more suitable
 
 **Pages** are how the main learning content is presented (similar to a page on the web), and can contain a number of sub-elements, making them perfect to present a single topic in an e-learning course.
 
-**Articles** are the next step down, and are used to present compound pieces of information within the page. Like pages, articles can be formed of many sub-elements. 
-<br>Articles can also be used to split up a page for presentation purposes.
+**Articles** are the next step down, and are used to present compound pieces of information within the page. Like pages, articles can be formed of many sub-elements. Articles can also be used to split up a page for presentation purposes.
 
 **Blocks** have replaced the traditional screens/slides found in most e-learning publishing software, and present small chunks of related content using **components**.
 
 **Components** are the main interactions in Adapt, and present simple ideas. Components can be used in a block full-width, or combined with another component for more variety.
 
-See the diagram to the right for a visual example of page structuring using this hierarchy. In summary:
-
-**Pages** contain **Articles** contain **Blocks** contain **Components**.
+To summarise: **Pages** contain **Articles** contain **Blocks** contain **Components**.
 
 Think **A**, **B**, **C**!
 
 ## Getting technical
 
-The Adapt framework has been designed to be easily accessible to developers. By using popular web frameworks, and a plug-and-play modular architecture, you can spend more time developing interesting functionality, and less time trying to integrate with the core product.
+The Adapt framework has been designed to be easily accessible to developers. By using popular web frameworks, and a modular plug-and-play architecture, you can spend more time developing fun stuff, and less time trying to integrate with the core product.
 
 ### Open standards and familiar frameworks
 
@@ -90,10 +87,10 @@ Adapt's core, while lightweight, has all the functionality you need to create co
 
 Adapt plugins fit into four different categories:
 
-**[Components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#components)**: small interactive widgets (e.g. text, slider).<br>
-**[Extensions](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#extensions)**: additional functionality extending the core (e.g. resources, assessment).<br>
-**[Themes](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#themes)**: custom course styling (e.g. vanilla).<br>
-**[Menus](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#menus)**: determines how the learner navigates through the course (e.g. box menu).
+**[Components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#components)**: small interactive widgets (e.g. [text](https://github.com/adaptlearning/adapt-contrib-text), [slider](https://github.com/adaptlearning/adapt-contrib-slider)).<br>
+**[Extensions](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#extensions)**: additional functionality extending the core (e.g. [resources](https://github.com/adaptlearning/adapt-contrib-resources), [assessment](https://github.com/adaptlearning/adapt-contrib-assessment)).<br>
+**[Themes](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#themes)**: custom course styling (e.g. [vanilla](https://github.com/adaptlearning/adapt-contrib-vanilla)).<br>
+**[Menus](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#menus)**: determines how the learner navigates through the course (e.g. [box menu](https://github.com/adaptlearning/adapt-contrib-boxmenu/)).
 
 ### Streamlined development and deployment with the Adapt command-line interface
 
