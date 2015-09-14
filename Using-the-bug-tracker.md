@@ -1,5 +1,3 @@
-# Using the bug tracker
-
 We use [JIRA](https://adaptlearning.atlassian.net/) to manage the day-to-day work on the Adapt framework. This page aims to give you a quick overview of the features we use.
 
 The Adapt JIRA is open for anyone to view, although an authorised account is needed to perform more administrative tasks. As an anonymous user, you can:
