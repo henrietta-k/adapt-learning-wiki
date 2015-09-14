@@ -1,34 +1,56 @@
-This page should guide you through the first steps of contributing to the Adapt Framework. Please note that it's a bit of a work-in-progress at the moment, so please bear with us - and please suggest edits/improvements to the content where you feel they are necessary!
+First of all, thank you for showing interest in the Adapt project! This document was intended to give some guidance on getting involved in two(!) easy steps.
 
-## Need help?
 
-## What skills do I need?
+## 1. Explore the community
 
-## General tips
+The Adapt project has a thriving, friendly community who have an incredible knowledge of the inner-workings of Adapt - make as much use of this as you can. 
 
-This section gives some pointers for getting involved in general Adapt business, be it by contributing to discussions, testing new releases, or just checking project activity.
+### Say hello
 
-### Welcome to the community
-If you're planning on getting involved with the Adapt project, you'll want to familiarise yourself with the community site: the hub of all things Adapt. The community site, if nothing else, collates all the different areas of the Adapt project, from bug tracking, to documentation, to releases, to social media.
+If this is your first time contributing, please drop by our [general_chat](https://gitter.im/adaptlearning/general_chat) stream on Gitter and introduce yourself (you'll need a GitHub account to do this) - we love seeing new faces!
 
-There's also the community forum, which is perused daily by a number of the core Adapt team, as well as other developers and users. If you have an Adapt-related question that can't be answered elsewhere (and hasn't been answered in the forum already), this is the place to go. Please contribute to discussion wherever you can; the Adapt project thrives on the feedback given by developers and users outside of the Adapt 'bubble'. There are always improvements to be made, and new features to be developed; even if you don't have the required skills to implement them yourself, please float your ideas on the forum as there may be someone that can (or has already!).
+You can also explore the other more specific Gitter rooms to get a feel of what goes on day-to-day.
 
-### Bug spotting
-As the Adapt project has to rely on voluntary time, regular, thorough testing cycles are a rarity. Please log any issues you find while working with Adapt on the relevant GitHub repository. If the issue has already been logged, please add any extra information you have, including your current browser/device operating system version and any other configuration set-up you can provide (or even simply an 'I can also replicate this issue'), as this will all be useful to the developer that comes to fix it.
+- [adapt_framework](https://gitter.im/adaptlearning/adapt_framework)
+- [adapt_authoring](https://gitter.im/adaptlearning/adapt_authoring)
+- [documentation](https://gitter.im/adaptlearning/documentation)
 
-## Coders
-* Fixing bugs (have added `good first bug` and `mentored bug` labels)
-   * Implementing new features
-   * JIRA
-   * Pull requests/code review
-   * Creating plugins  
-* Contributing Code
-   1. Before starting work on a new feature, enhancement, or fix, please create an issue and optionally assign it to yourself or a developer.
-   1. Fork the repository and make your changes against the 'develop' branch (not master).
-   1. After making your changes in your fork, run tests and ensure that the page looks good and works with all supported browsers.
-   1. If you have made a series of commits into the 'develop' branch, please try to squash them into a small number of commits.
-   1. Issue a Pull Request against the 'develop' branch (not master).
-   1. The core development team  will review your code and may optionally request conformance, functional, or other changes. Work together to resolve any issues.
-   1. Upon acceptance, your code will be merged into the codebase and will become available for all.
+### Head to the community site
 
-## Designers
+The community site acts as the project hub; first and foremost providing you with links to all corners of the Adapt project, such as the issue tracker, and source code.
+
+At the heart of the community site are the forums, and one of the best ways you can contribute to the project is to share your knowledge of Adapt in here. The only requirement is that you like a chat!
+
+
+## 2. Find something to work on
+
+The next step to getting involved is to find something to actually work on. Based on your skills and interests, there are a number of different areas that you can help out with.
+
+### Report issues
+
+One of the easiest ways to make a meaningful contribution to the project is to submit any bugs you find to [our bug tracker](https://adaptlearning.atlassian.net/).
+
+If you think you've found a bug, check out our guide on [reporting issues](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features), which will give you more information on verifying your bug, as well as what to report, and where.
+
+If you can fix a bug you've reported, even better! Check out the next section on what to do in that case.
+
+### Fix issues
+
+If you're looking to get involved as a developer, fixing existing issues is a good place to start.
+
+We've written a [guide to contributing code](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-code) which will give you more information on finding a bug to work on, how to go about fixing that bug, and what to do once you've written a patch.
+
+### Contribute code
+
+If you've been working with Adapt for a while, and are comfortable working with the framework on a larger scale, you may want to contribute to a larger [feature-request](https://adaptlearning.atlassian.net/browse/ABU-698?filter=10801) patch, or [write your own plugin](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins).
+
+Have a look at our [page dedicated to code contribution](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-code) for more.
+
+### Write documentation
+
+If you're a keen writer, we're always looking for more hands to help out writing documentation (no technical knowledge necessary). See our [documentation guide](https://github.com/adaptlearning/adapt_framework/wiki/Writing-documentation) for more.
+
+
+## 3. Repeat!
+
+Hopefully, you've been bitten by the open-source bug by now and want to contribute more. We always look forward to community contribution, no matter how small :grinning: 
