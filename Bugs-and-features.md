@@ -1,5 +1,3 @@
-# Bugs and features
-
 We use JIRA to manage all bugs and feature requests for the Adapt framework. If you're new to JIRA, please have a look at our [guide to using the bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker) for some preliminary reading.
 
 ## Reporting bugs
