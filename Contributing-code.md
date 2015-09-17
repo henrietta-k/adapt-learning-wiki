@@ -10,7 +10,7 @@
 - Grunt (node)
 
 [Becoming a code ninja](https://github.com/adaptlearning/adapt_framework/wiki/Becoming-a-code-ninja)
-[Becoming a front-end ninja](https://github.com/adaptlearning/adapt_framework/wiki/Becoming-a-front-end-ninja)
+<br>[Becoming a front-end ninja](https://github.com/adaptlearning/adapt_framework/wiki/Becoming-a-front-end-ninja)
 
 ## Finding something to work on
 good-first-bug
