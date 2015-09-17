@@ -9,6 +9,8 @@
 - **CSS** (LESS preprocessed)
 - Grunt (node)
 
+[Becoming a code ninja](https://github.com/adaptlearning/adapt_framework/wiki/Becoming-a-code-ninja)
+
 ## Finding something to work on
 good-first-bug
 mentored-bug
