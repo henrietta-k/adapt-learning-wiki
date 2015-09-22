@@ -36,6 +36,9 @@ Adapt requires few pre-requisites prior so if you haven't already, get up-and-ru
 
 ## Submitting your code
 
+- Link to code styleguide
+- Grunt task to enforce whitespace etc?
+
 ### Peer code review
 
 ### Merging
