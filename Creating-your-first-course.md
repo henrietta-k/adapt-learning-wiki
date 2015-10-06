@@ -91,7 +91,7 @@ On a new line directly after paste the code you copied earlier, so the end of yo
 * Change the title and the body, just as you did in the previous example.
 * Save your code
 
-Now you will need to re-build your code and refresh the browser, should now see at the bottom of the menu a new item (it won't do anything just yet).
+Adapt content requires a structure of articles, blocks, and components. The number of each will vary from course to course, but the hierarchical relationship is fundamental to each page.
 
 ####articles.json
 Now that you have created your item in the menu you will want to create an 'Article'. Open the articles.json file, just as we did in the last example, copy the first json object and paste this at the bottom of your document.
