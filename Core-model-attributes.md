@@ -12,7 +12,6 @@ Attribute | Description | Default value
 `_isEnabledOnRevisit` |  | `true`
 `_isAvailable` |  | `true`
 `_isOptional` | If set to `true`, the user will not be required to complete the component in order to complete the course. The completion of the component will still be tracked, but it will be ignored during any completion calculations.  | `false`
-`_isTrackable` | Specifies whether or not the current item can be tracked by an extension such as SCORM. |  `true`  
 `_isReady` | This is used to determine if the current item is ready (i.e. has been initialised). This needs to be set manually for custom components. For instance, this may be set to true post-render. | `false`
 `_questionWeight` | The weight of a particular question, which is used when calculating the score. | `1`
 `_buttons` | An object to store the label values for template buttons. Buttons can then be referenced in templates using `{{{_buttons.submit}}}` | See fig.1.
