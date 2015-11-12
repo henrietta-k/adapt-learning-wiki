@@ -36,7 +36,7 @@ Fixing bugs is a great way to dip your toe into the warm Adapt waters. Head to o
 
 There's already a good long list of TODO features on our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker), so have a look on there to see if anything takes your fancy.
 
-Regardless of the feature, there will probably be some design/architecture required, and therefore some discussion amongst the community/core team before you get knee-deep in code. It's a good idea therefore to head to [Gitter](https://gitter.im/orgs/adaptlearning/rooms) to get the ball rolling and give everyone a heads-up on what you're thinking of doing.
+Regardless of the feature, there will probably be some discussion amongst the community/core team needed before you can get knee-deep in code. It's a good idea therefore to head to [Gitter](https://gitter.im/orgs/adaptlearning/rooms) to get the ball rolling and give everyone a heads-up on what you're thinking of doing so we can advise you on the best route to take.
 
 ### Shout about it!
 
