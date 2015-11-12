@@ -1,27 +1,40 @@
 _**Note:** This article assumes that you understand the [basic concepts of the git version control system](https://help.github.com/articles/good-resources-for-learning-git-and-github/)._
 
-On the Adapt project, we've adopted the git flow model to organise our repos using branches (which you can read more about in [this article](http://nvie.com/posts/a-successful-git-branching-model/)). This process may be too involved for smaller plugins, but as a rule, it's important to always separate your release code from your in-development code (i.e. master and develop).
+### Branching
 
-We use the following branches:
+On the Adapt project, we organise the branches in our repos according to GitHub flow - a simplified variation of the git flow model. For those familiar with git flow, you will notice that there are no develop branches anywhere to be found ***(you can read more about GitHub flow [here](https://guides.github.com/introduction/flow/))***.
+
+What this means in practise is that we can get releases out much more frequently; little and often is something which works much better with the oft fluctuating developer resources we rely on.
+
+We use the following branches in the core Adapt repositories:
 
 Name | Description | Persisting
 ---- | ----------- | ----------
 `master` | Contains the stable, released code. | yes
-`develop` | The ‘working’ branch containing the latest code, and the parent of all feature and release branches. Develop code has **not** gone through a rigorous testing process, and should definitely not be considered production ready. | yes
-`release/VERSION_NAME` | (e.g. `release/v2.0`)<br> A release candidate branch. Contains code currently being tested. | no
-`hotfix/TICKET_NAME` | (e.g. `hotfix/ABU-001`)<br> Self-contained bug-fix. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
-`feature/FEATURE_NAME` | This is also likely to be named after a JIRA ticket (see above).<br> Self-contained feature. Should not be pushed to the core repo, but rather a personal fork. Changes submitted as a pull request | no
+`release/VERSION_NAME`<br/>*(e.g. `release/v2.0`)* | A release candidate branch. Contains **development** code, and should not be considered stable. Use this code at your own risk! | no
+`issue/TICKET_NAME` <br/>*(e.g. `issue/ABU-001`)* | A self-contained bug-fix. Should be named after a corresponding issue ID. Finished changes should be submitted as a pull request. | no
+`feature/FEATURE_NAME` | A self-contained feature. This should also be named with an issue ID (see above). Finished changes should be submitted as a pull request. | no
 
-We apply the following rules to the core Adapt repos (i.e. those owned by [@adaptlearning](https://github.com/adaptlearning)):
+We also apply the following rules to the core Adapt repos (i.e. those owned by [@adaptlearning](https://github.com/adaptlearning)):
 
-* Core repos should only ever have `master`, `develop`, and `release` branches.
-* The `master` branch contains only thoroughly tested code, and only ever merges in `release` branches (and `hotfix` branches in the case that an urgent bug is found).
-* Feature branches represent isolated, new functionality, and should be taken from develop.
-* Hotfix branches are used to fix issues, and merged into both `develop` and `master`.
-* The `master` and `develop` branches are the only persisting branches. All other branches should be deleted post-merge.
-* Anyone who is making a change to a repo creates their own fork, and works from that (this should include the core team). 
-* PRs work in the same way.
+* The `master` branch is the only persisting branch. All other branches should be deleted post-merge.
+* Core Adapt repos should only ever have `master` and `release` branches.
+* The `master` branch contains only *thoroughly* tested code, and should only ever merge code from a `release` branch.
+* `feature` branches represent isolated, new functionality, and should be taken from the latest `release` branch. Once work is complete, code should be submitted as a pull request (PR) to the latest `release` branch (**NOT** `master`).
+* Bug fixes (i.e. `issue` branches) should be submitted as a PR to the current `release` branch (**NOT** `master` -- due to our frequent release schedule, we don't allow hotfixes directly into `master`).
+* Anyone who is making a change to a repo should create and work from their own fork (including where possible, the core team).
 
 ### Gearing up for release
 
-When a release is planned, we create a release branch from `develop` at the point that represents the required feature set. Once this release branch is created, only fixes are made to it, no further additions. After this branch has been thoroughly tested, and any bugs fixed, it is merged with `master` (and optionally `develop`, to make sure that all fixes have been carried across) and deleted. A 'tag' is added to the master branch to signify the new release.
+We go through the following schedule prior to making a release:
+
+1. The core development team assign a bunch of issues/features to the relevant release in our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker).
+1. A `release` branch is created from the latest `master` code.
+1. The coders are let loose :wrench:, and submit their additions as PRs using the aforementioned process.
+1. Once all work has been done, the branch goes through our testing process.
+1. Any issues found during testing are fixed.
+1. Once the testing team are happy, we're good to release.
+
+### Releasing
+
+Once the release code has been properly tested, we are ready to merge back into master. When this is done, we tag the master branch with the release number, and **party**! :tada::balloon::tropical_drink:
