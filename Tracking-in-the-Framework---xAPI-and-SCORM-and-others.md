@@ -12,3 +12,8 @@ Some work has been done already (see [ABU-1116](https://adaptlearning.atlassian.
   * Are events consistent?
 * xAPI extension? (new Scorm one too?)
 * Additional tracking types - in addition to SCORM/xAPI?
+
+## Tentative Actions/Conclusions:
+* Serialization should stay within the protocol (SCORM, xAPI, etc.)
+* Stateful session will move to adapt core
+* Possibility of implementing one tracking query that each protocol can query to determine the tracking status (rather than a lot of individual tracking calls to core)
