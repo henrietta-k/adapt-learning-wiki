@@ -1,4 +1,4 @@
-<a href="https://github.com/adaptlearning/adapt_framework/wiki"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/adapt-logo_208x200.gif" alt="adapt logo"></a> 
+<a href="https://github.com/adaptlearning/adapt_framework/wiki"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/adapt-logo_208x200.gif" alt="adapt logo"></a>
 
 ###Getting Started
 * [Framework in Five Minutes](https://github.com/adaptlearning/adapt_framework/wiki/Framework-in-five-minutes)
@@ -16,7 +16,7 @@
 * [Creating Your First Course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
 * [Styling Your Course](https://github.com/adaptlearning/adapt_framework/wiki/Styling-your-course)
 * [Core Plugins in the Adapt Learning Framework](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework)
-* [Deploying and Testing Your Adapt Course](https://github.com/adaptlearning/adapt_framework/wiki/Deploying-and-testing-your-Adapt-course)  
+* [Compiling, testing and deploying your Adapt course](https://github.com/adaptlearning/adapt_framework/wiki/Compiling,-testing-and-deploying-your-Adapt-course)  
 * [Converting a Course from Framework Version 1 to Version 2](https://github.com/adaptlearning/adapt_framework/wiki/Converting-a-Course-from-Version-1-to-Version-2)
 
 ----------------
