@@ -26,17 +26,7 @@ The following are supporting libraries and frameworks; not essential to know, bu
 
 The first step contributing code to the project is to find an area that you want to work on - something that can be easier said than done.
 
-If you already have something in mind - maybe you've found a bug, or there's a specific plugin you want to develop, great! Otherwise, have a look at the next two sections for a bit of advice on finding something to work on.
-
-### Bugs
-
-Fixing bugs is a great way to dip your toe into the warm Adapt waters. Head to our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker) and look for issues with the **good-first-bug** or **mentored-bug** labels for some more straighforward tasks. The former should be accessible to developers of any experience level, while the latter may require some more metaphorical hand-holding from one of the core development team.
-
-### Features
-
-There's already a good long list of TODO features on our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker), so have a look on there to see if anything takes your fancy.
-
-Regardless of the feature, there will probably be some discussion amongst the community/core team needed before you can get knee-deep in code. It's a good idea therefore to head to [Gitter](https://gitter.im/orgs/adaptlearning/rooms) to get the ball rolling and give everyone a heads-up on what you're thinking of doing so we can advise you on the best route to take.
+If you already have something in mind - maybe you've found a bug, or there's a specific plugin you want to develop, great! Otherwise, we've written [a few tips](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features/) on our Bugs and features page on how you can get started.
 
 ### Shout about it!
 
