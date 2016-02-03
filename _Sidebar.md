@@ -7,8 +7,7 @@
 * [Adapt Command Line Interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
 * [Common Issues](https://github.com/adaptlearning/adapt_framework/wiki/Common-Issues)
 * [Reporting Bugs](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features#reporting-bugs)
-* [Requesting Features](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features#requesting-new-features)
-* [Using the Bug Tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker)
+* [Requesting Features](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features#features)
 
 ----------------
 
