@@ -1,10 +1,12 @@
 _**Note:** This article assumes that you understand the [basic concepts of the git version control system](https://help.github.com/articles/good-resources-for-learning-git-and-github/)._
 
-### Branching
+### Overview
+
+On the Adapt project, our mantra when it comes to releasing new versions of the framework and core plugins is 'little and often'. To achieve this, we've adopted a similar cut-down approach to the popular 'git flow' model to that [used by GitHub](https://guides.github.com/introduction/flow/): we've done away with develop branches in favour of merging directly into master, which not only means much less testing is required, but more importantly for our users, much more frequent releases :tada: (something which we find works much better with the oft fluctuating developer resource we rely on).
 
 On the Adapt project, we organise the branches in our repos according to GitHub flow - a simplified variation of the git flow model. For those familiar with git flow, you will notice that there are no develop branches anywhere to be found ***(you can read more about GitHub flow [here](https://guides.github.com/introduction/flow/))***.
 
-What this means in practise is that we can get releases out much more frequently; little and often is something which works much better with the oft fluctuating developer resources we rely on.
+### Branching
 
 We use the following branches in the core Adapt repositories:
 
@@ -31,7 +33,7 @@ We go through the following schedule prior to making a release:
 1. The core development team assign a bunch of issues/features to the relevant release in our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker).
 1. A `release` branch is created from the latest `master` code.
 1. The coders are let loose :wrench:, and submit their additions as PRs using the aforementioned process.
-1. Once all work has been done, the branch goes through our testing process.
+1. Once all work has been done, we call a code freeze :snowflake:, and the branch goes through our testing process.
 1. Any issues found during testing are fixed.
 1. Once the testing team are happy, we're good to release.
 
