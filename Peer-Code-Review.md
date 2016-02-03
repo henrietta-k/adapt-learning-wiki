@@ -2,7 +2,7 @@ After writing some code (be it in the form of a new feature, or bug fix), it mus
 
 1. Code is submitted for review as a pull request.
 2. Code is reviewed by peers with any discussion taking place in public, on the PR page itself.
-3. Peers post their assessment of the code on the PR page with any of the following: -1, +1, +2. 
+3. Peers post their assessment of the code on the PR page and when they feel in the position to give a concrete verdict, give either a +1, +2 or -1 (reserved for exceptional circumstances).
 4. Code is merged after the required +1s are received.
 
 The process is governed by these rules:
@@ -37,9 +37,9 @@ Scores indicate the following:
 
 ### Core Team Members
 
-**Adapt Framework Core Developers:** Daryl Hedley, Chris Jones, Brian Quinn, Alan Bourne, Himanshu Rajotia, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Petra Nussdorfer, Dennis Heaney
+**Adapt Framework Core Developers:** Chris Jones, Brian Quinn, Alan Bourne, Himanshu Rajotia, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Thomas Berger, 
  
-**Adapt Authoring Tool Core Developers:** Daryl Hedley, Dennis Heaney, Brian Quinn, Dan Gray, Petra Nussdorfer, Tom Taylor, Finbar Tracey
+**Adapt Authoring Tool Core Developers:**Dennis Heaney, Brian Quinn, Dan Gray, Tom Taylor, Thomas Berger
 
 ### References
 
