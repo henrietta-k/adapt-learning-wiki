@@ -35,39 +35,48 @@ Adapt also allows modules to plugin into events through events triggered by core
 ````
 Adapt.on('pageView:postRender', function(view) {
     // 'view' is the current view triggering the event
-})
+});
 ````
 
-Below is a list of all the core view events:
-##### Core Events
-* ('configModel:dataLoaded') - Triggered when the config model is loaded. This can be used to stop the course files from being fetched.
-* ('configModel:loadCourseData') - Triggered just before Adapt creates the main content collections and models. This can be used to load the course files if a plugin has stopped the default fetch.
-* ('app:dataReady') - Triggered when all the course data is loaded.
-* ('adapt:start') - Triggered before adapt starts the router, gives the start controller an opportunity to set a custom start location
-* ('adapt:initialize') - Triggered when adapt is ready to start the router.
-* ('router:menu', [currentModel]) - Triggered when a route hits a menu.
-* ('router:page', [currentModel]) - Triggered when a route hits a page.
-* ('remove') - Is used by Adapt to trigger an event to remove all views.
-* ('device:resize', [Adapt.device.screenWidth]) - Triggered when the window resizes.
-* ('device:changed', [Adapt.device.screenSize]) - Triggered when the device size changes.
+#### Core events
 
-##### Core Views
-* ('menuView:preRender', [currentView]) - Triggered when a menuView has initialized.
-* ('menuView:postRender', [currentView]) - Triggered when a menuView has rendered.
-* ('pageView:preRender', [currentView]) - Triggered when a pageView has initialized.
-* ('pageView:postRender', [currentView]) - Triggered when a pageView has rendered.
-* ('pageView:ready', [currentView]) - Triggered when all the assets are loaded for a page.
-* ('articleView:preRender', [currentView]) - Triggered when a articleView has initialized.
-* ('articleView:postRender', [currentView]) - Triggered when a articleView has rendered.
-* ('blockView:preRender', [currentView]) - Triggered when a blockView has initialized.
-* ('blockView:postRender', [currentView]) - Triggered when a blockView has rendered.
-* ('componentView:preRender', [currentView]) - Triggered when a componentView has initialized.
-* ('componentView:postRender', [currentView]) - Triggered when a componentView has rendered.
-* ('navigationView:preRender', [navigationView]) - Triggered when the navigationView has initialized.
-* ('navigationView:postRender', [navigationView]) - Triggered when the navigationView has rendered.
-* ('questionView:showFeedback', [currentView]) - Triggered when a question shows feedback. Question View automatically sets up feedbackTitle and feedbackMessage as attributes on the currentView.model.
-* ('questionView:disabledFeedback', [currentView]) - Triggered when a question is meant to show feedback but ``_canShowFeedback`` is disabled on the model.
+Event | Argument | Description
+----- | -------- | -----------
+`configModel:dataLoaded` | | Triggered when the config model is loaded. This can be used to stop the course files from being fetched.
+`configModel:loadCourseData` | | Triggered just before Adapt creates the main content collections and models. This can be used to load the course files if a plugin has stopped the default fetch.
+`app:dataReady` | | Triggered when all the course data is loaded.
+`adapt:start` | | Triggered before Adapt starts the router, gives the start controller an opportunity to set a custom start location.
+`adapt:initialize` | | Triggered when Adapt is ready to start the router.
+`router:location` | `Adapt.location` | Triggered when the location changes.
+`router:menu` | `model` | Triggered when a route hits a menu.
+`router:page` | `model` | Triggered when a route hits a page.
+`remove` | | Is used by Adapt to trigger an event to remove all views.
+`device:resize` | `Adapt.device.screenWidth` | Triggered when the window resizes.
+`device:changed` | `Adapt.device.screenSize` | Triggered when the device size changes.
 
-##### Navigation Events
-* ('navigation:backButton') - Triggered when the menu button is pressed.
-* ('navigation:toggleDrawer') - Triggered when the Drawer toggle button is clicked.
+#### Core views
+
+Event | Argument | Description
+----- | -------- | -----------
+`menuView:preRender` | `view` | Triggered when a menu’s view has initialised.
+`menuView:postRender` | `view` | Triggered when a menu’s view has rendered.
+`pageView:preRender` | `view` | Triggered when a page’s view has initialised.
+`pageView:postRender` | `view` | Triggered when a page’s view has rendered.
+`pageView:ready` | `view` | Triggered when all the assets are loaded for a page.
+`articleView:preRender` | `view` | Triggered when an article’s view has initialised.
+`articleView:postRender` | `view` | Triggered when an article’s view has rendered.
+`blockView:preRender` | `view` | Triggered when a block’s view has initialised.
+`blockView:postRender` | `view` | Triggered when a block’s view has rendered.
+`componentView:preRender` | `view` | Triggered when a component’s view has initalised.
+`componentView:postRender` | `view` | Triggered when a component’s view has rendered.
+`navigationView:preRender` | `view` | Triggered when navigation view has initialised.
+`navigationView:postRender` | `view` | Triggered when navigation view has rendered.
+`questionView:showFeedback` | `view` | Triggered when a question shows feedback. Question view automatically sets up `feedbackTitle` and `feedbackMessage` as attributes on the current view’s model.
+`questionView:disabledFeedback` | `view` | Triggered when a question is meant to show feedback but `_canShowFeedback` is disabled on the model.
+
+#### Navigation events
+
+Event | Argument | Description
+----- | -------- | -----------
+`navigation:backButton` | | Triggered when the menu button is pressed.
+`navigation:toggleDrawer` | | Triggered when the drawer toggle button is clicked.
