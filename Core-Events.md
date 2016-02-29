@@ -43,6 +43,7 @@ Below is a list of all the core view events:
 * ('configModel:dataLoaded') - Triggered when the config model is loaded. This can be used to stop the course files from being fetched.
 * ('configModel:loadCourseData') - Triggered just before Adapt creates the main content collections and models. This can be used to load the course files if a plugin has stopped the default fetch.
 * ('app:dataReady') - Triggered when all the course data is loaded.
+* ('adapt:start') - Triggered before adapt starts the router, gives the start controller an opportunity to set a custom start location
 * ('adapt:initialize') - Triggered when adapt is ready to start the router.
 * ('router:menu', [currentModel]) - Triggered when a route hits a menu.
 * ('router:page', [currentModel]) - Triggered when a route hits a page.
