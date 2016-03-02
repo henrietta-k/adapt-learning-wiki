@@ -18,7 +18,7 @@ Your plugin will be published to the registry, you can confirm this by doing `ad
 
 #### Plugin versioning
 
-It is possible to maintain multiple version of your plugin, giving you the freedom to change your plugin at any time without requiring existing users to migrate to newer versions. 
+It is possible to maintain multiple versions of your plugin, giving you the freedom to change your plugin at any time without requiring existing users to migrate to newer versions. 
 We strongly recommend that you follow [Semantic version numbers](//github.com/adaptlearning/adapt_framework/wiki/Semantic-Version-numbers) for your releases.
 
 To create a new version of a registered plugin, simple [tag your git repository](http://git-scm.com/book/en/Git-Basics-Tagging) with the new version number.
