@@ -12,7 +12,7 @@ Adapt employs a hierarchy of web elements to provide structure to course content
 
 *course.json* begins with a group of attributes that are common to the structural elements. You'll see them often: **_id**, **_type**, **title**, **displayTitle**, **description**, and **body**. They are followed by defaults for button labels, values of [aria](http://webaim.org/techniques/aria/) regions and labels, and values for plug-ins that cross structural elements.
 
-The properties and their values explained below found in _course.json_. Reference [_course.json_](https://github.com/adaptlearning/adapt_framework/blob/master/src/course/en/course.json) on GitHub to see them properly formatted as JSON. [_Configuring General Settings_](https://github.com/adaptlearning/adapt_authoring/wiki) provides information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
+The properties and their values explained below found in _course.json_. Reference [_course.json_](https://github.com/adaptlearning/adapt_framework/blob/master/src/course/en/course.json) on GitHub to see them properly formatted as JSON. [_Configuration Settings_](https://github.com/adaptlearning/adapt_authoring/wiki/Configuration-settings) provides information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
 
 The order in which the properties appear in *course.json* is unimportant. And whether a group is required is often determined by whether the plug-in is being used.
 
