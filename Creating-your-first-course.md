@@ -22,7 +22,7 @@ For this exercise you will need to have:
 * 1x terminal window which is pointing to the root of your project folder, this we will use shortly.
 
 ####course.json
-Begin by opening the course.json file, Here we can edit the title and short description of your course.
+Begin by opening the [course.json](#Content-starts-with-course.json) file. Here we can edit the title and short description of your course.
 Modify both of these values and save your code.
 
 Now you will need to re-build your course to see your modifications. To do this you will need to open your terminal window (not the terminal running the server), and run the following command.
