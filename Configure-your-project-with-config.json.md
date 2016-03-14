@@ -3,7 +3,7 @@
 _config.json_ is located at [_/src/course/config.json_](https://github.com/adaptlearning/adapt_framework/blob/master/src/course/config.json). This required file is included with the installation of the Adapt framework and the Adapt authoring tool. 
 
 >**Note**: What's the difference between _config.json_ and _course.json_?  
-- _config.json_ contains settings that determine how your Adapt project **functions**. Whereas _course.json_ is focused on **content** that is used throughout your course, oftentimes being reused by various components and other plug-ins. 
+- _config.json_ contains settings that determine how your Adapt project **functions**. Whereas [_course.json_](https://github.com/adaptlearning/adapt_framework/wiki/Content-starts-with-course.json) is focused on **content** that is used throughout your course, oftentimes being reused by various components and other plug-ins. 
 -  _config.json_ resides **outside** of the language folder and _course.json_ resides **inside** (e.g., _/src/course/en_). Settings that are language dependent go in _course.json_.   
  
 ## Settings Overview
