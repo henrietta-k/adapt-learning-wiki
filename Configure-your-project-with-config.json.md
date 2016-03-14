@@ -8,7 +8,7 @@ _config.json_ is located at [_/src/course/config.json_](https://github.com/adapt
  
 ## Settings Overview
 
-The properties listed below and their values are used to configure an Adapt project. Reference [_config.json_](https://github.com/adaptlearning/adapt_framework/blob/master/src/course/config.json) on GitHub to see them properly formatted as JSON. [_Configuring General Settings_](https://github.com/adaptlearning/adapt_authoring/wiki) provides information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki).
+The properties listed below and their values are used to configure an Adapt project. Reference [_config.json_](https://github.com/adaptlearning/adapt_framework/blob/master/src/course/config.json) on GitHub to see them properly formatted as JSON. [_Configuration Settings_](https://github.com/adaptlearning/adapt_authoring/wiki/Configuration-settings) provides information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki).
 
 ### Attributes  
 
