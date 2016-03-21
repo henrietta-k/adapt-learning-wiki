@@ -48,11 +48,12 @@ The order in which the properties appear in *course.json* is unimportant. And wh
 
 >>**_className** (string): This optional attribute provides classes that can be used to select a start page based on device width and on whether its screen is touch-enabled. Classes are assembled as a comma separated list. Values may be any combination of `.size-small`, `.size-medium`, and `.size-large`, and may include `.touch` and `.no-touch`; however, it makes no sense to include both `.touch` and `.no-touch` since they are exclusive. These values are compared against the classes in the HTML element.  
 
->**_id** (string): Set **_id** to the default start page. If no page represented by a **start ID** group is selected (no match on **_className** or on completion status), the course will be routed to this page ID. It is recommended that the value match the originating **_id** of *course.json*.  
+>**_id** (string): Set **_id** to the default start page. If no page represented by a **start ID** group is selected (no match on **_className** or on completion status), the course will be routed to this page ID. If you just want the default start location (the main menu) to be shown, you can leave this property out.
 
 >**_force** (boolean): If set to `true`, this attribute will cause the course to route to the eligible start page regardless of the URL provided.
 
-Example:  
+Example 1:  
+On small and medium touch-capable devices, always show co-05 as the start page. On small and medium devices without touch support, always show co-10 as the start page. For everything else, show the main menu as the start page.
 ```
 "_start": {
     "_isEnabled": true,
@@ -68,7 +69,34 @@ Example:
             "_className": ".size-small.no-touch, .size-medium.no-touch"
         }
     ],
-    "_id": "course",
     "_force": true
 }
 ```
+Example 2:  
+Show co-05 as the start page, unless it has been completed, in which case show the main menu
+```
+"_start": {
+    "_isEnabled": true,
+    "_startIds": [
+        {
+            "_id": "co-05",
+            "_skipIfComplete": true
+        }
+    ],
+    "_force": true
+}
+```
+Example 3:  
+On small and medium touch-capable devices, show co-05 as the start page. For everything else, show co-10 as start page. In all browsers/devices, if a different route is specified via the URL, that will be given priority (so if you were to refresh the page whilst on co-15 you would be taken back to co-15 instead of being redirected to one of the start pages).
+```
+"_start": {
+    "_isEnabled": true,
+    "_startIds": [
+        {
+            "_id": "co-05",
+            "_skipIfComplete": false,
+            "_className": ".size-small.touch, .size-medium.touch",
+        }
+    ],
+    "_id": "co-10"
+}
