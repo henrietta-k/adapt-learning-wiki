@@ -50,7 +50,7 @@ CSS/Less example:
 
 ## Configure type of locking  
 
-Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For menus, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu object or page object in *course.json*.
+Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For menus, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to *course.json*.
 
 ### sequential
 **json**  
