@@ -88,8 +88,10 @@ where `"co-XX"` is a comma-separated list of the Id/s of the object/s whose comp
 All menu items are enabled *except* any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
 
 ### `_forceRouteLocking`
-Using `_isLocked` and `_lockType` affects the learner's interaction with on-screen elements. It does not lock down the ability to navigate to pages using the browser's address bar. If this is a concern, the course author  can prevent this by adding the following in *config.json*:
+Whilst the locking system in Adapt prevents the user from navigating to locked objects using the interface elements in the course, it does not prevent navigating to a locked object by changing the ID in the address bar. To prevent this, add the following to *config.json*:  
 `,"_forceRouteLocking": true`
+
+>Note: Many learning management systems launch the course in a browser window where the address bar cannot be accessed by the user, so this is generally not an issue. In addition, having the ability to bypass the locking during course development and testing can be useful.  
 
 ## Document for your users  
 When using locking with a plug-in, remember to document its use in your README and to provide sample configuration in *example.json*.  
