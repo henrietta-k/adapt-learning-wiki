@@ -55,11 +55,11 @@ Example:
 ```javascript  
 "_id": "course",
 "_type": "course",
+"_lockType": "sequential", 
 "title": "Adapt demonstration",
 "displayTitle": "Adapt demonstration",
 "description": "A sample course demonstrating the capabilities of the Adapt",
 "body": "Welcome to the demonstration build of the Adapt framework.",
-"_lockType": "sequential", 
 ```
 
 ### sequential
