@@ -2,7 +2,7 @@ As of framework version 2.0.9, Adapt employs '_isLocked' as a [core model attrib
 
 '_isLocked' is available on all models that extend Adapt.model. It is commonly used by menus to lock an item until a particular condition is satisfied, such as the completion of the previous item. Examples below focus on its use by menus.
 
-### To lock an item
+## To lock an item
 - Set `"_isLocked" = false`
 - Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
 JS example:  
@@ -46,18 +46,10 @@ CSS/Less example:
 }
 ```  
 
+## Configure type of locking  
 
-## The Scenario  
-A course presents a number of menu items to the learner. Of this number, only the first is enabled. After the learner completes the first, the other menu items (or some subset) are enabled and the learner now has access to them.
+Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For menus, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu object or page object in *course.json*.
 
-## How To 
-
-1. Ensure your Adapt framework version is ^2.0.9
-2. Ensure the menu includes [code snippet](https://github.com/adaptlearning/adapt-contrib-boxmenu/blob/master/js/adapt-contrib-boxmenu.js#L37), but implement the menu json normally per the *example.json* or README.
-3. Add your "_lockType" to *course.json*
-4. Style CSS and/or adjust JavaScript based on class locked.
-
-## Lock Types
 ### sequential
 **json**  
 In *course.json* add the following:  
@@ -93,6 +85,10 @@ where `"co-XX"` is the Id of the object whose completion will enable this page o
 **effect**  
 The all menu items are enabled except any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
 
+## Document for your users  
+When using locking with a plug-in, remember to document its use in your README and to provide sample configuration in *example.json*.
+
+  
 CSS
 _isComplete
 _force
