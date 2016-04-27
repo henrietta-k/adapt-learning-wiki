@@ -88,7 +88,7 @@ where `"co-XX"` is a comma-separated list of the Id/s of the object/s whose comp
 All menu items are enabled *except* any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
 
 ### `_forceRouteLocking`
-Using `_isLocked` and `_lockType` affects the learner's interaction with on-screen elements. It does not lock down the ability to navigate to pages using the browser's address bar. If this is a concern for the course author, add the following in *course.json* along with the `_lockType`:
+Using `_isLocked` and `_lockType` affects the learner's interaction with on-screen elements. It does not lock down the ability to navigate to pages using the browser's address bar. If this is a concern, the course author  can prevent this by adding the following in *config.json*:
 `,"_forceRouteLocking": true`
 
 ## Document for your users  
