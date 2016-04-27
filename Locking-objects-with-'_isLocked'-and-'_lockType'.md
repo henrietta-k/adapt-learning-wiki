@@ -5,29 +5,30 @@ As of framework version 2.0.9, Adapt employs '_isLocked' as a [core model attrib
 ## To lock an item
 - Set `"_isLocked" = false`
 - Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
+
 JS example:  
 ```javascript  
 className: function() {
-            var nthChild = this.model.get("_nthChild");
-            return [
-                'menu-item',
-                'menu-item-' + this.model.get('_id') ,
-                this.model.get('_classes'),
-                this.model.get('_isVisited') ? 'visited' : '',
-                this.model.get('_isComplete') ? 'completed' : '',
-                this.model.get('_isLocked') ? 'locked' : '',
-                'nth-child-' + nthChild,
-                nthChild % 2 === 0 ? 'nth-child-even' : 'nth-child-odd'
-            ].join(' ');
-        },
+    var nthChild = this.model.get("_nthChild");
+    return [
+        'menu-item',
+        'menu-item-' + this.model.get('_id') ,
+        this.model.get('_classes'),
+        this.model.get('_isVisited') ? 'visited' : '',
+        this.model.get('_isComplete') ? 'completed' : '',
+        this.model.get('_isLocked') ? 'locked' : '',
+        'nth-child-' + nthChild,
+        nthChild % 2 === 0 ? 'nth-child-even' : 'nth-child-odd'
+    ].join(' ');
+},
 ```  
 JS example:  
 ```javascript  
 onClickMenuItemButton: function(event) {
-            if(event && event.preventDefault) event.preventDefault();
-            if(this.model.get('_isLocked')) return;
-            Backbone.history.navigate('#/id/' + this.model.get('_id'), {trigger: true});
-        }
+    if(event && event.preventDefault) event.preventDefault();
+    if(this.model.get('_isLocked')) return;
+    Backbone.history.navigate('#/id/' + this.model.get('_id'), {trigger: true});
+}
 ```  
 Template example:  
 ```handlebars    
