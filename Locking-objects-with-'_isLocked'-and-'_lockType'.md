@@ -3,7 +3,8 @@ As of framework version 2.0.9, Adapt employs '_isLocked' as a [core model attrib
 '_isLocked' is available on all models that extend Adapt.model. It is commonly used by menus to lock an item until a particular condition is satisfied, such as the completion of the previous item. Examples below focus on its use by menus.
 
 ## To lock an item
-- Set `"_isLocked" = false`
+- Set `"_isLocked" = false`  
+    - This is typically accomplished by setting a `"_lockType"` on the object's json and is typically done by the course author. A developer may, of course, accomplish this differently within the plug-in's code.
 - Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
 
 JS example:  
@@ -41,7 +42,7 @@ CSS/Less example:
     background-image: url('course/en/images/menu-item.png');
     background-repeat: no-repeat;
     &.locked {
-        background-image: url('course/en/images/menu-item-locked.png.png');
+        background-image: url('course/en/images/menu-item-locked.png');
         background-repeat: no-repeat;
     }
 }
