@@ -85,7 +85,7 @@ In *contentsObjects.json* add the following to the page or menu that you want lo
 where `"co-XX"` is the Id of the object whose completion will enable this page or menu.
 
 **effect**  
-The all menu items are enabled except any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
+All menu items are enabled *except* any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
 
 ## Document for your users  
 When using locking with a plug-in, remember to document its use in your README and to provide sample configuration in *example.json*.
