@@ -40,6 +40,7 @@
 * [Developing Plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
 * [Developer's Guide: Components](https://github.com/adaptlearning/adapt_framework/wiki/Developers-guide:-components)
 * [Developer's Guide: Theme](https://github.com/adaptlearning/adapt_framework/wiki/Developers-Guide:-Theme)
+* [Developer's Guide: Menu](https://github.com/adaptlearning/adapt_framework/wiki/Developers-Guide:-Menu)
 * [Registering a Plugin](https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin)
 * [Semantic Version Numbers](https://github.com/adaptlearning/adapt_framework/wiki/Semantic-Version-numbers)
 * [Core Model Attributes](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes)
