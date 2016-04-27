@@ -88,17 +88,4 @@ where `"co-XX"` is the Id of the object whose completion will enable this page o
 All menu items are enabled *except* any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
 
 ## Document for your users  
-When using locking with a plug-in, remember to document its use in your README and to provide sample configuration in *example.json*.
-
-  
-CSS
-_isComplete
-_force
-
-define completion
-define enabled
-
-*src/core/js/models/adaptModel.js*
-Matt: please note that I have instructed that all lockTypes including custom to be assigned in course.json, and that custom requires an additional assignment of `_lockedBy`in contentObjects.json.
-
-Complete page: Developers Guide: Menu. How to ensure the menu can be locked. 
+When using locking with a plug-in, remember to document its use in your README and to provide sample configuration in *example.json*.  
