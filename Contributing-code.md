@@ -64,8 +64,19 @@ If your work is unfinished, don't worry. Pull requests are a great way to start 
 Before you submit a PR to us, there are a few hoops that we ask you to jump through in the interest of transparency:
 
 - **Does your code work?** This may seem obvious, but if we can't test your code, it's not going to be merged. Please make sure that anything you submit actually works :smile:
-- **Does your code have a related JIRA issue?** It's important that we keep a paper-trail regarding work done on the project; this helps us to keep a track of what's going on, and allows us to plan and manage our available developer resource effectively. Please make sure that there's an accompanying JIRA issue to go with your PR, be it a bug fix, new feature, or anything else (see our [page on reporting bugs](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features#reporting-bugs) for more information on this).
+- **Does your code have a related Github issue?** It's important that we keep a paper-trail regarding work done on the project; this helps us to keep a track of what's going on, and allows us to plan and manage our available developer resource effectively. Please make sure that there's an accompanying Github issue to go with your PR, be it a bug fix, new feature, or anything else (see our [page on reporting bugs](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features#reporting-bugs) for more information on this).
 - **Does your code comply to the Adapt code styleguide?** To give everyone working on the project an easier ride, we like to keep the coding style consistent across the breadth of Adapt repositories. Please make sure yours also complies to [our standards](https://github.com/adaptlearning/documentation/blob/master/01_cross_workstream/style_guide.md).
+
+### Creating a good PR
+Remember that the purpose of the pull request is to allow the other contributors to review what you have written. To this end, it's important that you have:
+* included a reference to the related Github issue/feature request
+* commented your commits well
+* given a short overview of what you've done
+* described the expected behaviour after the changes
+* listed any steps that need to be taken to check the changes
+* noted anything that should be ignore (for example a known issue that you are not addressing)
+* included screenshots if necessary
+There's a good [guide to commit messages and PRs](http://www.sitepoint.com/how-good-are-your-html-and-css-comments/) (you'll have to scroll down a bit) by [Georgie Luhur](http://www.sitepoint.com/author/gluhur/) over at sitepoint that's worth a read - it also has some great tips on commenting your code well.
 
 ### Peer code review
 
