@@ -91,8 +91,8 @@ The all menu items are enabled except the last item. The last item is enabled on
 In *course.json* add the following:  
 `,"_lockType": "custom"`  
 In *contentsObjects.json* add the following to the page or menu that you want locked:  
-`,"_lockedBy": ["co-XX"]`
-where `"co-XX"` is a comma-separated list of the Id/s of the object/s whose completion will enable this page or menu.
+`,"_lockedBy": ["co-10", "co-15"]`  
+where the value of `"_lockedBy"` is an array of one or more Ids of the object/s whose completion will enable this page or menu.
 
 **effect**  
 All menu items are enabled *except* any item whose json contains the `"_lockedBy"` attribute. That item will be enabled only when the menu item specified by the value of `"_lockedBy"` is completed. 
