@@ -50,7 +50,9 @@ CSS/Less example:
 
 ## Configure type of locking  
 
-Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For menus, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to *course.json*.  
+Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For locking pages on a menu, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu itself.
+
+The normal use case has the menu at the root level of the course and so the `_lockType` should be added to *course.json*. For a sub-menu, the `_lockType` should be added to the content object (in *contentObjects.json*) which is the parent of the pages to be locked.
 Example:  
 ```javascript  
 "_id": "course",
@@ -64,7 +66,7 @@ Example:
 
 ### sequential
 **json**  
-In *course.json* add the following:  
+On the menu add the following:  
 `,"_lockType": "sequential"`
 
 **effect**  
@@ -72,7 +74,7 @@ The first menu item will be enabled. The following items will be disabled. Each 
 
 ### unlockFirst
 **json**  
-In *course.json* add the following:  
+On the menu add the following:  
 `,"_lockType": "unlockFirst"`
 
 **effect**  
@@ -80,7 +82,7 @@ The first menu item will be enabled. The following items will be disabled. When 
 
 ### lockLast
 **json**  
-In *course.json* add the following:  
+On the menu add the following:  
 `,"_lockType": "lockLast"`
 
 **effect**  
@@ -88,7 +90,7 @@ The all menu items are enabled except the last item. The last item is enabled on
 
 ### custom
 **json**  
-In *course.json* add the following:  
+On the menu add the following:  
 `,"_lockType": "custom"`  
 In *contentsObjects.json* add the following to the page or menu that you want locked:  
 `,"_lockedBy": ["co-10", "co-15"]`  
