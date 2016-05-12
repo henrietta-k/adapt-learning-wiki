@@ -79,7 +79,7 @@ To override this default behaviour, add the class `no-state` to the non-interact
 
 #### `not-accessible` class
 
-Some components can never be accessible. Components which rely on making sighted judgments or which require a level of visual special awareness can be skipped over when the course has accessibility enabled. To achieve this, assign the component the class `not-accessible`. Doing that will remove the component from the tabbing order. Be sure to configure these components as [optional](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes), since they will never be completed by the learner who relies on tabbing.  
+Some components can never be accessible. Components which rely on making sighted judgments or which require a level of visual special awareness can be skipped over when the course has accessibility enabled. To achieve this, assign the component the class `not-accessible`. Doing that will remove the component from the tabbing order. Be sure to configure these components as [optional](Core-model-attributes), since they will never be completed by the learner who relies on tabbing.  
 <div float align=right><a href="#top">Back to Top</a></div>
 -----
 ## Make your plug-in accessible.  
@@ -103,7 +103,7 @@ define(function(require) {
 <div float align=right><a href="#top">Back to Top</a></div>  
 
 ### Add ARIA roles and labels to your template  
-Your plug-in's HTML will be read by assistive technology such as screen readers. Most widgets require additional attributes to facilitate this. Add them to your plug-in's Handlebars (.hbs) template. [ARIA roles and labels](https://github.com/adaptlearning/adapt_framework/wiki/ARIA-Roles-and-Labels) provides a useful summary.   
+Your plug-in's HTML will be read by assistive technology such as screen readers. Most widgets require additional attributes to facilitate this. Add them to your plug-in's Handlebars (.hbs) template. [ARIA roles and labels](ARIA-Roles-and-Labels) provides a useful summary.   
 ``` javascript  
 //Example of ARIA role and aria-label: 
 <div class="mynewcomp-inner component-inner" role="region" aria-label="{{_globals._components._mynewcomp.ariaRegion}}">
@@ -123,9 +123,9 @@ Course authors may include HTML tags in their text content. Sometimes it is welc
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ### Provide sample text for `_globals`
-The sighted learner can scan a plug-in to determine how to interact with it. The learner who relies on a screen reader requires a description of the component or an instruction to know how to interact with it. Your plug-in should provide this description in an aria-label that is associated with `role="region"` and that is located in your component's root div. Reference the template of any of Adapt's [core components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#components) for a model. 
+The sighted learner can scan a plug-in to determine how to interact with it. The learner who relies on a screen reader requires a description of the component or an instruction to know how to interact with it. Your plug-in should provide this description in an aria-label that is associated with `role="region"` and that is located in your component's root div. Reference the template of any of Adapt's [core components](Core-Plug-ins-in-the-Adapt-Learning-Framework#components) for a model. 
 
-You could hard-code the description and instruction into the aria-label, but it is not recommended. Adapt encourages exposing the text to editing by the course author in case customisation is desirable. To expose it to editing in the Adapt authoring tool, add a `"globals"` section to your [*properties.schema*](https://github.com/adaptlearning/adapt_authoring/wiki/Properties-Schema#globals). To expose it in Adapt's framework, the [course author will need to enter it](#add-_global-aria-labels-for-non-core-plug-ins) into the `"_globals" section of *course.json*. You can make it easy, since you know your plug-in so well, by supplying suggested text in your *example.json*. The value for `"ariaRegion"` should include a succinct description and how to interact with it:  
+You could hard-code the description and instruction into the aria-label, but it is not recommended. Adapt encourages exposing the text to editing by the course author in case customisation is desirable. To expose it to editing in the Adapt authoring tool, add a `"globals"` section to your [*properties.schema*](Properties-Schema#globals). To expose it in Adapt's framework, the [course author will need to enter it](#add-_global-aria-labels-for-non-core-plug-ins) into the `"_globals" section of *course.json*. You can make it easy, since you know your plug-in so well, by supplying suggested text in your *example.json*. The value for `"ariaRegion"` should include a succinct description and how to interact with it:  
 ``` javascript  
 //Add the _mynewcomp section to the _globals in your course.json:  
 "_globals": {
@@ -153,4 +153,4 @@ preRender: function() {
 - [WAI-ARIA Overview (W3C)](https://www.w3.org/WAI/intro/aria)
 - [HTML5 Accessibility Chops: hidden and aria-hidden (The Paciello Group)](https://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)  
 - [Name, State, Role, and Value: What’s it all about? (Karl Groves)](http://www.karlgroves.com/2013/03/02/name-state-role-and-value-whats-it-all-about/)
-- [Accessibility: worked example](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility:-worked-example)
+- [Accessibility: worked example](Accessibility:-worked-example)
