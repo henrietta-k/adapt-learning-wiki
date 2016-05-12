@@ -53,7 +53,7 @@ You cannot assume that a third-party plug-in adequately supports accessibility. 
 
 The bulk of Adapt course content is found in presentation components and question components. The sighted learner has the ability to scan the page to determine what next step she'll take to access the content. Because low-vision can impede this ability, each component presents an `aria-label` that describes how it functions. ARIA labels are not visible; they are announced by screen readers. Regardless of how many times a particular component is used within a course, the same description of it is announced to the learner.    
 
-The Adapt framework gathers these descriptions in the *course.json* file in a section called [`"_globals"`](https://github.com/chucklorenz/demo-wiki/wiki/Globals-and-ARIA-Labels). You'll find the same descriptions in the Adapt authoring tool in the Accessibility section of the Project configuration menu. Adapt provides descriptions for the core plug-ins. It cannot provide descriptions for plug-ins it does not about. If you use a third-party plug-in AND if the accessibility feature is important to your learners, ensure your plug-in has an entry in `"_globals"`.  
+The Adapt framework gathers these descriptions in the *course.json* file in a section called [`"_globals"`](Globals-and-ARIA-Labels.md). You'll find the same descriptions in the Adapt authoring tool in the Accessibility section of the Project configuration menu. Adapt provides descriptions for the core plug-ins. It cannot provide descriptions for plug-ins it does not about. If you use a third-party plug-in AND if the accessibility feature is important to your learners, ensure your plug-in has an entry in `"_globals"`.  
 <div float align=right><a href="#top">Back to Top</a></div>
 
 
