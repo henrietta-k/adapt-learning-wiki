@@ -149,6 +149,8 @@ preRender: function() {
 -----
 ## Resources
  
+- [*The Adapt Accessibility Standards and Guidelines*](https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/Adapt-Accessibility-OS-Doc.pdf)  
+- [*Accessibility in Adapt: A Technical Perspective*](https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/accessibility-notes.pdf)    
 - [WAI-ARIA Overview (W3C)](https://www.w3.org/WAI/intro/aria)
 - [HTML5 Accessibility Chops: hidden and aria-hidden (The Paciello Group)](https://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)  
 - [Name, State, Role, and Value: What’s it all about? (Karl Groves)](http://www.karlgroves.com/2013/03/02/name-state-role-and-value-whats-it-all-about/)
