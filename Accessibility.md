@@ -131,8 +131,7 @@ You could hard-code the description and instruction into the aria-label, but it 
 "_globals": {
         "_components": {
             "_mynewcomp": {
-                "ariaRegion": "This component is made up of things that do this and that. Select the thingamajig to access the content.",
-                "instruction": ""
+                "ariaRegion": "This component is made up of things that do this and that. Select the thingamajig to access the content."
             },  
 ```
 
