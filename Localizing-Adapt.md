@@ -17,7 +17,9 @@
 - Asset Links are not changed during Export/Import Process (manual Relinking)
 
 ## Open Decisions
-- Add Language picker to core framework or as a plugin
-- Text Export/Import as grunt task or adapt-cli (compatibility with AT)
+- Add Language picker ~~to core framework or~~ as a plugin
+- Text Export/Import as grunt task ~~or adapt-cli~~ (compatibility with AT)
 - File format for Text export (JSON, CSV, XML)
 - AT implementation
+
+## Brainstorming AT-implementation
