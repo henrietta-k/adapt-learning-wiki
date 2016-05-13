@@ -24,7 +24,7 @@
 
 ## Brainstorming AT-implementation
 
-MultiLanguage (ML) Bundle
+### MultiLanguage (ML) Bundle
 - create ML courses by bundling courses into one ML-Package
 - create a master course
 - add LanguagePicker plugin to master course
