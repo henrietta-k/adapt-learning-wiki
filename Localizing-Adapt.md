@@ -23,3 +23,21 @@
 - AT implementation
 
 ## Brainstorming AT-implementation
+
+MultiLanguage (ML) Bundle
+- create ML courses by bundling courses into one ML-Package
+- create a master course
+- add LanguagePicker plugin to master course
+- duplicate
+- localize course
+	- optionally update individual course structure
+	- update assets for a language if required
+- repeat for all languages
+- select courses
+- build "ML-course" from selected courses <-- new feature
+	- build master course with Language-Picker
+	- move to temp Folder
+	- build each sub-language and append build/course/[lang] to master course
+	- download master course
+- would be good to persistently store Ml-Course bundles and mapping to sub-courses in the AT
+	- will require new type of course?
