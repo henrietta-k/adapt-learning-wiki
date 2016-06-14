@@ -40,7 +40,7 @@ The order in which the properties appear in *course.json* is unimportant. And wh
 
 >**_isEnabled** (boolean): This value provides a way to turn off the start page. This is convenient during development. Acceptable values include `true` and `false`.  
 
->**_startIds** (object):  A **start ID** group describes a start page and the conditions under which it will be chosen. When multiple pages are specified, the first one that satisfies criteria will be used. The **start ID** group contains values for **_className**, **_id**, and **_skipIfComplete**.  
+>**_startIds** (array):  Each object in the **start ID** group describes a start page and the conditions under which it will be chosen. When multiple pages are specified, the first one that satisfies criteria will be used. Each item in the **start ID** group has the properties **_id**, **_className** and **_skipIfComplete**.  
 
 >>**_id** (string):  This value matches the `_id` of the page found in *contentObjects.json*.  
 
