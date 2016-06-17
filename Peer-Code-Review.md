@@ -39,7 +39,7 @@ Scores indicate the following:
 
 **Adapt Framework Core Developers:** Chris Jones, Brian Quinn, Alan Bourne, Himanshu Rajotia, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Thomas Berger, 
  
-**Adapt Authoring Tool Core Developers:**Dennis Heaney, Brian Quinn, Dan Gray, Tom Taylor, Thomas Berger
+**Adapt Authoring Tool Core Developers:** Dennis Heaney, Brian Quinn, Dan Gray, Tom Taylor, Thomas Berger
 
 ### References
 
