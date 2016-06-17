@@ -1,5 +1,5 @@
 ## Adapt Core Plug-ins  
-The Adapt community is committed to supporting the plug-ins listed below. Other plug-ins are available through third-parties, but Adapt does not certify them in any manner.  
+The Adapt community is committed to supporting the plug-ins listed below. Other plug-ins are available through third-parties, but the Adapt project does not certify them in any manner.  
 
 ##Components  
 #### Presentation Components  
