@@ -23,7 +23,7 @@
 ----------------
 
 ###Framework Development
-* [Contributing to the Adapt Framework](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-to-the-Adapt-Framework)
+* [Contributing to the Adapt Project](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-to-the-Adapt-Project)
 * [Git Flow](https://github.com/adaptlearning/adapt_framework/wiki/Git-flow)
 * [Adapt API](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-API)
 * [Adapt Command Line Interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
