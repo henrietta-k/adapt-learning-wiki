@@ -15,7 +15,7 @@ If you think you’ve found a bug, there are a few things to consider before log
 
 **Can you replicate it?** If the answer to this is no, please think carefully before logging an issue. Although we take bugs seriously, our development time is limited and we can’t afford to spend it failing to replicate bugs.
 
-**Has the issue been reported before?** We have already built up a sizeable back-log of issues, so the issue may have been reported by someone already. Please do therefore [search the list of issues](https://adaptlearning.atlassian.net/issues/) first. If it has already been reported, any extra information you have garnered from your own tests could be invaluable in fixing it, so please add any such info to the existing ticket, should you find one.
+**Has the issue been reported before?** We have already built up a sizeable back-log of issues, so the issue may have been reported by someone already. Please do therefore search the list of issues first. If it has already been reported, any extra information you have garnered from your own tests could be invaluable in fixing it, so please add any such info to the existing ticket, should you find one.
 
 **Is it covered?** By this we mean: is your set-up listed in the [v2.0.0 standards definitions document](https://community.adaptlearning.org/pluginfile.php/24/mod_forum/attachment/3397/Adapt_Framework_v2.0.0_standards_definitions_draft.pdf)? In an ideal world, we’d commit to supporting Adapt on all browsers and operating systems. Unfortunately this isn’t feasible with the resources we have, so we have to prioritise those named in the standards definition.
 
@@ -29,7 +29,7 @@ The main body of the issue needs to contain as much detail as possible about the
 
 A **description** of the bug, **steps** on how to replicate it and your **set up** (i.e. browser and operating system - [aboutmybrowser](http://aboutmybrowser.com) can be useful here). Feel free to include any other information which you think may be useful, screenshots in particular can often give more useful information than words alone!
 
-Make a note of any JavaScript errors you see. You may need to press F12 to reveal your browser's developer tools. If you are testing using a tablet or smartphone you will need to connect it to your PC or Mac in order to get access to the developer tools.
+Make a note of any JavaScript errors you see. You may need to press **F12** to reveal your browser's developer tools. If you are testing using a tablet or smartphone you will need to connect it to your PC or Mac in order to get access to the developer tools.
 
 If your bug depends upon certain configuration options in order to be replicable, it is vital that you state these (or copy the require JSON into the issue and mark as a codeblock - GitHub issues support [markdown](https://guides.github.com/features/mastering-markdown/)).
 
@@ -53,7 +53,7 @@ Fixing bugs is a great way to dip your toe into the warm Adapt waters. Head to o
 
 #### New features
 
-If you're confident working with the framework on a larger scale, why not grab a [feature-request](https://github.com/adaptlearning/adapt_framework/issues?q=is%3Aopen+is%3Aissue+label%3A%22feature+request%22) issue and give that a go? 
+If you're confident working with the framework on a larger scale, why not grab a feature-request issue and give that a go? 
 
 Regardless of the feature, there will probably be some discussion amongst the community/core team needed before you can get knee-deep in code. It's a good idea therefore to head to [Gitter](https://gitter.im/orgs/adaptlearning/rooms) to get the ball rolling and give everyone a heads-up on what you're thinking of doing so we can advise you on the best route to take. Also be sure to have a look at our [guide to contributing code](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-code), which has some handy tips!
 
