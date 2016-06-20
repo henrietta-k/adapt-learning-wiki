@@ -28,7 +28,9 @@ The next step to getting involved is to find something to actually work on. Base
 
 ### Report issues
 
-One of the easiest ways to make a meaningful contribution to the project is to submit any bugs you find to [our bug tracker](https://adaptlearning.atlassian.net/).
+One of the easiest ways to make a meaningful contribution to the project is to submit any bugs you find to the relevant repo:
+- [Adapt Framework](https://github.com/adaptlearning/adapt_framework/issues)
+- [Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/issues)
 
 If you think you've found a bug, check out our guide on [reporting issues](https://github.com/adaptlearning/adapt_framework/wiki/Bugs-and-features), which will give you more information on verifying your bug, as well as what to report, and where.
 
@@ -42,7 +44,7 @@ We've written a [guide to contributing code](https://github.com/adaptlearning/ad
 
 ### Contribute code
 
-If you've been working with Adapt for a while, and are comfortable working with the framework on a larger scale, you may want to contribute to a larger [feature-request](https://adaptlearning.atlassian.net/browse/ABU-698?filter=10801) patch, or [write your own plugin](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins).
+If you've been working with Adapt for a while, and are comfortable working with the framework on a larger scale, you may want to contribute to a larger feature-request patch (you can filter these in the issues page of the relevant repo), or [write your own plugin](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins).
 
 Have a look at our [page dedicated to code contribution](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-code) for more.
 
