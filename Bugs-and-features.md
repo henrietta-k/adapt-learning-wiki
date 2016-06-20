@@ -49,7 +49,7 @@ We are always grateful for any time you have to contribute to the Adapt project.
 
 #### Bugs
 
-Fixing bugs is a great way to dip your toe into the warm Adapt waters. Head to our [bug tracker](https://github.com/adaptlearning/adapt_framework/wiki/Using-the-bug-tracker) and look for issues with the **good-first-bug** or **mentored-bug** labels for some more straighforward tasks. The former should be accessible to developers of any experience level, while the latter may require some more metaphorical hand-holding from one of the core development team.
+Fixing bugs is a great way to dip your toe into the warm Adapt waters. Head to the relevant repo's issues page and look for issues with the **good-first-bug** or **mentored-bug** labels for some more straightforward tasks. The former should be accessible to developers of any experience level, while the latter may require some more metaphorical hand-holding from one of the core development team.
 
 #### New features
 
