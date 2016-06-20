@@ -2,7 +2,7 @@
 Welcome to the developer documentation for the Adapt Framework! 
 
 ## Getting started as a developer
-* [[Contributing to the Adapt Framework]]
+* [[Contributing to the Adapt Project]]
 * [[Framework in five minutes]]
 * [[Setting up your development environment]]
 * [[Creating your first course]]
