@@ -13,6 +13,7 @@ You can also explore the other more specific Gitter rooms to get a feel of what 
 
 - [adapt_framework](https://gitter.im/adaptlearning/adapt_framework)
 - [adapt_authoring](https://gitter.im/adaptlearning/adapt_authoring)
+- [UI](https://gitter.im/adaptlearning/ui)
 - [documentation](https://gitter.im/adaptlearning/documentation)
 
 ### Head to the community site
