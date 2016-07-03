@@ -72,8 +72,10 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 1. Place the translated language files in the *languagefiles* folder.  All five files are required even if a file did not require translation.  
 2. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 3. Navigate to the root of your course to make it the current working directory.  
-4. Import the translated language files by running the following command:  
-`grunt translate:import --targetLang="de" --files="articles_export_de.csv,blocks_export_de.csv,components_export_de.csv,contentObjects_export_de.csv,course_export_de.csv"`  
+4. Import the translated language files by running the following command (where "xx" has been replaced with the language code of your translation):  
+```
+grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
+```  
 Command options:  
 `--format="[csv|raw]"`
 Choose the format of exported files.   
