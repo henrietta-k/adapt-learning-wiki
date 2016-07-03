@@ -58,7 +58,28 @@ Specify the delimiter used to separate fields in the CSV tables. Use a character
 `--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.
 4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the translate:export command: articles_export_xx.csv, blocks_export_xx.csv, components_export_xx.csv, contentObjects_export_xx.csv, course_export_xx.csv.
 
+### 3. Translate exported files.   
+„Es führen viele Wege zum Ziel“, «il y a plus d'une façon d'accommoder un lapin», and “there's more than one way to skin a cat”, but here's just one way to get you started:  
 
+1. Open an exported language file, such as *components_export_en.csv*, in a word processing application. While opening be sure to specify the same field separator that used during export.  
+2. Translate each cell in the blank column to its right.  
+3. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  
+4. Rename the file, replacing the original language code with the translated language code. For example, rename the exported English language file *components_export_en.csv* to reflect a German translation *components_export_de.csv*.  
+
+### 4. Import language files.  
+As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
+
+1. Place the translated language files in the languagefiles folder.  All five files are required even if a file did not require translation.  
+2. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
+3. Navigate to the root of your course to make it the current working directory.  
+4. Export the translatable fields (course JSON, global ARIA fields, etc.) by running the following command:  
+`grunt translate:export --format="csv"`  
+Command options:  
+`--format="[csv|raw]"`
+Choose the format of exported files.   
+`--csvDelimiter="|"`
+Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
+`--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.
 
 give hint when grunt task is not used  
 Example how to use the Authoring Tool and the Framework to create a ML course  
