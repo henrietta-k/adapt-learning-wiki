@@ -52,9 +52,11 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 `grunt translate:export --format="csv"`  
 Command options:  
 `--format="[csv|raw]"`
-Choose the format of exported files. Default is "csv".  
+Choose the format of exported files.   
 `--csvDelimiter="|"`
-Delimiter used to create CSV Tables
+Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
+`--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.
+4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the translate:export command: articles_export_xx.csv, blocks_export_xx.csv, components_export_xx.csv, contentObjects_export_xx.csv, course_export_xx.csv.
 
 
 
