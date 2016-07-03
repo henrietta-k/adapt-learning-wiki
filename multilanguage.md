@@ -6,8 +6,8 @@ Chuck's questions:
 
 Introduction  
 Adapt's support for multiple languages:  
-- language picker
-- import/export
+- language picker: Component that presents a list of available languages and allows the learner to choose which she would prefer to work in. Component can be configured to apprear before enterign the course content and/or while the course is in progress. 
+- import/export: Commands that can be executed with Grunt. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format. 
 
 Language Picker  
 - What it does
