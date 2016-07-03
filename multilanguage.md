@@ -72,16 +72,19 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 1. Place the translated language files in the *languagefiles* folder.  All five files are required even if a file did not require translation.  
 2. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 3. Navigate to the root of your course to make it the current working directory.  
-4. Import the translated language files by running the following command (where "xx" has been replaced with the language code of your translation):  
+4. Import the translated language files by running the following command (where `xx` has been replaced with the language code of your translation):  
 ```
 grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
 ```  
 Command options:  
-`--format="[csv|raw]"`
-Choose the format of exported files.   
+`--targetLang="de"`
+Language of the new Course
+
+`--files"file1.csv,file2.csv"`
+Language Files seperated by a comma
+
 `--csvDelimiter="|"`
 Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
-`--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.
 
 give hint when grunt task is not used  
 Example how to use the Authoring Tool and the Framework to create a ML course  
