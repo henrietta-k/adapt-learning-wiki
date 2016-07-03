@@ -1,6 +1,7 @@
 >Note: The title and URL of this page *will* change.  
 
 Chuck's questions: 
+- What is the purpose of export_en.json?
 - Does an LMS record as a single course regardless of language chosen?
 - How does an LMS respond if the components in each language are no equal in arrangement?  
 
@@ -52,7 +53,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 Command options:  
 `--format="[csv|raw]"`
 Choose the format of exported files. Default is "csv".  
-`--csvDelimiter=";"`
+`--csvDelimiter="|"`
 Delimiter used to create CSV Tables
 
 
