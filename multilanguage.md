@@ -71,7 +71,7 @@ Command options:
 Specify the language of the translated files.
 
 ```
---files="files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
+--files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
 ```
 Language files separated by a comma. Replace *xx* with the language code of the translation.  
 
