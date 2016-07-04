@@ -105,10 +105,7 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
 // Example of basing styles on the value of the lang attribute  
 :lang(de) {
   body {
-    font-family: "Comic Sans MS";
-  }
-  .page .page-header {
-      background-color: spin(@background-color-inverted, 90);
+    font-family: Verdana;
   }
 }
 
@@ -116,17 +113,11 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
   body {
     font-family: Serif;
   }
-  .page .page-header {
-      background-color: spin(@background-color-inverted, 180);
-  }
 }
 
 :lang(it) {
   body {
     font-family: monospace;
-  }
-  .page .page-header {
-      background-color: spin(@background-color-inverted, 270);
   }
 }
 ```
