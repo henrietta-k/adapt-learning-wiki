@@ -14,11 +14,11 @@ Fundamental to localisation is language, so much of the following instruction fo
 - As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
 - Do not confuse this with exporting and importing completed courses. These techniques focus on exporting and importing texts, not entire courses. 
 - Not all fields are exported for translation. Exported fields are marked as translatable in the plug-in's *properties.schema* file. Plug-ins that have no *properties.schema* will have no fields exported for translation.  
-- Imported content relies on the presence of required plug-ins. The import process does not install plug-ins specified by the various language files. 
+- Imported content relies on the presence of required plug-ins. The import process does not install plug-ins expected by the various language files. 
 - Imported files must match the format produced by exporting translatable content. 
 
 ### Language Picker  
-- The Language Picker is a component that presents a list of available languages. It allows the learner to choose the language of the course content. The component can be configured to appear before entering the course content and/or while the course is in progress. 
+- The [Language Picker (adapt-contrib-languagePicker)](https://github.com/adaptlearning/adapt-contrib-languagePicker) is an extension that presents a list of available languages. It allows the learner to choose the language of the course content. The component can be configured to appear before entering the course content and/or while the course is in progress. 
 - The Language Picker does not create localised content. It must be configured to reflect the languages present in the course root. 
 - The Language Picker expects that Adapt conventions will be follow, specifically that localised content will be stored in a folder within the course directory and that it use the language code as the name folder.  
 <div float align=right><a href="#top">Back to Top</a></div>  
@@ -34,7 +34,7 @@ Fundamental to localisation is language, so much of the following instruction fo
 [6. Add the Language Picker plug-in.](#6-add-the-language-picker-plug-in)  
 
 ### 1. Create your course in the first language.  
-Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the alt attribute of images.
+Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the `alt` attribute of images.
 
 ### 2. Export language files.  
 As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.
