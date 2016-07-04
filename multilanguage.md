@@ -19,7 +19,8 @@ Fundamental to localisation is language, so much of the following instruction fo
 ### Language Picker  
 - The Language Picker is a component that presents a list of available languages. It allows the learner to choose the language of the course content. The component can be configured to appear before entering the course content and/or while the course is in progress. 
 - The Language Picker does not create localised content. It must be configured to reflect the languages present in the course root. 
-- The Language Picker expects that Adapt conventions will be follow, specifically that localised content will be stored in a folder within the course directory and that it use the language code as the name folder.
+- The Language Picker expects that Adapt conventions will be follow, specifically that localised content will be stored in a folder within the course directory and that it use the language code as the name folder.  
+<div float align=right><a href="#top">Back to Top</a></div>  
 
 ## How to recreate your course in another language
 
