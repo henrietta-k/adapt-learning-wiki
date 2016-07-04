@@ -25,11 +25,11 @@ Fundamental to localisation is language, so much of the following instruction fo
 
 ### Overview of language localisation  
 [1. Create course in first language.](#1-create-your-course-in-the-first-language)  
-2. Export language files.  
-3. Translate exported files.
-4. Import language files.
-5. Relink assets if required.
-6. Add the Language Picker plug-in. 
+[2. Export language files.](#2-export-language-files)  
+[3. Translate exported files.](#3-translate-exported-files)
+[4. Import language files.](#4-import-language-files)
+[5. Relink assets if required.](#5-relink-assets-if-required)
+[6. Add the Language Picker plug-in.](#6-) 
 
 ### 1. Create your course in the first language.  
 Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the alt attribute of images.
