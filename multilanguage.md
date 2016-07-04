@@ -78,13 +78,16 @@ grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_
 ```  
 Command options:  
 `--targetLang="de"`
-Language of the new Course
+Specify the language of the translated files.
 
-`--files"file1.csv,file2.csv"`
-Language Files seperated by a comma
+`--files="files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv""`
+Language files separated by a comma. Replace *xx* in the model with the language code of the translation.  
 
 `--csvDelimiter="|"`
 Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
+
+`--masterLang="en"` 
+Defaults to "en". Specify the existing course language folder to be exported.
 
 give hint when grunt task is not used  
 Example how to use the Authoring Tool and the Framework to create a ML course  
