@@ -1,10 +1,5 @@
 >Note: The title and URL of this page *will* change.  
 
-Chuck's questions: 
-- What is the purpose of export_en.json?
-- Does an LMS record as a single course regardless of language chosen?
-- How does an LMS respond if the components in each language are no equal in arrangement?  
-
 ##Introduction  
 With Adapt you can localise your content and engage learners in ways that speak from their native culture. Localisation may involve modifying  
 - content language
