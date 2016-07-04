@@ -11,6 +11,7 @@ Fundamental to localisation is language, so much of the following instruction fo
 
 ### Export/Import  
 - Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
+- As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
 - Do not confuse this with exporting and importing completed courses. These techniques focus on exporting and importing texts, not entire courses. 
 - Not all fields are exported for translation. Exported fields are marked as translatable in the plug-in's *properties.schema* file. Plug-ins that have no *properties.schema* will have no fields exported for translation.  
 - Imported content relies on the presence of required plug-ins. The import process does not install plug-ins specified by the various language files. 
@@ -36,7 +37,7 @@ Fundamental to localisation is language, so much of the following instruction fo
 Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the alt attribute of images.
 
 ### 2. Export language files.  
-As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
+As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.
 1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 2. Navigate to the root of your course to make it the current working directory.  
 3. Export the translatable fields (course JSON, global ARIA fields, etc.) by running the following command:  
@@ -58,8 +59,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 4. Rename the file, replacing the original language code with the translated language code. For example, rename the exported English language file *components_export_en.csv* to reflect a German translation *components_export_de.csv*.  
 
 ### 4. Import language files.  
-As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
-
+As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
 1. Place the translated language files in the *languagefiles* folder.  All five files are required even if a file did not require translation.  
 2. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 3. Navigate to the root of your course to make it the current working directory.  
