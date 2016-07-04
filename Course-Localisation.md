@@ -79,7 +79,9 @@ grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_
 Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, their paths must be updated in the appropriate files. 
 
 ### 6. Add the Language Picker plug-in. 
-The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.
+The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.  
+
+>**Note:** The *languagefiles* folder and its contents may be deleted after a successful import.
 
 ## Styling localised courses
 
