@@ -15,8 +15,9 @@ With Adapt you can localise your content and engage learners in ways that speak 
 Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages.
 
 Adapt (v2.0.11) provides two features to support for multiple languages:  
-- language picker: Component that presents a list of available languages and allows the learner to choose which she would prefer to work in. Component can be configured to appear before entering the course content and/or while the course is in progress. 
-- import/export: Commands that can be executed with Grunt. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format. 
+- Export/Import: Adapt providesCommands that can be executed with Grunt. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format. 
+- Language Picker: Component that presents a list of available languages and allows the learner to choose which she would prefer to work in. Component can be configured to appear before entering the course content and/or while the course is in progress. 
+
 
 ## Language Picker  
 - What it does
@@ -26,7 +27,7 @@ Adapt (v2.0.11) provides two features to support for multiple languages:
     - LMS (see questions above)
 
 ## Export/Import  
-- What it does  
+- Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
 - What it assumes  
     - the content of imported files will only use plug-ins that are present in the src directory
 
@@ -96,3 +97,36 @@ Assets are not copied into the newly created course when using `grunt translate:
 
 ### 6. Add the Language Picker plug-in. 
 The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.
+
+## Styling localised courses
+
+Adapt sets the `lang` attribute of the HTML element to the proper language code. CSS styles can use the [:lang( ) pseudo-class selector](http://www.w3schools.com/cssref/sel_lang.asp) to vary styles based on language.  
+```CSS
+// Example of basing styles on the value of the lang attribute  
+:lang(de) {
+  body {
+    font-family: "Comic Sans MS";
+  }
+  .page .page-header {
+      background-color: spin(@background-color-inverted, 90);
+  }
+}
+
+:lang(fr) {
+  body {
+    font-family: Serif;
+  }
+  .page .page-header {
+      background-color: spin(@background-color-inverted, 180);
+  }
+}
+
+:lang(it) {
+  body {
+    font-family: monospace;
+  }
+  .page .page-header {
+      background-color: spin(@background-color-inverted, 270);
+  }
+}
+```
