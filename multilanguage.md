@@ -46,7 +46,8 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 - `--format="[csv|raw]"` Choose the format of exported files.   
 - `--csvDelimiter="|"` Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
 - `--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.  
-4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.
+4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
+<div float align=right><a href="#top">Back to Top</a></div>  
 
 ### 3. Translate exported files.   
 „Es führen viele Wege zum Ziel“, «il y a plus d'une façon d'accommoder un lapin», and “there's more than one way to skin a cat”, but here's just one way to get you started:  
@@ -74,6 +75,7 @@ grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_
 - `--csvDelimiter="|"` Specify the delimiter used in the files to be imported.  
 
 - `--masterLang="en"`  Specify the existing master course language. Defaults to "en".  
+<div float align=right><a href="#top">Back to Top</a></div>  
 
 ### 5. Relink assets if required.  
 Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, their paths must be updated in the appropriate files. 
@@ -103,4 +105,5 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
     font-family: monospace;
   }
 }
-```
+```  
+<div float align=right><a href="#top">Back to Top</a></div>  
