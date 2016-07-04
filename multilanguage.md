@@ -7,7 +7,7 @@ With Adapt you can localise your content and engage learners in ways that speak 
 - content examples, regulations and legal requirements  
 - visual elements such as graphics, design and layout  
 
-Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.11) provides two features to support for multiple languages: Export/Import and the Language Picker.  
+Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.11) provides two features to support for multiple languages: **Export/Import** and the **Language Picker**.  
 
 ## Export/Import  
 - Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
