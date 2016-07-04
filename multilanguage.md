@@ -21,15 +21,15 @@ Fundamental to localisation is language, so much of the following instruction fo
 - The Language Picker does not create localised content. It must be configured to reflect the languages present in the course root. 
 - The Language Picker expects that Adapt conventions will be follow, specifically that localised content will be stored in a folder within the course directory and that it use the language code as the name folder.
 
-## Overview of language localisation  
-1. Create course in first language.  
+## How to recreate your course in another language
+
+### Overview of language localisation  
+[1. Create course in first language.](#1-create-your-course-in-the-first-language)  
 2. Export language files.  
 3. Translate exported files.
 4. Import language files.
 5. Relink assets if required.
 6. Add the Language Picker plug-in. 
-
-## How to recreate your course in another language
 
 ### 1. Create your course in the first language.  
 Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the alt attribute of images.
