@@ -1,5 +1,3 @@
->Note: The title and URL of this page *will* change.  
-
 ##Introduction  
 With Adapt you can localise your content and engage learners in ways that speak from their native culture. Localisation may involve modifying  
 - content language
