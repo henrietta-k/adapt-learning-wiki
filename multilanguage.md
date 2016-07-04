@@ -7,12 +7,14 @@ With Adapt you can localise your content and engage learners in ways that speak 
 - content examples, regulations and legal requirements  
 - visual elements such as graphics, design and layout  
 
-Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages.
+Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.11) provides two features to support for multiple languages: Export/Import and the Language Picker.  
 
-Adapt (v2.0.11) provides two features to support for multiple languages:  
-- Export/Import: Adapt providesCommands that can be executed with Grunt. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format. 
-- Language Picker: Component that presents a list of available languages and allows the learner to choose which she would prefer to work in. Component can be configured to appear before entering the course content and/or while the course is in progress. 
-
+## Export/Import  
+- Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
+- Do not confuse this with exporting and importing completed courses. These techniques focus on exporting and importing texts, not entire courses. 
+- Not all fields are exported for translation. Exported fields are marked as translatable in the plug-in's *properties.schema* file. Plug-ins that have no *properties.schema* will have no fields exported for translation.  
+- Imported content relies on the presence of required plug-ins. The import process does not install plug-ins specified by the various language files. 
+- Imported files must match the format produced by exporting translatable content. 
 
 ## Language Picker  
 - What it does
@@ -21,10 +23,10 @@ Adapt (v2.0.11) provides two features to support for multiple languages:
     - use of language folder in the course root
     - LMS (see questions above)
 
-## Export/Import  
-- Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
-- What it assumes  
-    - the content of imported files will only use plug-ins that are present in the src directory
+
+
+- Export/Import: Adapt providesCommands that can be executed with Grunt. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format. 
+- Language Picker: Component that presents a list of available languages and allows the learner to choose which she would prefer to work in. Component can be configured to appear before entering the course content and/or while the course is in progress. 
 
 ## Overview of language localisation  
 1. Create course in first language.  
@@ -40,8 +42,7 @@ Adapt (v2.0.11) provides two features to support for multiple languages:
 Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the alt attribute of images.
 
 ### 2. Export language files.  
-As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.
-
+As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
 1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 2. Navigate to the root of your course to make it the current working directory.  
 3. Export the translatable fields (course JSON, global ARIA fields, etc.) by running the following command:  
