@@ -9,14 +9,14 @@ With Adapt you can localise your content and engage learners in ways that speak 
 
 Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.11) provides two features to support for multiple languages: **Export/Import** and the **Language Picker**.  
 
-## Export/Import  
+### Export/Import  
 - Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
 - Do not confuse this with exporting and importing completed courses. These techniques focus on exporting and importing texts, not entire courses. 
 - Not all fields are exported for translation. Exported fields are marked as translatable in the plug-in's *properties.schema* file. Plug-ins that have no *properties.schema* will have no fields exported for translation.  
 - Imported content relies on the presence of required plug-ins. The import process does not install plug-ins specified by the various language files. 
 - Imported files must match the format produced by exporting translatable content. 
 
-## Language Picker  
+### Language Picker  
 - The Language Picker is a component that presents a list of available languages. It allows the learner to choose the language of the course content. The component can be configured to appear before entering the course content and/or while the course is in progress. 
 - The Language Picker does not create localised content. It must be configured to reflect the languages present in the course root. 
 - The Language Picker expects that Adapt conventions will be follow, specifically that localised content will be stored in a folder within the course directory and that it use the language code as the name folder.
