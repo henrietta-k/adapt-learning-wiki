@@ -89,7 +89,11 @@ Language files separated by a comma. Replace *xx* with the language code of the 
 Specify the delimiter used in the files to be imported.  
 
 `--masterLang="en"` 
-Specify the existing master course language. Defaults to "en". 
+Specify the existing master course language. Defaults to "en".  
+
+### 4. Relink assets if required.  
+Assets are not copied into the newly created course. And paths to assets found within the course JSON files are not alterred either.
+
 
 give hint when grunt task is not used  
 Example how to use the Authoring Tool and the Framework to create a ML course  
