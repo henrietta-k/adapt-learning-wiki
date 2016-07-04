@@ -95,6 +95,4 @@ Specify the existing master course language. Defaults to "en".
 Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, their paths must be updated in the appropriate files. 
 
 ### 6. Add the Language Picker plug-in. 
-
-give hint when grunt task is not used  
-Example how to use the Authoring Tool and the Framework to create a ML course  
+The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.
