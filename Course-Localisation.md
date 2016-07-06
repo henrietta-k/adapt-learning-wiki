@@ -43,7 +43,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 
 **Command options:**  
 - `--format="[csv|raw]"` Choose the format of exported files.   
-- `--csvDelimiter="|"` Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported.  
+- `--csvDelimiter="|"` Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to ",".  
 - `--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.  
 4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
 <div float align=right><a href="#top">Back to Top</a></div>  
@@ -65,12 +65,14 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 ```
 grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
 ```  
+>**Note**: `--csvDelimiter` is required if the field delimiter is not ",". `--masterLang` is required if the master course is not *course/en*.  
+
 **Command options:**  
 - `--targetLang="de"` Specify the language of the translated files.
 
 - `--files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv, contentObjects_export_xx.csv,course_export_xx.csv"` Language files separated by a comma. Replace *xx* with the language code of the translation.  
 
-- `--csvDelimiter="|"` Specify the delimiter used in the files to be imported.  
+- `--csvDelimiter="|"` Specify the delimiter used in the files to be imported. Defaults to "|".   
 
 - `--masterLang="en"`  Specify the existing master course language. Defaults to "en".  
 <div float align=right><a href="#top">Back to Top</a></div>  
