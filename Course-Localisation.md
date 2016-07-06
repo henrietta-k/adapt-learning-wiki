@@ -109,3 +109,6 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
 }
 ```  
 <div float align=right><a href="#top">Back to Top</a></div>  
+
+## Resources  
+https://www.w3.org/International/ The W3C Internationalization (I18n) Activity
