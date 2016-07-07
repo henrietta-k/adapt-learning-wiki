@@ -72,7 +72,7 @@ grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_
 
 - `--files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv, contentObjects_export_xx.csv,course_export_xx.csv"` Language files separated by a comma. Replace *xx* with the language code of the translation.  
 
-- `--csvDelimiter="|"` Specify the delimiter used in the files to be imported. Defaults to "|".   
+- `--csvDelimiter="|"` Specify the delimiter used in the files to be imported. Defaults to ",".   
 
 - `--masterLang="en"`  Specify the existing master course language. Defaults to "en".  
 <div float align=right><a href="#top">Back to Top</a></div>  
