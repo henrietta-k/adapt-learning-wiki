@@ -35,8 +35,10 @@ Fundamental to localisation is language, so much of the following instruction fo
 Finalise the JSON content of your master course. Do not overlook titles that might be hidden in the Drawer or in the `alt` attribute of images.
 
 ### 2. Export language files.  
-As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.
-1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
+>**Note**: Only those text fields marked as "translatable" will be exported. Fields are so designated in properties.schema. Read more about [Properties Schema](https://github.com/adaptlearning/adapt_authoring/wiki/Properties-Schema).  
+As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
+
+1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).    
 2. Navigate to the root of your course to make it the current working directory.  
 3. Export the translatable fields (course JSON, global ARIA fields, etc.) by running the following command:  
 `grunt translate:export --format="csv"`  
