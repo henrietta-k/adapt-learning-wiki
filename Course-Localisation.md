@@ -97,7 +97,7 @@ The value of the `_defaultLanguage` property in the *course/config.json* determi
 
 Adapt sets the `lang` attribute of the HTML element to the proper language code. CSS styles can use the [:lang( ) pseudo-class selector](http://www.w3schools.com/cssref/sel_lang.asp) to vary styles based on language.  
 ```CSS
-// Example of basing styles on the value of the lang attribute  
+// Example of styles that target the value of the lang attribute  
 :lang(de) {
   body {
     font-family: Verdana;
