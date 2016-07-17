@@ -1,3 +1,9 @@
+[Introduction](#introduction)  
+[How to recreate your course in another language](#how-to-recreate-your-course-in-another-language)  
+[Styling localised courses](#styling-localised-courses)  
+[Building localised courses](#building localised courses)
+
+
 ##Introduction  
 With Adapt you can localise your content and engage learners in ways that speak from their native culture. Localisation may involve modifying  
 - content language
@@ -89,7 +95,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, paths to these assets must be updated in the appropriate files. Remember to review your theme's CSS and Less files for paths that need to be updated. 
 
 ### 6. Add the Language Picker plug-in. 
-The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.  
+The value of the `_defaultLanguage` property in the *course/config.json* file determines which language is presented to the learner. To pass control to the learner, install [*adapt-contrib-languagePicker*](https://github.com/adaptlearning/adapt-contrib-languagePicker). The Language Picker appears before the course and allows the learner to choose the language of the course.  
 
 >**Note:** The *languagefiles* folder and its contents may be deleted after a successful import.
 
@@ -117,6 +123,12 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
 }
 ```  
 <div float align=right><a href="#top">Back to Top</a></div>  
+
+## Building localised courses  
+
+By default all language folders are built with the `grunt build` command. As of v2.0.11 the Adapt framework allows you to specify which languages to build. Use the `--languages` flag to specify an individual language or a subset of languages separated by a comma. To build just the German and French versions of a course, run the following command:   
+`grunt build --languages=“fr,de”`
+
 
 ## Resources  
 https://www.w3.org/International/ The W3C Internationalization (I18n) Activity
