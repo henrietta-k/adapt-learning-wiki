@@ -133,4 +133,5 @@ By default all language folders are built with the `grunt build` command. As of 
 
 
 ## Resources  
-https://www.w3.org/International/ The W3C Internationalization (I18n) Activity
+* [Tag Registry of language codes](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)  
+* [The W3C Internationalization (I18n) Activity](https://www.w3.org/International/)
