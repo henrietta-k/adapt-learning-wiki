@@ -73,7 +73,8 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 
 ### 4. Import language files.  
 As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
-1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course was English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*). 
+
+1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course was English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*).  
 2. Place the translated language files in the newly created subfolder. All five files are required even if a file did not require translation.  
 3. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 4. Navigate to the root of your course to make it the current working directory.  
