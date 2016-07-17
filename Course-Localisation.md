@@ -74,7 +74,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 ### 4. Import language files.  
 As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
 
-1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course was English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*).  
+1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course is English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*).  
 2. Place the translated language files in the newly created subfolder. All five files are required even if a file did not require translation.  
 3. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 4. Navigate to the root of your course to make it the current working directory.  
@@ -82,15 +82,16 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 `grunt translate:import --targetLang="de" --replace`  
 
    **Command model:**  
-    `grunt translate:import [--masterLang=en] [--format=json|raw|csv] [--csvDelimiter=,] [--replace]` 
+    `grunt translate:import --targetLang=xx [--masterLang=yy] [--csvDelimiter=z] [--replace]` 
 
    **Command options:**  
     `--targetLang="xx"` Specify the language of the translated files.  
-    `--masterLang="xx"`  Specify the existing master course language. Defaults to "en".  
-    `--csvDelimiter="x"` Specify the delimiter used in the files to be imported. Defaults to ",".  
+    `--masterLang="yy"`  Specify the existing master course language. Defaults to "en".  
+    `--csvDelimiter="z"` Specify the delimiter used if CSV files are being imported. Defaults to ",".  
     `--replace` Overwrite an existing folder named with the value of `targetLang` e.g., an existing *course/de* folder. 
 
->**Note**: `--masterLang` is required if the master course is not *course/en*. `--csvDelimiter` is required if the field delimiter is not ",". `--replace` is required if the targeted language folder already exists.    
+   >**Note**:  
+   >* Only translatable text fields are being imported. The rest of the necessary JSON is copied from the course designated by the value of `masterLang`.
 
 <div float align=right><a href="#top">Back to Top</a></div>  
 
