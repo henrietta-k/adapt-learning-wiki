@@ -90,8 +90,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
     `--csvDelimiter="z"` Specify the delimiter used if CSV files are being imported. Defaults to ",".  
     `--replace` Overwrite an existing folder named with the value of `targetLang` e.g., an existing *course/de* folder. 
 
-   >**Note**:  
-   >* Only translatable text fields are being imported. The rest of the necessary JSON is copied from the course designated by the value of `masterLang`.
+   >**Note**: Only translatable text fields are being imported. The rest of the necessary JSON is copied from the course designated by the value of `masterLang`.
 
 <div float align=right><a href="#top">Back to Top</a></div>  
 
