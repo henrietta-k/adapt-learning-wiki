@@ -81,7 +81,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 `grunt translate:import --targetLang="de" --replace`  
 
    **Command model:**  
-    `grunt translate:export [--masterLang=en] [--format=json|raw|csv] [--csvDelimiter=,] [--replace]` 
+    `grunt translate:import [--masterLang=en] [--format=json|raw|csv] [--csvDelimiter=,] [--replace]` 
 
    **Command options:**  
     `--targetLang="xx"` Specify the language of the translated files.  
