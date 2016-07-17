@@ -79,7 +79,7 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
     `--targetLang="xx"` Specify the language of the translated files.  
     `--masterLang="xx"`  Specify the existing master course language. Defaults to "en".  
     `--csvDelimiter="x"` Specify the delimiter used in the files to be imported. Defaults to ",".  
-    `--replace` Overwrite an existing folder named with the value of `targetLang` e.g., *course/de*. 
+    `--replace` Overwrite an existing folder named with the value of `targetLang` e.g., an existing *course/de* folder. 
 
 >**Note**: `--masterLang` is required if the master course is not *course/en*. `--csvDelimiter` is required if the field delimiter is not ",". `--replace` is required if the targeted language folder already exists.    
 
