@@ -65,27 +65,28 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 
 ### 4. Import language files.  
 As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
-1. Place the translated language files in the *languagefiles* folder.  All five files are required even if a file did not require translation.  
-2. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
-3. Navigate to the root of your course to make it the current working directory.  
-4. Import the translated language files by running the following command (where `xx` has been replaced with the language code of your translation):  
-```
-grunt translate:import --targetLang="xx" --files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv,contentObjects_export_xx.csv,course_export_xx.csv"
-```  
->**Note**: `--csvDelimiter` is required if the field delimiter is not ",". `--masterLang` is required if the master course is not *course/en*.  
+1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course was English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*). 
+2. Place the translated language files in the newly created subfolder. All five files are required even if a file did not require translation.  
+3. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
+4. Navigate to the root of your course to make it the current working directory.  
+5. Import the translated language files. To import German language files into a project configured with English as its master language, run the following command:  
+`grunt translate:import --targetLang="de" --replace`  
 
-**Command options:**  
-- `--targetLang="de"` Specify the language of the translated files.
+   **Command model:**  
+    `grunt translate:export [--masterLang=en] [--format=json|raw|csv] [--csvDelimiter=,] [--replace]` 
 
-- `--files="articles_export_xx.csv,blocks_export_xx.csv,components_export_xx.csv, contentObjects_export_xx.csv,course_export_xx.csv"` Language files separated by a comma. Replace *xx* with the language code of the translation.  
+   **Command options:**  
+    `--targetLang="xx"` Specify the language of the translated files.  
+    `--masterLang="xx"`  Specify the existing master course language. Defaults to "en".  
+    `--csvDelimiter="x"` Specify the delimiter used in the files to be imported. Defaults to ",".  
+    `--replace` Overwrite an existing folder named with the value of `targetLang` e.g., *course/de*. 
 
-- `--csvDelimiter="|"` Specify the delimiter used in the files to be imported. Defaults to ",".   
+>**Note**: `--masterLang` is required if the master course is not *course/en*. `--csvDelimiter` is required if the field delimiter is not ",". `--replace` is required if the targeted language folder already exists.    
 
-- `--masterLang="en"`  Specify the existing master course language. Defaults to "en".  
 <div float align=right><a href="#top">Back to Top</a></div>  
 
 ### 5. Relink assets if required.  
-Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, their paths must be updated in the appropriate files. 
+Assets are not copied into the newly created course when using `grunt translate:import`. And paths to assets found within the exported course files are not altered either. This allows the developer to choose to maintain a single copy of assets or to copy all or some assets. If any assets are copied into the newly created course, paths to these assets must be updated in the appropriate files. Remember to review your theme's CSS and Less files for paths that need to be updated. 
 
 ### 6. Add the Language Picker plug-in. 
 The value of the `_defaultLanguage` property in the *course/config.json* determines which language is served. To pass control to the learner, install *adapt-contrib-languagePicker*. The Language Picker appears before the course and allows the learner to choose the language of the course.  
