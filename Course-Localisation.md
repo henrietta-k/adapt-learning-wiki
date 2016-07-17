@@ -1,7 +1,7 @@
 [Introduction](#introduction)  
 [How to recreate your course in another language](#how-to-recreate-your-course-in-another-language)  
 [Styling localised courses](#styling-localised-courses)  
-[Building localised courses](#building localised courses)
+[Building localised courses](#building-localised-courses)
 
 
 ##Introduction  
