@@ -41,14 +41,18 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 
 1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).    
 2. Navigate to the root of your course to make it the current working directory.  
-3. Export the translatable fields (course JSON, global ARIA fields, etc.) by running the following command:  
+3. Export the translatable fields (course JSON, global ARIA fields, etc.). To export from *course/en* into a CSV file format, run the following command:  
 `grunt translate:export --format="csv"`  
 
-**Command options:**  
-- `--format="[csv|raw]"` Choose the format of exported files.   
-- `--csvDelimiter="|"` Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to ",".  
-- `--masterLang="en"` Defaults to "en". Specify the existing course language folder to be exported.  
-4. A new folder named "languagefiles" is created. It contains the following files with names that reflect the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
+    **Command model:**  
+    `grunt translate:export [--masterLang=en] [--format=json|raw|csv] [--csvDelimiter=,]` 
+
+    **Command options:**  
+    `--masterLang="en"` Specify the existing course language folder to be exported. Defaults to "en".  
+    `--format="[json|csv|raw]"` Choose the format of exported files. Defaults to "json".    
+    `--csvDelimiter=","` Specify the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to ",".  
+ 
+4. A new folder named "languagefiles" is created with a subfolder named with the value of `masterLang`. The subfolder contains the following files with names reflecting the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
 <div float align=right><a href="#top">Back to Top</a></div>  
 
 ### 3. Translate exported files.   
