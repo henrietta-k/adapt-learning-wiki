@@ -52,6 +52,8 @@ The order in which the properties appear in *course.json* is unimportant. And wh
 
 >**_force** (boolean): If set to `true`, this attribute will cause the course to route to the eligible start page regardless of the URL provided.
 
+>**_isMenuDisabled** (boolean): If set to `true` and **_isEnabled** is also `true`, this will completely prevent routing to the menu page.
+
 Example 1:  
 On small and medium touch-capable devices, always show co-05 as the start page. On small and medium devices without touch support, always show co-10 as the start page. For everything else, show the main menu as the start page.
 ```
