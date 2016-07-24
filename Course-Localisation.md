@@ -53,12 +53,12 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 `grunt translate:export --format=csv`  
 
     **Command model:**  
-    `grunt translate:export [--masterLang=xx] [--format=json|raw|csv] [--csvDelimiter=y]` 
+    `grunt translate:export [--masterLang=xx] [--format=json|raw|csv] [--csvDelimiter=x]` 
 
     **Command options:**  
     `--masterLang=xx` Specifies the existing course language folder to be exported. Defaults to `en`.  
     `--format=[json|csv|raw]` Specifies the format of exported files. Acceptable values are `json`, `csv`, or `raw`. Defaults to `json`.    
-    `--csvDelimiter=y` Specifies the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to `,`.  
+    `--csvDelimiter=x` Specifies the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to `,`.  
  
 4. A new folder named "languagefiles" is created with a subfolder named with the value of `masterLang`. The subfolder contains the following files with names reflecting the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
 <div float align=right><a href="#top">Back to Top</a></div>  
@@ -83,14 +83,14 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
 
    **Command model:**  
     ```
-    grunt translate:import --targetLang=xx [--masterLang=yy] [--format=json|raw|csv] [--csvDelimiter=z] [--replace]
+    grunt translate:import --targetLang=xx [--masterLang=xx] [--format=json|raw|csv] [--csvDelimiter=x] [--replace]
     ``` 
 
    **Command options:**  
     `--targetLang=xx` Specifies the language of the translated files.  
-    `--masterLang=yy`  Specifies the existing master course language. Defaults to `en`.  
+    `--masterLang=xx`  Specifies the existing master course language. Defaults to `en`.  
     `--format=json|raw|csv` Specifies the format of the files being imported. Acceptable values are `json`, `csv`, or `raw`. Defaults to `json`.  
-    `--csvDelimiter=z` Specifies the delimiter used if CSV files are being imported. Defaults to `,`.  
+    `--csvDelimiter=x` Specifies the delimiter used if CSV files are being imported. Defaults to `,`.  
     `--replace` Indicates an existing folder named with the value of `targetLang` should be overwritten with the imported texts. This option does not take a value.
 
    >**Note**: Only translatable text fields are being imported. The rest of the necessary JSON is copied from the course designated by the value of `masterLang`.
