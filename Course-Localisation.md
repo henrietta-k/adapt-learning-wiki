@@ -60,22 +60,23 @@ As of v2.0.11 Adapt provides grunt tasks for export and import of translatable c
     `--format=[json|csv|raw]` Specifies the format of exported files. Acceptable values are `json`, `csv`, or `raw`. Defaults to `json`.    
     `--csvDelimiter=x` Specifies the delimiter used to separate fields in the CSV tables. Use a character that is unlikely to appear in the content being exported. Defaults to `,`.  
  
-4. A new folder named "languagefiles" is created with a subfolder named with the value of `masterLang`. The subfolder contains the following files with names reflecting the options used with the `translate:export` command: *articles_export_xx.csv*, *blocks_export_xx.csv*, *components_export_xx.csv*, *contentObjects_export_xx.csv*, *course_export_xx.csv*.  
+4. A new folder named "languagefiles" is created with a subfolder named with the value of `masterLang`. The subfolder contains the following files with names reflecting the format option used with the `translate:export` command: *articles.csv*, *blocks.csv*, *components.csv*, *contentObjects.csv*, *course.csv*, *export.json*.  
 <div float align=right><a href="#top">Back to Top</a></div>  
 
 ### 3. Translate exported files.   
 „Es führen viele Wege zum Ziel“, «il y a plus d'une façon d'accommoder un lapin», and “there's more than one way to skin a cat”, but here's just one way to get you started:  
 
-1. Open an exported language file, such as *components_export_en.csv*, in a word processing application. While opening be sure to specify the same field separator that used during export.  
-2. Translate each cell in the blank column to its right.  
-3. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  
-4. Rename the file, replacing the original language code with the translated language code. For example, rename the exported English language file *components_export_en.csv* to reflect a German translation *components_export_de.csv*.  
+1. Copy the entire folder to keep the exported files together as a group.  
+2. Open an exported language file, such as *components.csv*, in a word processing application. While opening, be sure to specify the same field separator that was used during export.  
+3. Translate each cell in the blank column to its right.  
+4. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  
+5. When finished translating, save each file as utf-8 in order to accommodate special characters. This is easily done in many word processing applications. It is not possible within Microsoft® Excel. A workaround is to open the file in another program such as Notepad and save it as utf-8 from there.     
 
 ### 4. Import language files.  
 As of v2.0.11 Adapt provides grunt tasks for export and import of translatable content.  
 
 1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course is English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*).  
-2. Place the translated language files in the newly created subfolder. All five files are required even if a file did not require translation.  
+2. Place the translated language files in the newly created subfolder. Files must use these names: *articles.xxx*, *blocks.xxx*, *components.xxx*, *contentObjects.xxx*, *course.xxx*. The extension must accurately reflect the file format. Acceptable options are *csv*, *json*, or *raw*. If any of these files is omitted, the original content of the existing masterLang will be copied in its place.    
 3. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).  
 4. Navigate to the root of your course to make it the current working directory.  
 5. Import the translated language files. To import German language files into a project configured with English as its master language, run the following command:  
