@@ -13,11 +13,11 @@ With Adapt you can localise your content and engage learners in ways that speak 
 - content examples, regulations and legal requirements  
 - visual elements such as graphics, design and layout  
 
-Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.12) provides two features to support for multiple languages: **Export/Import** and the **Language Picker**.  
+Fundamental to localisation is language, so much of the following instruction focuses on providing content in multiple languages. Adapt (v2.0.13) provides two features to support for multiple languages: **Export/Import** and the **Language Picker**.  
 
 ### Export/Import  
 - Adapt provides export and import functionality via the command line. Export commands copy translatable fields into several CSV files to be used in preparing a translation. Import commands load translated content from CSV files matching the export format.  
-- As of v2.0.12 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
+- As of v2.0.13 Adapt provides grunt tasks for export and import of translatable content. These commands are most easily run when using the Adapt framework as a stand-alone development environment.  
 - Do not confuse this with exporting and importing completed courses. These techniques focus on exporting and importing texts, not entire courses. 
 - Not all fields are exported for translation. Exported fields are marked as translatable in the plug-in's *properties.schema* file. Plug-ins that have no *properties.schema* will have no fields exported for translation.  
 - Imported content relies on the presence of required plug-ins. The import process does not install plug-ins expected by the various language files. 
@@ -45,7 +45,7 @@ Finalise the JSON content of your master course. Do not overlook titles that mig
 ### 2. Export language files.  
 >**Note**: Only those text fields marked as "translatable" will be exported. Fields are so designated in properties.schema. Read more about [Properties Schema](https://github.com/adaptlearning/adapt_authoring/wiki/Properties-Schema).   
 
-As of v2.0.12 Adapt provides grunt tasks for export and import of translatable content.  
+As of v2.0.13 Adapt provides grunt tasks for export and import of translatable content.  
 
 1. Open a command line window (Mac's Terminal, Window's Git Bash or Command Prompt).    
 2. Navigate to the root of your course to make it the current working directory.  
@@ -73,7 +73,7 @@ As of v2.0.12 Adapt provides grunt tasks for export and import of translatable c
 5. When finished translating, save each file as utf-8 in order to accommodate special characters. This is easily done in many word processing applications. It is not possible within Microsoft® Excel. A workaround is to open the file in another program such as Notepad and save it as utf-8 from there.     
 
 ### 4. Import language files.  
-As of v2.0.12 Adapt provides grunt tasks for export and import of translatable content.  
+As of v2.0.13 Adapt provides grunt tasks for export and import of translatable content.  
 
 1. In the *languagefiles* folder, create a subfolder named with the language code of the translation language. For example, if the language of your original course is English (*course/en*) and you are creating a version in German (target language), create a subfolder named "de" (*languagefiles/de*).  
 2. Place the translated language files in the newly created subfolder. The extension must accurately reflect the file format. Acceptable options are *csv* or *json*. If any of these files is omitted, the original content of the existing masterLang will be copied in its place.    
@@ -133,7 +133,7 @@ Adapt sets the `lang` attribute of the HTML element to the proper language code.
 
 ## Building localised courses  
 
-By default all language folders are built with the `grunt build` command. As of v2.0.12 the Adapt framework allows you to specify which languages to build. Use the `--languages` flag to specify an individual language or a subset of languages separated by a comma. To build just the German and French versions of a course, run the following command:   
+By default all language folders are built with the `grunt build` command. As of v2.0.13 the Adapt framework allows you to specify which languages to build. Use the `--languages` flag to specify an individual language or a subset of languages separated by a comma. To build just the German and French versions of a course, run the following command:   
 `grunt build --languages=“fr,de”`
 
 
