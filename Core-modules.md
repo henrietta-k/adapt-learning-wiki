@@ -214,14 +214,13 @@ How to activate a push notification:
 ```
 var pushObject = {
     title: "Great work!",
-    body: "You've just completed a page",
-    _timeout:5000,
-    _callbackEvent: "pageCompletion:complete"
+    body: "You've just done something that merited a push notification.",
+    _timeout: 5000,
+    _callbackEvent: "pushNotify:clicked" // The _callbackEvent is triggered only if the push notification is clicked
 };
-// The _callbackEvent is called when the push notification is clicked.
-// This callback event is not fired when closed.
-Adapt.on('pageCompletion:complete', function() {
-    console.log('A push alert was clicked');
+
+Adapt.on('pushNotify:clicked', function() {
+    console.log('A push notification was clicked');
 });
 
 Adapt.trigger('notify:push', pushObject);
