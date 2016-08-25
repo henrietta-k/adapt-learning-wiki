@@ -1,20 +1,13 @@
-#####Quick links
+##### Quick links
 
-[App](#app)
-
-[NavigationView](#navigationView)
-
-[Router](#router)
-
-[Device](#device)
-
-[Drawer](#drawer)
-
-[Notify](#notify)
-
-[Popup Manager](#popupManager)
-
-[Helpers](#helpers)
+* [App](#app)
+* [NavigationView](#navigationView)
+* [Router](#router)
+* [Device](#device)
+* [Drawer](#drawer)
+* [Notify](#notify)
+* [Popup Manager](#popupManager)
+* [Helpers](#helpers)
 
 ### <a name="app"></a>App
 
