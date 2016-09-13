@@ -9,7 +9,6 @@ Attribute | Description | Default value
 `body` | The body text content of the particular item.
 `_isComplete` | Whether the item has been completed. | `false`
 `_isEnabled` | Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled. | `true`
-`_isEnabledOnRevisit` |  | `true`
 `_isAvailable` |  | `true`
 `_isOptional` | If set to `true`, the user will not be required to complete the component in order to complete the course. The completion of the component will still be tracked, but it will be ignored during any completion calculations.  | `false`
 `_isReady` | This is used to determine if the current item is ready (i.e. has been initialised). This needs to be set manually for custom components. For instance, this may be set to true post-render. | `false`
