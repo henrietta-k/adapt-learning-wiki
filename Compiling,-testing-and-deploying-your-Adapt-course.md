@@ -1,3 +1,7 @@
+**Important**: if using the authoring tool, please do not attempt to build individual courses using the below instructions (unless you *really* know what you're doing).
+
+---
+
 To make developing and deploying Adapt courses as painless as possible, we use the [Grunt task runner](http://gruntjs.com/) to automate as many of the menial tasks as possible.
 
 ## Tasks
