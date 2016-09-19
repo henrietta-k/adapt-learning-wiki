@@ -1,13 +1,19 @@
-## Overview
-Adapt Command Line Interface is a set of cross platform command line tools for developers to create, manage and build Adapt courses and plugin.
+**Important**: the CLI is only for use with developing *standalone* courses using the framework. Please do not attempt to use it in conjunction with an authoring tool installation.
 
-Full details are available from the [npm Package](https://npmjs.org/package/adapt-cli).
+---
+The Adapt command-line interface (CLI) is a set of cross platform command-line tools for developers to create, manage and build Adapt courses and plugin.
+
+Check out the CLI's [README](https://github.com/adaptlearning/adapt-cli) for full details.
 
 ### Installation
-To install the Adapt CLI, first be sure to install NodeJS, then from the command line run:-
+
+**Prerequisites**: NodeJS (and NPM)
+
+To install the Adapt CLI, run the following from the command line:
 ```bash
 $ npm install adapt-cli -g
 ```
+This will install the CLI globally (i.e. allow you to access the tools from anywhere on your computer).
 
 ### Update
 To update the Adapt CLI run the following command
