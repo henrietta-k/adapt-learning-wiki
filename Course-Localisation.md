@@ -68,9 +68,11 @@ As of v2.0.13 Adapt provides grunt tasks for export and import of translatable c
 
 1. Copy the entire folder to keep the exported files together as a group.  
 2. Open an exported language file, such as *components.csv*, in a word processing application. While opening, be sure to specify the same field separator that was used during export.   
-3. Translate each cell in the blank column to its right.  <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/ml-utf8-dialog.png" alt="" align="right">  
-4. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  
-5. When finished translating, save each file as utf-8 in order to accommodate special characters. This is easily done in many word processing applications. It is not possible within Microsoft® Excel. A workaround is to open the file in another program such as Notepad and save it as utf-8 from there.     
+3. Translate each cell in the blank column to its right.  
+4. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/ml-utf8-dialog.png" alt="" align="right">  
+5. When finished translating, save each file as utf-8 in order to accommodate special characters. This is easily done in many word processing applications. It is not possible within Microsoft® Excel. A workaround is to open the file in another program such as Notepad and save it as utf-8 from there.  
+
+>**Note**: It is recommended to use a word processing application that provides explicit control over encoding. Without such a feature, it is difficult to know if all special characters were properly encoded. [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/) is one such application.   
 
 ### 4. Import language files.  
 As of v2.0.13 Adapt provides grunt tasks for export and import of translatable content.  
