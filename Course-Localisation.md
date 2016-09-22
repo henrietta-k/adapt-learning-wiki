@@ -66,9 +66,9 @@ As of v2.0.13 Adapt provides grunt tasks for export and import of translatable c
 ### 3. Translate exported files.   
 „Es führen viele Wege zum Ziel“, «il y a plus d'une façon d'accommoder un lapin», and “there's more than one way to skin a cat”, but here's just one way to get you started:  
 
-1. Copy the entire folder to keep the exported files together as a group.  <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/ml-utf8-dialog.png" alt="" align="right"> 
+1. Copy the entire folder to keep the exported files together as a group.  
 2. Open an exported language file, such as *components.csv*, in a word processing application. While opening, be sure to specify the same field separator that was used during export.   
-3. Translate each cell in the blank column to its right.  
+3. Translate each cell in the blank column to its right.  <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/ml-utf8-dialog.png" alt="" align="right">  
 4. When finished translating, delete the column of text in the original language, leaving the remaining two columns side-by-side.  
 5. When finished translating, save each file as utf-8 in order to accommodate special characters. This is easily done in many word processing applications. It is not possible within Microsoft® Excel. A workaround is to open the file in another program such as Notepad and save it as utf-8 from there.     
 
