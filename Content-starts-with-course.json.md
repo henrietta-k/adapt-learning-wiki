@@ -97,7 +97,7 @@ On small and medium touch-capable devices, show co-05 as the start page. For eve
         {
             "_id": "co-05",
             "_skipIfComplete": false,
-            "_className": ".size-small.touch, .size-medium.touch",
+            "_className": ".size-small.touch, .size-medium.touch"
         }
     ],
     "_id": "co-10"
