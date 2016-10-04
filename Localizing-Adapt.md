@@ -29,6 +29,9 @@
 - create a master course
 - add LanguagePicker plugin to master course
 - duplicate
+	- use _translatable attribute to export text
+        - create language file
+        - duplicate course by importing translated language file
 - localize course
 	- optionally update individual course structure
 	- update assets for a language if required
