@@ -3,9 +3,9 @@ If you're new to the Adapt framework, or the project in general, this page will 
 ## What is the Adapt framework?
 
 In a single (albeit verbose) sentence, the Adapt framework is:<br>
-***a modular, reusable codebase for developing single-version, responsive e-learning courses***.
+***a modular, reusable codebase for developing single-version, easily localisable, responsive e-learning courses***.
 
-What this means in practise:
+What this means in practice:
 
 **Multi-device delivery**: The framework offers the cross-platform and cross-browser versatility that you expect from standard web pages, so a single build of your course will work across all devices in the [supported tech spec](https://github.com/adaptlearning/documentation/blob/master/01_cross_workstream/developer_requirements.md). With mobile devices quickly becoming the de facto way to access the web, Adapt provides a future-proof solution.
 
@@ -16,6 +16,8 @@ What this means in practise:
 **Designed for e-learning**: Built from the ground up specifically for e-learning, the framework comes bundled with a number of useful plugins, including learner progress tracking, customisable assessments and a learning resources 'drawer'.
 
 **Accessibility out-of-the-box**: Courses created in the Adapt framework are fully accessible with no need for a separate version to comply with DDA guidelines.
+
+**Easily localisable**: Content can be exported from the framework to a CSV file, translated, then imported back in. A language picker allows learners to easily choose and switch languages. Find out more in the [[Course Localisation|Course-Localisation]] Wiki page
 
 **Free**: All source code for the framework and core bundle of plugins are available for download free ([as in speech](https://en.wikipedia.org/wiki/Free_and_open-source_software)) on our GitHub page, for you to take and modify as you like.
 
