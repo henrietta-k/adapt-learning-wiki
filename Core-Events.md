@@ -51,6 +51,8 @@ Event | Argument | Description
 `router:menu` | `model` | Triggered when a route hits a menu.
 `router:page` | `model` | Triggered when a route hits a page.
 `remove` | | Is used by Adapt to trigger an event to remove all views.
+`preRemove` | | Is used by Adapt to trigger an event that must occur immediately prior to `remove`.
+`postRemove` | | Is used by Adapt to trigger an event that must occur immediately after `remove`.
 `device:resize` | `Adapt.device.screenWidth` | Triggered when the window resizes.
 `device:changed` | `Adapt.device.screenSize` | Triggered when the device size changes.
 
