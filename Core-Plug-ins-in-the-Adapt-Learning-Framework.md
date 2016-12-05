@@ -33,4 +33,5 @@ The Adapt community is committed to supporting the plug-ins listed below. Other 
 * **Spoor:** [wiki](https://github.com/adaptlearning/adapt-contrib-spoor/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-spoor)  
 * **Trickle:** [wiki](https://github.com/adaptlearning/adapt-contrib-trickle/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-trickle)   
 * **Tutor:** [source code](https://github.com/adaptlearning/adapt-contrib-tutor)  
+* **Language Picker** [source code](https://github.com/adaptlearning/adapt-contrib-languagePicker)
 
