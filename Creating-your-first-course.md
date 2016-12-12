@@ -175,5 +175,6 @@ Modify the title and body and save your code. Now you will need to re-build your
 ####images/
 Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of its use can be viewed in the components.json file.
 
+**Important:** if your course targets IE8, it is recommended to limit the number of components on a single page to 20. This is recommended to help avoid the popup warning "A script on this page is causing Internet Explorer to run slowly". See https://support.microsoft.com/en-gb/kb/175500 for more information.
 
 **Next** - [[Styling your course]]
