@@ -45,9 +45,9 @@ Plug-ins will often include several types of files. Storing these in following n
 | `/js` | JavaScript files | `/adapt/js/adapt.min.js` |  
 | `/less` | Less file used to style the plug-in | `/adapt/css/adapt.css` |
 | `/templates` | Handlebars (`.hbs`) files used to create the plug-in views | `/templates.js` |
-| `/assets` | Graphic and media files | `/assets/` |
+| `/assets` | Graphic and media files | `/assets/` for components and extensions, `/adapt/css/assets/` for themes|
 | `/libraries` | JavaScript libraries from third-parties and the like that are referenced by the plug-in's js file. | `/libraries/`  |
-| `/required` | miscellaneous files such XML configuration files | `/` |
+| `/required` | Any additional files to go in the course 'root' folder e.g. SCORM manifest files | `/` |
 
 
 #### Defining a package
