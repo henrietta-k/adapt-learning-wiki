@@ -28,3 +28,10 @@ To fix this, you'll need to configure your $HOME environment variable.
 On Win 7 go to Control Panel\All Control Panel Items\System then select Advanced system settings > Environment variables 
 
 Then add a new variable called HOME with the value 'C:\Users\your.username\' (or whatever the correct path to your user profile directory happens to be)
+
+## Running your course
+### In IE8 you receive the warning "A script on this page is causing Internet Explorer to run slowly"
+
+(N.B. see https://support.microsoft.com/en-gb/kb/175500 for more information about this warning)
+
+When targetting IE8 it is recommended that a single page be limited to a maximum of 20 components. Check the size of each page and try breaking up large pages to see if this resolves the problem. If the problem appears to relate to a page with an assessment, check how many questions are in the assessment. Try reducing the number of questions or splitting the assessment into multiple smaller assessments. See https://github.com/adaptlearning/adapt-contrib-assessment for more information.
