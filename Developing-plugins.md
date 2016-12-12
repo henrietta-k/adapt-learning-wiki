@@ -18,14 +18,17 @@ In order to publish a plug-in it is required that a plug-in name must:-
 3. Not start with **adapt-contrib-**, this is reserved for plug-ins that have been acknowledged by the Adapt Community as "officially" supported. To achieve contrib status a plug-in must conform to the projects standard for code convention and test coverage.
 
 #### Implementing a plug-in
-The plug-ins javascript file must define itself as an AMD module (this is the file specified by the `main` property in your package).
+The plug-ins JavaScript file must define itself as an AMD module (this is the file specified by the `main` property in your package)
 
 ```js
-define(["coreViews/componentView", "coreJS/adapt"], function(ComponentView, Adapt) {
+define([
+    "core/js/adapt",
+    "core/js/views/componentView"
+], function(Adapt, ComponentView) {
 
     var MyPlugin = {
        // implement your component
-    };        
+    };
     return MyPlugin;
    
 });
