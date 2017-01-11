@@ -20,7 +20,7 @@ The properties listed below and their values are used to configure an Adapt proj
 
 **_questionWeight** (number): This value is used by [Question components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#question-components) when using the function [`setScore()`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/questionView.js). This value functions as a global default for all Question components; but individual components may override it by including the same attribute in its JSON model. Reference the Matching component's [_example.json_](https://github.com/adaptlearning/adapt-contrib-matching/blob/master/example.json) as an example.
 
-**_accessibility** (object): Adapt's built-in accessibility feature provides tab-highlighting, enables aria-labels that are otherwise hidden, and processes content text to ensure screen readers can access it. The accessibility attributes group contains values for **_isEnabled**, **_shouldSupportLegacyBrowsers**, and **_isTextProcessorEnabled**.  
+**_accessibility** (object): Adapt's built-in accessibility feature provides tab-highlighting, enables aria-labels that are otherwise hidden, and processes content text to ensure screen readers can access it. The accessibility attributes group contains values for **_isEnabled**, **_isDisabledOnTouchDevices**, **_shouldSupportLegacyBrowsers**, and **_isTextProcessorEnabled**.  
 
 >**_isEnabled** (boolean):  Specify a value of `true` or `false` to enable or to disable the accessibility feature.  
 
