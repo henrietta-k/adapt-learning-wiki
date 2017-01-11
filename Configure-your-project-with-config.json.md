@@ -24,6 +24,8 @@ The properties listed below and their values are used to configure an Adapt proj
 
 >**_isEnabled** (boolean):  Specify a value of `true` or `false` to enable or to disable the accessibility feature.  
 
+>**_isDisabledOnTouchDevices** (boolean): If set to `true`, accessibility features will be disabled on touch devices - useful if you only need accessibility on desktop browsers.
+
 >**_shouldSupportLegacyBrowsers** (boolean):  If set to `true`, Adapt will supply the 'focused' class to accommodate some legacy browser's inability to recognize `:focus`. The 'focused' class is used to outline elements when tab-highlighting is enabled.
 
 >**_isTextProcessorEnabled** (boolean):  If set to `true`, content text is processed by the `a11y_text` function of [_jquery.a11y.js_](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js). The primary goal is to ensure the text or HTML is accessible by tabbing.
@@ -40,6 +42,8 @@ The properties listed below and their values are used to configure an Adapt proj
 
 **_disableAnimationFor** (string array): A comma separated list of jQuery selectors that could match on the HTML tag. A match allows core modules and other plug-ins to employ alternative styles for those browsers that do not support common animation techniques. Typical strings include `".ie8"` ([*index.html*](https://github.com/adaptlearning/adapt_framework/blob/master/src/index.html)), and `".iPhone.version-7\\.0"` ([*src/core/js/device.js*](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/device.js)). 
 
+**_forceRouteLocking** (boolean): If menu locking is being used in the course, this setting prevents the user from bypassing the locking by doing things like specifying the route in the address bar or via the browser console.
+
 **build** (object): By default, Adapt includes all installed plug-ins in its build process. (The result of the build is found at `build/adapt/`.) Sometimes the developer may install plug-ins that are only used during development or that are not yet being used by the content. This bloats the build needlessly. The **build** object allows the developer to specify explicitly which plug-ins will be included in the build or excluded from the build. The build attributes group is **optional**. It contains values for one of two arrays: **excludes** or **includes**.  
 
 >**excludes** (string array):  All plug-ins will be included in the build except those whose names appear in this comma separated list.
@@ -54,10 +58,4 @@ The properties listed below and their values are used to configure an Adapt proj
         "adapt-contrib-assessmentResultsTotal"
     ]
 } 
-```   
-
-
-
-   
-    
-   
+```
