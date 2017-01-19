@@ -109,7 +109,7 @@ Remember to use [Handlebars helpers](http://handlebarsjs.com/block_helpers.html)
 
 ###Theme Javascript
 
-The theme JavaScript files found in the *js* folder should be used to add any additional theming that cannot be done using just html/css (.hbs/.less). For example, you could ass JavaScript to fade in an image when the page loads.
+The theme JavaScript files found in the *js* folder should be used to add any additional theming that cannot be done using just html/css (.hbs/.less). For example, you could add JavaScript to fade in an image when the page loads.
 
 It's strongly recommended that the theme shouldn't be setting any attributes on [Backbone models](http://backbonejs.org/#Model-View-separation); you can, however, use classes if, say, you want an effect on a particular page.
 
