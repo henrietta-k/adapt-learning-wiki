@@ -4,7 +4,7 @@ In Adapt we have a concept of components. These components are the main interact
 
 #### Presentation components
 
-A [presentation component](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#presentation-components) should be used to display content with little interactivity. A few components that full under this category are: Graphic, Media, Hot Graphic and Narrative. Each presentation component should call the following methods in the view:
+A [presentation component](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#presentation-components) should be used to display content with little interactivity. A few components that fall under this category are: Graphic, Media, Hot Graphic and Narrative. Each presentation component should call the following methods in the view:
 
 - ``setCompletionStatus`` - Should be called when the user completes the component.
 - ``setReadyStatus`` - Should be called when the component is fully loaded. If the component has images, please see the adapt-contrib-narrative component for an example of imageReady.
