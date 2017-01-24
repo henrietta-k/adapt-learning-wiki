@@ -45,6 +45,7 @@ Event | Argument | Description
 `configModel:dataLoaded` | | Triggered when the config model is loaded. This can be used to stop the course files from being fetched.
 `configModel:loadCourseData` | | Triggered just before Adapt creates the main content collections and models. This can be used to load the course files if a plugin has stopped the default fetch.
 `app:dataReady` | | Triggered when all the course data is loaded.
+`app:languageChange` | `newLanguage` | Triggered if the user changes the course language. The argument `newLanguage` will be set to the language code of the new language e.g. `"fr"` for French. Changing language will trigger a reload of all the course content and a re-render of the course itself so components, menus and themes should get updated automatically - but some extensions (e.g. resources, glossary, spoor) will need to do extra work when the language is changed.
 `adapt:start` | | Triggered before Adapt starts the router, gives the start controller an opportunity to set a custom start location.
 `adapt:initialize` | | Triggered when Adapt is ready to start the router.
 `router:location` | `Adapt.location` | Triggered when the location changes.
