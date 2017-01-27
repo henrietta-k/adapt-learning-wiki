@@ -54,7 +54,30 @@ The order in which the properties appear in *course.json* is unimportant. And wh
 
 >**_isMenuDisabled** (boolean): If set to `true` and **_isEnabled** is also `true`, this will completely prevent routing to the menu page.
 
-Example 1:  
+#### Example 1:  
+Always show co-05 as the start page.
+```
+"_start": {
+    "_isEnabled": true,
+    "_id": "co-05",
+    "_force": true
+}
+```
+#### Example 2:  
+Show co-05 as the start page, unless it has been completed, in which case show the main menu
+```
+"_start": {
+    "_isEnabled": true,
+    "_startIds": [
+        {
+            "_id": "co-05",
+            "_skipIfComplete": true
+        }
+    ],
+    "_force": true
+}
+```
+#### Example 3:  
 On small and medium touch-capable devices, always show co-05 as the start page. On small and medium devices without touch support, always show co-10 as the start page. For everything else, show the main menu as the start page.
 ```
 "_start": {
@@ -74,21 +97,7 @@ On small and medium touch-capable devices, always show co-05 as the start page. 
     "_force": true
 }
 ```
-Example 2:  
-Show co-05 as the start page, unless it has been completed, in which case show the main menu
-```
-"_start": {
-    "_isEnabled": true,
-    "_startIds": [
-        {
-            "_id": "co-05",
-            "_skipIfComplete": true
-        }
-    ],
-    "_force": true
-}
-```
-Example 3:  
+#### Example 4:  
 On small and medium touch-capable devices, show co-05 as the start page. For everything else, show co-10 as start page. In all browsers/devices, if a different route is specified via the URL, that will be given priority (so if you were to refresh the page whilst on co-15 you would be taken back to co-15 instead of being redirected to one of the start pages).
 ```
 "_start": {
@@ -102,3 +111,4 @@ On small and medium touch-capable devices, show co-05 as the start page. For eve
     ],
     "_id": "co-10"
 }
+```
