@@ -30,6 +30,8 @@ The properties listed below and their values are used to configure an Adapt proj
 
 >**_isTextProcessorEnabled** (boolean):  If set to `true`, content text is processed by the `a11y_text` function of [_jquery.a11y.js_](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js). The primary goal is to ensure the text or HTML is accessible by tabbing.
 
+>**_isSkipNavigationEnabled** (boolean): If set to 'true' a 'Skip Navigation' link will appear allowing users to jump past the navigation and straight into the content, useful for screen reader users who don't want to have to keep tabbing through all the navigation bar items.
+
 **_drawer** (object): Adapt's [Drawer](https://github.com/adaptlearning/adapt_framework/wiki/Core-modules#drawer) provides a slide out panel that is often used to display indicators of page level progress and links to ancillary course resources. The Drawer uses the [velocity.js](http://julian.com/research/velocity/) engine for its animations. The Drawer attributes group contains values for **_showEasing**, **_hideEasing**, and **_duration**.  
 
 >**_showEasing** (string):  This value controls the variations in speed and bounce as the Drawer opens. It must be a [value acceptable to Velocity](http://julian.com/research/velocity/#easing). Most of [jQueryUI's easings](http://easings.net/) are built into Velocity. 
