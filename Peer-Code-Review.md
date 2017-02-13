@@ -9,7 +9,7 @@ The process is governed by these rules:
 * The developer who submits the PR is not allowed to cast a +1.
 * If a commit is added to the PR, any +1s given so far are invalidated. Everyone must post their assessment/+1 after reviewing the commit.
 * Any new functionality/feature requests uncovered during review of a PR must be separated into new issues/PRs.
-* **For code to be merged, a minimum of three +1s is required. Of these, at least two +1s must have come from a core team member.**  
+* **For code to be merged, a minimum of three +1s is required. Of these, at least two +1s must have come from a core team member. All three +1s cannot come from reviewers working from the same company.**  
 * The person who merges the PR must also post their +1 prior to merging if their vote is required.
 * A vote of -1 must be accompanied by an explanation of why the PR should not be merged. Without this, the -1 will be disregarded.
 * Any concerns signaled by a -1 warrant careful consideration, but no reviewer has veto rights. 
@@ -37,7 +37,7 @@ Scores indicate the following:
 
 ### Core Team Members
 
-**Adapt Framework Core Developers:** Chris Jones, Brian Quinn, Alan Bourne, Himanshu Rajotia, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Thomas Berger, 
+**Adapt Framework Core Developers:** Brian Quinn, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Thomas Berger, Tom Greenfield
  
 **Adapt Authoring Tool Core Developers:** Dennis Heaney, Brian Quinn, Dan Gray, Tom Taylor, Thomas Berger
 
