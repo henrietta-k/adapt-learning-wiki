@@ -37,9 +37,9 @@ Scores indicate the following:
 
 ### Core Team Members
 
-**Adapt Framework Core Developers:** Brian Quinn, Matt Leathes, Tom Taylor, Oliver Foster, Dan Gray, Thomas Berger, Tom Greenfield
+**Adapt Framework Core Developers:** Thomas Berger, Oliver Foster, Dan Gray, Tom Greenfield, Matt Leathes, Brian Quinn, Tom Taylor
  
-**Adapt Authoring Tool Core Developers:** Dennis Heaney, Brian Quinn, Dan Gray, Tom Taylor, Thomas Berger
+**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Brian Quinn, Tom Taylor
 
 ### References
 
