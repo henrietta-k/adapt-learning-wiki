@@ -6,20 +6,20 @@ Semantic Versioning uses a three-part version number, represented by: **MAJOR**.
 
 ### Major releases
 A **major** release signifies changes to the API which are _not backward-compatible_ (we call these breaking changes).
-- Usually introduce backwards-incompatible, breaking changes.
-- Introduce the APIs we intend to support for the foreseeable future.
+- Usually introduces backwards-incompatible, breaking changes.
+- Introduces the APIs we intend to support for the foreseeable future.
 
 ### Minor releases
-A **minor** release add news (but crucially, **backward-compatible**) API features.
-- Include additions and/or refinements of APIs and subsystems.
+A **minor** release add new (but crucially, **backward-compatible**) API features.
+- Includes additions and/or refinements of APIs and subsystems.
 - Do not generally change APIs nor introduce backwards-incompatible breaking changes, except where unavoidable.
 - Are mostly additive releases.
 
 ### Patch releases
 A **patch** release represents minor changes and bug fixes which do not change the software's public API/interface.
-- Include bug, performance, and security fixes.
+- Includes bug, performance, and security fixes.
 - Do not add nor change public interfaces.
-- Do not alter the expected behavior of a given interface.
+- Do not alter the expected behaviour of a given interface.
 - Can correct behaviour if it is out-of-sync with the documentation.
 
 ## Example scenario
