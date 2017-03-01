@@ -14,7 +14,7 @@ Name | Description | Persisting
 ---- | ----------- | ----------
 `master` | Contains the stable, released code. | yes
 `release/VERSION_NAME`<br/>*(e.g. `release/v2.0`)* | A release candidate branch. Contains **development** code, and should not be considered stable. Use this code at your own risk! | no
-`issue/TICKET_NAME` <br/>*(e.g. `issue/ABU-001`)* | A self-contained bug-fix. Should be named after a corresponding issue ID. Finished changes should be submitted as a pull request. | no
+`issue/TICKET_NAME` <br/>*(e.g. `issue/1024`)* | A self-contained bug-fix. Should be named after a corresponding issue ID. Finished changes should be submitted as a pull request. | no
 `feature/FEATURE_NAME` | A self-contained feature. This should also be named with an issue ID (see above). Finished changes should be submitted as a pull request. | no
 
 We also apply the following rules to the core Adapt repos (i.e. those owned by [@adaptlearning](https://github.com/adaptlearning)):
