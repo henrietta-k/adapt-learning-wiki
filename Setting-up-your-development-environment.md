@@ -87,6 +87,7 @@ This will now open your default browser at the following URL:
 
 This allows you to test your SCO without the need for a continual upload / update / reupload cycle. If you need to reset the stored data, open the browser console and execute the command `API.LMSClear()`.
 
+If you do not require SCORM functionality, please run 
 ```bash
 adapt uninstall contrib-spoor
 grunt build
