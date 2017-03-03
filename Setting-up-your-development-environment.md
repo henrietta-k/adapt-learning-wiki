@@ -25,7 +25,7 @@ npm install grunt-cli -g
 The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
 
 #### Downloading the framework
-You can get the latest version of the framework from our [GitHub repository](/adaptlearning/adapt_framework) using the Adapt Command Line Interface.
+You can get the latest version of the framework from our [GitHub repository](/adaptlearning/adapt_framework) using the Adapt **C**ommand **L**ine **I**nterface.
 
 First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
 
