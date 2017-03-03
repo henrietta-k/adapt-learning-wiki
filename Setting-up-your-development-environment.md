@@ -59,6 +59,14 @@ grunt build
 ```
 The build task compiles and compresses your course and prepares it for viewing and distribution. The output is located in the *build* directory.
 
+Whilst you are working on your course, you should use:
+```bash
+grunt dev
+```
+This task will compile your files with 'sourcemapping' enabled so as to allow for debugging using your browser's developer tools. It will also watch for changes so every time you save a file it will automatically process it as necessary. To exit, press <kbd>CTRL+c</kbd>
+
+> Note: as a general rule, you should run `$ grunt build` on your course when you want to make it 'production-ready' as this 'minifies' the code, making it quicker for end users to download, improving course start-up performance.
+
 #### Viewing the build
 To view the build package create a local server:
 ```bash
@@ -69,15 +77,15 @@ To emulate a SCORM server, use this command instead:
 ```bash
 grunt server-scorm
 ```
-Note: to terminate the server, press ctrl+c
+Note: to terminate the server, press <kbd>CTRL+c</kbd>
 
 This will now open your default browser at the following URL:
 [http://localhost:9001/](http://localhost:9001/)
 
 *N.B.* If you have run the server-scorm task, navigate to this URL to emulate an LMS environment:
-[http://localhost:9001/main.html](http://localhost:9001/main.html)
+[http://localhost:9001/scorm_test_harness.html](http://localhost:9001/scorm_test_harness.html)
 
-This allows you to test your SCO without the need for a continual upload / update / reupload cycle. Please note that as this emulation uses an iframe, it is not suitable for device testing. It is intended for testing SCORM functionality only. If you do not require SCORM functionality, please run 
+This allows you to test your SCO without the need for a continual upload / update / reupload cycle. If you need to reset the stored data, open the browser console and execute the command `API.LMSClear()`.
 
 ```bash
 adapt uninstall contrib-spoor
