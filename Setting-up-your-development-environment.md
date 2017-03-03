@@ -3,7 +3,7 @@ Installing Adapt requires the use of the command line. If your skills are a litt
 
 Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
-> Linux users please note that on some distributions the node folder is called 'nodejs' - which will not work. You can work around this by either running `$ sudo apt install nodejs-legacy` or by creating a symbolic link that has the right name by doing something like `$ sudo ln -s /usr/bin/nodejs /usr/bin/node`
+> Linux users please note that on some distributions the node folder is called 'nodejs' - which will not work. You can work around this by either running `$ apt install nodejs-legacy` or by creating a symbolic link that has the right name by doing something like `$ sudo ln -s /usr/bin/nodejs /usr/bin/node`
 
 > Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/). **Note: if you install Git for Windows, you will need to reboot after installation even though it doesn't prompt you to do this**.
 
@@ -13,7 +13,7 @@ Once you've got both Git and Node.js installed, the other components you'll need
 
 To install the components, run the following two commands - which can be done via Terminal on OS X or on Windows via whatever command line utility was installed when you installed Git e.g. Git Bash or PoshGit.
 
-OS X users - you will need to either prefix the commands with 'sudo' - or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo)
+> Mac users - you will need to either prefix the commands with 'sudo' - or first give yourself elevated permissions on the /usr/local directory as documented [here](http://foohack.com/2010/08/intro-to-npm/#what_no_sudo)
 
 ```bash
 npm install adapt-cli -g
