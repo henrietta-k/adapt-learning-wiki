@@ -23,7 +23,9 @@ To activate the accessibility feature while viewing a course, press the Tab key.
 
 Once the feature is activated, pressing the Tab key navigates the learner through content. Focused content regions are highlighted with an outline. And ARIA labels are enabled for assistive technology such as screen readers.  
 <div float align=right><a href="#top">Back to Top</a></div>  
------
+
+***
+
 ## Make your course accessible.  
 
 The course author can ensure a course is accessible by taking several steps:  
@@ -81,7 +83,9 @@ To override this default behaviour, add the class `no-state` to the non-interact
 
 Some components can never be accessible. Components which rely on making sighted judgments or which require a level of visual special awareness can be skipped over when the course has accessibility enabled. To achieve this, assign the component the class `not-accessible`. Doing that will remove the component from the tabbing order. Be sure to configure these components as [optional](Core-model-attributes), since they will never be completed by the learner who relies on tabbing.  
 <div float align=right><a href="#top">Back to Top</a></div>
------
+
+***
+
 ## Make your plug-in accessible.  
 
 The plug-in developer can ensure a component is accessible by taking several steps: 
