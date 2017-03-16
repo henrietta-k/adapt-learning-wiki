@@ -1,4 +1,4 @@
-##Contents  
+## Contents  
 * [Introduction](#introduction)  
 * [How to recreate your course in another language](#how-to-recreate-your-course-in-another-language)  
 * [Styling localised courses](#styling-localised-courses)  
@@ -6,7 +6,7 @@
 * [Resources](#Resources)
 
 
-##Introduction  
+## Introduction  
 With Adapt you can localise your content and engage learners in ways that speak from their native culture. Localisation may involve modifying  
 - content language
 - content data formats used with dates, currency, and units of measure  
