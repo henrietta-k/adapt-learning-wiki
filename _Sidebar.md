@@ -1,6 +1,6 @@
 <a href="https://github.com/adaptlearning/adapt_framework/wiki"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/adapt-logo_208x200.gif" alt="adapt logo"></a>
 
-###Getting Started
+### Getting Started
 * [Framework in Five Minutes](https://github.com/adaptlearning/adapt_framework/wiki/Framework-in-five-minutes)
 * [Setting up Your Development Environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment)  
 * [Manual Installation of the Adapt Framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework)
@@ -11,7 +11,7 @@
 
 ----------------
 
-###Course Authoring
+### Course Authoring
 * [Creating Your First Course](https://github.com/adaptlearning/adapt_framework/wiki/Creating-your-first-course)
 * [Styling Your Course](https://github.com/adaptlearning/adapt_framework/wiki/Styling-your-course)  
 * [Configuring Your Project with *config.json*](https://github.com/adaptlearning/adapt_framework/wiki/Configure-your-project-with-config.json)  
@@ -23,7 +23,7 @@
 
 ----------------
 
-###Framework Development
+### Framework Development
 * [Contributing to the Adapt Project](https://github.com/adaptlearning/adapt_framework/wiki/Contributing-to-the-Adapt-Project)
 * [Git Flow](https://github.com/adaptlearning/adapt_framework/wiki/Git-flow)
 * [Adapt API](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-API)
@@ -36,7 +36,7 @@
 
 ----------------
 
-###Plugin Development
+### Plugin Development
 * [Plugins](https://github.com/adaptlearning/adapt_framework/wiki/Plugins)
 * [Developing Plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins)
 * [Developer's Guide: Components](https://github.com/adaptlearning/adapt_framework/wiki/Developers-guide:-components)
@@ -52,6 +52,6 @@
 
 ----------------
 
-###Resources
+### Resources
 * [Adapt Community Home](https://community.adaptlearning.org/)
 * [FAQ](https://github.com/adaptlearning/adapt_authoring/wiki/FAQ)  
