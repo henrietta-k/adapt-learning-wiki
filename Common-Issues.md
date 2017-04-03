@@ -1,5 +1,5 @@
 ## Installation/setup
-###'Can't find Python executable' error when installing Adapt
+### 'Can't find Python executable' error when installing Adapt
 On Windows, when running ```$ npm install adapt-cli -g```, you receive a long list of errors and the first few are something like:
 ```
 gyp ERR! configure error
