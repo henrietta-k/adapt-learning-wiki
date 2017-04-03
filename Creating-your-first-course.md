@@ -3,10 +3,10 @@
 ### Locating the course files
 Navigate to ```src/course/``` here you will find the following files/folders:
 
-####config.json
+#### config.json
 The [config file](Configure-your-project-with-config.json) is used to store any settings for your course. For example which folder to use as the default language or any LMS tracking settings.
 
-####en
+#### en
 The folder ```/en/``` folder contains all of the language specific data of your course. "en" is used in this instance to hold all English data and assets.
 
 Inside this folder are a number of .json files which all follow contain [[core model attributes]] as well as a directory used to store and language specific images.
@@ -21,7 +21,7 @@ For this exercise you will need to have:
 * 1x browser tab open displaying the working build, on the main menu screen
 * 1x terminal window which is pointing to the root of your project folder, this we will use shortly.
 
-####course.json
+#### course.json
 Begin by opening the [course.json](Content-starts-with-course.json) file. Here we can edit the title and short description of your course.
 Modify both of these values and save your code.
 
@@ -32,7 +32,7 @@ Now you will need to re-build your course to see your modifications. To do this 
 After a short period of time, the build process will complete. Switch over to your browser and refresh the course. You will now see at the top of the course the name and description have been updated.
 
 
-####contentObjects.json
+#### contentObjects.json
 Now lets look at adding a new item to the menu. You will see there are already a number of items in this file.
 
 Here we have 2 options, we can create:
@@ -93,7 +93,7 @@ On a new line directly after paste the code you copied earlier, so the end of yo
 
 Adapt content requires a structure of articles, blocks, and components. The number of each will vary from course to course, but the hierarchical relationship is fundamental to each page.
 
-####articles.json
+#### articles.json
 Now that you have created your item in the menu you will want to create an 'Article'. Open the articles.json file, just as we did in the last example, copy the first json object and paste this at the bottom of your document.
 
 Again we need to modify the '_id' attribute of this article, so change the id to 'a-50'.
@@ -118,7 +118,7 @@ You should now have something which looks like this..
 
 Modify the title and body and save your code.
 
-####blocks.json
+#### blocks.json
 Now that we've setup your first article, we can now include a new block element, this will be used later to add components.
 
 Open the blocks.json file, again copy the first json object and paste this at the bottom of your document.
@@ -145,7 +145,7 @@ You should have something that looks like this:
 
 Modify the title and body and save your code.
 
-####components.json
+#### components.json
 Its time to add a component to your course. Again copy the first json object and paste this at the bottom of your document.
 
 Again we need to modify the '_id' attribute of this component, so change the id to 'c-200'.
@@ -172,7 +172,7 @@ You should have something that looks like this:
 Modify the title and body and save your code. Now you will need to re-build your course and refresh your browser. From the main menu you will be able to click your new menu item. You should now see your article, block and component displaying on screen :)
 
 
-####images/
+#### images/
 Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of its use can be viewed in the components.json file.
 
 **Important:** if your course targets IE8, it is recommended to limit the number of components on a single page to 20. This is recommended to help avoid the popup warning "A script on this page is causing Internet Explorer to run slowly". See https://support.microsoft.com/en-gb/kb/175500 for more information.
