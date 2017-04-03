@@ -7,7 +7,7 @@ gyp ERR! stack Error: Can't find Python executable "python", you can set the PYT
 ```
 You should just reboot your PC to allow the environment variables to be set correctly, the try the command again. You may still get an error like 'optional dep failed, continuing' - that's OK because it's only an option dependency.
 
-###'git is not installed' error when installing Adapt
+### 'git is not installed' error when installing Adapt
 On Windows, when running ```$ npm install adapt-cli -g```, you receive an error like:
 ```
 Oh dear, something went wrong. I'm terribly sorry. git is not installed or is not in the path
