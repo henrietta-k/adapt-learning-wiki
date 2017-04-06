@@ -1,9 +1,9 @@
 ## Introduction  
-The [Adapt-CLI](/adaptlearning/adapt_framework/wiki/Adapt Command Line Interface) provides a command for creating a course. The command downloads and installs the latest public release of the Adapt framework. It is the easiest way for a developer/author to [set up a development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment#installation).
+The [Adapt-CLI](adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface) provides a command for creating a course. The command downloads and installs the latest public release of the Adapt framework. It is the easiest way for a developer/author to [set up a development environment](https://github.com/adaptlearning/adapt_framework/wiki/Setting-up-your-development-environment#installation).
 
 There may be times when using the command line interface is unsuitable, for example, when installing the develop branch or when installing a fork or test package. Such situations require manual installation, and the following instructions aim to help.  
 
-##Installation Overview
+## Installation Overview
 1. **<a href="#1">Install prerequisites.</a>**  
 Installation of the Adapt framework depends on Node, Git, Grunt, and the Adapt-CLI.
 
@@ -19,7 +19,7 @@ Build the supplied sample course and start a server.
 ____________
 
 
-##<a name="1"></a>1. Install Prerequisites
+## <a name="1"></a>1. Install Prerequisites
 
 Install the following before proceeding:
 * <a href="http://git-scm.com/downloads" target="_blank">Git</a>
@@ -32,13 +32,13 @@ Install the following before proceeding:
 > + Windows users should run these commands in Git Bash if Git was installed using default settings.
 > + Mac and Linux users may need to prefix the commands with `sudo` or give yourself elevated permissions on the /usr/local directory as documented <a href="http://foohack.com/2010/08/intro-to-npm/#what_no_sudo" target="_blank">here</a>.
 
-##<a name="2"></a>2. Download the Framework.
+## <a name="2"></a>2. Download the Framework.
 
 Download the Adapt framework as a ZIP and extract the files. (If you are a Windows user, you may need to <a href="http://answers.microsoft.com/en-us/windows/forum/windows_7-security/windows-found-that-this-file-is-potentially/cab2b576-2074-4b26-bf54-571fe03f9ef8" target="_blank">unblock the ZIP archive</a> before you extract it.)
 
 Open a console interface (e.g. Git Bash, Terminal on OSX, Powershell or CMD.exe) and navigate to the extracted folder (typically adapt_framework-master, but you can safely rename this). 
 
-##<a name="3"></a>3. Install Module Dependencies.  
+## <a name="3"></a>3. Install Module Dependencies.  
 
 With the extracted folder as your current working directory, run the following command.     
 `npm install`  
@@ -48,7 +48,7 @@ This will install all of the package dependencies of the framework. Be patient. 
 
 This will download all of the Adapt plug-ins to the correct locations in the framework.
 
-##<a name="4"></a>4. Run the Application 
+## <a name="4"></a>4. Run the Application 
 
 Build the included sample course by running the following command:  
 `grunt build`  
