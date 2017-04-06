@@ -11,10 +11,10 @@ $ adapt install some-other-theme
 $ grunt build
 ```
 
-###Theme variables  
+### Theme variables  
 Simple customisation is possible by changing the built-in variables in **Vanilla**'s *less* folder: *colors.less*, *fonts.less*, *generic.less*, and *paddings.less*.  
 
-####Main colors
+#### Main colors
 
 Use variables to store your theme's colors. Assign these to roles in your color scheme. This will help achieve a consistent look and feel across your course.
 
@@ -51,50 +51,50 @@ Transparencies are used for modal pop-ups to fade out the content underneath so 
 
 To support browsers that don't support transparent color, a fallback is required. This is set by providing a transparent PNG and setting the source of the file to this variable.
 
-####Validation States
+#### Validation States
 
 - **@validation-error**  
 - **@validation-success**
 
 Set a validation error color to highlight items and instruction text when the learner's input is disallowed and to color the "X" icon when the answer is incorrect. Be careful in your choice since this color needs to attract the learner's attention. Set a validation-success color to highlight the tick icon when the answer is correct.
 
-####Device widths
+#### Device widths
 
 These variables are used to set the breakpoints that determine what widths the design will respond to. For example **@device-width-small** could be used to set your mobile breakpoint. These are found in *less/generic.less*
 
-####Global spacing
+#### Global spacing
 
 Set the variables for padding and margins for all titles and body text in your course in *less/paddings.less*.
 
-####Fonts
+#### Fonts
 
 Setup global font styling and properties in *less/fonts.less*.
 
 
-###Style Rules  
+### Style Rules  
 Variables set in *colors.less*, *fonts.less*, *generic.less*, and *paddings.less* are assigned to CSS styles found in the various files contained in the *less/src* folder.
 
-####Navigation
+#### Navigation
 
 The navigation is the bar that is fixed to the top of the browser window. These CSS rules used to style the navigation bar and the icons that sit within it are located in *less/src/navigation.less*.
 
-####Drawer
+#### Drawer
 
 Drawer is the panel that slides out from the right of the browser window. Use the rules in *less/src/drawer.less* to style the drawer panel and the items that sit inside it.
 
-####Notify
+#### Notify
 
 **Notify** includes most modal pop-ups like you see with a question's feedback. Style them with rules found in *less/src/notify.less*. 
 
-####Icons
+#### Icons
 
 Styles for the SVG icons used in your theme are found in *less/src/icons.less*. An example of such an  icons would be the check-box icon that appears in a **Multiple Choice Question** (adapt-contrib-mcq). Contained in this file are the assignments of icon codes to the classnames used to represent them, for example, `.icon-tick:before {content: "\e633";}`
 
-####Button
+#### Button
 
 The styles found in *buttons.less* cover all states of a button. An example of a button in Adapt is the submit button on a question component. All the styling applied here will be applied to all buttons in the course. Make sure buttons are styled, not just for use with a mouse, but also for touch on a mobile device.
 
-###Theme templates
+### Theme templates
 
 Inside the *templates* folder you will find editable Handlebars templates for various views such as the page and block. 
 
@@ -107,7 +107,7 @@ Removing this element or changing the class name would mean that components woul
 
 Remember to use [Handlebars helpers](http://handlebarsjs.com/block_helpers.html) to make sure only the html that needs to be displayed is rendered.
 
-###Theme Javascript
+### Theme Javascript
 
 The theme JavaScript files found in the *js* folder should be used to add any additional theming that cannot be done using just html/css (.hbs/.less). For example, you could add JavaScript to fade in an image when the page loads.
 
@@ -115,11 +115,11 @@ It's strongly recommended that the theme shouldn't be setting any attributes on 
 
 You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on, say, a page postRender event.
 
-###Theme Assets
+### Theme Assets
 
 Place any assets required for your theme to display correctly in the *assets* folder. Any course related assets should be placed in the course folder (_src/course/en/*_) rather than here. Remember to provide smaller sized assets for mobile devices to keep page weights down.
 
-###How to modify the **Vanilla** theme
+### How to modify the **Vanilla** theme
 
 Locate the **Vanilla** theme:  *src/theme/adapt-contrib-vanilla* Here you will find all of the elements which make up an Adapt theme. Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for an exploration of its structure and styles. 
 
