@@ -24,12 +24,11 @@ A [question component](https://github.com/adaptlearning/adapt_framework/wiki/Cor
 - ``setupWeightSettings``
 - ``resetQuestion``
 - ``showFeedback``
-- ``showModelAnswer``
-- ``showUserAnswer``
+- ``showCorrectAnswer``
+- ``hideCorrectAnswer``
 - ``onComplete``
 - ``onQuestionCorrect``
 - ``onQuestionIncorrect``
-- ``onModelAnswerClicked``
 - ``onResetClicked``
 - ``onSubmitClicked``
 - ``onUserAnswerClicked``
