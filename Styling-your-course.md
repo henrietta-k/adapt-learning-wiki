@@ -96,6 +96,8 @@ The styles found in *buttons.less* cover all states of a button. An example of a
 
 ### Theme templates
 
+[TBC: Override the templates. Some text about copying the templates from core/templates/ into theme/templates/ folder enabling overrides]
+
 Inside the *templates* folder you will find editable Handlebars templates for various views such as the page and block. 
 
 It's important to understand how Adapt renders these templates before changing them significantly. For example, in *block.hbs*, you will find this `div` element:  
