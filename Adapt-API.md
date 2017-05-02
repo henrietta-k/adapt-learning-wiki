@@ -293,25 +293,25 @@ This will return a component model with ``_id`` of 'c-200'. This can also pass b
 
 To tap into our internal event system you would need to require 'coreJS/adapt' and use the following methods.
 
-#####- trigger 
+##### - trigger 
 Triggers a global event.
 
-#####- on 
+##### - on 
 Listens to a global event and calls a callback when triggered.
 
-#####- off 
+##### - off 
 Removes the callback from an object.
 
-#####- once
+##### - once
 Similar to **on** but the callback is only fired once.
 
-#####- listenTo
+##### - listenTo
 This is used to listen to an event on another object. If the object is removed at anytime during Adapt running, listenTo should be used as these events are stored and removed when a view is removed.
 
-#####- stopListening
+##### - stopListening
 Stops listening to events on other objects so the callbacks will not be called.
 
-#####- listenToOnce
+##### - listenToOnce
 Similar to listenTo but only calls the callback once.
 
 #### A basic events implementation
