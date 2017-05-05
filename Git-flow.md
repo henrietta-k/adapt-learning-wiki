@@ -2,7 +2,7 @@ _**Note:** This article assumes that you understand the [basic concepts of the g
 
 ### Overview
 
-On the Adapt project, our mantra when it comes to releasing new versions of the framework and core plugins is 'little and often'. To achieve this, we've adopted a similar cut-down approach to the popular 'git flow' model to that [used by GitHub](https://guides.github.com/introduction/flow/): we've done away with develop branches in favour of merging directly into master, which not only means much less testing is required, but more importantly for our users, much more frequent releases :tada: (something which we find works much better with the oft fluctuating developer resource we rely on).
+On the Adapt project, our mantra when it comes to releasing new versions of the framework and core plugins is 'little and often'. To achieve this, we've adopted a similar cut-down approach to the popular 'git flow' model to that is [used by GitHub](https://guides.github.com/introduction/flow/): we've done away with develop branches in favour of merging directly into master, which not only means much less testing is required, but more importantly for our users, much more frequent releases :tada: (something which we find works much better with the oft fluctuating developer resource we rely on).
 
 On the Adapt project, we organise the branches in our repos according to GitHub flow - a simplified variation of the git flow model. For those familiar with git flow, you will notice that there are no develop branches anywhere to be found ***(you can read more about GitHub flow [here](https://guides.github.com/introduction/flow/))***.
 
