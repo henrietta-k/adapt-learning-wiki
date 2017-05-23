@@ -24,7 +24,7 @@ The properties listed below and their values are used to configure an Adapt proj
 
 >**_isEnabled** (boolean):  Specify a value of `true` or `false` to enable or to disable the accessibility feature.  
 
->**_isDisabledOnTouchDevices** (boolean): If set to `true`, accessibility features will be disabled on touch devices - useful if you only need accessibility on desktop browsers.
+>**_isEnabledOnTouchDevices** (boolean): If set to `true`, accessibility features will be enabled on touch devices. Accessibility is disabled by default on such devices so that it can only be switched on when required, if left on by default it can cause unexpected issues for courses that have no need for accessibility.
 
 >**_shouldSupportLegacyBrowsers** (boolean):  If set to `true`, Adapt will supply the 'focused' class to accommodate some legacy browser's inability to recognize `:focus`. The 'focused' class is used to outline elements when tab-highlighting is enabled.
 
