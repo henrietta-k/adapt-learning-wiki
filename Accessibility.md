@@ -1,6 +1,6 @@
 # Accessibility
 - [What is meant by accessibility?](#what-is-meant-by-accessibility) 
-- [For the learner: How does the accessibility feature function in Adapt?](#how-does-the-accessibility-feature-function-in-adapt)
+- [For the learner: How does the accessibility feature function in Adapt?](#how-does-the-feature-function-in-adapt)
 - [For the course author: Make your course accessible.](#make-your-course-accessible)  
 - [For the plug-in developer: Make your plug-in accessible.](#make-your-plug-in-accessible)  
 - [Resources](#resources)
