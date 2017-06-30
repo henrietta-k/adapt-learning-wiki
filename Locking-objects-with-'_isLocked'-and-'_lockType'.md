@@ -1,6 +1,6 @@
-As of framework version 2.0.9, Adapt employs '_isLocked' as a [core model attribute](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes). Its default value is `false`. It is supported by the '_lockType' attribute and the 'checkLocking' function. The code governing these is found in [src/core/js/models/adaptModel.js](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/adaptModel.js).  
+As of framework version 2.0.9, Adapt employs `_isLocked` as a [core model attribute](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes). Its default value is `false`. It is supported by the `_lockType` attribute and the `checkLocking` function. The code governing these is found in [src/core/js/models/adaptModel.js](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/adaptModel.js).  
 
-'_isLocked' is available on all models that extend Adapt.model. It is commonly used by menus to lock an item until a particular condition is satisfied, such as the completion of the previous item. Examples below focus on its use by menus.
+`_isLocked` is available on all models that extend Adapt.model. It is commonly used by menus to lock an item until a particular condition is satisfied, such as the completion of the previous item. Examples below focus on its use by menus.
 
 ## To lock an item
 - Set `"_isLocked" = false`  
