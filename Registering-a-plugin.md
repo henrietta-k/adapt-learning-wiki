@@ -29,4 +29,4 @@ For example, the following would install version `0.0.2` of the `adapt-hello-wor
 adapt install hello-world#0.0.2
 ```
 
-Note that if you don't create tags or releases, the Adapt CLI will always download the 'default branch' (usually 'master') of your plugin
+Note that if you don't create tags or releases, the Adapt CLI will always download the 'default branch' - usually 'master' - of your plugin.
