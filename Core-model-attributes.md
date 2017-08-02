@@ -29,6 +29,7 @@ Attribute | Description | Default value
 `_isEnabled` | Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled. | `true`
 `_isResetOnRevisit` |  |  `false`
 `_isAvailable` |  | `true`
+`_isHidden` | Controls the display of the item. If `_isHidden` is false, the item will not be displayed | `true`
 `_isOptional` | If set to `true`, the user will not be required to complete the component in order to complete the course. The completion of the component will still be tracked, but it will be ignored during any completion calculations.  | `false`
 `_isVisible` |  | `true`
 `_isLocked` | Menus and other plug-ins can set its value using “_lockType”. Reference [Locking objects with '_isLocked' and '_lockType'](Locking-objects-with-'_isLocked'-and-'_lockType')| `false`
