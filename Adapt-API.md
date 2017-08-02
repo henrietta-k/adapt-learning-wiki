@@ -223,7 +223,7 @@ Any plugin is able to find out when the location has changed:
 ```
 Adapt.on('router:location', function(locationObject) {
     // Listen to location and if it's a page lock the default back button to not navigate back
-    if (locationObject._contentType = 'page' && locationObject._currentId == 'co-05') {
+    if (locationObject._contentType == 'page' && locationObject._currentId == 'co-05') {
         Adapt.router.set('_canNavigate', false, {pluginName:'_lockedPageNavigation'});
     } else {
     // If the location is anything else - return to the default navigation
