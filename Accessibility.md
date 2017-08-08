@@ -3,7 +3,7 @@
 - [For the learner: How does the accessibility feature function in Adapt?](#how-does-the-feature-function-in-adapt)
 - [For the course author: Make your course accessible.](#make-your-course-accessible)  
 - [For the plug-in developer: Make your plug-in accessible.](#make-your-plug-in-accessible)  
-- [Resources](#resources)
+- [Further Reading](#further-reading)
 
 ## What is meant by accessibility? 
 
@@ -151,7 +151,7 @@ preRender: function() {
 },
 ```
 -----
-## Resources
+## Further Reading
  
 - [*The Adapt Accessibility Standards and Guidelines*](https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/Adapt-Accessibility-OS-Doc.pdf)  
 - [*Accessibility in Adapt: A Technical Perspective*](https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/accessibility-notes.pdf)    
