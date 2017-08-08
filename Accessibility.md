@@ -112,6 +112,7 @@ define([
 Your plug-in's HTML will be read by assistive technology such as screen readers. Most widgets require additional attributes to facilitate this. Add them to your plug-in's Handlebars (.hbs) template. [ARIA roles and labels](ARIA-Roles-and-Labels) provides a useful summary.   
 ``` javascript  
 //Example of ARIA role and aria-label: 
+{{include_globals}}
 <div class="mynewcomp-inner component-inner">
    {{{a11y_aria_label _globals._components._mynewcomp.ariaRegion}}}
 ```  
