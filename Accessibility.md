@@ -99,9 +99,11 @@ The plug-in developer can ensure a component is accessible by taking several ste
 Extending [componentView.js](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/componentView.js) is the first step in ensuring your component integrates Adapt's accessibility feature.  
 ``` javascript  
 //Code snippet of extending componentView: 
-define(function(require) {
-    var ComponentView = require('coreViews/componentView');
-    var Adapt = require('coreJS/adapt');
+define([
+  'core/js/views/componentView',
+  'core/js/adapt'
+], function(ComponentView, Adapt) {
+
     var HotGraphic = ComponentView.extend({
 ```
 <div float align=right><a href="#top">Back to Top</a></div>  
