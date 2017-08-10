@@ -122,12 +122,18 @@ Your plug-in's HTML will be read by assistive technology such as screen readers.
     - [*Accessibility in Adapt: A Technical Perspective*](https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/adapt_framework/accessibility-notes.pdf) provides information about the properties, methods, and events found in [accessibility.js](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/accessibility.js) and [jquery.a11y.js](https://github.com/adaptlearning/jquery.a11y).  
 
 ### Process text with `a11y_text` 
-Course authors may include HTML tags in their text content. Sometimes it is welcomed and extends the plug-in's usefulness. Sometimes it undermines accessibility. Some HTML elements, such as `<div>` and `<span>`, do not have a natural ability to receive focus. This removes them from the tabbing order and makes their content unreachable by screen readers. You can make such content keyboard-accessible and accessible by processing it with `a11y_text`.  `a11y_text` is a function found within Adapt's *jquery.a11y.js*. Implement it in your template as in the model below:  
-``` javascript  
-//Example of processing body text with a11y_text:  
+Course authors may include HTML tags in their text content. Sometimes it is welcomed and extends the plug-in's usefulness. Sometimes it undermines accessibility. Some HTML elements, such as `<div>` and `<span>`, do not have a natural ability to receive focus. This removes them from the tabbing order and makes their content unreachable by screen readers. You can make such content keyboard-accessible and accessible by processing it with `a11y_text`.  `a11y_text` is a function found within Adapt's *jquery.a11y.js* and is made available to Handlebars templates via the helpers `a11y_text` and `compile_a11y_text`.
+
+Implement it in your template as in the model below:  
+``` html
+<!--Example of processing body text with a11y_text-->
 <div class="mynewcomp-content-body-inner">{{{a11y_text body}}}</div>
 ```  
-  
+Or, if inserting text via JQuery:
+```js
+$someDiv.html("Hello world!").a11y_text();
+```
+
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ### Provide sample text for `_globals`
