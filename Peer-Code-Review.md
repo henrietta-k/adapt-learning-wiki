@@ -3,7 +3,7 @@ After writing some code (be it in the form of a new feature, or bug fix), it mus
 1. Code is submitted for review as a pull request.
 1. Code is then reviewed by peers using GitHub's [pull-request review](https://help.github.com/articles/about-pull-request-reviews/) feature to leave comments where necessary and give an approval/rejection.
 1. Code is amended if needed until it satisfies the required number of approvals.
-1. Code is merged.
+1. Provided all unit tests are passing, code is merged.
 
 The process is governed by these rules:
 * The developer who submits the PR is not allowed to submit a review.
@@ -19,20 +19,20 @@ The process is governed by these rules:
 ### Review Scoring
 Scores indicate the following:  
 <dl>
-<dt>-1: Do not commit.</dt>
-<dd>A core developer may give a -1 because any (or all) of the following:<br /> 
+<dt>Request changes.</dt>
+<dd>A core developer may reject a PR because any (or all) of the following:<br /> 
 - The code fails testing.<br />
 - The code does not meet Adapt standards.<br />
 - The code negatively impacts the application.<br />
 - You have unresolved questions about the intent of the code.</dd>
-<dt>+1: Commit.</dt>
-<dd>A core developer may give a +1 because of the following:<br /> 
+<dt>Approved.</dt>
+<dd>A core developer will approve an PR because of the following:<br /> 
 - You understand the intentions of the submitter.<br /> 
 - You accept the implementation of the PR.<br />
+- The submitted code complies with the code-style outlined in the project's [styleguide](https://github.com/adaptlearning/documentation/blob/master/01_cross_workstream/style_guide.md).
+- The code passes all automated tests.
 - You don’t foresee any negative issues resulting from the proposed changes.
 </dd>
-<dt>+2: Commit.</dt>
-<dd>In addition to the meaning of +1, a score of +2 indicates that you have tested the code and confirm it to be working. A vote of +2 does not count as two +1s.</dd>
 </dl>
 
 ### Core Team Members
