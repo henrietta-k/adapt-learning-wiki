@@ -38,7 +38,7 @@ The course author can ensure a course is accessible by taking several steps:
 
 ### Enable accessibility
 
-- To enable accessibility in a course while working in the Adapt authoring tool, set accessibility to true in the Project Settings.  
+- To enable accessibility in a course while working in the Adapt authoring tool, set accessibility to true in the Configuration Settings.
 - To enable accessibility while working in the Adapt framework, set `"_isEnabled"` to true within the `"_accessibility"` section of *config.json*. If accessibility is not enabled, the learner cannot activate the feature.
 
 ### Use plug-ins that support accessibility  
