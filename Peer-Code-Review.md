@@ -1,11 +1,18 @@
-After writing some code (be it in the form of a new feature, or bug fix), it must go through a vetting process by the Adapt collaborators before it is incorporated in the collaborator-maintained codebases:
+All code must go through a peer-approval process before it is merged with any of the collaborator-maintained codebases. This is to ensure that it firstly 'scratches' the intended 'itch', and complies to the guidelines set out by the project.
+
+## The Process
+
+When code is ready for review, the below process is followed:
 
 1. Code is submitted for review as a pull request.
 1. Code is then reviewed by peers using GitHub's [pull-request review](https://help.github.com/articles/about-pull-request-reviews/) feature to leave comments where necessary and give an approval/rejection.
 1. Code is amended if needed until it satisfies the required number of approvals.
 1. Provided all unit tests are passing, code is merged.
 
-The process is governed by these rules:
+## The Rules
+
+The reviewing process is governed by these rules:
+
 * The developer who submits the PR is not allowed to submit a review.
 * If a commit is added to the PR, any previously given reviews are invalidated. Everyone must re-post their verdicts after reviewing the commit.
 * Any new functionality/feature requests uncovered during review of a PR must be separated into new issues/PRs, unless directly related.
@@ -16,31 +23,33 @@ The process is governed by these rules:
   1. Concerns will be resolved in conversation between the submitter of the PR and the reviewer who rejected the PR. When/if satisfied, the reviewer will change verdict to an approval.
   2. At an impasse, a course of action will be decided by the core development team.
 
-### Review Scoring
-Scores indicate the following:  
-<dl>
-<dt>Request changes.</dt>
-<dd>A core developer may reject a PR because any (or all) of the following:<br /> 
-- The code fails testing.<br />
-- The code does not meet Adapt standards.<br />
-- The code negatively impacts the application.<br />
-- You have unresolved questions about the intent of the code.</dd>
-<dt>Approved.</dt>
-<dd>A core developer will approve an PR because of the following:<br /> 
-- You understand the intentions of the submitter.<br /> 
-- You accept the implementation of the PR.<br />
+## The Verdict
+
+There are two 'statuses' which can be applied to submitted PRs: **approve** and **request changes**. See below for a quick checklist for each:
+
+### Request changes.
+A core developer may reject a PR because any (or all) of the following:
+
+- The code fails testing.
+- The code does not meet Adapt standards.
+- The code negatively impacts the application.
+- There are unresolved questions about the intent of the code.
+
+### Approved.
+A core developer will approve an PR because of the following:
+
+- The intentions of the submitter are understood.
+- The implementation of the PR is accepted.
 - The submitted code complies with the code-style outlined in the project's [styleguide](https://github.com/adaptlearning/documentation/blob/master/01_cross_workstream/style_guide.md).
 - The code passes all automated tests.
-- You don’t foresee any negative issues resulting from the proposed changes.
-</dd>
-</dl>
+- No negative issues resulting from the proposed changes are forseen.
 
-### Core Team Members
+## Core Team Members
 
 **Adapt Framework Core Developers:** Thomas Berger, Oliver Foster, Dan Gray, Tom Greenfield, Matt Leathes, Brian Quinn, Tom Taylor
  
-**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Brian Quinn, Tom Taylor
+**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Louise McMahon, Brian Quinn, Tom Taylor, Nicola Willis.
 
-### References
+## References
 
 [SmartBear: 11 Best Practices for Peer Code Review](http://smartbear.com/smartbear/media/pdfs/wp-cc-11-best-practices-of-peer-code-review.pdf)
