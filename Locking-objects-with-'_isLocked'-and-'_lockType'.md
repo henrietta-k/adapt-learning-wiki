@@ -5,7 +5,7 @@ As of framework version 2.0.9, Adapt employs `_isLocked` as a [core model attrib
 Examples below focus on its use by menus.
 
 ## To lock an item
-- Set `"_isLocked" = false`  
+- Set `"_isLocked" = true`  
     - This is typically accomplished by setting a `"_lockType"` on the object's json and is typically done by the course author. A developer may, of course, accomplish this differently within the plug-in's code.
 - Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
 
