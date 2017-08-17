@@ -55,7 +55,7 @@ CSS/Less example:
 
 Locking is frequently used with menus to control the learner's ability to access content. Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. A locking type can be specified in the model json. For locking pages on a menu, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu itself.
 
-> Note: Locking a menu or page directly using `"_isLocked" = true` in JSON is incompatible with the use of `"_lockType"`. Do not mix the two techniques.
+> Note: Locking a menu or page directly using `"_isLocked": true` in JSON is incompatible with the use of `"_lockType"`. Do not mix the two techniques.
 
 The normal use case has the menu at the root level of the course and so the `_lockType` should be added to *course.json*. For a sub-menu, the `_lockType` should be added to the content object (in *contentObjects.json*) which is the parent of the pages to be locked.
 Example:  
