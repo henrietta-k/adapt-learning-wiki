@@ -5,9 +5,10 @@ As of framework version 2.0.9, Adapt employs `_isLocked` as a [core model attrib
 Examples below focus on its use by menus.
 
 ## To lock an item
-- Set `"_isLocked" = true`  
-    - This is typically accomplished by setting a `"_lockType"` on the object's json and is typically done by the course author. A developer may, of course, accomplish this differently within the plug-in's code.
-- Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
+Set `"_isLocked" = true` in the object's model JSON, or set this model attribute within the plug-in's javascript code. Once set, the attribute can be referenced to determine behavior.  
+
+## Using `"_isLocked"` to determine behavior 
+Implement code in your JS, template, and CSS that checks the attribute and responds accordingly.  
 
 JS example:  
 ```javascript  
@@ -50,9 +51,11 @@ CSS/Less example:
 }
 ```  
 
-## Configure type of locking  
+## Using locking with menus  
 
-Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. Which is used is determined by the model json. For locking pages on a menu, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu itself.
+Locking is frequently used with menus to control the learner's ability to access content. Adapt provides four types of locking: sequential, unlockFirst, lockLast, and custom. A locking type can be specified in the model json. For locking pages on a menu, this means that the course author adds `"_lockType": "sequential"` (or other lock type) to the menu itself.
+
+> Note: Locking a menu or page directly using `"_isLocked" = true` in JSON is incompatible with the use of `"_lockType"`. Do not mix the two techniques.
 
 The normal use case has the menu at the root level of the course and so the `_lockType` should be added to *course.json*. For a sub-menu, the `_lockType` should be added to the content object (in *contentObjects.json*) which is the parent of the pages to be locked.
 Example:  
