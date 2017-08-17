@@ -1,5 +1,5 @@
 - [The `_isLocked` attribute](#the-_isLocked-attribute) 
-- [Using locking with menus](#Using-locking-with-menus)
+- [Using locking with menus](#using-locking-with-menus)
 
 ## The _isLocked attribute
 
