@@ -123,5 +123,10 @@ To control the execution of scripts you can add the following to the ``config.js
   "scriptSafe": "adapt-contrib-xapi, adapt-extensionName"
 }
 ```
+To execute all scripts without modifying the ``config.json``:
+```
+grunt dev --allowscripts
+grunt build --allowscripts
+```
 
 **Next** - [Registering a plug-in](https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin)
