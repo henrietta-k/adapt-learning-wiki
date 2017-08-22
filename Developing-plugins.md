@@ -48,6 +48,7 @@ define([
 <div class="component-inner myplugin-inner">
     {{> component this}}
     <div class="component-widget">
+        Hello World!
     </div>
 </div>
 ```
