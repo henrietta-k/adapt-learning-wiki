@@ -21,17 +21,35 @@ In order to publish a plug-in it is required that a plug-in name must:-
 The plug-ins JavaScript file must define itself as an AMD module (this is the file specified by the `main` property in your package)
 
 ```js
+// /js/helloworld.js
 define([
     "core/js/adapt",
-    "core/js/views/componentView"
-], function(Adapt, ComponentView) {
+    "core/js/views/componentView",
+    "core/js/models/componentModel"
+], function(Adapt, ComponentView, ComponentModel) {
 
-    var MyPlugin = {
-       // implement your component
-    };
-    return MyPlugin;
+    var MyPluginView = ComponentView.extend({
+       // implement your component view
+    });
+
+    var MyPluginModel = ComponentModel.extend({
+       // implement your component model
+    });
+
+    return Adapt.register("myplugin", {
+       view: MyPluginView,
+       model: MyPluginModel
+    });
    
 });
+```
+```handlebars
+{{!-- /templates/myplugin.hbs --}}
+<div class="component-inner myplugin-inner">
+    {{> component this}}
+    <div class="component-widget">
+    </div>
+</div>
 ```
 
 If your plug-in has a user interface, then you can include [LESS](http://lesscss.org/) stylesheets (.less) and [Handlebars](http://handlebarsjs.com/) templates (.hbs).
