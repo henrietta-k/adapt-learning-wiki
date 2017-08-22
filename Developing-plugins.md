@@ -119,8 +119,20 @@ module.exports = function(fs, path, log, options, done) {
 ```
 To control the execution of scripts you can add the following to the ``config.json``:
 ```json
+// allow only
 "build": {
   "scriptSafe": "adapt-contrib-xapi, adapt-extensionName"
+}
+```
+```json
+// allow all
+"build": {
+  "scriptSafe": "*"
+}
+```
+```json
+// allow default - adapt-contrib-xapi, adapt-contrib-spoor
+"build": {
 }
 ```
 To execute all scripts without modifying the ``config.json``:
