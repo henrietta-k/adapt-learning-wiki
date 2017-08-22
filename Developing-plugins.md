@@ -48,7 +48,7 @@ Plug-ins will often include several types of files. Storing these in following n
 | `/assets` | Graphic and media files | `/assets/` for components and extensions, `/adapt/css/assets/` for themes|
 | `/libraries` | JavaScript libraries from third-parties and the like that are referenced by the plug-in's js file. | `/libraries/`  |
 | `/required` | Any additional files to go in the course 'root' folder e.g. SCORM manifest files | `/` |
-| `/scripts` | Compile time scripts | n/a |
+| `/scripts` | Compile-time scripts | n/a |
 
 
 #### Defining a package
@@ -78,7 +78,7 @@ The `bower.json` defines several options:
 * `dependencies` [hash]: Packages your package depends upon in production. (unsupported)
 * `devDependencies` [hash]: Development dependencies.
 * `private` [boolean]: Set to true if you want to keep the package private and do not want to register the package in future.
-* `scripts` [hash]: Scripts to run at compile time. ``adaptpostbuild`` is the only supported hook.
+* `scripts` [hash]: Scripts to run at compile-time. ``adaptpostbuild`` is the only supported hook.
 
 ```js
 {
@@ -102,7 +102,7 @@ The `bower.json` defines several options:
 ```
 
 #### Compile-time scripts
-All compile time scripts should take this form:
+All compile-time scripts should take this form:
 ```javascript
 //src/extensions/adapt-extensionName/scripts/postbuild.js
 module.exports = function(fs, path, log, options, done) {
