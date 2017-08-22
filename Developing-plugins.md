@@ -101,4 +101,27 @@ The `bower.json` defines several options:
 }
 ```
 
+#### Scripts
+All compile time scripts should take this form:
+```javascript
+//src/extensions/adapt-extensionName/scripts/postbuild.js
+module.exports = function(fs, path, log, options, done) {
+    /* where
+    options = {
+        sourcedir: "/path/to/root/src",
+        outputdir: "/path/to/root/build",
+        plugindir: "/path/to/root/src/extension/adapt-extensionName"
+    };
+   */
+   log(JSON.stringify(options, null, 4));
+   done();
+};
+```
+To control the execution of scripts you can add the following to the ``config.json``:
+```json
+"build": {
+  "scriptSafe": "adapt-contrib-xapi, adapt-extensionName"
+}
+```
+
 **Next** - [Registering a plug-in](https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin)
