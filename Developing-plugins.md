@@ -101,7 +101,7 @@ The `bower.json` defines several options:
 }
 ```
 
-#### Scripts
+#### Compile-time scripts
 All compile time scripts should take this form:
 ```javascript
 //src/extensions/adapt-extensionName/scripts/postbuild.js
