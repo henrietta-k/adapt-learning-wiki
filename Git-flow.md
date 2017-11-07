@@ -1,3 +1,5 @@
+### This document outlines the git process used for the framework product. For information on the authoring tool's process, see [this page](https://github.com/adaptlearning/adapt_authoring/wiki/Git-process).
+
 _**Note:** This article assumes that you understand the [basic concepts of the git version control system](https://help.github.com/articles/good-resources-for-learning-git-and-github/)._
 
 ### Overview
