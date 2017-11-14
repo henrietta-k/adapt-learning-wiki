@@ -46,17 +46,23 @@ Go ahead and copy the first example:
 ```js
 ...
     {
-        "_id":"co-05",
-        "_parentId":"course",
-        "_type":"page",
-        "_classes":"",
-        "title":"Demo page",
-        "body":"This page should contain a working Adapt page will all core bundled components and plugins working.",
+        "_id": "co-05",
+        "_parentId": "course",
+        "_type": "page",
+        "_classes": "",
+        "title": "Presentation Components",
+        "displayTitle": "Presentation Components",
+        "pageBody": "<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
+        "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
         "graphic": {
-            "alt": "alt text",
-            "src": "course/en/images/origami-menu-one.jpg"
+            "src": "course/en/images/menu_thumb.jpg"
+            "alt": "Placeholder graphic.",
         },
         "linkText":"View"
+        "duration": "2 mins",
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
     }
 ...
 ```
@@ -76,20 +82,26 @@ On a new line directly after paste the code you copied earlier, so the end of yo
         "_parentId":"course",
         "_type":"page",
         "_classes":"",
-        "title":"Demo page",
-        "body":"This page should contain a working Adapt page will all core bundled components and plugins working.",
+        "title":"Presentation Components",
+        "displayTitle": "Presentation Components",
+        "pageBody":"<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
+        "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
         "graphic": {
-            "alt": "alt text",
-            "src": "course/en/images/origami-menu-one.jpg"
+            "src": "course/en/images/menu_thumb.jpg"
+            "alt": "Placeholder graphic.",
         },
         "linkText":"View"
+        "duration": "2 mins",
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
     }
 ]
 ```
 
 * Change the "_id" to an unused reference, for this example we want the item to be displayed last in the menu, so modify it to ```"_id":"co-25",```
-* Change the title and the body, just as you did in the previous example.
-* Save your code
+* Change the title, displayTitle, pageBody and body values.
+* Save the file
 
 Adapt content requires a structure of articles, blocks, and components. The number of each will vary from course to course, but the hierarchical relationship is fundamental to each page.
 
@@ -158,14 +170,14 @@ You should have something that looks like this:
 ...
     },
     {
-        "_id":"c-200",
-        "_parentId":"b-150",
-        "_type":"component",
-        "_component":"text",
-        "_classes":"",
-        "_layout":"left",
+        "_id": "c-200",
+        "_parentId": "b-150",
+        "_type": "component",
+        "_component": "text",
+        "_classes": "",
+        "_layout": "left",
         "title":"Title of our very first component",
-        "body":"Whoo - if we get this rendering we've made the big time"
+        "body": "Whoo - if we get this rendering we've made the big time"
     }
 ```
 
@@ -173,7 +185,7 @@ Modify the title and body and save your code. Now you will need to re-build your
 
 
 #### images/
-Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/origami-menu-two.jpg```. Examples of its use can be viewed in the components.json file.
+Here you can store any images used in your course. This folder will be exported in the build process and can be referenced where required using the following path value ```course/en/images/single_width.jpg```. Examples of its use can be viewed in the components.json file.
 
 **Important:** if your course targets IE8, it is recommended to limit the number of components on a single page to 20. This is recommended to help avoid the popup warning "A script on this page is causing Internet Explorer to run slowly". See https://support.microsoft.com/en-gb/kb/175500 for more information.
 
