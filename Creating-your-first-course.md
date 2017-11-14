@@ -58,7 +58,7 @@ Go ahead and copy the first example:
             "src": "course/en/images/menu_thumb.jpg"
             "alt": "Placeholder graphic.",
         },
-        "linkText":"View"
+        "linkText":"View",
         "duration": "2 mins",
         "_pageLevelProgress": {
             "_isEnabled": true
@@ -78,19 +78,19 @@ On a new line directly after paste the code you copied earlier, so the end of yo
 ...
     },
     {
-        "_id":"co-05",
-        "_parentId":"course",
-        "_type":"page",
+        "_id": "co-05",
+        "_parentId": "course",
+        "_type": "page",
         "_classes":"",
-        "title":"Presentation Components",
+        "title": "Presentation Components",
         "displayTitle": "Presentation Components",
-        "pageBody":"<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
+        "pageBody": "<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
         "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
         "graphic": {
             "src": "course/en/images/menu_thumb.jpg"
             "alt": "Placeholder graphic.",
         },
-        "linkText":"View"
+        "linkText": "View",
         "duration": "2 mins",
         "_pageLevelProgress": {
             "_isEnabled": true
