@@ -13,7 +13,9 @@ Accessibility is a short way of referring to:
 - [government regulations](http://www.powermapper.com/blog/government-accessibility-standards/) such as the Equality Act in Europe, BS 8878:2010 in the UK, and section 508 in the US.  
 
 The goal of Adapt's accessibility feature is to aid users and screen readers by making every piece of content keyboard-accessible and readable. The rationale behind it is to ensure the Adapt framework adheres to the W3C2 AA standards
-where possible.  A full breakdown of Adapt's accessibility matrix can be found [here](https://community.adaptlearning.org/pluginfile.php/6210/mod_resource/content/1/Adapt%20Framework%20v2%20accessibility%20matrix.pdf).
+where possible.  
+
+A full breakdown of Adapt's compliance against WCAG principles is available in the [accessibility matrix](https://community.adaptlearning.org/pluginfile.php/6210/mod_resource/content/1/Adapt%20Framework%20v2%20accessibility%20matrix.pdf) (PDF).
 
 ## How does the feature function in Adapt?  
 
