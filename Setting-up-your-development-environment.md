@@ -25,14 +25,14 @@ npm install adapt-cli -g
 npm install grunt-cli -g
 ```
 
-### Get the Adapt framework
+### The Adapt framework
 #### Overview
 The Adapt framework consists of three main parts:
 1. The 'source' - the files you'll need to edit/work with, located in a folder called 'src'
 1. A 'task runner' - called Grunt - which takes the 'source' files and compiles them into:
 1. The 'build' - this folder contains the course that you will eventually upload to a [web server](https://en.wikipedia.org/wiki/Web_server) or [Learning Management System](https://en.wikipedia.org/wiki/Learning_management_system).
 
-#### Downloading the framework
+#### Getting the framework
 Although you can [download and install the framework manually](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework), for the majority of users the easiest and most efficient method will be to use the Adapt **C**ommand **L**ine **I**nterface.
 
 First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
