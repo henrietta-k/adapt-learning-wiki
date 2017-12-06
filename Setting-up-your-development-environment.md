@@ -1,13 +1,18 @@
 ### Installation
-Installing Adapt requires the use of the command line. If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need. If you've never used the command line before, please take advantage of tutorials on the web. Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.  
+Installing Adapt requires the use of the [command line](https://en.wikipedia.org/wiki/Command-line_interface). If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need. 
 
+If you've never used the command line before, please take advantage of one of the many tutorials you'll find on the web. 
+
+Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.  
+
+### Prerequisites
 Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
 > Linux users please note that on some distributions the node folder is called 'nodejs' - which will not work. You can work around this by either running `$ apt install nodejs-legacy` or by creating a symbolic link that has the right name by doing something like `$ sudo ln -s /usr/bin/nodejs /usr/bin/node`
 
-> Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/). **Note: if you install Git for Windows, you will need to reboot after installation even though it doesn't prompt you to do this**.
+> Windows users may prefer [Git for Windows](https://msysgit.github.io/) or [Github for Windows](http://windows.github.com/). **Important: if you install Git for Windows, you will need to reboot after installation even though it doesn't prompt you to do this**.
 
-> Mac users running OS X 10.9 Mavericks (or better) you should be able to install git simply by trying to run the command 'git' in the Terminal. It should recognise what you are trying to do and prompt you to install the XCode Command Line Tools, which include Git. Note that if you installed the XCode Command Line Tools whilst running a previous version of macOS then you may need to update by running `$ sudo xcode-select --install`. Also check for any updates in the App Store.
+> Mac users running OS X 10.9 Mavericks (or better) should be able to install Git simply by trying to run the command 'git' in the Terminal. It should recognise what you are trying to do and prompt you to install the XCode Command Line Tools, which include Git. Note that if you installed the XCode Command Line Tools whilst running a previous version of macOS then you may need to update by running `$ sudo xcode-select --install`. Also check for any updates in the App Store.
 
 Once you've got both Git and Node.js installed, the other components you'll need can be installed with the Node Package Manager - AKA [npm](https://npmjs.org/) - which **comes installed with Node.js**
 
@@ -20,12 +25,15 @@ npm install adapt-cli -g
 npm install grunt-cli -g
 ```
 
-### Get the Adapt output framework
+### Get the Adapt framework
 #### Overview
-The output framework is the generic codebase used to create e-learning content – in other words, it is the generic code that runs as part of the e-learning package in the user’s browser when working through an e-learning module based on Adapt. 
+The Adapt framework consists of three main parts:
+1. The 'source' - the files you'll need to edit/work with, located in a folder called 'src'
+1. A 'task runner' - called Grunt - which takes the 'source' files and compiles them into:
+1. The 'build' - this folder contains the course that you will eventually upload to a [web server](https://en.wikipedia.org/wiki/Web_server) or [Learning Management System](https://en.wikipedia.org/wiki/Learning_management_system).
 
 #### Downloading the framework
-You can get the latest version of the framework from our [GitHub repository](/adaptlearning/adapt_framework) using the Adapt **C**ommand **L**ine **I**nterface.
+Although you can [download and install the framework manually](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework), for the majority of users the easiest and most efficient method will be to use the Adapt **C**ommand **L**ine **I**nterface.
 
 First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
 
@@ -42,12 +50,8 @@ This will ask you to confirm four things:
 
 A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
 
-Alternatively you can [download](/adaptlearning/adapt_framework/archive/master.zip) it as a ZIP and perform a [manual installation](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework).
-
-The output framework contains all the source files and programs required to produce your course. The output framework uses [Grunt](http://gruntjs.com/) to manage the build process and run all of the grunt tasks from your output framework directory.
-
-#### Building
-In order to run the various build commands, you will need to navigate to the directory that was created when you ran the create course command earlier.
+#### Building your course
+First you will need to navigate to the directory that was created when you ran the `adapt create course` command earlier.
 
 Assuming you used the default course name of 'my-adapt-course', you can change to that folder with the command:
 ```bash
@@ -65,34 +69,33 @@ grunt dev
 ```
 This task will compile your files with 'sourcemapping' enabled so as to allow for debugging using your browser's developer tools. It will also watch for changes so every time you save a file it will automatically process it as necessary. To exit, press <kbd>CTRL+c</kbd>
 
-> Note: as a general rule, you should run `$ grunt build` on your course when you want to make it 'production-ready' as this 'minifies' the code, making it quicker for end users to download, improving course start-up performance.
+> Note: as a general rule, you should run `grunt build` on your course when you want to make it 'production-ready' as this 'minifies' the code, making it quicker for end users to download, improving course start-up performance.
 
 #### Viewing the build
-To view the build package create a local server:
+To view the course in your browser you need to create a local server:
 ```bash
 grunt server
 ```
+This will open the course in your default browser at the URL [http://localhost:9001/](http://localhost:9001/)
 
-To emulate a SCORM server, use this command instead:
+> Running the course from a server ensures that it will load and run properly. If you were to run your course by double-clicking build/index.html your browser would almost certainly apply very strict 'local security' policies to it which would prevent it from working.
+
+Note: to terminate the server, press <kbd>CTRL+c</kbd>
+
+To emulate a [SCORM](https://scorm.com/scorm-explained/) server, use this command instead:
 ```bash
 grunt server-scorm
 ```
-Note: to terminate the server, press <kbd>CTRL+c</kbd>
+This will open the course in your default browser at the URL [http://localhost:9001/scorm_test_harness.html](http://localhost:9001/scorm_test_harness.html) and will allow the course to mimic some of the SCORM 1.2 tracking behaviour that would normally only be available from an LMS. This allows you to test your SCO without the need for a continual upload / update / reupload cycle. Note that this is NOT a substitute for doing proper SCORM testing which should always be conducted on a real Learning Management System. If you do not have access to one you can [create an account on SCORM Cloud](https://cloud.scorm.com/sc/guest/SignUpForm) for free.
 
-This will now open your default browser at the following URL:
-[http://localhost:9001/](http://localhost:9001/)
+If you need to reset the stored data, open the browser console and execute the command `API.LMSClear()`.
 
-*N.B.* If you have run the server-scorm task, navigate to this URL to emulate an LMS environment:
-[http://localhost:9001/scorm_test_harness.html](http://localhost:9001/scorm_test_harness.html)
-
-This allows you to test your SCO without the need for a continual upload / update / reupload cycle. If you need to reset the stored data, open the browser console and execute the command `API.LMSClear()`.
-
-If you do not require SCORM functionality, please run 
+If you do not require SCORM functionality, run 
 ```bash
 adapt uninstall contrib-spoor
 grunt build
 ```
-The server will display the default menu of the course in your browser with the view appropriate to the device you're using. Any changes to the course will automatically be built and displayed.
+To remove the SCORM tracking plugin completely.
 
 #### Building a course with different themes and menus
 The theme and menu used in the build process can be customised using the `--theme` and `--menu` switches.  For example, if you had installed a new theme called `adapt-new-theme` and a new menu called `adapt-new-menu`, you could use them as follows:
