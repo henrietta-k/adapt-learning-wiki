@@ -1,4 +1,4 @@
-### Installation
+### Before you begin
 Installing Adapt requires the use of the [command line](https://en.wikipedia.org/wiki/Command-line_interface). If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need. 
 
 If you've never used the command line before, please take advantage of one of the many tutorials you'll find on the web. 
