@@ -33,7 +33,7 @@ The Adapt framework consists of three main parts:
 1. The 'build' - this folder contains the course that you will eventually upload to a [web server](https://en.wikipedia.org/wiki/Web_server) or [Learning Management System](https://en.wikipedia.org/wiki/Learning_management_system).
 
 #### Getting the framework
-Although you can [download and install the framework manually](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework), for the majority of users the easiest and most efficient method will be to use the Adapt **C**ommand **L**ine **I**nterface (which you installed as part of the prerequisites).
+Although you can [download and install the framework manually](/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework), the majority of users find that the easiest and most efficient method is to use the Adapt **C**ommand **L**ine **I**nterface (which you installed as part of the prerequisites).
 
 First, open your command line utility and navigate to the folder where you'd like your Adapt course development files to be stored. Then run the command:
 
