@@ -1,4 +1,4 @@
-#### What is a component?
+### What is a component?
 
 In Adapt we have a concept of components. These components are the main interactive elements found on a page. (Multiple Choice Question, Media, Text and Narrative are all types of components). These components can be split into two categories.
 
@@ -38,7 +38,7 @@ Each question component should also set the following on its model:
 
 - ``_isCorrect`` (boolean) - This should be set when the question has no more attempts and the user has finished interacting with the question.
 
-#### Structure of components
+### Structure of components
 
 All components should have the following files to work:
 
