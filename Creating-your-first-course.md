@@ -55,8 +55,8 @@ Go ahead and copy the first example:
         "pageBody": "<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
         "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
         "graphic": {
-            "src": "course/en/images/menu_thumb.jpg"
-            "alt": "Placeholder graphic.",
+            "src": "course/en/images/menu_thumb.jpg",
+            "alt": "Placeholder graphic."
         },
         "linkText":"View",
         "duration": "2 mins",
@@ -87,8 +87,8 @@ On a new line directly after paste the code you copied earlier, so the end of yo
         "pageBody": "<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
         "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
         "graphic": {
-            "src": "course/en/images/menu_thumb.jpg"
-            "alt": "Placeholder graphic.",
+            "src": "course/en/images/menu_thumb.jpg",
+            "alt": "Placeholder graphic."
         },
         "linkText": "View",
         "duration": "2 mins",
