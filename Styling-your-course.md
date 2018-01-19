@@ -96,9 +96,9 @@ The styles found in *buttons.less* cover all states of a button. An example of a
 
 ### Theme templates
 
-Adapt templates stored in the Adapt Framework or associated plugins can be overridden in a theme by creating a file with the same name.
+Adapt templates are stored in the Adapt Framework at ``core/templates/`` or in associated plugins at ``adapt-pluginName/templates/``. Templates can be overridden in a theme by creating a file with the same name ``adapt-themeName/templates/templateName.hbs``.
 
-Inside the *templates* folder you will find editable Handlebars templates for various views such as the page and block. 
+Inside the *templates* folders you will find editable [Handlebars](http://handlebarsjs.com/) templates for various views such as the page and block. 
 
 It's important to understand how Adapt renders these templates before changing them significantly. For example, in *block.hbs*, you will find this `div` element:  
 ```
