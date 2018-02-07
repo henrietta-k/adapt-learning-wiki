@@ -9,7 +9,7 @@ The [config file](Configure-your-project-with-config.json) is used to store any 
 #### en
 The folder ```/en/``` folder contains all of the language specific data of your course. "en" is used in this instance to hold all English data and assets.
 
-Inside this folder are a number of .json files which all follow contain [[core model attributes]] as well as a directory used to store and language specific images.
+Inside this folder are a number of .json files which all contain [[core model attributes]] as well as a directory used to store and language specific images.
 
 Here it's key to work with the files in the following order to better understand how the framework is constructed. In the following documentation we will be looking at the example files provided.
 
