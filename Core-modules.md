@@ -169,17 +169,103 @@ var popupObject = {
 Adapt.trigger('notify:popup', popupObject);
 ```
 
-How to activate an alert:
+The popupObject has an `_isCancellable` property. If set to `false`:
+* the popup can only be closed via the `notify:close` event.
+* the cancel button will be removed. 
+* clicking on the shadow will not close the popup
+* triggering the `notify:cancel` event will not close the popup. 
+
+`_isCancellable` defaults to `true`
+
+The popup can also be appended with a sub view via the `_view` property.
+
+```js
+var popupObject = {
+    "title": "this is a text",
+    "_isCancellable": false,
+    _view: new PopupView({ model: new Backbone.Model({}) })
+};
 ```
+This sub view can be fully configured:
+
+```js
+var PopupView = Backbone.View.extend({
+
+  events: {
+    "click button.cancel": "onCancelClick",
+    "click button.close": "onCloseClick"
+  },
+
+  onCancelClick: function() {
+    console.log("SUBNOTIFY: button.cancel clicked");
+    Adapt.trigger("notify:cancel");
+  },
+
+  onCloseClick: function() {
+    console.log("SUBNOTIFY: button.close clicked");
+    Adapt.trigger("notify:close");
+  },
+
+  initialize: function() {
+    console.log("SUBNOTIFY: initialized");
+    this.listenToOnce(Adapt, {
+      "notify:opened": this.onOpened,
+      "notify:closed": this.onClosed,
+      "notify:cancelled": this.onCancelled
+    });
+    this.render();
+  },
+
+  render: function() {
+    this.$el.append("this is a sub view <button class='cancel'>click here to cancel</button><button class='close'>click here to close</button>");
+  },
+
+  onOpened: function(notifyView) {
+    // notifyView.subView === this
+    if (notifyView.subView.cid !== this.cid) return;
+    console.log("SUBNOTIFY: opened");
+  },
+
+  onClosed: function() {
+    // called when notify is closed
+    console.log("SUBNOTIFY: closed");
+  },
+
+  onCancelled: function() {
+    // called when notify is cancelled
+    console.log("SUBNOTIFY: cancelled");
+  },
+
+  remove: function() {
+    // called when notify is closed
+    console.log("SUBNOTIFY: removed");
+    Backbone.View.prototype.remove.apply(this, arguments);
+  }
+
+});
+```
+
+How to activate an alert:
+
+```js
 var alertObject = {
     title: "Alert",
     body: "Oops - looks like you've not passed this assessment. Please try again.",
     confirmText: "Ok",
+    _isCancellable: false,
     _callbackEvent: "assessment:notPassedAlert",
     _showIcon: true
 };
 
 Adapt.trigger('notify:alert', alertObject);
+```
+The alertObject has two specific properties. `confirmText` allows you to change the text of the confirm button presented in the alert popup. This button will dismiss the popup even if `_isCancellable: false` is set.
+
+`_callbackEvent` allows you to specify an event that will be triggered when the confirmText button is clicked. In the above example, we would want our code to be listening for the `assessment:notPassedAlert` event.
+```js
+Adapt.on('assessment:notPassedAlert', function() {
+    //do something
+})
 ```
 
 How to activate a prompt dialogue:
@@ -218,6 +304,22 @@ Adapt.on('pushNotify:clicked', function() {
 
 Adapt.trigger('notify:push', pushObject);
 ```
+
+#### Notify Events
+
+Event | Argument | Description
+--- | --- | ---
+`notify:popup` | `popupObject = {title: "Popup Title", body: "Body"}` | Triggers a popup
+`notify:prompt` | `promptObject = {_prompts: [{promptText: "Yes", _callbackEvent: "event"}]}` | Triggers a prompt popup
+`notify:alert` | `alertObject = {confirmText: "OK", _callbackEvent: "event"}` | Triggers an alert popup
+`notify:push` | `pushObject = {_timeout: 5000, _callbackEvent: "pushNotify:clicked"}` | Triggers a push popup
+`notify:pushShown` | | Triggers when a push popup is displayed
+`notify:pushRemoved` | | Triggers when a push popup is clicked by the user
+`notify:opened` | | Triggered when popup is opened
+`notify:close` | | Triggered by close button. Will work even when `_isCancellable:false` is set
+`notify:closed` | | Triggers when `closeNotify()` is run
+`notify:cancel` | | Triggered by cancel button or clicking on popup shadow. Disabled by setting `_isCancellable:false`
+`notify:cancelled` | | Triggers when `cancelNotify()` is run
 
 ### <a name="popupManager"></a>Popup Manager
 
