@@ -64,6 +64,7 @@ Attribute | Description | Default value
 `_parent`   |  | `"course"`  
 `_siblings`   |  | `"contentObjects"`  
 `_children`   |  | `"contentObjects"`  
+`_ariaLevel`   | If you need to override the default contentObject ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 
 ## Article Model Attributes  
 
@@ -72,6 +73,7 @@ Attribute | Description | Default value
 `_parent`   |  | `"contentObjects"`  
 `_siblings`   |  | `"articles"`  
 `_children`   |  | `"blocks"`  
+`_ariaLevel`   | If you need to override the default article ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 
 ## Block Model Attributes  
 
@@ -81,6 +83,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"blocks"`  
 `_children`   |  | `"components"` 
 `_sortComponents`   |  | `true` 
+`_ariaLevel`   | If you need to override the default block ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 
 ## Component Model Attributes  
 
@@ -88,6 +91,7 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_parent`   |  | `"blocks"`  
 `_siblings`   |  | `"components"` 
+`_ariaLevel`   | If you need to override the default component ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 `_disableAccessibilityState`   | Disables the hidden label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. | `false`
 
 
