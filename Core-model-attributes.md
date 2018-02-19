@@ -87,7 +87,8 @@ Attribute | Description | Default value
 Attribute | Description | Default value 
 --------- | ----------- | -------------
 `_parent`   |  | `"blocks"`  
-`_siblings`   |  | `"components"`  
+`_siblings`   |  | `"components"` 
+`_disableAccessibilityState`   | Disables the hidden label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. | `false`
 
 
 ## Question Model Attributes  
