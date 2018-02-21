@@ -37,6 +37,7 @@ The course author can ensure a course is accessible by taking several steps:
 - [Attend to images: alt text](#alt-attribute)
 - [Attend to images: `no-state`](#no-state-class)
 - [Attend to inaccessible components: `not-accessible`](#not-accessible-class)
+- [Handling media content](#handling-media-content)
 
 ### Enable accessibility
 
@@ -84,6 +85,10 @@ To override this default behaviour, add the class `no-state` to the non-interact
 #### `not-accessible` class
 
 Some components can never be accessible. Components which rely on making sighted judgments or which require a level of visual special awareness can be skipped over when the course has accessibility enabled. To achieve this, assign the component the class `not-accessible`. Doing that will remove the component from the tabbing order. Be sure to configure these components as [optional](Core-model-attributes), since they will never be completed by the learner who relies on tabbing.  
+
+### Handling media content
+Adapt's [media component](https://github.com/adaptlearning/adapt-contrib-media/) supports two alternative methods of presenting media content to users with accessibility requirements: via closed captions (in [VTT](https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format) format) and via a transcript (either inline or a link to an external file). Depending on your needs you may choose to use one or both of these - but note that closed captions are only supported for video content. If you do provide a transcript, it's probably a good idea to set the media component up so that it marks as completed when the transcript button is clicked, otherwise a user with accessibility requirements may be unable to complete the component and therefore the course. Finally, you may wish to avoid using Vimeo or YouTube video as these rely on external services to work, we are therefore unable to guarantee that these adhere to the same accessibility standards that Adapt does.
+
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ***
