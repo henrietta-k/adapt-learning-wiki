@@ -14,7 +14,7 @@ Welcome to the developer documentation for the Adapt Framework!
 * Read our [Development Standards](/adaptlearning/documentation/blob/master/01_cross_workstream/developer_requirements.md) - feel free to raise pull requests against this if you disagree with any!
 
 ## Adapt Authoring Tool
-As well as the Adapt Framework we are working on a web based authoring tool.  The [Developer documentation](/adaptlearning/adapt_authoring/wiki) can be found on its wiki
+As well as the Adapt Framework we have created a web based authoring tool.  The [Developer documentation](/adaptlearning/adapt_authoring/wiki) can be found on its wiki
 
 ## The Adapt Project 
 For wider discussions about the Open Source project, and additional information about our vision and strategy, you should visit the [Adapt Community Site](https://community.adaptlearning.org/)
