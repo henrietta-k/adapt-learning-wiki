@@ -1,6 +1,6 @@
-On August 3, 2015, Adapt released version 2.0 of the framework. It included some breaking changes, so courses created in version 1 will not necessarily run on version 2&mdash;without some conversion. The conversion process involves creating a new version 2 course and transferring JSON content from the older course to the newer course.
+On August 3, 2015, v2.0 of the framework was released. It included some breaking changes, so courses created in v1 will not necessarily run in v2 without some conversion. The conversion process involves creating a new v2 course and transferring JSON content from the older course to the newer course.
 
-##To convert a course from version 1 to version 2:
+## To convert a course from version 1 to version 2:
 
 1. Make a backup copy of your v1 course.
 
@@ -15,26 +15,26 @@ Once the course is created, run `grunt build` as usual and verify the sample cou
 
 While this list is not comprehensive, the following are some things to watch for in each file.
 
-####*config.json*  
+#### config.json
 * little has remained the same  
 * here's where to configure Spoor, Right-to-Left display, accessibility, default weight for questions, default language, and drawer behavior
 
-####*course.json*   
+#### course.json
 * There are completely new sections for buttons used with questions, texts used globally with accessibility, Page Level Progress, Assessment, and Bookmarking. The section for Resources has remained the same.
 
-####*contentObjects.json*  
+#### contentObjects.json
 * two new properties:`pageBody` and `linkText`
 
-####*articles.json*  
+#### articles.json
 * While the properties proper to an article (the article model) have not changed, some of the properties of extensions that are *applied* to the article have changed. Assessment and Trickle are perhaps the most notable examples.
 
-####*blocks.json*  
+#### blocks.json 
 * While the properties proper to a block (the block model) have not changed, some of the properties of extensions that are *applied* to the block have changed. Trickle is perhaps the most notable example.
 
-####*components.json*   
+#### components.json
 * All [question components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#question-components) have been updated to use [core buttons](https://github.com/adaptlearning/adapt_framework/wiki/Core-Buttons). No question component JSON from a course created in version 1 can be copied entirely into a version 2 course without modification.
 * All components&mdash;both presentation and question&mdash;have been updated to meet WAI AA standards for accessibility. If you are using a custom component or other plug-in, it is recommended to review accessibility as it applies to its construction.
 * [Presentation components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#presentation-components) with new properties: Accordion, Graphic, Narrative, Hot Graphic, and Media. 
 
-##More Tips for Converting Content
+## More Tips for Converting Content
 * (Add your tips here in this bulleted list.)
