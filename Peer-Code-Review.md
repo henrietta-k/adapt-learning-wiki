@@ -46,9 +46,9 @@ A core developer will approve an PR because of the following:
 
 ## Core Team Members
 
-**Adapt Framework Core Developers:** Thomas Berger, Oliver Foster, Dan Gray, Tom Greenfield, Matt Leathes, Louise McMahon, Brian Quinn, Tom Taylor
+**Adapt Framework Core Developers:** Thomas Berger, Oliver Foster, Dan Gray, Tom Greenfield, Matt Leathes, Brian Quinn, Tom Taylor, Nils Sanderson, Aniket Daria, Nayan Khedkar, Ratnadeep Rajput, Chetan Hajare
  
-**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Louise McMahon, Brian Quinn, Tom Taylor, Nicola Willis.
+**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Brian Quinn, Tom Taylor, Nicola Willis.
 
 ## References
 
