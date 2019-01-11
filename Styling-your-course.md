@@ -115,7 +115,7 @@ The theme JavaScript files found in the *js* folder should be used to add any ad
 
 It's strongly recommended that the theme shouldn't be setting any attributes on [Backbone models](http://backbonejs.org/#Model-View-separation); you can, however, use classes if, say, you want an effect on a particular page.
 
-You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/List-of-core-events) to add an effect on, say, a page postRender event.
+You can use the [core events](https://github.com/adaptlearning/adapt_framework/wiki/Core-Events) to add an effect on, say, a page postRender event.
 
 ### Theme Assets
 
