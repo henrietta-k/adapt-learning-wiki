@@ -1,4 +1,3 @@
-# Accessibility v3 > v4
 ## What has changed?
 Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course, reorientates user interaction around keyboard tab indexes.
 
