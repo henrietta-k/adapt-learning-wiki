@@ -74,7 +74,8 @@ Any view which triggers a `menuView:render`, `pageView:render`, `articleView:ren
 See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/templates/partials/component.hbs#L8-L13) as an example.  
 
 #### Heading completion settings
-* model: `_isA11yCompletionDescriptionEnabled: true`
+* model: `_disableAccessibilityState: false` Will enable/disable the `HeadingView` render
+* model: `_isA11yCompletionDescriptionEnabled: true` Will cause the `HeadingView` to render the completion description
 * course.json: `_globals._accessibility._ariaLabels.complete: "Completed"`
 * course.json: `_globals._accessibility._ariaLabels.incomplete: "Incomplete"`
 
