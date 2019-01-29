@@ -1,4 +1,4 @@
-# Accessibility
+# Accessibility v3
 - [What is meant by accessibility?](#what-is-meant-by-accessibility) 
 - [For the learner: How does the accessibility feature function in Adapt?](#how-does-the-feature-function-in-adapt)
 - [For the course author: Make your course accessible.](#make-your-course-accessible)  
