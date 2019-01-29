@@ -46,27 +46,27 @@ Reference: [Accessibility Developer Guide - Screen readers' browse and focus mod
 #### Readability, focus and seeking forward
 It is sometimes necessary to move browser tab focus (and hence the screen reader cursor), either to return the user to a previous location or to assist in the navigation of more complicated content presentations, such as accessing the non-active items in a narrative component.
 
-Adapt Framework can be reasonably modified and contains some complicated or changing user interface sequences. Programmically assigning focus to an element that may become disabled or removed (due to user interaction or developer modification) will cause the screen reader cursor to drop to the document body instead. When the focus and screen reader cursor drops to the document body unexpectedly, the user loses their place in the document. The submit or feedback buttons are good examples of an Adapt Framework user interface which expresses many behavioural variations.
+The Adapt Framework can be reasonably modified and contains some complicated or changing user interface sequences. Programmically assigning focus to an element that may become disabled or removed (due to user interaction or developer modification) will cause the screen reader cursor to drop to the document body instead. When the focus and screen reader cursor drops to the document body unexpectedly, the user loses their place in the document. The submit or feedback buttons are good examples of an Adapt Framework user interface which expresses many behavioural variations.
 
-Adapt Framework has two functions to aid in the allocation of focus, both of which seek forward in the document and assess the readability of elements as they go.
+The Adapt Framework has two functions to aid in the allocation of focus, both of which seek forward in the document and assess the readability of elements as they go.
 
-[`$("selector").focusOrNext();`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L263-L278) Will try to focus on the selected element, failing readability tests it will focus on the first readable child, or then the next readable element in the document.
+[`$("selector").focusOrNext();`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L263-L278) Will try to focus on the selected element; on failing readability tests it will focus on the first readable child, or then the next readable element in the document.
 
 [`$("selector").focusNext();`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L249-L261) Will focus on the first readable child or the next readable element in the document.
 
 These behaviours allow us to more loosely move the screen reader cursor and focus, relying on Adapt Framework to handle the correct allocation for us.
 
-Note: Sometimes the next readable element cannot have focus assigned because it is not tabbable, Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
+Note: Sometimes the next readable element cannot have focus assigned because it is not tabbable; if so the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
 
 #### Self-disabled buttons
-There are self disabling buttons in Adapt Framework, like the submit button on question components.
+There are self disabling buttons in Adapt Framework; for instance the submit button on question components.
 
-Disabled elements cannot receive the screen reader cursor nor browser focus, when elements move from having both the screen reader cursor and browser focus to becoming disabled, the screen reader cursor is moved by the screen reader to the document body.
+Disabled elements cannot receive the screen reader cursor or browser focus; when elements move from having both the screen reader cursor and browser focus to becoming disabled the screen reader cursor is moved by the screen reader to the document body.
 
 Adapt Framework prevents the screen reader cursor from returning to the document body for self-disabling elements as it listens to blur events from elements with a `[disabled]` attribute and [moves the cursor on to the next readable element in the document](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L513-L530). This retains the forward momentum of the content whilst allowing self-disabled buttons.
 
 #### Clicking with the keyboard
-When 'clicking' any element with the space or enter keys whilst the screen reader is running, the 'clicked' element will not receive focus but will fire a `click` event. Clickable elements often act as the point of return from popups or other activities, this lack of focus assignation on click can be somewhat problematic when we need to be aware of the last active element.
+When 'clicking' any element with the space or enter keys whilst the screen reader is running, the 'clicked' element will not receive focus but will fire a `click` event. Clickable elements often act as the point of return from popups or other activities, this lack of focus assignment on click can be somewhat problematic when we need to be aware of the last active element.
 
 Adapt helps mitigate the lack of focus on screen reader keyboard 'clicks' by using a capture event handler to [force focus when tabbable elements are clicked](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L488-L497). This behaviour allows [`document.activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement) to work as one would expect it to with a mouse.  
 References: [javascript.info - Bubbling and capturing events](https://javascript.info/bubbling-and-capturing)
@@ -82,7 +82,7 @@ Menu, page, article, block and component headings are set up to provide a more u
 
 Any view which triggers a `menuView:render`, `pageView:render`, `articleView:render`, `blockView:render` or `componentView:render` event and which contains an element with the class `js-heading` will now have a new [`HeadingView`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/headingView.js) injected into it.
 
-[`HeadingView`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/headingView.js) is a visually hidden aria label, its text is transparent, tiny and absolutely positioned so that it is only read by the screen reader. Any visual representation of the heading text should therefore be hidden from the screen reader with an `[aria-hidden="true"]` attribute. This is so that the heading text will not be read twice by the screen reader.  
+[`HeadingView`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/headingView.js) is a visually hidden aria label; its text is transparent, tiny and absolutely positioned so that it is only read by the screen reader. Any visual representation of the heading text should therefore be hidden from the screen reader with an `[aria-hidden="true"]` attribute. This is so that the heading text will not be read twice by the screen reader.  
 See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/templates/partials/component.hbs#L8-L13) as an example.  
 
 #### Heading completion settings
@@ -105,7 +105,7 @@ Note: Notify will always have heading level 1 as it is the only content
 represented on screen whilst being shown.
 
 ### Invisible labels
-Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader only text labels for the user. These labels are visually hidden, their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
+The Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader only text labels for the user. These labels are visually hidden; their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
 
 `{{a11y_aria_label 'text'}}` Will create a hidden text label.
 
@@ -142,7 +142,7 @@ Note: Notify and drawer both use this API and require no additional modification
 #### Links vs buttons
 Buttons and links which change the browser url and/or load new content that isn't a modal popup should have an implied or declared [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) attribute.
 
-Adapt Framework v4 applies this principle throughout by having [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) on all navigating buttons.
+Adapt Framework v4 applies this principle throughout by having [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) on all navigation buttons.
 
 Reference: [Mozilla - MDN - Using the link role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role)
 
@@ -165,7 +165,7 @@ following screen readers, browsers and operating systems in mind:
 * Voiceover and Chrome on OSX (used in development process)
 * NVDA and Firefox ESR on Windows (untested at present)
 
-Note: Ever-green Firefox is currently having accessibility issues despite being one
+Note: Evergreen Firefox is currently having accessibility issues despite being one
 of the most requested browsers for corporate e-learning accessibility.
 
 ### Exceptions to the WCAG implementation examples
