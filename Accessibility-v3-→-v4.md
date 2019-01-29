@@ -182,13 +182,13 @@ References: [W3C - WCAG Technique - ARIA6](https://www.w3.org/TR/WCAG20-TECHS/AR
 
 ### References
 #### JAWS keyboard controls
-* left arrow = move backward
-* right arrow = move forward
-* space bar = make selection / click
-* h = cycle through headings
-* r = cycle through regions
-* q = go to main content
-* esc = exit forms mode or dismiss notify
+* <kbd>&larr;</kbd> = move backward
+* <kbd>&rarr;</kbd> = move forward
+* <kbd>space</kbd> = make selection / click
+* <kbd>h</kbd> = cycle through headings
+* <kbd>r</kbd> = cycle through regions
+* <kbd>q</kbd> = go to main content
+* <kbd>Esc</kbd> = exit forms mode or dismiss notify
 
 
 #### Sources
