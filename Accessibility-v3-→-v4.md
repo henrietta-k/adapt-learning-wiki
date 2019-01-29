@@ -17,11 +17,11 @@ The onus is therefore on the course creator to:
 * understand what exactly 'accessible' means for learners with accessibility requirements
 * configure the course correctly to enable that level of accessibility
 * ensure that only plugins, assets & content that meet that level of accessibility are used in the course
-* verify through testing that the course has been successfully configured and meets the learners' requirements as best as possible
+* verify through testing that the course has been successfully configured and meets the learners' requirements as well as possible
 
-The bulk of the accessibility work in Adapt Framework - if we necessarily exclude content - revolves around screen reader access. This document will mostly cover how we facilitate screen reader access with references for further reading.
+The bulk of the accessibility work in the Adapt Framework - if we necessarily exclude content - revolves around screen reader access. This document will mostly cover how we facilitate screen reader access with references for further reading.
 
-Note: All of the specifications and recommendations utilized in Adapt Framework are tested as working. Anything which cannot provide a consistent experience (whilst excusing minor variations) across the predominantly used screen readers and browser should not be utilized in the framework.
+Note: All of the specifications and recommendations utilised in the Adapt Framework are tested as working. Anything which cannot provide a consistent experience (whilst excusing minor variations) across the most commonly used screen readers and browsers should not be utilised in the framework.
 
 ### Screen readers and the browser
 A standard browser 'tabbing cursor' follows the tabbability of elements through the DOM order. Tabbability is determined and reordered by the (implied or explicitly declared) value of each element's [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute. 
