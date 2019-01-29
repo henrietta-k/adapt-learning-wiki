@@ -21,7 +21,7 @@ The onus is therefore on the course creator to:
 
 The bulk of the accessibility work in the Adapt Framework - if we necessarily exclude content - revolves around screen reader access. This document will mostly cover how we facilitate screen reader access with references for further reading.
 
-Note: All of the specifications and recommendations utilised in the Adapt Framework are tested as working. Anything which cannot provide a consistent experience (whilst excusing minor variations) across the most commonly used screen readers and browsers should not be utilised in the framework.
+**Note:** All of the specifications and recommendations utilised in the Adapt Framework are tested as working. Anything which cannot provide a consistent experience (whilst excusing minor variations) across the most commonly used screen readers and browsers should not be utilised in the framework.
 
 ### Screen readers and the browser
 A standard browser 'tabbing cursor' follows the tabbability of elements through the DOM order. Tabbability is determined and reordered by the (implied or explicitly declared) value of each element's [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute. 
@@ -57,7 +57,7 @@ The Adapt Framework has two functions to aid in the allocation of focus, both of
 
 These behaviours allow us to more loosely move the screen reader cursor and focus, relying on Adapt Framework to handle the correct allocation for us.
 
-Note: Sometimes the next readable element cannot have focus assigned because it is not tabbable; if so the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
+**Note:** Sometimes the next readable element cannot have focus assigned because it is not tabbable; if so the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
 
 #### Self-disabling buttons
 There are self-disabling buttons in Adapt Framework; for instance the submit button on question components.
@@ -76,7 +76,7 @@ References: [javascript.info - Bubbling and capturing events](https://javascript
 [Navigation](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/navigationView.js#L23), [menu](https://github.com/adaptlearning/adapt-contrib-boxmenu/blob/master/js/adapt-contrib-boxmenu.js#L14), [page](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/pageView.js#L12), [notify](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/notifyView.js#L14) and [drawer](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/drawerView.js#L11) content is now assigned an appropriate
 aria-role. This affords screen reader users easily distinguishable areas of the Adapt Framework user interface. Screen reader users can now cycle through the regions, giving them a sense of the user interface and allowing them to locate content with greater ease.
 
-Note: A [component can optionally have a region](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/componentView.js#L14) by setting [`"_isA11yRegionEnabled": true`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/adaptModel.js#L14) on its model. This attribute is not yet represented in the schemas for the Authoring Tool as it is currently difficult to quantify its usefulness.
+**Note:** A [component can optionally have a region](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/views/componentView.js#L14) by setting [`"_isA11yRegionEnabled": true`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/adaptModel.js#L14) on its model. This attribute is not yet represented in the schemas for the Authoring Tool as it is currently difficult to quantify its usefulness.
 
 ### Headings
 Menu, page, article, block and component headings are set up to provide a more useful navigation layer for screen reader users. Headings now provide an extension to the header text by including a representation of the model's completion attribute along with an appropriate heading level.
@@ -96,7 +96,7 @@ See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/mas
 
 Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the a map in `config.json: _accessibility._ariaLevels` or  if one exists it will be taken from an `_ariaLevel` value from the current context. This behaviour allows menu, page, article, block and component default heading levels to be controlled from the `config.json` and also to be overridden on each model.
 
-Note: `_ariaLevel` is not yet defined in the Authoring Tool schemas.
+**Note:** `_ariaLevel` is not yet defined in the Authoring Tool schemas.
 
 #### Level settings
 * config.json: `_accessibility._ariaLevels: { componentItem: 5, ... }`
@@ -118,7 +118,7 @@ Generic invisible label descriptions are defined by and enabled on each componen
 
 Component descriptions can be disabled using the property [`"_isA11yComponentDescriptionEnabled": true`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/componentModel.js#L10) on the component models.
 
-Note: `_isA11yComponentDescriptionEnabled` is not yet defined in the Authoring Tool schemas.  
+**Note:** `_isA11yComponentDescriptionEnabled` is not yet defined in the Authoring Tool schemas.  
 See: [`narrative\properties.schema`](https://github.com/adaptlearning/adapt-contrib-narrative/blob/master/properties.schema#L10) as an example  
 
 ### Popups
@@ -131,12 +131,12 @@ To prevent users from accessing content outside of the modal popups, Adapt Frame
 
 `Adapt.trigger("popup:closed", $focusTarget);` will revert the tabbing and screen reader access and move the focus to the element provided.
 
-Note: Notify and drawer both use this soft API to control content access and require no additional configuration. This API will be turned into a hard API at some point in the near future.
+**Note:** Notify and drawer both use this soft API to control content access and require no additional configuration. This API will be turned into a hard API at some point in the near future.
 
 #### Tab wrapping
 To enable tab wrapping, such that tabbing beyond the popup will return the user to the first tabbable element in the popup, add `{{{a11y_wrap_focus}}` to the end of your popup template.
 
-Note: Notify and drawer both use this API and require no additional modifications.
+**Note:** Notify and drawer both use this API and require no additional modifications.
 
 ### Navigation
 #### Links vs buttons
@@ -165,8 +165,7 @@ following screen readers, browsers and operating systems in mind:
 * Voiceover and Chrome on OSX (used in development process)
 * NVDA and Firefox ESR on Windows (untested at present)
 
-Note: Evergreen Firefox is currently having accessibility issues despite being one
-of the most requested browsers for corporate e-learning accessibility.
+**Note:** 'Evergreen' Firefox is currently having accessibility issues despite being one of the most requested browsers for corporate e-learning accessibility.
 
 ### Exceptions to the WCAG implementation examples
 #### Headings
