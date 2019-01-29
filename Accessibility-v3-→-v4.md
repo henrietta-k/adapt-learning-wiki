@@ -1,5 +1,5 @@
 ## What has changed?
-Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course (accessible only via a tab keypress in v2), causes virtually all elements on the page to be 'tabbable'.
+Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course (accessible only via a <kbd>tab</kbd> keypress in v2), causes virtually all elements on the page to be 'tabbable'.
 
 In Adapt v4, the framework's accessibility implementation has been re-engineered to follow WCAG guidelines. This change effectively reverts tabbing to default browser behaviour (interactive elements only) and removes the need for an 'accessibility mode'.
 
@@ -28,7 +28,7 @@ A standard browser 'tabbing cursor' follows the tabbability of elements through 
 
 Elements gain and lose 'focus' as the learner navigates through the page, with the currently focused tabbable element being represented by the [`document.activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement) value. 
 
-Focus, which determines the position of the tabbing cursor, can be moved through the document with the tab key (forward), the shift+tab keys (backward) and by clicking or tapping on various tabbable elements.
+Focus, which determines the position of the tabbing cursor, can be moved through the document with the <kbd>tab</kbd> key (forward), the <kbd>shift</kbd>+<kbd>tab</kbd> keys (backward) and by clicking or tapping on various tabbable elements.
 
 A screen reader adds a distinct second cursor to the browser: the 'screen reader cursor'. The screen reader cursor follows the readability of elements through the DOM order but the flow of the screen reader cursor is not directly influenced by tabbability. 
 
