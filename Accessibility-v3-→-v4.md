@@ -40,7 +40,7 @@ It is possible to declare elements and their descendants inaccessible to the scr
 
 By default, a screen reader changes the behaviour of the keyboard in such a way that it becomes the primary method through which the user interacts with the computer. There are distinct and sometimes automatic [modes](https://www.accessibility-developer-guide.com/knowledge/desktop-screen-readers/browse-focus-modes/) assigned to key presses which allow for various tasks, such as navigation, text input and item selection. Keyboard shortcuts are an essential navigational tool for users who need to build a picture of graphically orientated content as a supplement to or in lieu of direct sight perception.
 
-Reference: [Accessibility Developer Guide - Screen readers' browse and focus modes](https://www.accessibility-developer-guide.com/knowledge/desktop-screen-readers/browse-focus-modes/)
+**Reference:** [Accessibility Developer Guide - Screen readers' browse and focus modes](https://www.accessibility-developer-guide.com/knowledge/desktop-screen-readers/browse-focus-modes/)
 
 ## New and built-in behaviours
 ### Focus control
@@ -144,7 +144,7 @@ Buttons and links which change the browser URL and/or load new content (that isn
 
 Adapt Framework v4 applies this principle throughout by having [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) on all navigation buttons.
 
-Reference: [Mozilla - MDN - Using the link role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role)
+**Reference:** [Mozilla - MDN - Using the link role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role)
 
 ### Scrolling
 As focus moves through the document and on to elements which overflow the viewport, the browser will tend to scroll the subject elements into the viewport.
@@ -170,7 +170,7 @@ Accessibility in Adapt Framework v4 has been built with the following screen rea
 #### Headings
 In lieu of semantic `h` tags (`<h1>`, `<h2>` etc.) Adapt uses `role="heading"` and `aria-level="1"` attributes. This is because we use classes to style heading texts and templates+JSON to define the heading level throughout the framework, which makes using semantic `h` tags unfeasible. The `role="heading"`, `aria-level="1"`attribute syntax is very well supported and an acceptable alternative for semantic `h` tags - however, as it is a (relatively) new technique, some older accessibility testing tools/documentation may - incorrectly - flag it as an issue.
 
-Reference: [W3C - WCAG Technique - ARIA12](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)
+**Reference:** [W3C - WCAG Technique - ARIA12](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)
 
 #### Alt text
 Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-label` attribute supersedes the `alt` attribute and is common to all elements in the DOM as well as being very well supported. The `alt` attribute is only available on the `<img>` tag and so should be thought of as a legacy attribute. 
