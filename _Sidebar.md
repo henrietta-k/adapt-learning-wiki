@@ -46,8 +46,8 @@
 * [Semantic Version Numbers](https://github.com/adaptlearning/adapt_framework/wiki/Semantic-Version-numbers)
 * [Core Model Attributes](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes)
 * [Adapt Command Line Interface](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface)
-* [Accessibility](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility)
-    * [Accessibility: Worked Example](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility:-worked-example)
+* [Accessibility v3](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility-v3)
+    * [Accessibility v3: Worked Example](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility-v3:-worked-example)
 * [Adapt Framework Right to Left (RTL) Support](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-Framework-Right-to-Left-\(RTL\)-support)
 
 ----------------
