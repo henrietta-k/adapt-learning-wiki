@@ -1,7 +1,7 @@
 ## What has changed?
-Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course, reorientates user interaction around keyboard tab indexes.
+Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course (accessible only via a tab keypress in v2), causes virtually all elements on the page to be 'tabbable'.
 
-In order to best facilitate screen reader access in v4, the framework's accessibility implementation has been re-engineered to follow WCAG guidelines. This change effectively reverts tabbing to default browser behaviour and removes the need for an 'accessibility mode' - which is all very good and proper news.
+In Adapt v4, the framework's accessibility implementation has been re-engineered to follow WCAG guidelines. This change effectively reverts tabbing to default browser behaviour (interactive elements only) and removes the need for an 'accessibility mode'.
 
 ## Prerequisite understandings
 ### Standards
