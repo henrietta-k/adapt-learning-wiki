@@ -60,9 +60,9 @@ These behaviours allow us to more loosely move the screen reader cursor and focu
 **Note:** Sometimes the next readable element cannot have focus assigned because it is not tabbable; if so the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
 
 #### Self-disabling buttons
-There are self-disabling buttons in Adapt Framework; for instance the submit button on question components.
+The Adapt Framework occasionally makes use of functionality we call a 'self-disabling button'. The Submit button used in question components is a good example of this.
 
-Disabled elements cannot receive the screen reader cursor or browser focus; when elements move from having both the screen reader cursor and browser focus to becoming disabled the screen reader cursor is moved by the screen reader to the document body.
+Disabled elements cannot receive the screen reader cursor or browser focus; when elements move from having both the screen reader cursor and browser focus to becoming disabled the screen reader cursor is moved by the screen reader to the document body and - as described in the previous section - this isn't something you want to happen to a screen reader user.
 
 Adapt Framework prevents the screen reader cursor from returning to the document body for self-disabling elements as it listens to blur events from elements with a `[disabled]` attribute and [moves the cursor on to the next readable element in the document](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L513-L530). This retains the forward momentum of the content whilst allowing for self-disabling buttons.
 
