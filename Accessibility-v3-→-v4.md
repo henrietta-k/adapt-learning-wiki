@@ -41,7 +41,7 @@ It is possible to declare elements and their descendants inaccessible to the scr
 By default, a screen reader changes the behaviour of the keyboard in such a way that it becomes the primary method through which the user interacts with the computer. There are distinct and sometimes automatic [modes](https://www.accessibility-developer-guide.com/knowledge/desktop-screen-readers/browse-focus-modes/) assigned to key presses which allow for various tasks, such as navigation, text input and item selection. Keyboard shortcuts are an essential navigational tool for users who need to build a picture of graphically orientated content as a supplement to or in lieu of direct sight perception.  
 Reference: [Accessibility Developer Guide - Screen readers' browse and focus modes](https://www.accessibility-developer-guide.com/knowledge/desktop-screen-readers/browse-focus-modes/)
 
-## New and build-in behaviours
+## New and built-in behaviours
 ### Focus control
 #### Readability, focus and seeking forward
 It is sometimes necessary to move browser tab focus (and hence the screen reader cursor), either to return the user to a previous location or to assist in the navigation of more complicated content presentations, such as accessing the non-active items in a narrative component.
