@@ -177,7 +177,7 @@ Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-
 
 As with the use of `role="heading"` attribute, some older accessibility testing tools/documentation may - incorrectly - flag the lack of `alt` attributes as an issue. Furthermore, the message 'images must have alt tags in order to be accessible' has been repeated _ad infinitum_ over the years and still is - despite no longer being accurate. Indeed many people still think this means an image has to display a 'tooltip' when you mouse over it, despite this just being down to an odd implementation in Internet Explorer where, if an image has no `title` attribute but does have an `alt` attribute, that 'alt text' would be displayed as the image 'tooltip'.
 
-References: [W3C - WCAG Technique - ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [Mozilla - MDN - ARIA:img role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img), [W3C - WAI-ARIA 1.0 User Agent Implementation Guide](https://www.w3.org/TR/2014/REC-wai-aria-implementation-20140320/#mapping_additional_nd_name), [W3C - HTML Accessibilty API Mappings 1.0 - Draft](https://www.w3.org/TR/html-aam-1.0/#img-element)
+**References:** [W3C - WCAG Technique - ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [Mozilla - MDN - ARIA:img role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img), [W3C - WAI-ARIA 1.0 User Agent Implementation Guide](https://www.w3.org/TR/2014/REC-wai-aria-implementation-20140320/#mapping_additional_nd_name), [W3C - HTML Accessibilty API Mappings 1.0 - Draft](https://www.w3.org/TR/html-aam-1.0/#img-element)
 
 
 ### References
