@@ -151,10 +151,12 @@ As focus moves through the document and on to elements which overflow the viewpo
 
 Adapt Framework v3 has a top navigation bar which overhangs the scrollable area of the viewport, obscuring any content beneath it. As the browser is both unaware of the navigation bar's obscuring of content and of the location of the screen reader cursor, the browser tends to scroll overflowing content underneath the navigation bar when bringing it into the viewport.
 
-Adapt Framework v4 has an additional option which introduces a scrollable area beneath the navigation bar. This allows the browser to scroll Adapt content in a way which does not occlude content beneath the navigation bar, which is preferable for screen reader access.
+Adapt Framework v4 therefore introduces an additional configuration option which introduces a scrollable area _beneath_ the navigation bar. Enabling this allows the browser to scroll Adapt content in a way which does not allow any content to be obscured by the navigation bar, which is preferable for screen reader access.
 
 * `config.json: _scrollingContainer._isEnabled = true` Enable the scrolling container
 * `config.json: _scrollingContainer._limitToSelector = ""` Selectively apply the scrolling container according to this html tag selector. Useful for device targeting: `".os-windows.chrome, .os-windows.ie.version-11-0"`
+
+**Note:** the downside of enabling `_scrollingContainer` is that it will disable some functionality of mobile browsers. For example, on Safari for iOS, the address bar will not shrink in size when you scroll down the page, nor will the 'double-tap the top of the screen to scroll to top' functionality work.
 
 ### Browser and screen reader compatibility
 Accessibility in Adapt Framework v4 has been built with the following screen readers, browsers and operating systems in mind:
