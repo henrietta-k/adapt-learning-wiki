@@ -116,7 +116,7 @@ References: [W3C - Invisible labels](https://www.w3.org/WAI/GL/wiki/Using_aria-l
 ### Component descriptions
 Generic invisible label descriptions are defined by and enabled on each component. They appear under the component heading and are designed to help users understand how to interact with the user interface by providing a simple name and description of its behaviour. 
 
-Component descriptions can be disabled using the property [`"_isA11yComponentDescriptionEnabled": true`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/componentModel.js#L10) on the component models.
+Component descriptions can be disabled by setting [`"_isA11yComponentDescriptionEnabled": false`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/models/componentModel.js#L10) on the component models.
 
 **Note:** `_isA11yComponentDescriptionEnabled` is not yet defined in the Authoring Tool schemas.  
 See: [`narrative\properties.schema`](https://github.com/adaptlearning/adapt-contrib-narrative/blob/master/properties.schema#L10) as an example  
