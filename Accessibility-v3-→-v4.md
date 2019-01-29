@@ -11,10 +11,13 @@ In Adapt v4, the framework's accessibility implementation has been re-engineered
 Accessibility is often seen as an additional and restrictive set of design patterns catering for only people with recognised disabilities. The reality is much more subtle and much broader in scope. Some essential reading can be found at [W3C WAI - Accessibility Fundamentals - Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/) and [Mozilla - MDN - Handling common accessibility problems](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility).
 
 ### Scope of accessibility in Adapt Framework
-As developers of the framework, we have no control over the assets, content or styling included in a final course. The scope of accessibility within Adapt is therefore naturally limited to ensuring that it allows a course creator to be able to create a course that is accessible. The framework cannot do this for you - nor can it ensure that you have done so, as what constitutes 'accessible' is subjective and will naturally vary from course to course; the onus is therefore on the course creator to:
+As developers of the framework, we have no control over the assets, content or styling included in a final course. The scope of accessibility within Adapt is therefore naturally limited to ensuring that it allows a course creator to be able to create a course that is accessible. The framework cannot do this for you - nor can it ensure that you have done so - as what constitutes 'accessible' is subjective and will naturally vary from course to course. 
+
+The onus is therefore on the course creator to:
 * understand what exactly 'accessible' means for learners with accessibility requirements
 * configure the course correctly to enable that level of accessibility
-* verify through testing that it has been successfully configured and meets the learners' requirements as best as possible
+* ensure that only plugins, assets & content that meet that level of accessibility are used in the course
+* verify through testing that the course has been successfully configured and meets the learners' requirements as best as possible
 
 The bulk of the accessibility work in Adapt Framework - if we necessarily exclude content - revolves around screen reader access. This document will mostly cover how we facilitate screen reader access with references for further reading.
 
