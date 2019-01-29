@@ -94,7 +94,7 @@ See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/mas
 
 #### Heading attribute helper
 
-Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the a map in `config.json: _accessibility._ariaLevels` or  if one exists it will be taken from an `_ariaLevel` value from the current context. This behaviour allows menu, page, article, block and component default heading levels to be controlled from the `config.json` and also to be overridden on each model.
+Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the a map in `config.json: _accessibility._ariaLevels` or  if one exists it will be taken from an `_ariaLevel` value from the current context. This behaviour allows menu, page, article, block and component default heading levels to be controlled from `config.json` and also to be overridden on each model.
 
 **Note:** `_ariaLevel` is not yet defined in the Authoring Tool schemas.
 
@@ -105,7 +105,7 @@ Additional to and utilised by the HeadingView is the heading attribute helper `{
 **Note:** Notify will always have heading level 1 as - when shown - it is the only content represented on screen.
 
 ### Invisible labels
-The Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader only text labels for the user. These labels are visually hidden; their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
+The Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader-only text labels for the user. These labels are visually hidden; their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
 
 `{{a11y_aria_label 'text'}}` Will create a hidden text label.
 
@@ -122,7 +122,7 @@ Component descriptions can be disabled using the property [`"_isA11yComponentDes
 See: [`narrative\properties.schema`](https://github.com/adaptlearning/adapt-contrib-narrative/blob/master/properties.schema#L10) as an example  
 
 ### Popups
-When a modal popup is shown, such as a notify or a drawer, the user should be isolated to just the popup content. With browser and screen readers there are the two ways of navigating to content under a modal popup, via tabbing and via the screen reader cursor.
+When a modal popup - such as Notify or Drawer - is shown, the user should be isolated to just the popup content. With browser and screen readers there are the two ways of navigating to content under a modal popup, via tabbing and via the screen reader cursor.
 
 #### Content restrictions
 To prevent users from accessing content outside of the modal popups, Adapt Framework can restrict both the tabbing and screen reader cursor, isolating the user to just the popup content.
@@ -134,13 +134,13 @@ To prevent users from accessing content outside of the modal popups, Adapt Frame
 **Note:** Notify and drawer both use this soft API to control content access and require no additional configuration. This API will be turned into a hard API at some point in the near future.
 
 #### Tab wrapping
-To enable tab wrapping, such that tabbing beyond the popup will return the user to the first tabbable element in the popup, add `{{{a11y_wrap_focus}}` to the end of your popup template.
+To enable 'tab wrapping' - where tabbing beyond the popup will return the user to the first tabbable element in the popup - add `{{{a11y_wrap_focus}}` to the end of your popup template.
 
-**Note:** Notify and drawer both use this API and require no additional modifications.
+**Note:** Notify and Drawer both already implement this API and so require no additional modifications. Making use of these is therefore highly recommended.
 
 ### Navigation
 #### Links vs buttons
-Buttons and links which change the browser url and/or load new content that isn't a modal popup should have an implied or declared [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) attribute.
+Buttons and links which change the browser URL and/or load new content (that isn't a modal popup) should have an implied or declared [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) attribute.
 
 Adapt Framework v4 applies this principle throughout by having [`[role="link"]`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role) on all navigation buttons.
 
@@ -149,7 +149,7 @@ Reference: [Mozilla - MDN - Using the link role](https://developer.mozilla.org/e
 ### Scrolling
 As focus moves through the document and on to elements which overflow the viewport, the browser will tend to scroll the subject elements into the viewport.
 
-Adapt Framework v3 has a top navigation bar which overhangs the scrollable area of the viewport occluding any content beneath it. As the browser is both unaware of the navigation bar's occlusion and the location of the screen reader cursor, the browser tends to scroll overflowing content underneath the navigation bar when bringing it into the viewport.
+Adapt Framework v3 has a top navigation bar which overhangs the scrollable area of the viewport, obscuring any content beneath it. As the browser is both unaware of the navigation bar's obscuring of content and of the location of the screen reader cursor, the browser tends to scroll overflowing content underneath the navigation bar when bringing it into the viewport.
 
 Adapt Framework v4 has an additional option which introduces a scrollable area beneath the navigation bar. This allows the browser to scroll Adapt content in a way which does not occlude content beneath the navigation bar, which is preferable for screen reader access.
 
@@ -157,8 +157,7 @@ Adapt Framework v4 has an additional option which introduces a scrollable area b
 * `config.json: _scrollingContainer._limitToSelector = ""` Selectively apply the scrolling container according to this html tag selector. Useful for device targeting: `".os-windows.chrome, .os-windows.ie.version-11-0"`
 
 ### Browser and screen reader compatibility
-Accessibility in Adapt Framework v4 has been built with the
-following screen readers, browsers and operating systems in mind:
+Accessibility in Adapt Framework v4 has been built with the following screen readers, browsers and operating systems in mind:
 
 * JAWS 18+ and IE11 on Windows (primary testing target)
 * JAWS 18+ and Chrome on Windows (used in development process)
@@ -169,12 +168,14 @@ following screen readers, browsers and operating systems in mind:
 
 ### Exceptions to the WCAG implementation examples
 #### Headings
-In lieu of semantic h tags, we use `role="heading"` and `aria-level="1"` attributes. This is as we use classes to style heading texts and templates+JSON to define the heading level throughout the framework. The `role="heading"`, `aria-level="1"`attribute syntax is very well supported and an acceptable alternative for semantic h tags.  
+In lieu of semantic `h` tags (`<h1>`, `<h2>` etc.) Adapt uses `role="heading"` and `aria-level="1"` attributes. This is because we use classes to style heading texts and templates+JSON to define the heading level throughout the framework, which makes using semantic `h` tags unfeasible. The `role="heading"`, `aria-level="1"`attribute syntax is very well supported and an acceptable alternative for semantic `h` tags - however, as it is a (relatively) new technique, some older accessibility testing tools/documentation may - incorrectly - flag it as an issue.
 
 Reference: [W3C - WCAG Technique - ARIA12](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)
 
 #### Alt text
-Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-label` attribute supersedes the `alt` attribute and is common to all elements in the DOM as well as being very well supported. The `alt` attribute is only available on the `<img>` tag and so should be thought of as a legacy attribute.  
+Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-label` attribute supersedes the `alt` attribute and is common to all elements in the DOM as well as being very well supported. The `alt` attribute is only available on the `<img>` tag and so should be thought of as a legacy attribute. 
+
+As with the use of `role="heading"` attribute, some older accessibility testing tools/documentation may - incorrectly - flag the lack of `alt` attributes as an issue. Furthermore, the message 'images must have alt tags in order to be accessible' has been repeated _ad infinitum_ over the years and still is - despite no longer being accurate. Indeed many people still think this means an image has to display a 'tooltip' when you mouse over it, despite this just being down to an odd implementation in Internet Explorer where, if an image has no `title` attribute but does have an `alt` attribute, that 'alt text' would be displayed as the image 'tooltip'.
 
 References: [W3C - WCAG Technique - ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [Mozilla - MDN - ARIA:img role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img), [W3C - WAI-ARIA 1.0 User Agent Implementation Guide](https://www.w3.org/TR/2014/REC-wai-aria-implementation-20140320/#mapping_additional_nd_name), [W3C - HTML Accessibilty API Mappings 1.0 - Draft](https://www.w3.org/TR/html-aam-1.0/#img-element)
 
