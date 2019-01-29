@@ -172,7 +172,7 @@ In lieu of semantic `h` tags (`<h1>`, `<h2>` etc.) Adapt uses `role="heading"` a
 
 **Reference:** [W3C - WCAG Technique - ARIA12](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)
 
-#### Alt text
+#### Alternative text
 Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-label` attribute supersedes the `alt` attribute and is common to all elements in the DOM as well as being very well supported. The `alt` attribute is only available on the `<img>` tag and so should be thought of as a legacy attribute. 
 
 As with the use of `role="heading"` attribute, some older accessibility testing tools/documentation may - incorrectly - flag the lack of `alt` attributes as an issue. Furthermore, the message 'images must have alt tags in order to be accessible' has been repeated _ad infinitum_ over the years and still is - despite no longer being accurate. Indeed many people still think this means an image has to display a 'tooltip' when you mouse over it, despite this just being down to an odd implementation in Internet Explorer where, if an image has no `title` attribute but does have an `alt` attribute, that 'alt text' would be displayed as the image 'tooltip'.
