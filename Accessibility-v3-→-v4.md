@@ -163,17 +163,17 @@ Adapt Framework v4 therefore introduces an additional configuration option which
 Table showing the use cases for alternative scrolling:
 <table>
 <tr>
-<th></th><th>Screen reader</th><th>iOS iframe</th><th>Browser gestures</th><th></th>
+<th></th><th>Screen reader</th><th>iOS iframe</th><th>Browser gestures</th>
 </tr>
 <tr>
-<td><pre>"_scrollingContainer": {
+<td>
+<pre>"_scrollingContainer": {
     "_isEnabled": false,
     "_limitToSelector": ""
 }</pre></td>
 <td>❎</td>
 <td>❎</td>
 <td>✅</td>
-<td>v2-v3 standard behaviour</td>
 </tr>
 <tr>
 <td><pre>"_scrollingContainer": {
@@ -183,7 +183,6 @@ Table showing the use cases for alternative scrolling:
 <td>✅</td>
 <td>✅</td>
 <td>❎</td>
-<td>v4 new behaviour</td>
 </tr>
 <tr>
 <td><pre>"_scrollingContainer": {
@@ -193,7 +192,6 @@ Table showing the use cases for alternative scrolling:
 <td>❎</td>
 <td>✅</td>
 <td>✅ (Not on iOS)</td>
-<td>v4 variation</td>
 </tr>
 <tr>
 <td><pre>"_scrollingContainer": {
@@ -204,7 +202,6 @@ Table showing the use cases for alternative scrolling:
 <td>✅</td>
 <td>✅</td>
 <td>✅ (Android only)</td>
-<td>v4 variation</td>
 </tr>
 </table>
 
