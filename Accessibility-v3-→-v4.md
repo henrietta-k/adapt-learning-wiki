@@ -160,6 +160,53 @@ Adapt Framework v4 therefore introduces an additional configuration option which
 
 **Note:** the downside of enabling `_scrollingContainer` is that it will disable some functionality of mobile browsers. For example, on Safari for iOS, the address bar will not shrink in size when you scroll down the page, nor will the 'double-tap the top of the screen to scroll to top' functionality work.
 
+Table showing the use cases for alternative scrolling:
+<table>
+<tr>
+<th></th><th>Screen reader</th><th>iOS iframe</th><th>Browser gestures</th><th></th>
+</tr>
+<tr>
+<td><pre>"_scrollingContainer": {
+    "_isEnabled": false,
+    "_limitToSelector": ""
+}</pre></td>
+<td>❎</td>
+<td>❎</td>
+<td>✅</td>
+<td>v2-v3 standard behaviour</td>
+</tr>
+<tr>
+<td><pre>"_scrollingContainer": {
+    "_isEnabled": true,
+    "_limitToSelector": ""
+}</pre></td>
+<td>✅</td>
+<td>✅</td>
+<td>❎</td>
+<td>v4 new behaviour</td>
+</tr>
+<tr>
+<td><pre>"_scrollingContainer": {
+    "_isEnabled": true,
+    "_limitToSelector": ".os-ios"
+}</pre></td>
+<td>❎</td>
+<td>✅</td>
+<td>✅ (Not on iOS)</td>
+<td>v4 variation</td>
+</tr>
+<tr>
+<td><pre>"_scrollingContainer": {
+    "_isEnabled": true,
+    "_limitToSelector": ":not(.os-android)"
+}</pre></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅ (Android only)</td>
+<td>v4 variation</td>
+</tr>
+</table>
+
 ### Browser and screen reader compatibility
 Accessibility in Adapt Framework v4 has been built with the following screen readers, browsers and operating systems in mind:
 
