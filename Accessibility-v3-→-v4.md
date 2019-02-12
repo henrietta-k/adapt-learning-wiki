@@ -1,6 +1,8 @@
 ## What has changed?
 Adapt Framework v2 and v3 have an 'accessibility mode' which, when enabled through a button at the start of the course (accessible only via a <kbd>tab</kbd> keypress in v2), causes virtually all elements on the page to be 'tabbable'.
 
+While the tabbing approach worked well and was popular with casual users of screen readers, we received feedback that it wasn't the best way to implement accessibility. Blind users universally reported that the Adapt accessibility implementation confounded their expectations of how they should navigate through the content with a screen reader (as standard keyboard shortcuts were not supported in the v2/3 implementation), and these users rejected the approach of having a specific accessibility 'mode'. Accessibility specialists from organisations who use Adapt agreed, and additionally pointed out that the tabbed approach did not align with the WCAG guidelines.
+
 In Adapt v4, the framework's accessibility implementation has been re-engineered to follow WCAG guidelines. This change effectively reverts tabbing to default browser behaviour (interactive elements only) and removes the need for an 'accessibility mode'.
 
 ## Prerequisite understandings
@@ -19,7 +21,7 @@ The onus is therefore on the course author to:
 * ensure that only plugins, assets & content that meet that level of accessibility are used in the course
 * verify through testing that the course has been successfully configured and meets the learners' requirements as best as possible
 
-The bulk of the accessibility work in the Adapt Framework - if we necessarily exclude content - revolves around screen reader access. This document will mostly cover how we facilitate screen reader access with references for further reading.
+The bulk of the accessibility work in the Adapt Framework - if we necessarily exclude content - revolves around screen reader access as ensuring that the framework efficiently describes visual content to users who are not able to see it is the biggest challenge to creating accessible online content. This document will mostly cover how we facilitate screen reader access with references for further reading.
 
 **Note:** All of the specifications and recommendations utilised in the Adapt Framework are tested as working. Anything which cannot provide a consistent experience (whilst excusing minor variations) across the most commonly used screen readers and browsers should not be utilised in the framework.
 
