@@ -198,7 +198,8 @@ Table showing the use cases for alternative scrolling:
 <tr>
 <td><pre>"_scrollingContainer": {
     "_isEnabled": true,
-    "_limitToSelector": ":not(.os-android)"
+    "_limitToSelector": 
+     ":not(.os-android)"
 }</pre></td>
 <td>✅</td>
 <td>✅</td>
