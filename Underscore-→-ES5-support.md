@@ -1,6 +1,6 @@
 :no_entry_sign: = not supported in IE11
 
-Underscore | ES6
+Underscore | ES5
 -- | --
 [`_.bind()`](https://underscorejs.org/#bind) | [`.bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 [`_.compact()`](https://underscorejs.org/#compact) | [`.filter(Boolean)`](https://www.reindex.io/blog/you-might-not-need-underscore/#create-a-copy-of-an-array-with-all-falsy-values-removed)
