@@ -96,7 +96,7 @@ See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/mas
 
 #### Heading attribute helper
 
-Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the map in `config.json: _accessibility._ariaLevels` or from the `_ariaLevel` value found in the current context, if such a value exists. This behaviour allows menu, page, article, block and component default heading levels to be controlled from `config.json` and also to be overridden on each model.
+Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the map in `config.json: _accessibility._ariaLevels`. If the appropriate `_ariaLevel` value is found in the current context, it overwrites the default. This behaviour allows menu, page, article, block and component default heading levels to be controlled from `config.json` and also to be overridden on each model.
 
 **Note:** `_ariaLevel` is not yet defined in the Authoring Tool schemas.
 
