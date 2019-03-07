@@ -32,9 +32,9 @@ Elements gain and lose 'focus' as the learner navigates through the page, with t
 
 Focus, which determines the position of the tabbing cursor, can be moved through the document with the <kbd>tab</kbd> key (forward), the <kbd>shift</kbd>+<kbd>tab</kbd> keys (backward) and by clicking or tapping on various tabbable elements.
 
-A screen reader adds a distinct second cursor to the browser: the 'screen reader cursor'. The screen reader cursor follows the readability of elements through the DOM order but the flow of the screen reader cursor is not directly influenced by tabbability. 
+A screen reader adds a distinct second cursor to the browser: the 'screen reader cursor'. The screen reader cursor follows the readability of elements through the DOM order, but the flow of the screen reader cursor is not directly influenced by tabbability. 
 
-Unlike the tabbing cursor, the existence, position and state of a screen reader cursor is not represented in the browser in any way. Although the screen reader cursor does move with the standard browser tab cursor it can also be directed independently of it. When the tab cursor is moved, the screen reader cursor follows - but when the screen reader cursor moves the tab cursor will not follow.
+Unlike the tabbing cursor, the existence, position and state of a screen reader cursor is not represented in the browser in any way. Although the screen reader cursor does move with the standard browser tab cursor, it can also be directed independently of it. When the tab cursor is moved, the screen reader cursor follows. But when the screen reader cursor moves, the tab cursor will not follow.
 
 The screen reader cursor will read all readable text blocks and any additional information supplied to the cursor about the ownership, form, intent and behaviour of the readable element.
 
@@ -49,7 +49,7 @@ By default, a screen reader changes the behaviour of the keyboard in such a way 
 #### Readability, focus and seeking forward
 It is sometimes necessary to move browser tab focus (and hence the screen reader cursor), either to return the user to a previous location or to assist in the navigation of more complicated content presentations, such as accessing the non-active items in a narrative component.
 
-The Adapt Framework can be reasonably modified and contains some complicated or changing user interface sequences. Programmatically assigning focus to an element that may become disabled or removed (due to user interaction or developer modification) will cause the screen reader cursor to drop to the document body instead. When the focus and screen reader cursor drops to the document body unexpectedly, the user loses their place in the document. The submit or feedback buttons are good examples of an Adapt Framework user interface which expresses many behavioural variations.
+The Adapt Framework can be reasonably modified and contains some complicated or changing user interface sequences. Programmatically assigning focus to an element that may become disabled or removed (due to user interaction or developer modification) will cause the screen reader cursor to drop to the document body instead. When the focus and screen reader cursor drop to the document body unexpectedly, the user loses their place in the document. The submit and feedback buttons are good examples of an Adapt Framework user interface which expresses many behavioural variations.
 
 The Adapt Framework has two functions to aid in the allocation of focus, both of which seek forward in the document and assess the readability of elements as they go.
 
@@ -59,12 +59,12 @@ The Adapt Framework has two functions to aid in the allocation of focus, both of
 
 These behaviours allow us to more loosely move the screen reader cursor and focus, relying on Adapt Framework to handle the correct allocation for us.
 
-**Note:** Sometimes the next readable element cannot have focus assigned because it is not tabbable; if so the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element allowing it to receive focus as needed and then remove these attributes on blur.
+**Note:** Sometimes the next readable element cannot have focus assigned because it is not tabbable. If so, the Adapt Framework will temporarily add [`[tabindex=-1][data-ally-force-focus]`](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L228-L247) to the element, allowing it to receive focus as needed and then remove these attributes on blur.
 
 #### Self-disabling buttons
 The Adapt Framework occasionally makes use of functionality we call a 'self-disabling button'. The Submit button used in question components is a good example of this.
 
-Disabled elements cannot receive the screen reader cursor or browser focus; when elements move from having both the screen reader cursor and browser focus to becoming disabled the screen reader cursor is moved by the screen reader to the document body and - as described in the previous section - this isn't something you want to happen to a screen reader user.
+Disabled elements cannot receive the screen reader cursor or browser focus. When elements transition from having the focus of both the screen reader cursor and the browser to a disabled state, the screen reader cursor is moved by the screen reader to the document body. As described in the previous section, this isn't something you want to happen to a screen reader user.
 
 Adapt Framework prevents the screen reader cursor from returning to the document body for self-disabling elements as it listens to blur events from elements with a `[disabled]` attribute and [moves the cursor on to the next readable element in the document](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/js/libraries/jquery.a11y.js#L513-L530). This retains the forward momentum of the content whilst allowing for self-disabling buttons.
 
@@ -96,7 +96,7 @@ See: [`component.hbs`](https://github.com/adaptlearning/adapt_framework/blob/mas
 
 #### Heading attribute helper
 
-Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the a map in `config.json: _accessibility._ariaLevels` or  if one exists it will be taken from an `_ariaLevel` value from the current context. This behaviour allows menu, page, article, block and component default heading levels to be controlled from `config.json` and also to be overridden on each model.
+Additional to and utilised by the HeadingView is the heading attribute helper `{{a11y_attrs_heading 'componentItem'}}`. This helper will produce the role and default heading level attribute for an element. The default heading level is taken from the map in `config.json: _accessibility._ariaLevels` or from the `_ariaLevel` value found in the current context, if such a value exists. This behaviour allows menu, page, article, block and component default heading levels to be controlled from `config.json` and also to be overridden on each model.
 
 **Note:** `_ariaLevel` is not yet defined in the Authoring Tool schemas.
 
@@ -104,7 +104,7 @@ Additional to and utilised by the HeadingView is the heading attribute helper `{
 * config.json: `_accessibility._ariaLevels: { componentItem: 5, ... }`
 * model: `_ariaLevel: 0`
 
-**Note:** Notify will always have heading level 1 as - when shown - it is the only content represented on screen.
+**Note:** Notify will always have heading level 1 since it is the only content represented on screen when active.
 
 ### Invisible labels
 The Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader-only text labels for the user. These labels are visually hidden; their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
@@ -124,7 +124,7 @@ Component descriptions can be disabled by setting [`"_isA11yComponentDescription
 See: [`narrative\properties.schema`](https://github.com/adaptlearning/adapt-contrib-narrative/blob/master/properties.schema#L10) as an example  
 
 ### Popups
-When a modal popup - such as Notify or Drawer - is shown, the user should be isolated to just the popup content. With browser and screen readers there are the two ways of navigating to content under a modal popup, via tabbing and via the screen reader cursor.
+When a modal popup, such as Notify or Drawer, is displayed, the user's actions should be restricted to just the popup content. With browsers and screen readers there are two ways of navigating to content under a modal popup: via tabbing and via the screen reader cursor.
 
 #### Content restrictions
 To prevent users from accessing content outside of the modal popups, Adapt Framework can restrict both the tabbing and screen reader cursor, isolating the user to just the popup content.
@@ -217,14 +217,14 @@ Accessibility in Adapt Framework v4 has been built with the following screen rea
 
 ### Exceptions to the WCAG implementation examples
 #### Headings
-In lieu of semantic `h` tags (`<h1>`, `<h2>` etc.) Adapt uses `role="heading"` and `aria-level="1"` attributes. This is because we use classes to style heading texts and templates+JSON to define the heading level throughout the framework, which makes using semantic `h` tags unfeasible. The `role="heading"`, `aria-level="1"`attribute syntax is very well supported and an acceptable alternative for semantic `h` tags - however, as it is a (relatively) new technique, some older accessibility testing tools/documentation may - incorrectly - flag it as an issue.
+In lieu of semantic `h` tags (`<h1>`, `<h2>` etc.) Adapt uses `role="heading"` and `aria-level="1"` attributes. This is because we use classes to style heading texts and templates+JSON to define the heading level throughout the framework, which makes using semantic `h` tags unfeasible. The `role="heading"`, `aria-level="1"`attribute syntax is very well supported and an acceptable alternative for semantic `h` tags. However, it is a relatively new technique, and some older accessibility testing tools/documentation may incorrectly flag it as an issue.
 
 **Reference:** [W3C - WCAG Technique - ARIA12](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)
 
 #### Alternative text
 Instead of using `<img alt="text">` we use `<img aria-label="text">`. The `aria-label` attribute supersedes the `alt` attribute and is common to all elements in the DOM as well as being very well supported. The `alt` attribute is only available on the `<img>` tag and so should be thought of as a legacy attribute. 
 
-As with the use of `role="heading"` attribute, some older accessibility testing tools/documentation may - incorrectly - flag the lack of `alt` attributes as an issue. Furthermore, the message 'images must have alt tags in order to be accessible' has been repeated _ad infinitum_ over the years and still is - despite no longer being accurate. Indeed many people still think this means an image has to display a 'tooltip' when you mouse over it, despite this just being down to an odd implementation in Internet Explorer where, if an image has no `title` attribute but does have an `alt` attribute, that 'alt text' would be displayed as the image 'tooltip'.
+As with the use of `role="heading"` attribute, some older accessibility testing tools/documentation may incorrectly flag the lack of `alt` attributes as an issue. No matter how commonplace is the message that 'images must have alt tags in order to be accessible,' it is no longer accurate. Likewise, confusion persists between the `alt` attribute and a visual “tooltip” that appears when hovering over an image.
 
 **References:** [W3C - WCAG Technique - ARIA6](https://www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [Mozilla - MDN - ARIA:img role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img), [W3C - WAI-ARIA 1.0 User Agent Implementation Guide](https://www.w3.org/TR/2014/REC-wai-aria-implementation-20140320/#mapping_additional_nd_name), [W3C - HTML Accessibilty API Mappings 1.0 - Draft](https://www.w3.org/TR/html-aam-1.0/#img-element)
 
