@@ -63,7 +63,7 @@ To better fit the new scrolling page design ethic, we've created a more suitable
 
 **Blocks** have replaced the traditional screens/slides found in most e-learning publishing software, and present small chunks of related content using **components**.
 
-**Components** are the main interactions in Adapt, and present simple ideas. Components can be used in a block full-width, or combined with another component for more variety.
+**Components** are the main interactions in Adapt, and present simple ideas. Components can be used in a block full-width, or combined with another component for more variety. In general, it's best not to add more than two half-width or one full-width component per block, because component order is adjusted for RTL languages. 
 
 To summarise: **Pages** contain **Articles** contain **Blocks** contain **Components**.
 
