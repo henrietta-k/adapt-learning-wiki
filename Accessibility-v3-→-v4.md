@@ -233,11 +233,12 @@ As with the use of `role="heading"` attribute, some older accessibility testing 
 #### JAWS keyboard controls
 * <kbd>&uarr;</kbd> = move backward
 * <kbd>&darr;</kbd> = move forward
-* <kbd>space</kbd> = make selection / click
+* <kbd>space</kbd> = make selection
+* <kbd>space/return</kbd> = click
 * <kbd>h</kbd> = cycle through headings
 * <kbd>r</kbd> = cycle through regions
 * <kbd>q</kbd> = go to main content
-* <kbd>Esc</kbd> = exit forms mode or dismiss notify
+* <kbd>esc</kbd> = exit selection (forms mode) or dismiss notify
 
 
 #### Sources
