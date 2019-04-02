@@ -231,8 +231,8 @@ As with the use of `role="heading"` attribute, some older accessibility testing 
 
 ### References
 #### JAWS keyboard controls
-* <kbd>&larr;</kbd> = move backward
-* <kbd>&rarr;</kbd> = move forward
+* <kbd>&uarr;</kbd> = move backward
+* <kbd>&darr;</kbd> = move forward
 * <kbd>space</kbd> = make selection / click
 * <kbd>h</kbd> = cycle through headings
 * <kbd>r</kbd> = cycle through regions
