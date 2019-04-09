@@ -1,4 +1,3 @@
-# Adapt Framework
 Welcome to the developer documentation for the Adapt Framework! 
 
 ## Getting started as a developer
