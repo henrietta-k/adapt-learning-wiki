@@ -55,6 +55,6 @@
 ### Resources
 * [Adapt Community Home](https://community.adaptlearning.org/)
 * [FAQ](https://github.com/adaptlearning/adapt_authoring/wiki/FAQ)
-* [Underscore → ES6 support](https://github.com/adaptlearning/adapt_framework/wiki/Underscore-%E2%86%92-ES6-support)
+* [Underscore → ES5 support](https://github.com/adaptlearning/adapt_framework/wiki/Underscore-%E2%86%92-ES5-support)
 * [Accessibility v3 → v4](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility-v3-%E2%86%92-v4)
 * [Adapt v5](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5)
