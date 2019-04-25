@@ -1,3 +1,5 @@
+**Note:** if you're using Adapt v4+, you should read the [Accessibility v3→v4 page](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility-v3-%E2%86%92-v4) instead of this one...
+
 # Accessibility v3
 - [What is meant by accessibility?](#what-is-meant-by-accessibility) 
 - [For the learner: How does the accessibility feature function in Adapt?](#how-does-the-feature-function-in-adapt)
