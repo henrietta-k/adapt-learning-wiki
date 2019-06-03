@@ -126,6 +126,14 @@ This is a blank method that is used to setup components before they render.
 
 This is a blank method that is used in other views to setup anything on the view or model after rendering.
 
+##### - <a name="adapt-view-findDescendantViews"></a>findDescendantViews(isParentFirst)
+
+This method will return all descendant views in parent first or child first order.
+
+##### - <a name="adapt-view-getChildViews"></a>getChildViews()
+
+This method will return any child views of the view.
+
 ### Adapt
 
 The main Adapt object can be used to pass events, grab the core collections of models or register a component. Adapt also has the following:
@@ -253,6 +261,14 @@ By wrapping your page and menu scrollTo methods with Adapt.scrollTo() you get th
 * ``'menu:scrollTo'`` - Triggered before the scroll when on a menu - passes out the element.
 * ``'page:scrolledTo'`` - Triggered after the scroll when on a page and the scroll has ended - passes out the element.
 * ``'menu:scrolledTo'`` - Triggered after the scroll when on a menu and the scroll has ended - passes out the element.
+
+##### Adapt.parentView
+
+Stores the course, page or menu view of the current location.
+
+##### Adapt.findViewByModelId(string)
+
+Returns the view which matches the specified id.
 
 ##### Adapt.navigateToElement
 
