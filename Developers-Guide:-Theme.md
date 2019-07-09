@@ -22,4 +22,6 @@ Adapt themes support customisation for the rendering of various Adapt elements v
 
 Until this guide can be completed, please take a look at the technique explained in [Modifying the Vanilla Theme](https://github.com/adaptlearning/adapt_authoring/wiki/Modifying-the-Vanilla-Theme).
 
+If you already have a theme, and you would like to make it work with the Authoring Tool's editable themes feature, please see [Making an existing theme editable](https://github.com/adaptlearning/adapt_framework/wiki/Making-an-existing-theme-editable).
+
 _TO DO: Add explanation of how to use `"_classes"` by adding a CSS class to *theme-extras.less* or other Less file._
