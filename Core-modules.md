@@ -286,7 +286,9 @@ var promptObject = {
     _showIcon: true
 }
 
-Adapt.trigger('notify:prompt', promptObject);
+Adapt.trigger('notify:prompt', promptObject);// if using Adapt FW v4.3.0 or earlier
+
+Adapt.notify.alert(promptObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
 How to activate a push notification:
@@ -302,10 +304,14 @@ Adapt.on('pushNotify:clicked', function() {
     console.log('A push notification was clicked');
 });
 
-Adapt.trigger('notify:push', pushObject);
+Adapt.trigger('notify:push', pushObject);// if using Adapt FW v4.3.0 or earlier
+
+Adapt.notify.push(pushObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
 #### Notify Events
+
+Note: the alert/prompt/popup/push events are deprecated as of Adapt v4.4.0 - they will still work but will be removed in a future release. Please update to using the new Notify API.
 
 Event | Argument | Description
 --- | --- | ---
@@ -320,6 +326,15 @@ Event | Argument | Description
 `notify:closed` | | Triggers when `closeNotify()` is run
 `notify:cancel` | | Triggered by cancel button or clicking on popup shadow. Disabled by setting `_isCancellable:false`
 `notify:cancelled` | | Triggers when `cancelNotify()` is run
+
+### Notify API
+The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` and has the following public methods:
+* `alert`
+* `prompt`
+* `popup`
+* `push`
+
+All of which accept an object containing the notify settings as the only parameter.
 
 ### <a name="popupManager"></a>Popup Manager
 
