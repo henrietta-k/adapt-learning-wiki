@@ -327,7 +327,7 @@ Event | Argument | Description
 `notify:cancel` | | Triggered by cancel button or clicking on popup shadow. Disabled by setting `_isCancellable:false`
 `notify:cancelled` | | Triggers when `cancelNotify()` is run
 
-### Notify API
+#### Notify API
 The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` and has the following public methods:
 * `alert`
 * `prompt`
