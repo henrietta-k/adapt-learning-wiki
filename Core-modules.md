@@ -311,7 +311,7 @@ Adapt.notify.push(pushObject);// if using Adapt FW v4.4.0 or later (the above wi
 
 #### Notify Events
 
-Note: the alert/prompt/popup/push events are deprecated as of Adapt v4.4.0 - they will still work but will be removed in a future release. Please update to using the new Notify API.
+Note: the alert/prompt/popup/push events are deprecated as of Adapt v4.4.0 - they will still work but will be removed in a future release. Please update to using the new [Notify API](#notify-api).
 
 Event | Argument | Description
 --- | --- | ---
