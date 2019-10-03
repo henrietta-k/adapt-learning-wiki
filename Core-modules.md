@@ -82,7 +82,7 @@ Adapt.on('router:plugin:myPluginName', function(pluginName, location, action) {
 });
 ```
 
-Plugins should not be adding classes to the #wrapper element as they get removed by the router - instead we suggest adding them to the HTML element.
+Plugins should not be adding classes to the `#wrapper` element as they get removed by the router - instead we suggest adding them to the HTML element.
 
 ### <a name="device"></a>Device
 
@@ -272,7 +272,7 @@ The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` 
 All of which accept an object containing the notify settings as the only parameter.
 
 #### Notify Subviews
-Additionally, the **alert**, **prompt** & **popup** Notify popup types all have the ability to accept a 'subview' to display in the popup - allowing for very custom popup layouts/functionality beyond the normal title/body/button display.
+Additionally, the **alert**, **popup** & **prompt** Notify popup types all have the ability to accept a 'subview' to display in the popup - allowing for very custom layouts/functionality beyond the normal title/body/button display.
 
 ```js
 var popupObject = {
@@ -339,7 +339,7 @@ var PopupView = Backbone.View.extend({
 
 });
 ```
-For a working implementation of a Notify SubView, see the [hot graphic plugin](https://github.com/adaptlearning/adapt-contrib-hotgraphic)
+For a working implementation of a Notify popup that uses a SubView, see the [hot graphic plugin](https://github.com/adaptlearning/adapt-contrib-hotgraphic)
 
 ### <a name="popupManager"></a>Popup Manager
 
