@@ -194,9 +194,10 @@ Adapt.trigger('notify:alert', alertObject);// if using Adapt FW v4.3.0 or earlie
 
 Adapt.notify.alert(alertObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
-The alertObject has two specific properties. `confirmText` allows you to change the text of the confirm button presented in the alert popup. This button will dismiss the popup even if `_isCancellable: false` is set.
+The `alertObject` has two specific properties:
+* `confirmText` allows you to change the text of the confirm button presented in the alert popup. This button will dismiss the popup even if `_isCancellable: false` is set.
+* `_callbackEvent` allows you to specify an event that will be triggered when the confirmText button is clicked. In the above example, we would want our code to be listening for the `assessment:notPassedAlert` event.
 
-`_callbackEvent` allows you to specify an event that will be triggered when the confirmText button is clicked. In the above example, we would want our code to be listening for the `assessment:notPassedAlert` event.
 ```js
 Adapt.on('assessment:notPassedAlert', function() {
     //do something
