@@ -18,7 +18,7 @@ This is where all the main loading and setup of Adapt begins. All the core Adapt
 
 ### <a name="navigationView"></a>NavigationView
 
-The NavigationView controls the top navigation bar. To keep a nice separation of plugins, any icon or button placed in this view should contain a 'data-event' attribute:
+The `NavigationView` controls the top navigation bar. To keep a nice separation of plugins, any icon or button placed in this view should contain a 'data-event' attribute:
 
 ```html
 <a href="#" data-event="backButton"><span>Back button</span></a>
@@ -32,7 +32,7 @@ Adapt.trigger('navigation:backButton');
 
 ### <a name="router"></a>Router
 
-When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an `_id` attribute being passed in and the third handles routes for plugins. 
+When initialized, the **Router** sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an `_id` attribute being passed in and the third handles routes for plugins. 
 
 When an `_id` attribute is passed in:
 
@@ -86,7 +86,7 @@ Plugins should not be adding classes to the `#wrapper` element as they get remov
 
 ### <a name="device"></a>Device
 
-The device module detects which browser the user is on and adds the following classes to the ``<HTML>`` tag:
+The **Device** module detects which browser the user is on and adds the following classes to the ``<HTML>`` tag:
 
 * Browser - ``Chrome``
 * Version - ``version-32``
@@ -112,7 +112,7 @@ Adapt.on('device:changed', function(deviceSize) {
 
 ### <a name="drawer"></a>Drawer
 
-The Drawer module is a slide out panel from the right hand side. Drawer has two main features:
+The **Drawer** module is a slide out panel from the right hand side. Drawer has two main features:
 
 * Item view - Enables plugins to add to the Drawer list. Each item can have a title, body and custom css class attached to the Drawer item. When a Drawer item is clicked it triggers a callback event.
 * Custom view - Enables plugins to add a custom view into the Drawer pull out. This is then managed via the plugin itself.
@@ -151,14 +151,14 @@ Drawer passes out a few useful events:
 
 ### <a name="notify"></a>Notify
 
-Adapt has an internal notifications system known as Notify which can trigger four types of notification:
+Adapt has an internal notifications system known as **Notify** which can trigger four types of notification:
 
-* **Popup** - Used for when you need to popup some additional information. Similar to the feedback plugin Tutor.
-* **Alert** - Used to get the users attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
+* **Popup** - Used for when you need to display some additional information; as used by the feedback plugin **Tutor**.
+* **Alert** - Used to get the learner's attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
 * **Prompt** - Used for when the learner needs to make a choice. The prompts can have unlimited button options but we suggest three is the maximum. Each prompt button triggers a callback event.
 * **Push** - Used to push an unobtrusive notification to the learner in a style similar to that of macOS/Windows 10 notifications. Only two push notifications are displayed at once; others are added into a queue and processed accordingly as the displayed ones are cleared.
 
-How to activate a popup:
+How to activate a **popup**:
 ```js
 var popupObject = {
     title: "Popup title",
@@ -178,7 +178,7 @@ The `popupObject` has an `_isCancellable` property. If set to `false`:
 
 `_isCancellable` defaults to `true`
 
-How to activate an alert:
+How to activate an **alert**:
 
 ```js
 var alertObject = {
@@ -203,7 +203,7 @@ Adapt.on('assessment:notPassedAlert', function() {
 })
 ```
 
-How to activate a prompt dialogue:
+How to activate a **prompt** dialog:
 ```js
 var promptObject = {
     title: "Leaving so soon?",
@@ -226,7 +226,7 @@ Adapt.trigger('notify:prompt', promptObject);// if using Adapt FW v4.3.0 or earl
 Adapt.notify.prompt(promptObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
-How to activate a push notification:
+How to activate a **push** notification:
 ```js
 var pushObject = {
     title: "Great work!",
@@ -246,7 +246,7 @@ Adapt.notify.push(pushObject);// if using Adapt FW v4.4.0 or later (the above wi
 
 #### Notify Events
 
-Note: the alert/prompt/popup/push events are deprecated as of Adapt v4.4.0 - they will still work but will be removed in a future release. Please update to using the new [Notify API](#notify-api).
+Note: the `notify:alert/prompt/popup/push` events are deprecated as of Adapt v4.4.0 - they will still work but will be removed in a future release. Please update to using the new [Notify API](#notify-api).
 
 Event | Argument | Description
 --- | --- | ---
@@ -272,7 +272,7 @@ The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` 
 All of which accept an object containing the notify settings as the only parameter.
 
 #### Notify Subviews
-Additionally, the **alert**, **popup** & **prompt** Notify popup types all have the ability to accept a 'subview' to display in the popup - allowing for very custom layouts/functionality beyond the normal title/body/button display.
+Additionally, the **alert**, **popup** & **prompt** Notify types all have the ability to accept a 'subview' to display in the popup - allowing for very custom layouts/functionality beyond the normal title/body/button display.
 
 ```js
 var popupObject = {
