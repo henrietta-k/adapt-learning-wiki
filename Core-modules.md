@@ -272,7 +272,7 @@ The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` 
 All of which accept an object containing the notify settings as the only parameter.
 
 #### Notify Subviews
-Additionally, the **alert**, **prompt** & **popup** Notify popup types all have the ability to accept a 'subview' to display in the popup allowing for very custom popup layouts/functionality beyond the normal title/body/button display.
+Additionally, the **alert**, **prompt** & **popup** Notify popup types all have the ability to accept a 'subview' to display in the popup - allowing for very custom popup layouts/functionality beyond the normal title/body/button display.
 
 ```js
 var popupObject = {
@@ -281,7 +281,7 @@ var popupObject = {
     _view: new PopupView({ model: new Backbone.Model({}) })
 };
 ```
-This Subview can be fully configured:
+This subview can be fully configured:
 
 ```js
 var PopupView = Backbone.View.extend({
