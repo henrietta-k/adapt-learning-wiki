@@ -6,6 +6,9 @@
 * [Device](#device)
 * [Drawer](#drawer)
 * [Notify](#notify)
+  * [Events](#notify-events)
+  * [API](#notify-api)
+  * [Subviews](#notify-subviews)
 * [Popup Manager](#popupManager)
 * [Helpers](#helpers)
 
@@ -148,7 +151,7 @@ Drawer passes out a few useful events:
 
 ### <a name="notify"></a>Notify
 
-Adapt has an internal notifications system and can trigger four types of notifications:
+Adapt has an internal notifications system known as Notify which can trigger four types of notification:
 
 * **Popup** - Used for when you need to popup some additional information. Similar to the feedback plugin Tutor.
 * **Alert** - Used to get the users attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
@@ -174,74 +177,6 @@ The `popupObject` has an `_isCancellable` property. If set to `false`:
 * triggering the `notify:cancel` event will not close the popup. 
 
 `_isCancellable` defaults to `true`
-
-The popup can also be appended with a sub view via the `_view` property.
-
-```js
-var popupObject = {
-    "title": "this is a text",
-    "_isCancellable": false,
-    _view: new PopupView({ model: new Backbone.Model({}) })
-};
-```
-This sub view can be fully configured:
-
-```js
-var PopupView = Backbone.View.extend({
-
-  events: {
-    "click button.cancel": "onCancelClick",
-    "click button.close": "onCloseClick"
-  },
-
-  onCancelClick: function() {
-    console.log("SUBNOTIFY: button.cancel clicked");
-    Adapt.trigger("notify:cancel");
-  },
-
-  onCloseClick: function() {
-    console.log("SUBNOTIFY: button.close clicked");
-    Adapt.trigger("notify:close");
-  },
-
-  initialize: function() {
-    console.log("SUBNOTIFY: initialized");
-    this.listenToOnce(Adapt, {
-      "notify:opened": this.onOpened,
-      "notify:closed": this.onClosed,
-      "notify:cancelled": this.onCancelled
-    });
-    this.render();
-  },
-
-  render: function() {
-    this.$el.append("this is a sub view <button class='cancel'>click here to cancel</button><button class='close'>click here to close</button>");
-  },
-
-  onOpened: function(notifyView) {
-    // notifyView.subView === this
-    if (notifyView.subView.cid !== this.cid) return;
-    console.log("SUBNOTIFY: opened");
-  },
-
-  onClosed: function() {
-    // called when notify is closed
-    console.log("SUBNOTIFY: closed");
-  },
-
-  onCancelled: function() {
-    // called when notify is cancelled
-    console.log("SUBNOTIFY: cancelled");
-  },
-
-  remove: function() {
-    // called when notify is closed
-    console.log("SUBNOTIFY: removed");
-    Backbone.View.prototype.remove.apply(this, arguments);
-  }
-
-});
-```
 
 How to activate an alert:
 
@@ -335,6 +270,76 @@ The Notify API was added in Adapt v4.4.0 - it can be accessed at `Adapt.notify` 
 * `push`
 
 All of which accept an object containing the notify settings as the only parameter.
+
+#### Notify Subviews
+Additionally, the **alert**, **prompt** & **popup** Notify popup types all have the ability to accept a 'subview' to display in the popup allowing for very custom popup layouts/functionality beyond the normal title/body/button display.
+
+```js
+var popupObject = {
+    "title": "this is a text",
+    "_isCancellable": false,
+    _view: new PopupView({ model: new Backbone.Model({}) })
+};
+```
+This Subview can be fully configured:
+
+```js
+var PopupView = Backbone.View.extend({
+
+  events: {
+    "click button.cancel": "onCancelClick",
+    "click button.close": "onCloseClick"
+  },
+
+  onCancelClick: function() {
+    console.log("SUBNOTIFY: button.cancel clicked");
+    Adapt.trigger("notify:cancel");
+  },
+
+  onCloseClick: function() {
+    console.log("SUBNOTIFY: button.close clicked");
+    Adapt.trigger("notify:close");
+  },
+
+  initialize: function() {
+    console.log("SUBNOTIFY: initialized");
+    this.listenToOnce(Adapt, {
+      "notify:opened": this.onOpened,
+      "notify:closed": this.onClosed,
+      "notify:cancelled": this.onCancelled
+    });
+    this.render();
+  },
+
+  render: function() {
+    this.$el.append("this is a sub view <button class='cancel'>click here to cancel</button><button class='close'>click here to close</button>");
+  },
+
+  onOpened: function(notifyView) {
+    // notifyView.subView === this
+    if (notifyView.subView.cid !== this.cid) return;
+    console.log("SUBNOTIFY: opened");
+  },
+
+  onClosed: function() {
+    // called when notify is closed
+    console.log("SUBNOTIFY: closed");
+  },
+
+  onCancelled: function() {
+    // called when notify is cancelled
+    console.log("SUBNOTIFY: cancelled");
+  },
+
+  remove: function() {
+    // called when notify is closed
+    console.log("SUBNOTIFY: removed");
+    Backbone.View.prototype.remove.apply(this, arguments);
+  }
+
+});
+```
+For a working implementation of a Notify SubView, see the [hot graphic plugin](https://github.com/adaptlearning/adapt-contrib-hotgraphic)
 
 ### <a name="popupManager"></a>Popup Manager
 
