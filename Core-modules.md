@@ -167,7 +167,7 @@ Adapt.trigger('notify:popup', popupObject);// if using Adapt FW v4.3.0 or earlie
 Adapt.notify.popup(popupObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
-The popupObject has an `_isCancellable` property. If set to `false`:
+The `popupObject` has an `_isCancellable` property. If set to `false`:
 * the popup can only be closed via the `notify:close` event.
 * the cancel button will be removed. 
 * clicking on the shadow will not close the popup
@@ -288,7 +288,7 @@ var promptObject = {
 
 Adapt.trigger('notify:prompt', promptObject);// if using Adapt FW v4.3.0 or earlier
 
-Adapt.notify.alert(promptObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
+Adapt.notify.prompt(promptObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
 How to activate a push notification:
