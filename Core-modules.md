@@ -153,7 +153,7 @@ Adapt has an internal notifications system and can trigger four types of notific
 * **Popup** - Used for when you need to popup some additional information. Similar to the feedback plugin Tutor.
 * **Alert** - Used to get the users attention. Has a confirm button that needs clicking before progressing further in the course. The confirm button triggers a callback event.
 * **Prompt** - Used for when the learner needs to make a choice. The prompts can have unlimited button options but we suggest three is the maximum. Each prompt button triggers a callback event.
-* **Push** - Used to push an unobtrusive message to the learner. Similar to Mac OS growl. Only two push notifications are displayed at once whilst the others are push into a queue.
+* **Push** - Used to push an unobtrusive notification to the learner in a style similar to that of macOS/Windows 10 notifications. Only two push notifications are displayed at once; others are added into a queue and processed accordingly as the displayed ones are cleared.
 
 How to activate a popup:
 ```js
