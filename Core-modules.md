@@ -29,9 +29,9 @@ Adapt.trigger('navigation:backButton');
 
 ### <a name="router"></a>Router
 
-When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an "_id" attribute being passed in and the third handles routes for plugins. 
+When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an `_id` attribute being passed in and the third handles routes for plugins. 
 
-When an `"_id"` attribute is passed in:
+When an `_id` attribute is passed in:
 
 ```
 "#/id/co-05"
@@ -42,10 +42,10 @@ the router will follow this order:
 * Remove all currently active views.
 * Show a loading status.
 * Set contentObjects to visited.
-* Set Adapt.location object to the current "_id" being passed in. Add a class to the "#wrapper" element based upon location.
-* Search through the contentObjects collection and find the model with that "_id". Then render either a menu or a page.
+* Set Adapt.location object to the current `_id` being passed in. Add a class to the `#wrapper` element based upon location.
+* Search through the contentObjects collection and find the model with that `_id`. Then render either a menu or a page.
 
-The ``navigateToPreviousRoute`` method mimics the back button of the browser whilst keeping the user within an Adapt course. This is the default way Adapt routes but can be overwritten like this:
+The `navigateToPreviousRoute` method mimics the back button of the browser whilst keeping the user within an Adapt course. This is the default way Adapt routes but can be overwritten like this:
 
 ```js
 // Using locked attributes a plugin can change the default navigation
@@ -123,8 +123,6 @@ Adapt.on('app:dataReady', function() {
         description: "A nice little description of my drawer item and possibly what I expect to see when clicked on.",
         className: 'custom-class-added-to-item'
     };
-    // Syntax for adding a Drawer item
-    // Adapt.drawer.addItem([object], [callbackEvent]);
     Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');
 });
 ```
@@ -132,12 +130,10 @@ Adapt.on('app:dataReady', function() {
 To add a custom view into the Drawer pull out use the following (remember that this invokes the view straight away):
 
 ```js
-// Syntax for adding a custom Drawer view
-// Adapt.drawer.triggerCustomView([$element], [showBackButton:boolean]);
 Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collection}).$el, false);
 ```
 
-Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use ``'drawer:closeDrawer'``. Custom views also have the ability to show a back button. This is set to show by default. The back button takes the user back to the Drawer item view
+Custom views should deal with their own removing and closing of Drawer. To close the Drawer pull out, use `'drawer:closeDrawer'`. Custom views also have the ability to show a back button. This is set to show by default. The back button takes the user back to the Drawer item view
 
 Drawer passes out a few useful events:
 
@@ -259,7 +255,9 @@ var alertObject = {
     _showIcon: true
 };
 
-Adapt.trigger('notify:alert', alertObject);
+Adapt.trigger('notify:alert', alertObject);// if using Adapt FW v4.3.0 or earlier
+
+Adapt.notify.alert(alertObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 The alertObject has two specific properties. `confirmText` allows you to change the text of the confirm button presented in the alert popup. This button will dismiss the popup even if `_isCancellable: false` is set.
 
