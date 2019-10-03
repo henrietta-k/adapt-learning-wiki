@@ -17,25 +17,25 @@ This is where all the main loading and setup of Adapt begins. All the core Adapt
 
 The NavigationView controls the top navigation bar. To keep a nice separation of plugins, any icon or button placed in this view should contain a 'data-event' attribute:
 
-````
+```html
 <a href="#" data-event="backButton"><span>Back button</span></a>
-````
+```
 
 The Navigation View will then trigger an event based up the elements data-event:
 
-````
+```js
 Adapt.trigger('navigation:backButton');
-````
+```
 
 ### <a name="router"></a>Router
 
 When initialized, the router sets up the course title as the HTML document title. Adapt has a simple routing system with only three routes. The first route handles loading the course object, the second route handles an "_id" attribute being passed in and the third handles routes for plugins. 
 
-When an "_id" attribute is passed in:
+When an `"_id"` attribute is passed in:
 
-````
+```
 "#/id/co-05"
-````
+```
 
 the router will follow this order:
 
@@ -47,7 +47,7 @@ the router will follow this order:
 
 The ``navigateToPreviousRoute`` method mimics the back button of the browser whilst keeping the user within an Adapt course. This is the default way Adapt routes but can be overwritten like this:
 
-```
+```js
 // Using locked attributes a plugin can change the default navigation
 // Set _canNavigate to false
 Adapt.router.set('_canNavigate', false, {pluginName: '_pageLevelProgress'});
@@ -65,7 +65,7 @@ The router allows a three level routing system for plugins. When using the route
 
 ``pluginName`` is needed whilst ``location`` and ``action`` are optional. When a user is navigated to a plugin route the router sets the Adapt.location object and triggers an event:
 
-```
+```js
 // If the plugin route was
 // #/myPluginName/views/edit
 // Then Adapt will trigger:
@@ -93,19 +93,19 @@ As well as adding these classes, device.js triggers some events:
 
 * ``'device:resize'`` - This should be used to find out when the browser has resized and passes the new window size as an argument.
 
-````
+```js
 Adapt.on('device:resize', function(windowWidth) {
     console.log("Any time the window resizes I will be called and here's the new window width: ", windowWidth);
 });
-````
+```
 
 * ``'device:changed'`` - This is fired when the screen size changes between the set screen sizes ('large', 'medium', 'small') and passes the new screen size as an argument.
 
-````
+```js
 Adapt.on('device:changed', function(deviceSize) {
     console.log("Any time the device size changes I will be called and here's the new device size: ", deviceSize);
 });
-````
+```
 
 ### <a name="drawer"></a>Drawer
 
@@ -115,7 +115,7 @@ The Drawer module is a slide out panel from the right hand side. Drawer has two 
 * Custom view - Enables plugins to add a custom view into the Drawer pull out. This is then managed via the plugin itself.
 
 To add an item to the Drawer you need to listen to the ``'app:dataReady'`` event and add your item:
-```
+```js
 // Listen to 'app:dataReady'
 Adapt.on('app:dataReady', function() {
     var drawerObject = {
@@ -131,7 +131,7 @@ Adapt.on('app:dataReady', function() {
 
 To add a custom view into the Drawer pull out use the following (remember that this invokes the view straight away):
 
-```
+```js
 // Syntax for adding a custom Drawer view
 // Adapt.drawer.triggerCustomView([$element], [showBackButton:boolean]);
 Adapt.drawer.triggerCustomView(new PageLevelProgressView({collection:this.collection}).$el, false);
@@ -160,13 +160,15 @@ Adapt has an internal notifications system and can trigger four types of notific
 * Push - Used to push an unobtrusive message to the learner. Similar to Mac OS growl. Only two push notifications are displayed at once whilst the others are push into a queue.
 
 How to activate a popup:
-```
+```js
 var popupObject = {
     title: "Popup title",
     body: "This is a popup to add additional information - please close me by pressing the 'x'"
 };
 
-Adapt.trigger('notify:popup', popupObject);
+Adapt.trigger('notify:popup', popupObject);// if using Adapt FW v4.3.0 or earlier
+
+Adapt.notify.popup(popupObject);// if using Adapt FW v4.4.0 or later (the above will still work but will be removed in a future release)
 ```
 
 The popupObject has an `_isCancellable` property. If set to `false`:
@@ -269,7 +271,7 @@ Adapt.on('assessment:notPassedAlert', function() {
 ```
 
 How to activate a prompt dialogue:
-```
+```js
 var promptObject = {
     title: "Leaving so soon?",
     body: "Looks like you're trying to leave this page, yet you haven't completed all the learning. Would you like to stay on this page and complete it?",
@@ -292,7 +294,7 @@ Adapt.notify.alert(promptObject);// if using Adapt FW v4.4.0 or later (the above
 ```
 
 How to activate a push notification:
-```
+```js
 var pushObject = {
     title: "Great work!",
     body: "You've just done something that merited a push notification.",
