@@ -4,6 +4,7 @@ The Adapt community is committed to supporting the plug-ins listed below. Other 
 ## Components  
 #### Presentation Components  
 * **Accordion:** [wiki](https://github.com/adaptlearning/adapt-contrib-accordion/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-accordion)  
+* **Assessment Results:** [wiki](https://github.com/adaptlearning/adapt-contrib-assessmentResults/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-assessmentResults)  
 * **Blank:** [wiki](https://github.com/adaptlearning/adapt-contrib-blank/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-blank)    
 * **Graphic:** [wiki](https://github.com/adaptlearning/adapt-contrib-graphic/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-graphic)  
 * **Hot Graphic:** [wiki](https://github.com/adaptlearning/adapt-contrib-hotgraphic/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-hotgraphic)  
@@ -26,7 +27,6 @@ The Adapt community is committed to supporting the plug-ins listed below. Other 
 
 ## Extensions  
 * **Assessment:** [wiki](https://github.com/adaptlearning/adapt-contrib-assessment/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-assessment)    
-* **Assessment Results:** [wiki](https://github.com/adaptlearning/adapt-contrib-assessmentResults/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-assessmentResults)  
 * **Bookmarking:** [wiki](https://github.com/adaptlearning/adapt-contrib-bookmarking/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-bookmarking)  
 * **Page Level Progress:** [wiki](https://github.com/adaptlearning/adapt-contrib-pageLevelProgress/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-pageLevelProgress)   
 * **Resources:** [wiki](https://github.com/adaptlearning/adapt-contrib-resources/wiki); [source code](https://github.com/adaptlearning/adapt-contrib-resources)   
