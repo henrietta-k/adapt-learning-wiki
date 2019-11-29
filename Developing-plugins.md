@@ -1,8 +1,8 @@
 ### Overview
-The Adapt output framework has been designed to use a modular system of plug-ins. These plug-ins perform various  functions and allow you to pick and choose what components, extensions, themes, and menus are used in your course.
+The Adapt output framework has been designed to use a modular system of plug-ins. These plug-ins perform various functions and allow you to pick and choose what components, extensions, themes, and menus are used in your course.
 
 The Adapt ecosystem of plug-ins is growing and allows developers to produce their own custom interactions and make them available to others. The plug-in system is built on top of [Bower](http://bower.io/) and uses standard Bower packages alongside Git to create a searchable, shareable and distributed dependency model.
-Each plug-in must define itself as an [AMD module](/amdjs/amdjs-api/wiki/AMD).
+Each plug-in must define itself as an [AMD module](/amdjs/amdjs-api/blob/master/AMD.md).
 
 ### Configuration
 The Adapt output framework is pre-configured to search for plug-ins in our own registry, `http://adapt-bower-repository.herokuapp.com`.
@@ -11,9 +11,9 @@ The Adapt output framework is pre-configured to search for plug-ins in our own r
 
 
 #### Plug-in naming policy
-In order to publish a plug-in it is required that a plug-in name must:-
+In order to publish a plug-in, it is required that a plug-in name must:-
 
-1. Be **Unique**, plug-in names are available on a first come, first serve basis.
+1. Be **Unique**, plug-in names are available on a first-come, first-serve basis.
 2. Start with **adapt-**
 3. Not start with **adapt-contrib-**, this is reserved for plug-ins that have been acknowledged by the Adapt Community as "officially" supported. To achieve contrib status a plug-in must conform to the projects standard for code convention and test coverage.
 
