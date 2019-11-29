@@ -1,2 +1,2 @@
-## What has changed?
-Adapt v5 aims to make it easier to read and write the Adapt framework and plugins by introducing [BEM](http://getbem.com/), a new naming convention, and [SMACSS](http://smacss.com/), a modular approach to front end code. It transitions away from pixels towards rems, which increases support for cross-browser zoom and [font size](https://medium.com/@vamptvo/pixels-vs-ems-users-do-change-font-size-5cfb20831773) settings and improves Adapt’s [accessibility](https://www.w3.org/TR/WCAG20-TECHS/C14.html). The LESS has been modernised to simplify and remove redundancy, reducing theme interference and the need for multiple overrides.
+## Overview?
+Adapt v5 aims to make it easier to read and write the Adapt framework and plugins by introducing **BEM**, a new naming convention, and **SMACSS**, a modular approach to front-end code.
