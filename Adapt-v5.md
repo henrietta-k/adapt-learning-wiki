@@ -10,14 +10,14 @@ V5 has moved toward a CSS naming convention and structure based on BEM and SMACC
 
 Examples: 
 
-`.article__header `
-`.article__header-inner `
-`is-visited `
+`.article__header 
+.article__header-inner
+is-visited `
 
 LESS usage: 
 
-`.article { `
-  `&__header.is-visited { `
+`.article { 
+  &__header.is-visited { 
     `border: 2px solid grey; `
   `} `
   `&__header-inner { `
