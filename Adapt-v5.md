@@ -41,4 +41,8 @@ Whereas previously the JavaScript made use of existing styling classes, these ha
 
 ### Spacing and indentation 
 
-Spacing and indentation has been made consistent throughout Adapt files using two spaces for indentation rather than tabs. The exception to this is that json files have retained four-space indentation. 
+Spacing and indentation has been made consistent throughout Adapt files using two spaces for indentation rather than tabs. The exception to this is that json files have retained four-space indentation.
+
+### Vanilla theme
+
+Styling has largely been confined to the theme, where rem has been continued and the considerable variable abstractions have been removed. The theme folder structure has also been refactored to reflect core and that of the plugins, with styling redundancy (e.g., theme plugin less files that had been copied directly from the plugins) removed.
