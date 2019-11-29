@@ -2,7 +2,6 @@
 Adapt v5 aims to make it easier to read and write the Adapt framework and plugins by introducing **BEM**, a new naming convention, and **SMACSS**, a modular approach to front-end code.
 
 ## What has changed
-Framework and plugins 
 
 ### CSS naming and architecture 
 
@@ -10,26 +9,29 @@ V5 has moved toward a CSS naming convention and structure based on BEM and SMACC
 
 Examples: 
 
-`.article__header 
+.article__header
+
 .article__header-inner
-is-visited `
+
+is-visited
 
 LESS usage: 
 
-`.article { 
-  &__header.is-visited { 
-    `border: 2px solid grey; `
-  `} `
-  `&__header-inner { `
-    `background-color: blue; `
-  `} `
-`} `
+.article {
+
+  &__header.is-visited {}
+
+  &__header-inner {}
+
+}
 
 Core framework CSS now includes files for utility, layout and base classes following SMACSS recommendations for class categorisation. Layout classes are prefixed with .l- (e.g., .l-container-responsive) and utility classes begin with .u- (e.g., .u-display-none). Utility classes are those that serve a single purpose and are named as such for easy reuse. 
 
-`.u-display-none { `
-  `display: none; `
-`{` 
+.u-display-none {
+
+  display: none;
+
+{
 
 Core variable declarations have been reduced so as not to require heavy overriding in theme, and reset.less has been switched to normalize.less for increased cross-compatibility. 
 
@@ -39,7 +41,7 @@ CSS in both core and plugins has been modernised and stripped back to serve only
 
 Whereas previously the JavaScript made use of existing styling classes, these have now been decoupled into, where possible, JavaScript hooks and separate classes for styling alone.  
 
-`.nav__back-btn.js-nav-back-btn `
+.nav__back-btn.js-nav-back-btn
 
 ### Spacing and indentation 
 
