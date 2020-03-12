@@ -70,12 +70,12 @@ Before you submit a PR to us, there are a few hoops that we ask you to jump thro
 
 ### Creating a good PR
 Remember that the purpose of the pull request is to allow the other contributors to review what you have written. To this end, it's important that you have:
-* included a reference to the related Github issue/feature request
+* included a reference to the related GitHub issue/feature request (ideally using [the keyword technique](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
 * commented your commits well
 * given a short overview of what you've done
 * described the expected behaviour after the changes
 * listed any steps that need to be taken to check the changes
-* noted anything that should be ignore (for example a known issue that you are not addressing)
+* noted anything that should be ignored (e.g. a known issue that you are not addressing)
 * included screenshots if necessary
 There's a good [guide to commit messages and PRs](http://www.sitepoint.com/how-good-are-your-html-and-css-comments/) (you'll have to scroll down a bit) by [Georgie Luhur](http://www.sitepoint.com/author/gluhur/) over at sitepoint that's worth a read - it also has some great tips on commenting your code well.
 
