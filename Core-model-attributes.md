@@ -82,7 +82,6 @@ Attribute | Description | Default value
 `_parent`   |  | `"articles"`  
 `_siblings`   |  | `"blocks"`  
 `_children`   |  | `"components"` 
-`_sortComponents`   |  | `true` 
 `_ariaLevel`   | If you need to override the default block ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 
 ## Component Model Attributes  
