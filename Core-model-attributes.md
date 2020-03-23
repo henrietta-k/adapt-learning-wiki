@@ -65,6 +65,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"contentObjects"`  
 `_children`   |  | `"contentObjects"`  
 `_ariaLevel`   | If you need to override the default contentObject ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_onScreen`   | Attribute for attaching predefined animation to the contentObject when the element comes into view | See documentation below
 
 ## Article Model Attributes  
 
@@ -74,6 +75,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"articles"`  
 `_children`   |  | `"blocks"`  
 `_ariaLevel`   | If you need to override the default article ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_onScreen`   | Attribute for attaching predefined animation to the article when the element comes into view | See documentation below
 
 ## Block Model Attributes  
 
@@ -83,6 +85,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"blocks"`  
 `_children`   |  | `"components"` 
 `_ariaLevel`   | If you need to override the default block ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_onScreen`   | Attribute for attaching predefined animation to the block when the element comes into view | See documentation below
 
 ## Component Model Attributes  
 
@@ -92,7 +95,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"components"` 
 `_ariaLevel`   | If you need to override the default component ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 `_disableAccessibilityState`   | Disables the hidden label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. | `false`
-
+`_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See documentation below
 
 ## Question Model Attributes  
 
@@ -104,3 +107,21 @@ Attribute | Description | Default value
 `_canShowFeedback` | | `true`
 `_canShowMarking` | | `true`
 `_questionWeight` | | 
+
+## _onScreen documentation
+
+**\_onScreen** (object): The onScreen object that contains values for **\_isEnabled**, **\_classes**, and **\_percentInviewVertical**. The **\_onScreen** feature is best used with **blocks** and **components** though it can also be used with **contentObjects** and **articles**.
+
+**\_isEnabled** (boolean): Turns **_onScreen** functionality on and off. Acceptable values are `true` and `false`.
+
+**\_classes** (string): CSS class name to be applied to the location that **\_onScreen** is attached to. The class name is responsible for attaching the animation, and any associated styling required, to the element and must be predefined in one of the Less files. The standard values found in Vanilla's [_animations.less](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/_defaults/_animations.less) are `fade-in`, `fade-in-top`, `fade-in-bottom`, `fade-in-left`, and `fade-in-right`. The direction in each of the class names defines the animation start point, e.g. `fade-in-right` states that the animation fades in from right to left until the element sits within its natural position.
+
+**\_percentInviewVertical** (number): This value determines the percentage on screen the element must be before the animation is triggered. The default value is `33`.
+
+``` javascript
+"_onScreen": { 
+   "_isEnabled": true, 
+   "_classes": "fade-in-right", 
+   "_percentInviewVertical": 33
+}
+```
