@@ -108,9 +108,7 @@ Class.recordInstance = function() {
 ```
 Contrast [String.fromCharCode()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) with [String.prototype.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt).
 
-Natively Backbone and ES6 differ in the way they treat Class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
-
-In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
+This is how static properties are defined in both styles.
 
 Backbone:
 ```js
@@ -130,6 +128,10 @@ class Class {
   // defines class static properties
   static recordInstance () {}
 }
+
+Natively Backbone and ES6 differ in the way they treat Class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
+
+In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
 #### Practical differences between ES6 and Backbone classes
 With Backbone classes it is possible to assign any value or reference to the constructor prototype object, but it more complicated to add a property getter/setter.
