@@ -102,7 +102,7 @@ var Class = function Constructor() {
 };
 
 Class.instances = 0;
-Class.recordInstance = function() {
+Class.recordInstances = function() {
   this.instances++;
 };
 ```
@@ -117,7 +117,7 @@ var Class = new Backbone.Model.extend({
   log: function() {}
 }, {
   // defines class static properties
-  recordInstance() {}
+  recordInstances() {}
 });
 ```
 ES6:
@@ -126,7 +126,7 @@ class Class {
   // defines the constructor.prototype object
   log() {}
   // defines class static properties
-  static recordInstance () {}
+  static recordInstances() {}
 }
 ```
 
