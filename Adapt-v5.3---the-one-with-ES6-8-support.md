@@ -108,7 +108,7 @@ Class.recordInstance = function() {
 ```
 Contrast [String.fromCharCode()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) with [String.prototype.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt).
 
-This is how static properties are defined in both styles.
+Static properties are defined slightly differently in Backbone and ES6.
 
 Backbone:
 ```js
@@ -128,6 +128,7 @@ class Class {
   // defines class static properties
   static recordInstance () {}
 }
+```
 
 Natively Backbone and ES6 differ in the way they treat Class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
 
