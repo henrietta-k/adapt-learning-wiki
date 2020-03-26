@@ -135,7 +135,7 @@ Natively Backbone and ES6 differ in the way they treat Class static properties. 
 In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
 #### Practical differences between ES6 and Backbone classes
-With Backbone classes it is possible to assign any value or reference to the constructor prototype object, but it more complicated to add a property getter/setter.
+With Backbone classes it is possible to assign any value or reference to the constructor's prototype object or to the class statically, but it is much more complicated to add a property getter/setter.
 ```js
 var Class = Backbone.Model.extend({
   a: null,
@@ -144,17 +144,58 @@ var Class = Backbone.Model.extend({
   d: function() {},
   e: {},
   f: []
+}, {
+  A: null,
+  B: 1,
+  C: "string",
+  D: function() {},
+  E: {},
+  F: []
 });
 
-// getter/setter definition
+// prototype getter/setter definition
 Object.defineProperty(Class.prototype.g, {
-  get: function() {
-    return this._g;
-  },
-  set: function(value) {
-    this._g = value;
-  }
+  get: function() {},
+  set: function(value) {}
+});
+
+// static getter/setter definition
+Object.defineProperty(Class.G, {
+  get: function() {},
+  set: function(value) {}
 });
 ```
+
+In ES6 it is only possible to define a getter, setter or function on both the constructor's prototype object and on the class statically. This means that it is more difficult to assign default values on ES6 classes, but much easier to define getters and setters.
+
+```js
+class Class {
+
+  d() {}
+  get g() {}
+  set g(value) {}
+ 
+  static D() {}
+  static get G() {}
+  static set G(value) {}
+
+}
+
+// assign inheritable defaults
+Class.prototype.a = null;
+Class.prototype.b = 1;
+Class.prototype.c = "string";
+Class.prototype.e = {};
+Class.prototype.f = [];
+
+// assign static defaults
+Class.A = null;
+Class.B = 1;
+Class.C = "string";
+Class.D = function() {};
+Class.E = {};
+Class.F = [];
+```
+
 
 ... incomplete...
