@@ -166,7 +166,7 @@ Object.defineProperty(Class.G, {
 });
 ```
 
-In ES6 it is only possible to define a getter, setter or function on both the constructor's prototype object and on the class statically. This means that it is more difficult to assign default values on ES6 classes, but much easier to define getters and setters.
+In ES6 it is only possible to define a getter, setter or function on both the constructor's prototype object and on the class statically. This means that it is more difficult to assign inherited default values on ES6 classes, but much easier to define getters and setters.
 
 ```js
 class Class {
