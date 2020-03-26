@@ -98,19 +98,41 @@ instance.log2('test');
 Aside from being able to define constructor prototype behaviour for each instance, it is possible to assign properties directly to the Class, these are called static properties. Class static properties are often helpful for defining behaviour which belongs to a Class abstraction but which is not specific to an instance of the Class.
 ```js
 var Class = function Constructor() {
-  Class.instances++; // record that a new instance was made
+  Class.recordInstances(); // record that a new instance was made
 };
 
-Class.instances = 0; // keep a count of the number of instances created
+Class.instances = 0;
+Class.recordInstance = function() {
+  this.instances++;
+};
 ```
 Contrast [String.fromCharCode()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) with [String.prototype.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt).
 
 Natively Backbone and ES6 differ in the way they treat Class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
 
-In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbones static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class
+In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
-#### Differences between ES6 and Backbone classes
-With Backbone classes it is possible to assign any value or reference to the constructor prototype object, but it more complicated to add a property getter/setter
+Backbone:
+```js
+var Class = new Backbone.Model.extend({
+  // defines the constructor.prototype object
+  log: function() {}
+}, {
+  // defines class static properties
+  recordInstance() {}
+});
+```
+ES6:
+```js
+class Class {
+  // defines the constructor.prototype object
+  log() {}
+  // defines class static properties
+  static recordInstance () {}
+}
+
+#### Practical differences between ES6 and Backbone classes
+With Backbone classes it is possible to assign any value or reference to the constructor prototype object, but it more complicated to add a property getter/setter.
 ```js
 var Class = Backbone.Model.extend({
   a: null,
@@ -119,5 +141,15 @@ var Class = Backbone.Model.extend({
   d: function() {},
   e: {},
   f: []
+});
+
+// getter/setter definition
+Object.defineProperty(Class.prototype.g, {
+  get: function() {
+    return this._g;
+  },
+  set: function(value) {
+    this._g = value;
+  }
 });
 ```
