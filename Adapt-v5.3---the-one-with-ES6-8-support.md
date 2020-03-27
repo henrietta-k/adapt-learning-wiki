@@ -144,6 +144,7 @@ Natively Backbone and ES6 differ in the way they treat class static properties. 
 In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
 #### Practical differences between ES6 and Backbone classes
+##### Default inherited properties
 With Backbone classes it is possible to assign any value or reference to the constructor's prototype object or to the class statically, but it is much more complicated to add a property getter/setter.
 ```js
 var Class = Backbone.Model.extend({
@@ -205,5 +206,8 @@ Class.E = {};
 Class.F = [];
 ```
 
+##### Constructor vs Backbone initialize
+
+##### Backbone properties: defaults, id, attributes, className, 
 
 ... incomplete...
