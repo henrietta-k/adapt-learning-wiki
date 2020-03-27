@@ -208,6 +208,6 @@ Class.F = [];
 
 ##### Constructor vs Backbone initialize
 
-##### Backbone properties: defaults, id, attributes, className, 
+##### Backbone initializing properties: defaults, id, attributes, className
 
 ... incomplete...
