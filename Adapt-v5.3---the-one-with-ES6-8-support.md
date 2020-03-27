@@ -14,17 +14,17 @@ We still use [requirejs](https://requirejs.org/) to [bundle](https://www.freecod
 
 
 ### ES6 classes and Backbone
-There are a few major concepts worth understanding before using [ES6 Classes](https://exploringjs.com/es6/ch_classes.html) and [Backbone](https://backbonejs.org/) together. Backbone is an ES5 library for providing an easy Class abstraction and a few base classes from which to extend and make new, easy to read behaviours. ES6 Classes are the standardised ECMAScript native Class abstraction. Both Backbone and ES6 Classes seek to provide Class abstractions in similar but subtly different ways.
+There are a few major concepts worth understanding before using [ES6 Classes](https://exploringjs.com/es6/ch_classes.html) and [Backbone](https://backbonejs.org/) together. Backbone is an ES5 library for providing an easy class abstraction and a few base classes from which to extend and make new, easy to read behaviours. ES6 Classes are the standardised ECMAScript native class abstraction. Both Backbone and ES6 Classes seek to provide class abstractions in similar but subtly different ways.
 
 #### ECMAScript Class origins
-A Class in ECMAScript is simply a function called using the `new` keyword. This function is called the `constructor` function and is executed as usual using the `()` notation. When we call a function using the `new` keyword, an new object instance is created and passed into the function as its `this` keyword. We call this process instantiation - creating a new instance of the Class.
+A class in ECMAScript is simply a function called using the `new` keyword. This function is called the `constructor` function and is executed as usual using the `()` notation. When we call a constructor function using the `new` keyword, a new object instance is created and passed into the function as its `this` keyword. We call this process instantiation - creating a new instance of the class.
 ```js
 var Class = function() { // constructor function
   this; // is a new instance of the class
 };
 var instance = new Class(); // instantiation
 ````
-The new keyword allows us to specify a set of behaviours on the Class which each new object instance will inherit. These behaviours don't live on the instance directly but are instead inherited from the parent Class.
+The new keyword allows us to specify a set of behaviours on the class which each new object instance will inherit. These behaviours don't live on the instance directly but are instead inherited from the parent Class.
 ```js
 var Class = function Constructor(text) {
   this.savedText = text;
@@ -41,7 +41,7 @@ instance2.log('test4');
 If you execute and inspect the above code in a debugger, you will see that `savedText` lives directly on the new instance, whereas `log` is inherited via the `__proto__` property. 
 
 #### Inheritance chains
-It is possible to create many layers of inheritance such that one class is able to inherit behaviour from another and all behaviour from all classes in the chain of inheritance will be expressed on the instance.
+It is possible to create many layers of inheritance such that a class is able to inherit behaviour from another and all behaviour from all classes in the chain of inheritance will be expressed on the instance.
 ```js
 var Class = function ConstructorA() {};
 Class.prototype.log = function(text) { console.log(text); };
@@ -94,8 +94,10 @@ instance.log('test1');
 instance.log2('test');
 ```
 
+The named values on the objects passed into the `Backbone.Class.extend` function are copied property name by property name onto the constructor.prototype and constructor respectively. This means that with backbone, a getter's return value will be copied rather than the getter property description.
+
 #### Class static properties
-Aside from being able to define constructor prototype behaviour for each instance, it is possible to assign properties directly to the Class, these are called static properties. Class static properties are often helpful for defining behaviour which belongs to a Class abstraction but which is not specific to an instance of the Class.
+Aside from being able to define constructor prototype behaviour for each instance, it is possible to assign properties directly to the class constructor, these are called static properties. Class static properties are often helpful for defining behaviour which belongs to a class abstraction but which is not specific to an instance of the class.
 ```js
 var Class = function Constructor() {
   Class.recordInstances(); // record that a new instance was made
@@ -113,24 +115,31 @@ Static properties are defined slightly differently in Backbone and ES6.
 Backbone:
 ```js
 var Class = new Backbone.Model.extend({
-  // defines the constructor.prototype object
+  // defines the constructor.prototype object properties
+
   log: function() {}
+
 }, {
   // defines class static properties
+
   recordInstances() {}
+
 });
 ```
 ES6:
 ```js
 class Class {
-  // defines the constructor.prototype object
+  
+  // define a constructor.prototype object property
   log() {}
-  // defines class static properties
+
+  // define a class static property
   static recordInstances() {}
+
 }
 ```
 
-Natively Backbone and ES6 differ in the way they treat Class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
+Natively Backbone and ES6 differ in the way they treat class static properties. Backbone will copy the parent class static property values and assign them to the child class at the same property name, whereas ES6 will inherit parent class static properties on the child class.
 
 In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
@@ -192,7 +201,6 @@ Class.prototype.f = [];
 Class.A = null;
 Class.B = 1;
 Class.C = "string";
-Class.D = function() {};
 Class.E = {};
 Class.F = [];
 ```
