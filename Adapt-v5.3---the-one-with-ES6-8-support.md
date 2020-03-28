@@ -122,7 +122,7 @@ var Class = new Backbone.Model.extend({
 }, {
   // defines class static properties
 
-  recordInstances() {}
+  recordInstances: function() {}
 
 });
 ```
