@@ -144,7 +144,7 @@ Natively Backbone and ES6 differ in the way they treat class static properties. 
 In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
 #### Practical differences between ES6 and Backbone classes
-##### Backbone extend is by value, not by definition 
+##### `Backbone.Class.extend` is by value, not by definition 
 When the `extend` function is called from a Backbone class, the extend function copies the values of the enumerable properties by name from both the prototype and static objects. As the `extend` function copies values only it disregards property descriptions. This means that a getter defined for Backbone extend to copy will only copy the getter's value and not the getter definition.
 ```js
 var constructorPrototype = {};
@@ -259,6 +259,18 @@ Class.F = [];
 var instance = new Class();
 // the value of a is inherited from the class prototype
 instance.a === null;
+
+
+```
+
+The best way to set custom default values on ES6 classes is to do that in the `constructor`, `preinitialize` or `initialize` functions. These values will not inherited from the constructor prototype but will instead exist on the instance.
+
+```js
+class Class {
+  preinitialize() {
+    this.customDefault = 1;
+  }
+}
 ```
 
 ##### ES6 constructor vs Backbone initialize
@@ -274,7 +286,7 @@ var Class = Backbone.View.extend({
 ES6:
 ```js
 class Class {
-   constructor() {}
+  constructor() {}
 }
 ```
 
@@ -295,17 +307,102 @@ The same pattern continues to apply when using ES6 syntax.
 
 ```js
 class Class extends Backbone.View {
-   preinitialize() {
-    // executed before default constructor behaviour
-   }
-   initialize() {
-    // executed after default constructor behaviour
-   }
+  preinitialize() {
+   // executed before default constructor behaviour
+  }
+  initialize() {
+   // executed after default constructor behaviour
+  }
 }
 ```
 
 ##### Backbone initializing properties: defaults, id, attributes, className
+As `Backbone.extend` doesn't copy property definitions and as ES6 classes cannot have easily defined default values, it is easiest to convert all Backbone initializing properties to their alternative syntax, as function definitions.
 
+```js
+var Class = Backbone.Model.extend({
+  defaults: {
+    // defaults definition
+  }
+});
 
-##### 
-... incomplete...
+var Class = Backbone.View.extend({
+  attributes: {
+    // defaults definition
+  }
+});
+```
+
+The above code would be translated into the following in ES6.
+
+```js
+class Class extends Backbone.Model {
+   defaults() {
+     return {
+       // defaults definition
+     };
+   }
+}
+
+class Class extends Backbone.View {
+   attributes() {
+     return {
+       // defaults definition
+     };
+   }
+}
+```
+
+##### Super
+Previously if we needed to call a parent class function from the child class which has been overridden, we would need a reference to the parent class.
+```js
+var Class = Backbone.Model.extend({
+
+  test: function() {
+    console.log('parent');
+  }
+
+});
+
+var Class1 = Class.extend({
+
+  initialize: function() {
+    this.test();
+  },
+
+  test: function() {
+    // Call the test function on the parent class
+    Class.prototype.test.apply(this, arguments);
+    console.log('parent');
+  }
+
+});
+```
+
+In ES6 it becomes easier to do this with the `super` keyword.
+```js
+class Class extends Backbone.Model {
+
+  test() {
+    console.log('parent');
+  }
+
+}
+
+class Class1 extends Class {
+
+  initialize() {
+    this.test();
+  }
+
+  test(...args) {
+    // Call the test function on the parent class
+    super.test(...args);
+    console.log('child');
+  }
+
+}
+```
+
+### End
+Happy coding!
