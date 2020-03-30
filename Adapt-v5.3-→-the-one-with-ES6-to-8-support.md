@@ -11,6 +11,7 @@ We still use [requirejs](https://requirejs.org/) to [bundle](https://www.freecod
 * You can **only** use ES6-8 in the `/js/` folder of the core and plugins.
 * The `/required/` folder, the `/libraries/` folder and externally required modules **do not** support ES6-8 as these are not transpiled by our build process and will not work in IE11.
 * You **should not** use the [`import`](https://exploringjs.com/es6/ch_modules.html) and [`export`](https://exploringjs.com/es6/ch_modules.html) statements as we are still using [requirejs](https://requirejs.org/) as our module bundler.
+* If using ES6-8 in a plugin, you **must** specify `"framework": ">=5.3"` in the bower.json.
 
 
 ### ES6 classes and Backbone
