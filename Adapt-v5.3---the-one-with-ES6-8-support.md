@@ -10,7 +10,7 @@ We still use [requirejs](https://requirejs.org/) to [bundle](https://www.freecod
 #### Limitations
 * You can **only** use ES6-8 in the `/js/` folder of the core and plugins.
 * The `/required/` folder, the `/libraries/` folder and externally required modules **do not** support ES6-8 as these are not transpiled by our build process and will not work in IE11.
-* You **should not** use the [`import` and `export` statements](https://exploringjs.com/es6/ch_modules.html) as we are still using [requirejs](https://requirejs.org/) as our module bundler.
+* You **should not** use the [`import`](https://exploringjs.com/es6/ch_modules.html) and [`export`](https://exploringjs.com/es6/ch_modules.html) statements as we are still using [requirejs](https://requirejs.org/) as our module bundler.
 
 
 ### ES6 classes and Backbone
@@ -94,7 +94,7 @@ instance.log('test1');
 instance.log2('test');
 ```
 
-The named values on the objects passed into the `Backbone.Class.extend` function are copied property name by property name onto the constructor.prototype and constructor respectively. This means that with backbone, a getter's return value will be copied rather than the getter property description.
+The named values on the objects passed into the `Backbone.Class.extend` function are copied property name by property name onto the constructor.prototype and constructor respectively. This means that with Backbone, a getter's return value will be copied rather than the getter property description.
 
 #### Class static properties
 Aside from being able to define constructor prototype behaviour for each instance, it is possible to assign properties directly to the class constructor, these are called static properties. Class static properties are often helpful for defining behaviour which belongs to a class abstraction but which is not specific to an instance of the class.
@@ -144,8 +144,55 @@ Natively Backbone and ES6 differ in the way they treat class static properties. 
 In Adapt Framework we have a [polyfill](https://github.com/adaptlearning/adapt_framework/blob/master/src/core/libraries/backbone.es6.js) that corrects the Backbone's static property behaviour and brings it inline with ES6 inheritance, such that parent class static properties are now inherited by the child class in Adapt Framework.
 
 #### Practical differences between ES6 and Backbone classes
+##### Backbone extend is by value, not by definition 
+When the `extend` function is called from a Backbone class, the extend function copies the values of the enumerable properties by name from both the prototype and static objects. As the `extend` function copies values only it disregards property descriptions. This means that a getter defined for Backbone extend to copy will only copy the getter's value and not the getter definition.
+```js
+var constructorPrototype = {};
+Object.defineProperty(constructorPrototype, 'test', {
+  get: function() {
+    // perform tasks
+    return 1;
+  }
+});
+
+var Class = new Backbone.Model.extend(constructorPrototype);
+```
+The above definition would only copy the value of the `test` property to the constructor prototype rather than copying the property definition.
+
+It will produce:
+```js
+Class.prototype === {
+  test: 1
+};
+
+var instance = new Class();
+// the defined getter function isn't called
+instance.test === 1;
+```
+And not:
+```js
+Class.prototype === {
+  get test: function() {
+    // perform tasks
+    return 1;
+  }
+};
+```
+
+The way to define a getter or setter on a Backbone class is to perform the `Object.defineProperty` on the `constructor.prototype` after the class creation.
+
+```js
+var Class = new Backbone.Model.extend({});
+Object.defineProperty(Class.prototype, 'test', {
+  get: function() {
+    // perform tasks
+    return 1;
+  }
+});
+```
+
 ##### Default inherited properties
-With Backbone classes it is possible to assign any value or reference to the constructor's prototype object or to the class statically, but it is much more complicated to add a property getter/setter.
+With Backbone classes it is possible to assign any value or reference to the constructor's prototype object or to the class statically and for it to be inherited on the instance. It is however more complicated to add a property getter/setter.
 ```js
 var Class = Backbone.Model.extend({
   a: null,
@@ -174,9 +221,13 @@ Object.defineProperty(Class.G, {
   get: function() {},
   set: function(value) {}
 });
+
+var instance = new Class();
+// the value of a is inherited from the class prototype
+instance.a === null;
 ```
 
-In ES6 it is only possible to define a getter, setter or function on both the constructor's prototype object and on the class statically. This means that it is more difficult to assign inherited default values on ES6 classes, but much easier to define getters and setters.
+In ES6 it is only possible to define a getter, setter or function on both the constructor's prototype object and on the class statically. It is more difficult to assign inherited default values on ES6 classes but much easier to define getters and setters.
 
 ```js
 class Class {
@@ -204,10 +255,57 @@ Class.B = 1;
 Class.C = "string";
 Class.E = {};
 Class.F = [];
+
+var instance = new Class();
+// the value of a is inherited from the class prototype
+instance.a === null;
 ```
 
-##### Constructor vs Backbone initialize
+##### ES6 constructor vs Backbone initialize
+Backbone classes come with predefined constructors which provide default class instantiation behaviours. The `Backbone.Model` class has a constructor which initializes model defaults, `Backbone.View` has behaviour which constructs the parent element attached to the view instance at `this.$el`. It is possible to override the constructor function in both ES6 and Backbone classes as follows.
+
+Backbone:
+```js
+var Class = Backbone.View.extend({
+  constructor: function() {}
+});
+```
+
+ES6:
+```js
+class Class {
+   constructor() {}
+}
+```
+
+It is very unlikely however that anyone would want to override the default constructor behaviour of Backbone classes and so the Backbone constructor functions call a series of functions from which the default constructor can be extended rather than being overridden.
+
+```js
+var Class = Backbone.View.extend({
+  preinitialize: function() {
+    // executed before default constructor behaviour
+  },
+  initialize: function() {
+    // executed after default constructor behaviour
+  }
+});
+```
+
+The same pattern continues to apply when using ES6 syntax.
+
+```js
+class Class extends Backbone.View {
+   preinitialize() {
+    // executed before default constructor behaviour
+   }
+   initialize() {
+    // executed after default constructor behaviour
+   }
+}
+```
 
 ##### Backbone initializing properties: defaults, id, attributes, className
 
+
+##### 
 ... incomplete...
