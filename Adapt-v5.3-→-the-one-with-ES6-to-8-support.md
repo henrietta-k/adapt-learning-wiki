@@ -355,7 +355,7 @@ class Class extends Backbone.View {
 ```
 
 ##### Super
-Previously if we needed to call a parent class function from the child class which has been overridden, we would need a reference to the parent class.
+Previously if we needed to call a parent class function which had been overridden on the child class, we would need a reference to the parent class.
 ```js
 var Class = Backbone.Model.extend({
 
@@ -374,7 +374,7 @@ var Class1 = Class.extend({
   test: function() {
     // Call the test function on the parent class
     Class.prototype.test.apply(this, arguments);
-    console.log('parent');
+    console.log('child');
   }
 
 });
