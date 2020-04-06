@@ -264,7 +264,7 @@ instance.a === null;
 
 ```
 
-The best way to set custom default values on ES6 classes is to do that in the `constructor`, `preinitialize` or `initialize` functions. These values will not inherited from the constructor prototype but will instead exist on the instance.
+The best way to set custom default values on ES6 classes using Backbone, is to do that in the `constructor`, `preinitialize` or `initialize` functions. These values will not inherited from the constructor prototype but will instead exist on the instance. See more on these functions next.
 
 ```js
 class Class {
