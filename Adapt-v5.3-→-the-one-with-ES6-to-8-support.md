@@ -95,7 +95,7 @@ instance.log('test1');
 instance.log2('test');
 ```
 
-The named values on the objects passed into the `Backbone.Class.extend` function are copied property name by property name onto the constructor.prototype and constructor respectively. This means that with Backbone, a getter's return value will be copied rather than the getter property description.
+The named values on the objects passed into the `Backbone.Class.extend` function are copied property name by property name onto the constructor.prototype and constructor respectively. More on this later...
 
 #### Class static properties
 Aside from being able to define constructor prototype behaviour for each instance, it is possible to assign properties directly to the class constructor, these are called static properties. Class static properties are often helpful for defining behaviour which belongs to a class abstraction but which is not specific to an instance of the class.
