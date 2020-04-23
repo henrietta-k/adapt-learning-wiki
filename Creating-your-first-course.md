@@ -86,7 +86,7 @@ On a new line directly after paste the code you copied earlier, so the end of yo
         "displayTitle": "Presentation Components",
         "pageBody": "<strong>Scroll down to see what presentation components are available as part of the Version 2.0 core bundle.</strong>",
         "body": "Find out what presentation components are available within the core bundle and how you might consider using them within your courses. ",
-        "graphic": {
+        "_graphic": {
             "src": "course/en/images/menu_thumb.jpg",
             "alt": "Placeholder graphic."
         },
