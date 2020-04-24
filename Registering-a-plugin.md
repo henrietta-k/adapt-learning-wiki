@@ -1,5 +1,7 @@
 All plugins are Bower packages; to create your plugin you will first need to define your package, and then register it with our plugin registry.
 
+**Note:** as things stand, registration of plugins is only supported for plugins hosted in [GitHub](https://github.com/). If there is enough interest, we may add support for GitLab to the roadmap. Please register your interest [here](https://github.com/adaptlearning/adapt-cli/issues/122).
+
 #### Registering a new plugin
 
 To register a plugin, it must first comply with the following:
