@@ -104,7 +104,7 @@ Additional to and utilised by the HeadingView is the heading attribute helper `{
 * config.json: `_accessibility._ariaLevels: { componentItem: 5, ... }`
 * model: `_ariaLevel: 0`
 
-**Note:** Notify will always have heading level 1 since it is the only content represented on screen when active.
+**Note:** ~~Notify will always have heading level 1 since it is the only content represented on screen when active.~~ As of [v4.3.0](https://github.com/adaptlearning/adapt_framework/releases/tag/v4.3.0) the Notify heading level can now be set via `config.json`
 
 ### Invisible labels
 The Adapt Framework has a couple of template helpers functions which allow a developer to provide additional screen reader-only text labels for the user. These labels are visually hidden; their text is transparent, tiny and absolutely positioned so as not to influence the document flow.
