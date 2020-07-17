@@ -10,3 +10,5 @@ See the links below for further reading.
 * [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 * [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
 * [What is JSX](https://www.reactenlightenment.com/react-jsx/5.1.html)
+* [Import directives](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [Export directives](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
