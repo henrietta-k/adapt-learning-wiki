@@ -60,3 +60,4 @@
 * [Accessibility v3 → v4](https://github.com/adaptlearning/adapt_framework/wiki/Accessibility-v3-%E2%86%92-v4)
 * [Adapt v5](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5)
 * [Adapt v5.3 - ES6-8](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5.3-%E2%86%92-the-one-with-ES6-to-8-support)
+* [JSX](https://github.com/adaptlearning/adapt_framework/wiki/JSX)
