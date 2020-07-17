@@ -7,8 +7,10 @@ See the links below for further reading.
 * [issue/2824-jsx React version of accordion](https://github.com/adaptlearning/adapt-contrib-accordion/pull/97)
 
 ### References
+#### JSX
 * [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 * [JSX in depth](https://reactjs.org/docs/jsx-in-depth.html)
 * [What is JSX](https://www.reactenlightenment.com/react-jsx/5.1.html)
+#### ES6 Modules
 * [Import directives](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 * [Export directives](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
