@@ -61,3 +61,4 @@
 * [Adapt v5](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5)
 * [Adapt v5.3 - ES6-8](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5.3-%E2%86%92-the-one-with-ES6-to-8-support)
 * [ES6 Modules and JSX](https://github.com/adaptlearning/adapt_framework/wiki/ES6-Modules-and-JSX)
+* [Providing good alt text](https://github.com/adaptlearning/adapt_framework/wiki/Providing-good-alt-text)
