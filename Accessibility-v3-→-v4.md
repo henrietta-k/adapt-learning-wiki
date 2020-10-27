@@ -206,7 +206,7 @@ Table showing the use cases for alternative scrolling:
 </table>
 
 ### Screen-reader-specific text
-Occasionally, screen readers like Jaws do not read out the on-screen text correctly - and changing it to suit Jaws may not always be an option. The classic example is Jaws reading 'IT' as 'it' rather than 'eye tea'. As a workaround, Adapt v4.4.0 introduced the `ally_text` handlebars helper which can be used to give screen readers a different version of the text to read out, for example:{{a11y_alt_text 'IT' 'I T'}} or `{{a11y_alt_text '$5bn' 'five billion dollars'}}`
+Occasionally, screen readers like Jaws do not read out the on-screen text correctly - and changing it to suit Jaws may not always be an option. The classic example is Jaws reading 'IT' as 'it' rather than 'eye tea'. As a workaround, Adapt v4.4.0 introduced the `ally_text` handlebars helper which can be used to give screen readers a different version of the text to read out, for example: `{{a11y_alt_text 'IT' 'I T'}}` or `{{a11y_alt_text '$5bn' 'five billion dollars'}}`
 
 ### Browser and screen reader compatibility
 Accessibility in Adapt Framework v4 has been built with the following screen readers, browsers and operating systems in mind:
