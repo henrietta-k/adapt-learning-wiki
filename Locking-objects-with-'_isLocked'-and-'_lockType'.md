@@ -41,7 +41,7 @@ onClickMenuItemButton: function(event) {
 ```  
 Template example:  
 ```handlebars    
-<div class="menu-item-inner {{#if _locked}}locked{{/if}}" aria-label="{{_globals._menu._mymenu.menuItem}}" {{#if _globals._menu._mymenu.menuItem}}tabindex="0"{{/if}}>
+<div class="menu-item-inner {{#if _isLocked}}locked{{/if}}" aria-label="{{_globals._menu._mymenu.menuItem}}" {{#if _globals._menu._mymenu.menuItem}}tabindex="0"{{/if}}>
 
 ```  
 CSS/Less example:  
