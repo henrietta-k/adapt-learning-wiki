@@ -14,9 +14,11 @@ $ grunt build
 ### Theme variables  
 Simple customisation is possible by changing the built-in variables in **Vanilla**'s *less* folder: *colors.less*, *fonts.less*, *generic.less*, and *paddings.less*.  
 
+> **Note:** The Vanilla plugin was significantly modified with the release of version 5. Class names, variable names, less file names and locations changed. The specific data in this article pertains to versions of Vanilla that pre-date v5. However, the many of the general principles still apply. Read more about [Vanilla v5](https://github.com/adaptlearning/adapt_framework/wiki/Adapt-v5).
+
 #### Main colors
 
-Use variables to store your theme's colors. Assign these to roles in your color scheme. This will help achieve a consistent look and feel across your course.
+Use variables to store your theme's colors. Assign these to roles in your color scheme. This will help achieve a consistent look and feel across your course.  
 
 - **@primary-color**
 
