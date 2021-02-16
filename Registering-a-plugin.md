@@ -3,19 +3,21 @@ All plugins are Bower packages; to create your plugin you will first need to def
 **Note: registration of plugins is only supported for plugins hosted in [GitHub](https://github.com/)**. If there is enough interest, we may add support for GitLab to the roadmap. Please register your interest [here](https://github.com/adaptlearning/adapt-cli/issues/122).
 
 #### Registering a new plugin
-
 To register a plugin, it must first comply with the following:
-* There must be a valid manifest `bower.json` in the current working directory. 
+* There must be a valid `bower.json` in the current working directory. 
 * Your package must be available at a Git endpoint (e.g. `git://github.com/<user>/<repo_name>.git`).
 * There must be a valid `.bowerrc` file in the current working directory. See the [adapt_framework repository](https://github.com/adaptlearning/adapt_framework/blob/master/.bowerrc) for an example (you are fine to copy this as-is to your plugin source and you can safely delete it once you've registered your plugin).
 
-Once you are ready to publish, run the adapt command line interface and provide the required information.
+Once you are ready to publish, run the following command using the Adapt CLI and provide the required information when prompted
 
-```bash
-$ adapt register
+```console
+adapt register
 ```
 
-Your plugin will be published to the registry, you can confirm this by doing `adapt search <plugin-name>`. 
+Your plugin will be published to the registry, you can confirm this by doing:
+```console
+adapt search <plugin-name>
+```
 
 #### Plugin versioning
 
@@ -27,7 +29,7 @@ To create a new version of a registered plugin, simply [tag your git repository]
 To install a specific version of a plugin using the [Adapt Command Line Interface](//github.com/adaptlearning/adapt_framework/wiki/Adapt-Command-Line-Interface) run the install command followed by the name of the plugin, # symbol and then the version number.
 
 For example, the following would install version `0.0.2` of the `adapt-hello-world` plugin:
-```bash
+```console
 adapt install hello-world#0.0.2
 ```
 
