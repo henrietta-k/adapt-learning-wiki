@@ -25,7 +25,7 @@ When the course is closed, the course calls the LMS's SCORM function `LMSFinish`
 ### Bad solution
 > _Call LMSFinish and wait for it to complete before closing the window_
 
-We could change the way Adapt works to do an asynchronous (non-blocking) http request first, before any call to `window.close`, but `window.close` is only one way of closing the window. We aren't able trap or prevent or stop or delay other methods of closing a window in order to call a non-blocking `LMSFinish` first.
+We could change the way Adapt works to do an asynchronous (non-blocking) http request first, before any call to `window.close` but... `window.close` is only one way of closing the window. We aren't able trap or prevent or stop or delay other methods of closing a window in order to call a non-blocking `LMSFinish` first.
 
 For example, when a user clicks the window's close button, the JavaScript function `window.close` is never called, but the window triggers its unload events - which can't be stopped - Adapt calls `LMSFinish` from a window unload event handler, and then the browser then closes. `LMSFinish` in modern browsers (remember that `LMSFinish` is implemented by the LMS) is now not allowed to make a blocking http request, so when it does (in the case of this bug), the browser closes before the course's finishing http request is complete.
 
