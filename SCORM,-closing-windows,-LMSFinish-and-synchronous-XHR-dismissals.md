@@ -1,11 +1,11 @@
 ### Symptom
-Upon closing a SCORM course, the LMS doesn't do [something expected] when using a modern browser.
+Upon closing a SCORM course, the LMS doesn't do [something expected] when using a modern browser - typically one based on the Chromium rendering engine (Chrome, Edge, Opera etc.)
 
 ### SCORM overview
-The LMS makes a series of standardised, named functions, an API called SCORM, available in JavaScript with which the content JavaScript can interact. The content does not directly communicate with the LMS except through this SCORM API. The back end of the SCORM API, implemented by the LMS, communicates with the LMS on the course's behalf using http requests.
+The LMS makes a series of standardised, named functions (via the <abbr title="Sharable Content Object Reference Model">SCORM</abbr> API), available in JavaScript with which the content JavaScript can interact. The content does not directly communicate with the LMS except through this SCORM API. The back end of the SCORM API, implemented by the LMS, communicates with the LMS on the course's behalf using http requests.
 
 ### Problem summary
-When the course is closed, the course calls the LMS's SCORM function `LMSFinish`. In this case, the `LMSFinish` function uses a synchronous, or blocking, http request. Modern browsers prevent blocking https requests in order that whilst a request is being performed, the browser window does not hang. Instead, asynchronous or non-blocking http requests are performed so that the browser window stays performant whilst in use.
+When the course is closed, the course calls the LMS's SCORM function `LMSFinish`. In some cases, the `LMSFinish` function implemented by the LMS uses a synchronous, or blocking, XML-http request to save the data back to the server. Since around March 2020, Chromium-based browsers have prevented synchronous XML http requests in order that whilst a request is being performed, the browser window does not hang. Instead, asynchronous or non-blocking http requests are performed so that the browser window stays performant whilst in use.
 
 ### Problem use-case
 ##### Old method
@@ -36,4 +36,4 @@ You could add an additional close button to your course, which calls `LMSFinish`
 Fix the LMS's `LMSFinish` function.
 
 ### References
-[beforeunload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload), [unload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload), [sendBeacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon), [fun reading](https://community.trivantis.com/knowledge-base/chrome-80-will-disallow-synch-xhr-page-dismissal/), [more fun reading](https://support.scorm.com/hc/en-us/articles/360035814314-Blocked-SCORM-Exit-Postbacks-with-Google-Chrome-80-and-Above), [and more](https://community.articulate.com/discussions/articulate-storyline/chrome-78-release-on-22-october), [fetch#stayin-alive](https://javascript.info/fetch-api#keepalive)
+[beforeunload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload), [unload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunload), [sendBeacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon), [fun reading](https://community.trivantis.com/knowledge-base/chrome-80-will-disallow-synch-xhr-page-dismissal/), [more fun reading](https://support.scorm.com/hc/en-us/articles/360035814314-Blocked-SCORM-Exit-Postbacks-with-Google-Chrome-80-and-Above), [and more](https://community.articulate.com/discussions/articulate-storyline/chrome-78-release-on-22-october)
