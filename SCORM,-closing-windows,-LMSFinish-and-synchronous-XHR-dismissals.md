@@ -2,10 +2,10 @@
 Upon closing a SCORM course, the LMS doesn't do [something expected] when using a modern browser.
 
 ### SCORM overview
-The LMS makes a series of named functions (an API called SCORM) available in JavaScript which the content JavaScript interacts with. The content does not directly communicate with the LMS except through this SCORM API. The back end of the SCORM API, implemented by the LMS, communicates with the LMS on the course's behalf using http requests.
+The LMS makes a series of standardised, named functions, an API called SCORM, available in JavaScript with which the content JavaScript can interact. The content does not directly communicate with the LMS except through this SCORM API. The back end of the SCORM API, implemented by the LMS, communicates with the LMS on the course's behalf using http requests.
 
 ### Problem summary
-When the course is closed, the course calls the LMS's SCORM function LMSFinish. In this case, the LMSFinish function uses a synchronous, or blocking, http request. Modern browsers prevent blocking https requests in order to stop browser windows from hanging whilst a request is being performed. Instead, asynchronous or non-blocking http requests are performed so that the browser window stays performant whilst in use.
+When the course is closed, the course calls the LMS's SCORM function `LMSFinish`. In this case, the `LMSFinish` function uses a synchronous, or blocking, http request. Modern browsers prevent blocking https requests in order that whilst a request is being performed, the browser window does not hang. Instead, asynchronous or non-blocking http requests are performed so that the browser window stays performant whilst in use.
 
 ### Problem use-case
 ##### Old method
