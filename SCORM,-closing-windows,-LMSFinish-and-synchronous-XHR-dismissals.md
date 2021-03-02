@@ -30,7 +30,7 @@ We could change the way Adapt works to do an asynchronous (non-blocking) http re
 For example, when a user clicks the window's close button, the JavaScript function `window.close` is never called, but the window triggers its unload events - which can't be stopped - Adapt calls `LMSFinish` from a window unload event handler, and then the browser closes. `LMSFinish` in modern browsers (remember that `LMSFinish` is implemented by the LMS) is now not allowed to make a blocking http request, so when it does (in the case of this bug), the browser closes before the course's finishing http request is complete.
 
 ### Interim solution
-You could add an additional close button to your course, which calls `LMSFinish` when clicked, (see [adapt-close](https://github.com/cgkineo/adapt-close)). This won't stop users clicking the window close button and losing their stuff, as this isn't an LMS fix for the `LMSFinish` function, but it may buy you time until you can fix your LMS.
+You could add an additional close button to your course, which calls `LMSFinish` when clicked (see [adapt-close](https://github.com/cgkineo/adapt-close)). This won't stop users clicking the window close button and losing their stuff, as this isn't an LMS fix for the `LMSFinish` function, but it may buy you time until you can fix your LMS.
 
 ### Best solution
 Fix the LMS's `LMSFinish` function.
