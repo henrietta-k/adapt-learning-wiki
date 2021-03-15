@@ -110,7 +110,7 @@ Attribute | Description | Default value
 
 ## _onScreen documentation
 
-**\_onScreen** (object): The onScreen object that contains values for **\_isEnabled**, **\_classes**, and **\_percentInviewVertical**. The **\_onScreen** feature is best used with **blocks** and **components** though it can also be used with **contentObjects** and **articles**.
+**\_onScreen** (object): The **\_onScreen** object that contains values for **\_isEnabled**, **\_classes**, and **\_percentInviewVertical**. The **\_onScreen** feature is best used with **blocks** and **components** though it can also be used with **contentObjects** and **articles**.
 
 **\_isEnabled** (boolean): Turns **_onScreen** functionality on and off. Acceptable values are `true` and `false`.
 
