@@ -39,10 +39,10 @@ Attribute | Description | Default value
 **Figure 1**
 ``` javascript
 "_buttons": { 
-   "submit":"Submit", 
-   "reset":"Reset", 
-   "showCorrectAnswer":"ModelAnswer", 
-   "hideCorrectAnswer":"My Answer" 
+   "submit": "Submit", 
+   "reset": "Reset", 
+   "showCorrectAnswer": "ModelAnswer", 
+   "hideCorrectAnswer": "My Answer" 
 }
 ```
 
