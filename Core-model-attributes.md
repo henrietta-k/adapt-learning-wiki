@@ -32,7 +32,7 @@ Attribute | Description | Default value
 `_isHidden` | Controls the display of the item. If `_isHidden` is true, the item will not be displayed | `false`
 `_isOptional` | If set to `true`, the user will not be required to complete the component in order to complete the course. The completion of the component will still be tracked, but it will be ignored during any completion calculations.  | `false`
 `_isVisible` |  | `true`
-`_isLocked` | Menus and other plug-ins can set its value using “_lockType”. Reference [Locking objects with '_isLocked' and '_lockType'](Locking-objects-with-'_isLocked'-and-'_lockType')| `false`
+`_isLocked` | Menus and other plug-ins can set its value using `_lockType`. Reference [Locking objects with '_isLocked' and '_lockType'](Locking-objects-with-'_isLocked'-and-'_lockType')| `false`
 `_questionWeight` | The weight of a particular question, which is used when calculating the score. | `1`
 `_buttons` | An object to store the label values for template buttons. Buttons can then be referenced in templates using `{{{_buttons.submit}}}` | See fig.1.
 
