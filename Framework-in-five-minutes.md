@@ -2,7 +2,7 @@ If you're new to the Adapt framework, or the project in general, this page will 
 
 ## What is the Adapt framework?
 
-In a (somewhat verbose) nutshell :chestnut::squirrel:, the Adapt framework is:<br>
+In a (somewhat verbose) nutshell :chestnut:, the Adapt framework is:<br>
 > a modular, reusable codebase for developing single-version, easily localisable, responsive e-learning courses.
 
 What this means in practice:
