@@ -111,5 +111,3 @@ Event | Argument | Trigger
 `questionView:disabledFeedback` | `view` | a question is meant to show feedback but `_canShowFeedback` is disabled on the model
 `questionView:showInstructionError` | `view` | the learner has pressed submit without having selected an answer
 `questionView:recordInteraction` | `view` | the learner has answered a question that needs to be reported to SCORM/xAPI's cmi.interactions
-`question:refresh` | `null` | add desc
-`buttons:stateUpdate` | `BUTTON_STATE` | one of the buttons in the question buttons view has been pressed. The argument `BUTTON_STATE` is an [enum](https://en.wikipedia.org/wiki/Enumerated_type) representing the state of the button at the time it was pressed e.g. `BUTTON_STATE.SHOW_CORRECT_ANSWER` if the 'Show Correct Answer' button was pressed, `BUTTON_STATE.HIDE_CORRECT_ANSWER` if the 'Show your answer' button was pressed.
