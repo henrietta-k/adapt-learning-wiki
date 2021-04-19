@@ -60,27 +60,56 @@ Event | Argument | Description
 
 #### Core views
 
-Event | Argument | Description
------ | -------- | -----------
-`menuView:preRender` | `view` | Triggered when a menu’s view has initialised.
-`menuView:postRender` | `view` | Triggered when a menu’s view has rendered.
-`pageView:preRender` | `view` | Triggered when a page’s view has initialised.
-`pageView:postRender` | `view` | Triggered when a page’s view has rendered.
-`pageView:ready` | `view` | Triggered when all the assets are loaded for a page.
-`articleView:preRender` | `view` | Triggered when an article’s view has initialised.
-`articleView:postRender` | `view` | Triggered when an article’s view has rendered.
-`blockView:preRender` | `view` | Triggered when a block’s view has initialised.
-`blockView:postRender` | `view` | Triggered when a block’s view has rendered.
-`componentView:preRender` | `view` | Triggered when a component’s view has initalised.
-`componentView:postRender` | `view` | Triggered when a component’s view has rendered.
-`navigationView:preRender` | `view` | Triggered when navigation view has initialised.
-`navigationView:postRender` | `view` | Triggered when navigation view has rendered.
-`questionView:showFeedback` | `view` | Triggered when a question shows feedback. Question view automatically sets up `feedbackTitle` and `feedbackMessage` as attributes on the current view’s model.
-`questionView:disabledFeedback` | `view` | Triggered when a question is meant to show feedback but `_canShowFeedback` is disabled on the model.
+##### Generic Events
+These events are triggered by all the different view types in Adapt - so you can listen to the event from a specific kind of view by changing `view:` to one of the following:
+* `contentObjectView:` (pages and menus)
+* `menuView:`
+* `pageView:`
+* `articleView:`
+* `blockView:`
+* `componentView:`
 
-#### Navigation events
-
-Event | Argument | Description
+Event | Argument | Trigger
 ----- | -------- | -----------
-`navigation:backButton` | | Triggered when the menu button is pressed.
-`navigation:toggleDrawer` | | Triggered when the drawer toggle button is clicked.
+`view:preRender` | `view` | a view has initialised
+`view:render` | `view` | a view is rendering
+`view:postRender` | `view` |  a view has rendered
+`view:preRemove` | `view` | a view about to be removed
+`view:remove` | `view` | a view is being removed
+`view:postRemove` | `view` | a view has been removed
+
+
+##### Page/Menu Events
+These events are all triggered by page or menu views - so you can listen to the event from a specific kind of view by changing `view:` to one of the following:
+* `contentObjectView:` (pages and menus)
+* `menuView:`
+* `pageView:`
+
+Event | Argument | Trigger
+----- | -------- | -----------
+`view:preReady` | `view` | a view is about to start loading its assets
+`view:ready` | `view` | all the view's assets have loaded
+`view:postReady` | `view` | all the assets are loaded for a view
+
+##### Navigation events
+Event | Argument | Trigger
+----- | -------- | -----------
+`navigationView:preRender` | `view` | navigation view has initialised
+`navigationView:postRender` | `view` | navigation view has rendered
+`navigation:backButton` | `null` | the navigation back button is pressed
+`navigation:homeButton` | `null` | the navigation home button is pressed
+`navigation:parentButton` | `null` | the navigation up button is pressed
+`navigation:skipNavigation` | `null` | the skip navigation button is pressed
+`navigation:returnToStart` | `null` | the return to start button is pressed
+`navigation:toggleDrawer` | `null` | the drawer toggle button is clicked
+
+
+##### Question events
+Event | Argument | Trigger
+----- | -------- | -----------
+`questionView:showFeedback` | `view` | a question shows feedback. Question view automatically sets up `feedbackTitle` and `feedbackMessage` as attributes on the current view’s model
+`questionView:disabledFeedback` | `view` | a question is meant to show feedback but `_canShowFeedback` is disabled on the model
+`questionView:showInstructionError` | `view` | when the learner has pressed submit without having selected an answer
+`questionView:recordInteraction` | `view` | the learner has answered a question that needs to be reported to SCORM/xAPI's cmi.interactions
+`question:refresh` | `null` | add desc
+`buttons:stateUpdate` | `BUTTON_STATE` | one of the buttons in the question buttons view has been pressed. The argument `BUTTON_STATE` is an [enum](https://en.wikipedia.org/wiki/Enumerated_type) representing the state of the button at the time it was pressed e.g. `BUTTON_STATE.SHOW_CORRECT_ANSWER` if the 'Show Correct Answer' button was pressed, `BUTTON_STATE.HIDE_CORRECT_ANSWER` if the 'Show your answer' button was pressed.
