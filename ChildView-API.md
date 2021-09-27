@@ -1,5 +1,3 @@
-# ChildView API
-
 To understand the ChildView API it is helpful to review how rendering works in Adapt.
 
 After a view is rendered it continues by rendering its immediate children. Once the immediate children have been rendered, the first of these children renders its immediate children, then the second child renders its immediate children and so on. The order can be described as an immediate children first approach. The process continues until all descendents have been rendered or the process is halted. When rendering a page the effect, then, is to first render articles, then blocks, then components.
