@@ -92,7 +92,7 @@ As of v2.0.14 Adapt provides grunt tasks for export and import of translatable c
    **Command options:**  
     `--targetLang=xx` Specifies the language of the translated files. Multiple languages not allowed.   
     `--masterLang=xx`  Specifies the existing master course language. Defaults to `en`.  
-    `--format=json|raw|csv` Specifies the format of the files being imported. Acceptable values are `json`, `csv`, or `raw`. Defaults to `json`.  
+    `--format=json|raw|csv` Specifies the format of the files being imported. Acceptable values are `json`, `csv`, or `raw`.  
     `--csvDelimiter=x` Specifies the delimiter used if CSV files are being imported. Defaults to `,`.  
     `--replace` Indicates an existing folder named with the value of `targetLang` should be overwritten with the imported texts. This option does not take a value.
 
