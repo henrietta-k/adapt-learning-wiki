@@ -78,6 +78,7 @@ Event | Argument | Trigger
 `view:remove` | `view` | a view is being removed
 `view:postRemove` | `view` | a view has been removed
 
+Parent views also have event used to manage their children. See [ChildView API](https://github.com/adaptlearning/adapt_framework/wiki/ChildView-API).
 
 ##### Page/Menu Events
 These events are all triggered by page or menu views - so you can listen to the event from a specific kind of view by changing `view:` to one of the following:
@@ -90,8 +91,6 @@ Event | Argument | Trigger
 `view:preReady` | `view` | a view is about to start loading its assets
 `view:ready` | `view` | all the view's assets have loaded
 `view:postReady` | `view` | all the assets are loaded for a view
-
-Parent views also have event used to manage their children. See [ChildView API](https://github.com/adaptlearning/adapt_framework/wiki/ChildView-API).
 
 ##### Navigation events
 Event | Argument | Trigger
