@@ -91,7 +91,7 @@ Event | Argument | Trigger
 `view:ready` | `view` | all the view's assets have loaded
 `view:postReady` | `view` | all the assets are loaded for a view
 
-Views also have event used to manage their children. See [ChildView API](https://github.com/adaptlearning/adapt_framework/wiki/ChildView-API).
+Parent views also have event used to manage their children. See [ChildView API](https://github.com/adaptlearning/adapt_framework/wiki/ChildView-API).
 
 ##### Navigation events
 Event | Argument | Trigger
