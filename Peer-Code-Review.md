@@ -42,13 +42,13 @@ A core developer will approve an PR because of the following:
 - The implementation of the PR is accepted.
 - The submitted code complies with the code-style outlined in the project's [styleguide](https://github.com/adaptlearning/documentation/blob/master/01_cross_workstream/style_guide.md).
 - The code passes all automated tests.
-- No negative issues resulting from the proposed changes are forseen.
+- No negative issues resulting from the proposed changes are foreseen.
 
 ## Core Team Members
 
-**Adapt Framework Core Developers:** Thomas Berger, Oliver Foster, Dan Gray, Tom Greenfield, Matt Leathes, Brian Quinn, Tom Taylor, Nils Sanderson, Aniket Daria, Nayan Khedkar, Ratnadeep Rajput, Chetan Hajare
+**Adapt Framework Core Developers:** Alex Benesch, Oliver Foster, Dan Gray, Tom Taylor, Cahir O'Doherty, Brian Quinn Aniket Daria, Nayan Khedkar, Ratnadeep Rajput, Chetan Sachdev, Chris Steele, Chuck Lorenz, Eleanor Heath, Kirsty Hames, Guy Willis, Joe Allen
  
-**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Greenfield, Dennis Heaney, Brian Quinn, Tom Taylor, Nicola Willis.
+**Adapt Authoring Tool Core Developers:** Thomas Berger, Dan Gray, Tom Taylor, Nicola Willis, Ali Maimaiti, Ingo Klemm
 
 ## References
 
