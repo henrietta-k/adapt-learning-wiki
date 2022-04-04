@@ -23,7 +23,7 @@ ____________
 
 Install the following before proceeding:
 * <a href="http://git-scm.com/downloads" target="_blank">Git</a>
-* <a href="http://nodejs.org/" target="_blank">Node.js</a> (the <a href="https://nodejs.org/en/about/releases/" target="_blank">LTS</a> version; Currently version 14 or 16)
+* <a href="http://nodejs.org/" target="_blank">Node.js</a> (the <a href="https://nodejs.org/en/about/releases/" target="_blank">LTS</a> version - currently 14 or 16)
 * <a href="http://gruntjs.com/" target="_blank">grunt-cli</a>
 * <a href="https://github.com/adaptlearning/adapt-cli" target="_blank">adapt-cli</a>  
 
