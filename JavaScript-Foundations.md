@@ -2,7 +2,7 @@
 Below are some short lessons and resources on programming concepts.
 
 # The 'event loop'
-As a single threaded language, JavaScript or ECMAScript, can only execute one line of code at a time. The currently running line is kept as part of a call stack (which you can see in your debugger) as a list of functions. Each new function, as it is executed, is pushed to the top of the call stack and popped from the top upon return. Using the callback queue and the event loop, built into the ECMAScript environment, it is possible to queue function calls on a new call stack for later execution. This is primarily how DOM events, such as click or scroll, are able to execute callback handler functions.
+As a single threaded language, JavaScript or ECMAScript, can only execute one line of code at a time. The currently running line is kept as part of a call stack (which you can see in your debugger) as a list of functions. Each new function, as it is executed, is pushed to the top of the call stack with its scopes and popped from the top of the stack upon its return. Using the callback queue and the event loop, built into the ECMAScript environment, it is possible to queue function calls on a new call stack for later execution. This is primarily how DOM events, such as click or scroll, are able to execute callback handler functions.
 
 [Video - What is the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)<br/><br/>
 
