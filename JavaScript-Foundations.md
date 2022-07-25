@@ -7,7 +7,7 @@ As a single threaded language, JavaScript or ECMAScript, can only execute one li
 [Video - What is the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)<br/><br/>
 
 # Set theory
-A 'set' is, [mathematically speaking](https://en.wikipedia.org/wiki/Set_theory), an unordered group/pile of unique items; think [venn diagrams](https://en.wikipedia.org/wiki/Venn_diagram). Two sets can intersect, such that they have a series of indentical and potentially differing items. A set may be a subset or superset of any other, in that it contains only part of or includes the entirety of the second set. Sets can be joined in a union forming larger sets or split into further subsets.
+A 'set' is, [mathematically speaking](https://en.wikipedia.org/wiki/Set_theory), an unordered group/pile of unique items Two sets can intersect, such that they have a series of indentical and potentially differing items. A set may be a subset or superset of any other, in that it contains only part of or includes the entirety of the second set. Sets can be joined in a union forming larger sets or split into further subsets; think [venn diagrams](https://en.wikipedia.org/wiki/Venn_diagram).
 
 [Webpage - Basic set theory](https://plato.stanford.edu/entries/set-theory/basic-set-theory.html)<br>
 [Video - Introduction to set theory - Discrete Mathematics](https://www.youtube.com/watch?v=tyDKR4FG3Yw)
