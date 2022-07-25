@@ -12,6 +12,18 @@ A 'set' is, [mathematically speaking](https://en.wikipedia.org/wiki/Set_theory),
 [Webpage - Basic set theory](https://plato.stanford.edu/entries/set-theory/basic-set-theory.html)<br>
 [Video - Introduction to set theory - Discrete Mathematics](https://www.youtube.com/watch?v=tyDKR4FG3Yw)
 
+### In JavaScript
+Set theory is used in a variety of ways in both the [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and [libraries](https://en.wikipedia.org/wiki/List_of_JavaScript_libraries) associated with JavaScript.
+
+[jQuery](https://api.jquery.com/) is a utility library, predominantly used for manipulating the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model). jQuery's main function, usually `$()`, returns a subset of document elements (`<div>, <span>, <a>`) against which to perform functions. jQuery has functions for [uniting jQuery sets](https://api.jquery.com/add/), for [generating jQuery subsets](https://api.jquery.com/filter/) and for [traversing the DOM heirarchy](https://api.jquery.com/children/). It is possible using jQuery to [attach a single event handler](https://api.jquery.com/on/) to all of the elements in the set using a single line. jQuery uses an [extended version of the CSS selector](https://api.jquery.com/jQuery/) syntax to create a subset of the elements in the document.
+
+[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is a core JavaScript class designed to hold a set of variables ordered by an index, starting at index 0. Array has native functions for [uniting arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), for [generating Array subsets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and for [transforming](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [manipulating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) array items.
+
+### In Databases
+
+### In CSS
+
+
 jQuery
 Array
 lodash
