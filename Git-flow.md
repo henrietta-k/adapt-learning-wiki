@@ -38,18 +38,13 @@ We use the following branches in the core Adapt repositories:
 Name | Description | Persisting
 ---- | ----------- | ----------
 `master` | Contains the stable, released code. | yes
-`release/VERSION_NAME`<br/>*(e.g. `release/v2.0`)* | A release candidate branch. Contains **development** code, and should not be considered stable. Use this code at your own risk! | no
 `issue/TICKET_NAME` <br/>*(e.g. `issue/1024`)* | A self-contained bug-fix. Should be named after a corresponding issue ID. Finished changes should be submitted as a pull request. | no
-`feature/FEATURE_NAME` | A self-contained feature. This should also be named with an issue ID (see above). Finished changes should be submitted as a pull request. | no
 
 We also apply the following rules to the core Adapt repos (i.e. those owned by [@adaptlearning](https://github.com/adaptlearning)):
 
 * The `master` branch is the only persisting branch. All other branches should be deleted post-merge.
-* Core Adapt repos should only ever have `master` and `release` branches.
-* The `master` branch contains only *thoroughly* tested code, and should only ever merge code from a `release` branch.
-* `feature` branches represent isolated, new functionality, and should be taken from the latest `release` branch. Once work is complete, code should be submitted as a pull request (PR) to the latest `release` branch (**NOT** `master`).
-* Bug fixes (i.e. `issue` branches) should be submitted as a PR to the current `release` branch (**NOT** `master` -- due to our frequent release schedule, we don't allow hotfixes directly into `master`).
-* Anyone who is making a change to a repo should create and work from their own fork (including where possible, the core team).
+* The `master` branch contains only *thoroughly* tested code.
+* Bug fixes (i.e. `issue` branches) should be submitted as a PR to the `master` branch.
 
 ## Git projects
 A git project is a folder on your hard drive which keeps a journal of file change commits, in branches, to which you can commit, pull, merge and push other file change commits.<br/><br/>
