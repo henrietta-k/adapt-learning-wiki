@@ -19,6 +19,8 @@ Set theory is used in a variety of ways in both the [Web APIs](https://developer
 
 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is a core JavaScript class designed to hold a set of variables ordered by an index, starting at index 0. Array has native functions for [uniting arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), for [generating Array subsets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and for [transforming](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [manipulating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) array items.
 
+[Underscore.js](https://underscorejs.org/) and [lodash](https://lodash.com/docs/4.17.15) are both utility libraries for JavaScript. They both contain a series of functions which allow for Array [interections](https://lodash.com/docs/4.17.15#intersection) and [differences](https://lodash.com/docs/4.17.15#difference).
+
 ### In Databases
 
 ### In CSS
