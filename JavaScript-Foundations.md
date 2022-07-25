@@ -24,7 +24,7 @@ Set theory is used in a variety of ways in both the [Web APIs](https://developer
 As may be apparant from the above libraries, implementations of the core set theory concepts often allow for non-unique set items and often extend sets with sort order, item names and a whole raft of problem specific capabilities.
 
 ### ... in Databases
-Set theory is the foundation on which modern databases functions.
+Set theory is the foundation on which modern databases function.
 
 In [SQL (structured query language)](https://en.wikipedia.org/wiki/SQL), each table in a database is a set of unique rows/items. SQL allows the database administrators and systems designers to select and join the tables using the `FROM ... ON ...` clause, create subsets using the `WHERE` clause, and provides extra behaviour for sorting in `ORDER BY`, grouping in `GROUP BY` and projecting the result into a new table/set of the selected columns using the `SELECT` clause.
 
