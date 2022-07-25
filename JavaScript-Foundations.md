@@ -115,3 +115,5 @@ Each CSS statement begins with a [CSS selector](https://developer.mozilla.org/en
 
 ### Minimum compatible implementations
 
+# Final notes
+One of the newest and most documented engineering subdiciplines. Resources.
