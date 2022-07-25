@@ -31,5 +31,87 @@ In [SQL (structured query language)](https://en.wikipedia.org/wiki/SQL), each ta
 ### ... in CSS
 Each CSS statement begins with a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors), the rules inside this statement are applied to the set of elements selected from the DOM by the selector. jQuery utilises this selector syntax in order to select DOM elements from within JavaScript.
 
+# Primitives, object references and operators
 
+## Primitives
+
+## Object references
+
+## Operators
+
+# Patterns and paradigms
+
+## Paradigms
+
+### Functional vs object-orientated
+
+#### Functional
+
+#### Object orientated 
+
+### Imperative vs declarative
+
+#### Imperative
+
+#### Declarative
+
+## Patterns
+
+### Sort
+
+### MVC
+
+### Observer/observable
+
+# Modularisation
+
+## Functions
+
+## Classes
+
+## Modules
+
+## APIs
+
+## Libraries
+
+# Compilers
+
+## Abstract Syntax Tress
+
+## Bundlers
+
+## Transpilers
+
+## Pseudo-languages
+
+# Design, implementation and planning
+
+## Software development methodologies 
+
+## Object-orientated design
+
+## Project planning
+
+### Gantt charts
+
+### Critical path
+
+### Risk management and critical thinking
+
+# Media distribution
+
+## Transport
+
+## Encoding
+
+# Accessibility
+
+## Tools
+
+### Market coverage
+
+## Specifications
+
+### Minimum compatible implementations
 
