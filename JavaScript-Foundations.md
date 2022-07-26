@@ -32,6 +32,7 @@ In [SQL (structured query language)](https://en.wikipedia.org/wiki/SQL), each ta
 Each CSS statement begins with a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors), the rules inside this statement are applied to the set of elements selected from the DOM by the selector. jQuery utilises this selector syntax in order to select DOM elements from within JavaScript.
 
 # Primitives, object references and operators
+Variables in JavaScript behave slightly differently from other languages and so in order to really grasp the language it's worth understanding the specific rules.
 
 ## Primitives
 
