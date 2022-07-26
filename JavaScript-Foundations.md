@@ -34,7 +34,12 @@ Each CSS statement begins with a [CSS selector](https://developer.mozilla.org/en
 # Primitives, object references and operators
 Variables in JavaScript behave slightly differently from other languages and so in order to really grasp the language it's worth understanding the specific rules.
 
+Definition: A variable is a place to store a [primitive value](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) or an [object reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+
 ## Primitives
+Are simply values of the type `string`, `number`, `boolean`, `undefined`, `null`, `bigint` and `symbol`. The last two, bigint and symbol we'll leave aside for the moment.
+
+String is any text, usually encapsulated in single quotes, `'this is some text'`. A string value, when writting in code, can have specially escaped characters representing things like a tab `\t` or a new line `\n`; when these special characters are compiled by the browser the are translated into their respective real characters when stored in memory, such that the representations in the editor and the actual value in memory can be ever so slightly different.
 
 ## Object references
 
