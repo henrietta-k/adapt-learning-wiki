@@ -41,7 +41,8 @@ Are simply values of the type [`string`](https://developer.mozilla.org/en-US/doc
 
 String is any text, usually encapsulated in single quotes, `'this is some text'`. A string value, when writting in code, can have specially escaped characters representing things like a tab `\t` or a new line `\n`; when these special characters are compiled by the browser they are translated into their respective real characters when stored in memory, such that the representations in the editor and the actual value in memory can be ever so slightly different.
 
-## Object references
+## Objects
+
 
 ## Operators
 
