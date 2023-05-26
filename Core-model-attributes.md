@@ -12,7 +12,7 @@ All core models extend **adaptModel** (adaptModel.js), and so contain its attrib
 - blockModel (blockModel.js)  
 - componentModel (componentModel.js)  
 
-In addition, questionModel (questionModel.js) extends componentModel (componentModel.js). 
+In addition, [questionModel.js](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#question-model-attributes) extends componentModel (componentModel.js). 
 
 An asterisk denotes that an attribute is required.  
 
