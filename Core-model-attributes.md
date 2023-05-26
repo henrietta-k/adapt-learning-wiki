@@ -95,7 +95,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"components"` 
 `_ariaLevel`   | If you need to override the default component ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 `_disableAccessibilityState`   | Disables the hidden label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. | `false`
-`_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See documentation below
+`_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
 ## Question Model Attributes  
 
