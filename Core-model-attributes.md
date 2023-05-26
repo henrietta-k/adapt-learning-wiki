@@ -3,14 +3,14 @@ The following extend the [**Backbone model**](http://backbonejs.org/#Model):
 - lockingModel (lockingModel.js)  
 - notifyModel (notifyModel.js)  
 - routerModel (routerModel.js)  
-- adaptModel (adaptModel.js)  
+- [adaptModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#adapt-model-attributes) (adaptModel.js)  
 
 All core models extend **adaptModel** (adaptModel.js), and so contain its attributes:  
-- courseModel (courseModel.js)  
-- contentObjectsModel (contentObjectsModel.js)  
-- articleModel (articleModel.js)  
-- blockModel (blockModel.js)  
-- componentModel (componentModel.js)  
+- [courseModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#course-model-attributes) (courseModel.js)  
+- [contentObjectsModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#contentobjects-model-attributes) (contentObjectsModel.js)  
+- [articleModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#article-model-attributes) (articleModel.js)  
+- [blockModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#block-model-attributes) (blockModel.js)  
+- [componentModel](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#component-model-attributes) (componentModel.js)  
 
 In addition, [questionModel.js](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#question-model-attributes) extends componentModel (componentModel.js). 
 
