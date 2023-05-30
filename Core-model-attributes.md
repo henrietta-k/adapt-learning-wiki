@@ -22,7 +22,7 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_canShowFeedback` |  | `true`
 `_classes` |  |  `""`
-`_canReset` |  |  `true`
+`_canReset` | Controls the model's ability to reset. When set to `false`, calling `model.reset()` will return `false` and the model will not be reset. |  `true`
 `_isComplete` | Whether the item has been completed. | `false`
 `_isInteractionComplete` |  |  `false`
 `_requireCompletionOf` |  |  `-1`
