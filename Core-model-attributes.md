@@ -22,7 +22,7 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_canShowFeedback` |  | `true`
 `_classes` |  |  `""`
-`_canReset` |  |  `false`
+`_canReset` |  |  `true`
 `_isComplete` | Whether the item has been completed. | `false`
 `_isInteractionComplete` |  |  `false`
 `_requireCompletionOf` |  |  `-1`
