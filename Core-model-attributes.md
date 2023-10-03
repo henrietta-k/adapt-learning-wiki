@@ -25,7 +25,7 @@ Attribute | Description | Default value
 `_canReset` | Controls the model's ability to reset. When set to `false`, calling `model.reset()` will return `false` and the model will not be reset. |  `true`
 `_isComplete` | Whether the item has been completed | `false`
 `_isInteractionComplete` |  |  `false`
-`_requireCompletionOf` |  |  `-1`
+`_requireCompletionOf` | The number of children within the item that the learner must complete in order for the item to be set as completed. A value of -1 requires all of them to be completed |  `-1`
 `_isEnabled` | Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled. | `true`
 `_isResetOnRevisit` | Determines if the item should be reset to its default values upon returning |  `false`
 `_isAvailable` | Controls whether the item is available in the course | `true`
