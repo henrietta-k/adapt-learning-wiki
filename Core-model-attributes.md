@@ -20,18 +20,18 @@ An asterisk denotes that an attribute is required.
 
 Attribute | Description | Default value 
 --------- | ----------- | -------------
-`_canShowFeedback` |  | `true`
-`_classes` |  |  `""`
+`_canShowFeedback` | Allows the user to view feedback on their answer | `true`
+`_classes` | Allows you to specify custom CSS classes |  `""`
 `_canReset` | Controls the model's ability to reset. When set to `false`, calling `model.reset()` will return `false` and the model will not be reset. |  `true`
-`_isComplete` | Whether the item has been completed. | `false`
+`_isComplete` | Whether the item has been completed | `false`
 `_isInteractionComplete` |  |  `false`
 `_requireCompletionOf` |  |  `-1`
 `_isEnabled` | Controls the availability of the item. If ``_isEnabled`` is false, the item is disabled. | `true`
-`_isResetOnRevisit` |  |  `false`
-`_isAvailable` |  | `true`
+`_isResetOnRevisit` | Determines if the item should be reset to its default values upon returning |  `false`
+`_isAvailable` | Controls whether the item is available in the course | `true`
 `_isHidden` | Controls the display of the item. If `_isHidden` is true, the item will not be displayed | `false`
 `_isOptional` | If set to `true`, the user will not be required to complete the component in order to complete the course. The completion of the component will still be tracked, but it will be ignored during any completion calculations.  | `false`
-`_isVisible` |  | `true`
+`_isVisible` | When set to 'false', this is the equivalent of applying the CSS 'visibility:hidden' | `true`
 `_isLocked` | Menus and other plug-ins can set its value using `_lockType`. Reference [Locking objects with '_isLocked' and '_lockType'](Locking-objects-with-'_isLocked'-and-'_lockType')| `false`
 `_questionWeight` | The weight of a particular question, which is used when calculating the score. | `1`
 `_buttons` | An object to store the label values for template buttons. Buttons can then be referenced in templates using `{{{_buttons.submit}}}` | See fig.1.
