@@ -56,6 +56,7 @@ Attribute | Description | Default value
 `_children`   |   | `"contentObjects"`  
 `_start`   |   |   
 `_isReady` | This is used to determine if the current item is ready (i.e. has been initialised). This needs to be set manually for custom components. For instance, this may be set to true post-render. | `false`
+`_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the course to screenreader users. | `true`
 
 ## ContentObjects Model Attributes  
 
@@ -65,6 +66,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"contentObjects"`  
 `_children`   |  | `"contentObjects"`  
 `_ariaLevel`   | If you need to override the default contentObject ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the menu/page to screenreader users. `_isOptional` contentObjects default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the contentObject when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
 ## Article Model Attributes  
@@ -74,7 +76,8 @@ Attribute | Description | Default value
 `_parent`   |  | `"contentObjects"`  
 `_siblings`   |  | `"articles"`  
 `_children`   |  | `"blocks"`  
-`_ariaLevel`   | If you need to override the default article ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_ariaLevel`   | If you need to override the default article ARIA level (as set in config.json), set this to any number greater than 0 | `0`
+`_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the article to screenreader users. `_isOptional` articles default to `false`| `true` 
 `_onScreen`   | Attribute for attaching predefined animation to the article when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
 ## Block Model Attributes  
@@ -85,6 +88,7 @@ Attribute | Description | Default value
 `_siblings`   |  | `"blocks"`  
 `_children`   |  | `"components"` 
 `_ariaLevel`   | If you need to override the default block ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the block to screenreader users. `_isOptional` blocks default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the block when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
 ## Component Model Attributes  
@@ -94,7 +98,7 @@ Attribute | Description | Default value
 `_parent`   |  | `"blocks"`  
 `_siblings`   |  | `"components"` 
 `_ariaLevel`   | If you need to override the default component ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
-`_disableAccessibilityState`   | Disables the hidden label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. | `false`
+`_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. `_isOptional` components default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
 ## Question Model Attributes  
