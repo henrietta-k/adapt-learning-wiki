@@ -65,7 +65,6 @@ Attribute | Description | Default value
 `_parent`   |  | `"course"`  
 `_siblings`   |  | `"contentObjects"`  
 `_children`   |  | `"contentObjects"`  
-`_ariaLevel`   | If you need to override the default contentObject ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 `_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the menu/page to screenreader users. `_isOptional` contentObjects default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the contentObject when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
@@ -76,7 +75,6 @@ Attribute | Description | Default value
 `_parent`   |  | `"contentObjects"`  
 `_siblings`   |  | `"articles"`  
 `_children`   |  | `"blocks"`  
-`_ariaLevel`   | If you need to override the default article ARIA level (as set in config.json), set this to any number greater than 0 | `0`
 `_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the article to screenreader users. `_isOptional` articles default to `false`| `true` 
 `_onScreen`   | Attribute for attaching predefined animation to the article when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
@@ -86,8 +84,7 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_parent`   |  | `"articles"`  
 `_siblings`   |  | `"blocks"`  
-`_children`   |  | `"components"` 
-`_ariaLevel`   | If you need to override the default block ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
+`_children`   |  | `"components"`  
 `_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the block to screenreader users. `_isOptional` blocks default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the block when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
@@ -97,7 +94,6 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_parent`   |  | `"blocks"`  
 `_siblings`   |  | `"components"` 
-`_ariaLevel`   | If you need to override the default component ARIA level (as set in config.json), set this to any number greater than 0 | `0` 
 `_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. `_isOptional` components default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
