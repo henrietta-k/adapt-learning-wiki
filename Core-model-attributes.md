@@ -94,7 +94,7 @@ Attribute | Description | Default value
 --------- | ----------- | -------------
 `_parent`   |  | `"blocks"`  
 `_siblings`   |  | `"components"` 
-`_isA11yComponentDescriptionEnabled `   | Disables the hidden label that provides the component description to screenreader users. The label is specified in the `_globals._component[componentName].ariaRegion` in the `properties.schema:globals.ariaRegion` | `true`
+`_isA11yComponentDescriptionEnabled `   | Disables the hidden label that provides the component description to screenreader users. They appear under the component heading and are designed to help users understand how to interact with the user interface by providing a simple name and description of its behaviour. Labels are specified in the `_globals._component[componentName].ariaRegion` | `true`
 `_isA11yCompletionDescriptionEnabled `   | Disables the hidden title label that describes the state of the component to screenreader users. Useful if the component is of no interest to a screenreader user - such as an optional decorative graphic component. `_isOptional` components default to `false`| `true`
 `_onScreen`   | Attribute for attaching predefined animation to the component when the element comes into view | See [documentation](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes#_onscreen-documentation) below
 
