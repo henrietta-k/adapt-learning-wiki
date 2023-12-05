@@ -1,6 +1,6 @@
 # Navigation
 
-The following covers Core navigation functionality: [sorting order](https://github.com/adaptlearning/adapt_framework/wiki/Navigation/_edit#navigation-sorting-order), [button API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation/_edit#navigation-button-api) and [tooltip API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation/_edit#navigation-tooltip-api).
+The following covers Core navigation functionality: [sorting order](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-sorting-order), [button API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-button-api) and [tooltip API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-tooltip-api).
 
 ## Navigation sorting order 
 
