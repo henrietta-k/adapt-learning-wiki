@@ -83,3 +83,9 @@ The navigation button API was created to allow extensions to define buttons and 
 
 
 ## Navigation tooltip API
+JSON in _course.json_ to enable / disable globally:<br>
+```
+"_tooltips": {
+  "_isEnabled": true
+}
+```
