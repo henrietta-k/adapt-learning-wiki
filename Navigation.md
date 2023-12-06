@@ -155,9 +155,31 @@ Older buttons should have an `aria-label` attribute or an `.aria-label` element 
 ***
 
 ## Navigation tooltip API
+
+Tooltips display on mouseover and focus. Tooltips are read by a screenreader on mouseover, on focus the screen reader will read the target's aria label. The button `aria-label` is used to set the default tooltip `text`.  
+
 JSON in _course.json_ to enable / disable globally:<br>
 ```
 "_tooltips": {
   "_isEnabled": true
 }
 ```
+Core navigation:<br>
+JSON in _course.json_ `_globals._extensions` to configure Back button and Drawer button:
+```
+"_extensions": {
+  "_navigation": {
+    "_backNavTooltip": {
+      "_isEnabled": true,
+      "text": "{{ariaLabel}}"
+    }
+  },
+  "_drawer": {
+    "_navTooltip": {
+      "_isEnabled": true,
+      "text": "{{ariaLabel}}"
+    }
+  }
+}
+```
+Navigation plugins also support `_navTooltip`, for example [pageLevelProgress](https://github.com/adaptlearning/adapt-contrib-pageLevelProgress/blob/a82f33a7de45517d4537552fde451ef8e31011ff/example.json#L9C12-L9C23) or [Visua11y](https://github.com/cgkineo/adapt-visua11y/blob/0eae8306eb0f4479fa8d3595e5b931f7077cc650/example.json#L6).
