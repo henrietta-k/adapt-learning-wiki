@@ -70,9 +70,13 @@ JSON in _course.json_ `_globals`:<br>
     }
 </pre>
 
+
+
+***
+
 ## Navigation button API
 
-The navigation button API was created to allow extensions to define buttons and add them to the navigation bar rather than allowing DOM injection.
+The navigation button API was created to allow extensions to define buttons and add them to the navigation bar rather than allowing DOM injection. API features include:
 
 * Backward compatible with injection
 * Text label based upon the button aria label
@@ -81,6 +85,74 @@ The navigation button API was created to allow extensions to define buttons and 
 * Show/hide text
 
 
+### Navigation model
+* `NavigationButtonModel` To hold the properties for each button
+* `NavigationButtonView` For extensions to make their own buttons and for legacy injected button management
+* `NavigationModel` To hold the navigation configuration
+* All model updates will be reflected in the DOM.
+
+### General API layout
+```js
+import navigation from 'core/js/navigation';
+navigation.model.set('_showLabel', true); // Show all labels
+
+const backButton = navigation.getButton('back');
+backButton.set('_order', 400); // Move the back button to the right
+backButton.set('text', 'New Label'); // Change the back button label text
+
+
+navigation.removeButton(backButton); // Remove back button
+
+// Remove all buttons
+navigation.buttons.forEach(button => navigation.removeButton(button));
+```
+
+Example, making a home button:
+
+![image](https://user-images.githubusercontent.com/7974663/228893292-c4737ad4-a768-437e-9075-ca3f5481fcc8.png)
+
+
+```js
+import Adapt from 'core/js/adapt';
+import navigation from 'core/js/navigation';
+import NavigationButtonModel from 'core/js/models/NavigationButtonModel';
+import NavigationButtonView from 'core/js/views/NavigationButtonView';
+
+// Extend the model and view classes to add own behaviour
+
+Adapt.on('navigation:ready', () => {
+  const model = new NavigationButtonModel({
+    _id: 'home',
+    _order: 0,
+    _event: 'homeButton',
+    _showLabel: null,
+    _classes: '',
+    _iconClasses: 'icon-medal',
+    _role: 'link',
+    ariaLabel: 'Home',
+    text: '{{ariaLabel}}'
+  });
+  const view = new NavigationButtonView({ model });
+  navigation.addButton(view);
+});
+```
+
+Each button has the potential for custom `_id`, `_order`, `_event`, `_showLabel`, `_classes`, `_iconClasses`, `_role`, `ariaLabel` and `text`, with global settings for `_showLabel`, `_navigationAlignment` and `_isBottomOnTouchDevices`.
+
+`_event` has some default behaviour at `"backButton"`, `"homeButton"`, `"parentButton"`, `"skipNavigation"` and `"returnToStart"`.
+
+
+
+Example, added visua11y and the above home button to the vanilla course:
+
+![image](https://user-images.githubusercontent.com/7974663/228896348-be925656-bbe8-40d2-bf35-a3b046f83895.png)
+
+
+### Backward compatibility
+Older buttons should have an `aria-label` attribute or an `.aria-label` element in order for a text label to be automatically generated. A `<span class="label" aria-hidden="true">{{ariaLabel}}</span>` will be appended automatically to any existing button, if it doesn't exist, and will otherwise be automatically updated from the value of the `aria-label` attribute or `.aria-label` element. This is as model `text` defaults to `{{ariaLabel}}`. On older buttons `"ariaLabel"`, `"_role"` and `"_classes"` have no effect when changed from the model as they should be supplied by the injected buttons themselves. `"text"`, `"_order"`, `"_showLabel"`, `"_id"` and `"_event"` should work as expected on older injected buttons.
+
+
+***
 
 ## Navigation tooltip API
 JSON in _course.json_ to enable / disable globally:<br>
