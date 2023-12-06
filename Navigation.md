@@ -78,12 +78,30 @@ JSON in _course.json_ `_globals`:<br>
 
 The navigation button API was created to allow extensions to define buttons and add them to the navigation bar rather than allowing DOM injection. API features include:
 
-* Backward compatible with injection
-* Text label based upon the button aria label
+* Supports backward compatibility with injection
+* Display button text label based upon the button aria label
+* Display button icons
 * Ordering
-* Icons
 * Show/hide text
 
+
+Core navigation:<br>
+JSON in _course.json_ to globally configure navigation button text labels:
+```
+"_navigation": {
+  "_showLabel": true, // Show navigation button labels
+  "_showLabelAtWidth": "medium", // Show label at this breakpoint and higher
+  "_labelPosition": "auto" // Where to show the label in relation to the button icons 
+}
+```
+When the user's browser window is at least the size specified in `_showLabelAtWidth` or greater, the text labels will be shown. Options include `any`, `small`, `medium` and `large`. `small`, `medium` and `large` refer to the standard Adapt breakpoints (see default [screenSize](https://github.com/adaptlearning/adapt-contrib-core/blob/852ef1269dcdfc220361d500c473c9042ffa65f4/schema/config.model.schema#L191) values). The `any` option will show the label at any size.
+
+The `_labelPosition` refers to where to show the label in relation to the button icons. Options inlclude `auto`, `top`, `bottom`, `left` and `right`.<br> 
+`auto` - default display, inherits from lang direction [ icon / text] for LTR and [ text / icon ] for RTL<br>
+`left` - label displays left of icon regardless of lang direction [ text / icon ]<br>
+`right` - label displays right of icon regardless of lang direction [ icon / text]
+
+Navigation plugins also support `navLabel`, for example [pageLevelProgress](https://github.com/adaptlearning/adapt-contrib-pageLevelProgress/blob/a82f33a7de45517d4537552fde451ef8e31011ff/example.json#L6C12-L6C20) or [Visua11y](https://github.com/cgkineo/adapt-visua11y/blob/0eae8306eb0f4479fa8d3595e5b931f7077cc650/example.json#L5).
 
 ### Navigation model
 * `NavigationButtonModel` To hold the properties for each button
