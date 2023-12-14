@@ -1,6 +1,23 @@
 # Navigation
 
-The following covers Core navigation functionality: [sorting order](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-sorting-order), [button API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-button-api) and [tooltip API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-tooltip-api).
+The following covers Core navigation functionality: [navigation settings](https://github.com/adaptlearning/adapt_framework/wiki/Navigation/_edit#navigation-settings), [sorting order](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-sorting-order), [button API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-button-api) and [tooltip API](https://github.com/adaptlearning/adapt_framework/wiki/Navigation#navigation-tooltip-api).
+
+## Navigation settings
+
+The navigation settings allow you to control the behaviour of the navigation bar.<br>
+
+JSON in _course.json_ `_navigation`:<br>
+<pre>
+  "_navigation": {
+    "_isDefaultNavigationDisabled": false, // disable the default navigation bar
+    "_navigationAlignment": "top", // determines where the navigation bar is displayed - 'top' or 'bottom'
+    "_isBottomOnTouchDevices": false // display the navigation bar at the bottom of the course for touch devices
+  }
+</pre>
+
+
+
+***
 
 ## Navigation sorting order 
 
