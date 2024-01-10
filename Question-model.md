@@ -4,7 +4,9 @@ The following covers Core question model functionality: [Feedback image support]
 
 ## Feedback image support
 
-Support for feedback images was introduced in [v6.20.5](https://github.com/adaptlearning/adapt-contrib-core/releases/tag/v6.20.5). Images mirror the question feedback text so there are correct, partly correct not / final, and incorrect not final versions. 
+Support for feedback images was introduced in [v6.20.5](https://github.com/adaptlearning/adapt-contrib-core/releases/tag/v6.20.5). This behaviour is fully backward compatible if the old style of `_feedback` objects are used. The new style feedback can be used in the new AAT and if building by hand, it will not be supported in the classic AAT.
+
+Images mirror the question feedback text so there are `_feedback._correct`, `_feedback._partlyCorrectNotFinal`, `_feedback._partlyCorrectFinal`, `_feedback._incorrectNotFinal`, `_feedback._incorrectFinal` and for `_items[].feedback`.
 
 If an image is defined, the layout of the text and image is split 60% / 40% in favour of the text. If no image is defined the text defaults to 100% width. 
 
