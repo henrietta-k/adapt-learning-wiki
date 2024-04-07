@@ -1,12 +1,12 @@
 ### Before you begin
-Installing Adapt requires the use of the [command line](https://en.wikipedia.org/wiki/Command-line_interface). If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need. 
+Installing Adapt requires the use of the [command line](https://en.wikipedia.org/wiki/Command-line_interface). If your skills are a little rusty, the wiki article [*Just Enough Command Line for Installing*](https://github.com/adaptlearning/adapt_authoring/wiki/Just-Enough-Command-Line-for-Installing) might be all the assistance you need.
 
-If you've never used the command line before, please take advantage of one of the many tutorials you'll find on the web. 
+If you've never used the command line before, please take advantage of one of the many tutorials you'll find on the web.
 
-Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.  
+Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.
 
 ### Prerequisites
-Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version) and [Git](http://git-scm.com/downloads) if you haven't already done so.
+Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version - make sure it is an even-numbered release, currently v20) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
 > Linux users please note that on some distributions the node folder is called 'nodejs' - which will not work. You can work around this by either running `$ apt install nodejs-legacy` or by creating a symbolic link that has the right name by doing something like `$ sudo ln -s /usr/bin/nodejs /usr/bin/node`
 
@@ -48,7 +48,7 @@ This will ask you to confirm four things:
 1. **branch:** accept the default (master)
 1. **create now?:** accept the default (y)
 
-A directory with the course name will be created and all the Adapt framework files will be downloaded into it. 
+A directory with the course name will be created and all the Adapt framework files will be downloaded into it.
 
 #### Building your course
 First you will need to navigate to the directory that was created when you ran the `adapt create course` command earlier.
@@ -90,7 +90,7 @@ This will open the course in your default browser at the URL [http://localhost:9
 
 If you need to reset the stored data, open the browser console and execute the command `API.LMSClear()`.
 
-If you do not require SCORM functionality, run 
+If you do not require SCORM functionality, run
 ```bash
 adapt uninstall contrib-spoor
 grunt build
