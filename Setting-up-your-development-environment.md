@@ -6,7 +6,7 @@ If you've never used the command line before, please take advantage of one of th
 Adapt does not require you to be an expert with the command line, just familiar with basic terminology and techniques.
 
 ### Prerequisites
-Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version - make sure it is an even-numbered release, currently v20) and [Git](http://git-scm.com/downloads) if you haven't already done so.
+Before you get started with Adapt, you will need to install [Node.js](http://nodejs.org/) (the LTS version - make sure it is an even-numbered release) and [Git](http://git-scm.com/downloads) if you haven't already done so.
 
 > Linux users please note that on some distributions the node folder is called 'nodejs' - which will not work. You can work around this by either running `$ apt install nodejs-legacy` or by creating a symbolic link that has the right name by doing something like `$ sudo ln -s /usr/bin/nodejs /usr/bin/node`
 
